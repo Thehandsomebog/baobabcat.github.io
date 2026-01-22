@@ -3,63 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to BaobabCat - Your friendly corner of the internet">
-    <title>BaobabCat - Home</title>
+    <meta name="description" content="BaobabCat Consulting - Strategic business consulting to help your company grow and thrive">
+    <title>BaobabCat - Business Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="navLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b35"/>
+                            <stop offset="100%" style="stop-color:#ff8c42"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 45 L20 28 Q20 25 18 23 L15 20 Q13 18 15 16 L18 14 Q20 12 20 10 L20 8 Q20 5 23 5 L27 5 Q30 5 30 8 L30 10 Q30 12 32 14 L35 16 Q37 18 35 20 L32 23 Q30 25 30 28 L30 45 Z" fill="url(#navLogoGradient)"/>
+                    <ellipse cx="25" cy="6" rx="12" ry="5" fill="url(#navLogoGradient)" opacity="0.9"/>
+                    <path d="M16 8 L13 2 L18 6 Z" fill="url(#navLogoGradient)"/>
+                    <path d="M34 8 L37 2 L32 6 Z" fill="url(#navLogoGradient)"/>
+                    <circle cx="21" cy="6" r="1.5" fill="#0a0a0f"/>
+                    <circle cx="29" cy="6" r="1.5" fill="#0a0a0f"/>
+                </svg>
+                <span class="logo-text">Baobab<span class="logo-accent">Cat</span></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to BaobabCat</h1>
-            <p>Your friendly corner of the internet</p>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="reveal-word">Strategic</span>
+                <span class="reveal-word">Consulting</span>
+                <span class="reveal-word">for</span>
+                <span class="reveal-word highlight">Growing</span>
+                <span class="reveal-word highlight">Businesses</span>
+            </h1>
+            <p class="hero-subtitle reveal-text">
+                We partner with ambitious companies to unlock potential, streamline operations, and accelerate sustainable growth.
+            </p>
+            <div class="hero-cta reveal-text">
+                <a href="#contact" class="btn btn-primary">Get Started</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
 
-        <section class="content-section">
-            <h2>About Us</h2>
-            <p>Welcome to BaobabCat! We're glad you stopped by. This is a space where we share ideas, stories, and connect with our community.</p>
-            <p>Like the mighty baobab tree that stands strong through the seasons, we're here to provide a reliable and welcoming presence on the web.</p>
-        </section>
-
-        <section class="content-section">
-            <h2>What We Offer</h2>
-            <p>Explore our blog for the latest updates, insights, and interesting reads. We cover a variety of topics and always aim to bring you quality content.</p>
-            <p>Feel free to browse around and make yourself at home!</p>
-        </section>
-
-        <section class="content-section">
-            <h2>Stay Connected</h2>
-            <p>Sign up to receive updates and news from BaobabCat.</p>
-            <form class="contact-form" action="#" method="POST">
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label animate-on-scroll">Who We Are</span>
+                <h2 class="section-title animate-on-scroll">Built on Strength,<br>Rooted in Results</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content animate-on-scroll">
+                    <p class="lead-text">
+                        Like the mighty baobab tree that thrives in challenging conditions, BaobabCat Consulting helps businesses build resilient foundations for lasting success.
+                    </p>
+                    <p>
+                        Founded with a mission to democratize strategic consulting, we bring enterprise-level expertise to businesses of all sizes. Our team combines decades of experience across industries with a fresh, agile approach to problem-solving.
+                    </p>
+                    <p>
+                        We don't believe in one-size-fits-all solutions. Every engagement begins with deep listening and ends with actionable strategies tailored to your unique challenges and opportunities.
+                    </p>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <div class="about-stats">
+                    <div class="stat-card animate-on-scroll">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Clients Served</span>
+                    </div>
+                    <div class="stat-card animate-on-scroll">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-card animate-on-scroll">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Client Retention</span>
+                    </div>
+                    <div class="stat-card animate-on-scroll">
+                        <span class="stat-number">3x</span>
+                        <span class="stat-label">Avg. ROI Delivered</span>
+                    </div>
                 </div>
-                <div class="form-group checkbox-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="sms-consent" name="sms-consent" required>
-                        <span>I agree to receive SMS text messages from BaobabCat regarding my appointment and inquiries.</span>
-                    </label>
-                </div>
-                <button type="submit" class="submit-btn">Subscribe</button>
-                <p class="form-disclaimer">By clicking submit, you consent to receive SMS messages. In our messages, we advise that Message and Data Rates may apply, Messaging Frequency varies, and that you can STOP messaging by sending STOP and get more help by sending HELP. We also send a link to our <a href="privacy.html">Privacy Policy</a>.</p>
-            </form>
-        </section>
-    </main>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 BaobabCat. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label animate-on-scroll">What We Do</span>
+                <h2 class="section-title animate-on-scroll">Services That<br>Drive Impact</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <h3>Strategic Planning</h3>
+                    <p>Develop comprehensive roadmaps that align your vision with actionable milestones. We help you navigate complexity and make confident decisions.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="20" x2="12" y2="10"/>
+                            <line x1="18" y1="20" x2="18" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="16"/>
+                        </svg>
+                    </div>
+                    <h3>Growth Strategy</h3>
+                    <p>Identify and capitalize on opportunities for sustainable expansion. From market entry to scaling operations, we fuel your growth engine.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3>Operations Optimization</h3>
+                    <p>Streamline processes, reduce waste, and boost efficiency. We transform how your business operates to maximize output and minimize friction.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Leadership Development</h3>
+                    <p>Build capable leaders at every level. Our coaching and training programs equip your team with skills to inspire, decide, and execute.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3>Digital Transformation</h3>
+                    <p>Navigate the digital landscape with confidence. We guide technology adoption that enhances capabilities without disrupting what works.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Change Management</h3>
+                    <p>Guide your organization through transitions smoothly. We help teams embrace change and maintain momentum during transformation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label animate-on-scroll">Client Stories</span>
+                <h2 class="section-title animate-on-scroll">Trusted by Leaders<br>Across Industries</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        <p>"BaobabCat transformed how we approach strategic planning. Their insights helped us identify opportunities we'd been missing for years. Revenue is up 40% since we started working together."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <span class="author-name">James Mitchell</span>
+                            <span class="author-role">CEO, TechFlow Solutions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        <p>"The team's ability to understand our unique challenges and deliver practical solutions is remarkable. They don't just consult—they become true partners in your success."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah Rodriguez</span>
+                            <span class="author-role">Founder, Elevate Wellness</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-content">
+                        <p>"We were stuck in a growth plateau for two years. BaobabCat helped us reimagine our operations and break through. Best investment we've ever made in our business."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DK</div>
+                        <div class="author-info">
+                            <span class="author-name">David Kim</span>
+                            <span class="author-role">COO, Meridian Logistics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info animate-on-scroll">
+                    <span class="section-label">Get In Touch</span>
+                    <h2 class="section-title">Let's Build<br>Something Great</h2>
+                    <p>Ready to take your business to the next level? Reach out and let's start a conversation about your goals.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <a href="mailto:baobabcatllc@gmail.com">baobabcatllc@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <a href="tel:+15102995399">(510) 299-5399</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Houston, Texas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="sms-consent" name="sms-consent" required>
+                                <span>I agree to receive SMS text messages from BaobabCat regarding my appointment and inquiries.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        <p class="form-disclaimer">By clicking submit, you consent to receive SMS messages. Message and Data Rates may apply. Messaging Frequency varies. You can STOP messaging by sending STOP and get help by sending HELP. View our <a href="privacy.html">Privacy Policy</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff6b35"/>
+                                    <stop offset="100%" style="stop-color:#ff8c42"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M20 45 L20 28 Q20 25 18 23 L15 20 Q13 18 15 16 L18 14 Q20 12 20 10 L20 8 Q20 5 23 5 L27 5 Q30 5 30 8 L30 10 Q30 12 32 14 L35 16 Q37 18 35 20 L32 23 Q30 25 30 28 L30 45 Z" fill="url(#footerLogoGradient)"/>
+                            <ellipse cx="25" cy="6" rx="12" ry="5" fill="url(#footerLogoGradient)" opacity="0.9"/>
+                            <path d="M16 8 L13 2 L18 6 Z" fill="url(#footerLogoGradient)"/>
+                            <path d="M34 8 L37 2 L32 6 Z" fill="url(#footerLogoGradient)"/>
+                            <circle cx="21" cy="6" r="1.5" fill="#0a0a0f"/>
+                            <circle cx="29" cy="6" r="1.5" fill="#0a0a0f"/>
+                        </svg>
+                        <span class="logo-text">Baobab<span class="logo-accent">Cat</span></span>
+                    </a>
+                    <p>Strategic consulting for businesses ready to grow.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:baobabcatllc@gmail.com">baobabcatllc@gmail.com</a></li>
+                            <li><a href="tel:+15102995399">(510) 299-5399</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BaobabCat. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="animations.js"></script>
 </body>
 </html>

@@ -3,48 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BaobabCat Blog - Read our latest posts and updates">
+    <meta name="description" content="BaobabCat Blog - Insights on business strategy, growth, and consulting">
     <title>BaobabCat - Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html" class="active">Blog</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-        </ul>
+<body class="blog-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="navLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b35"/>
+                            <stop offset="100%" style="stop-color:#ff8c42"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 45 L20 28 Q20 25 18 23 L15 20 Q13 18 15 16 L18 14 Q20 12 20 10 L20 8 Q20 5 23 5 L27 5 Q30 5 30 8 L30 10 Q30 12 32 14 L35 16 Q37 18 35 20 L32 23 Q30 25 30 28 L30 45 Z" fill="url(#navLogoGradient)"/>
+                    <ellipse cx="25" cy="6" rx="12" ry="5" fill="url(#navLogoGradient)" opacity="0.9"/>
+                    <path d="M16 8 L13 2 L18 6 Z" fill="url(#navLogoGradient)"/>
+                    <path d="M34 8 L37 2 L32 6 Z" fill="url(#navLogoGradient)"/>
+                    <circle cx="21" cy="6" r="1.5" fill="#0a0a0f"/>
+                    <circle cx="29" cy="6" r="1.5" fill="#0a0a0f"/>
+                </svg>
+                <span class="logo-text">Baobab<span class="logo-accent">Cat</span></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main>
-        <div class="page-header">
-            <h1>Blog</h1>
-            <p>Our latest thoughts and updates</p>
-        </div>
+        <div class="container">
+            <div class="page-header">
+                <h1>Insights & Updates</h1>
+                <p>Thoughts on strategy, growth, and business transformation</p>
+            </div>
 
-        <div class="blog-grid">
-            <article class="blog-card">
-                <h3>Welcome to Our New Website!</h3>
-                <p class="date">January 20, 2025</p>
-                <p>We're excited to launch our brand new website! This is just the beginning of our journey, and we can't wait to share more content with you. Stay tuned for updates!</p>
-            </article>
+            <div class="blog-grid">
+                <article class="blog-card animate-on-scroll">
+                    <h3>Building Resilient Business Foundations</h3>
+                    <p class="date">January 22, 2025</p>
+                    <p>Like the baobab tree that thrives in harsh conditions, successful businesses need strong roots. Discover how strategic planning can help your organization weather any storm and emerge stronger.</p>
+                </article>
 
-            <article class="blog-card">
-                <h3>Getting Started with BaobabCat</h3>
-                <p class="date">January 20, 2025</p>
-                <p>Learn about what makes BaobabCat special and how you can make the most of your time here. We've got plenty of exciting things planned for the future.</p>
-            </article>
+                <article class="blog-card animate-on-scroll">
+                    <h3>The Art of Sustainable Growth</h3>
+                    <p class="date">January 20, 2025</p>
+                    <p>Growth for growth's sake often leads to instability. Learn our approach to scaling your business in a way that maintains quality, culture, and long-term viability.</p>
+                </article>
 
-            <article class="blog-card">
-                <h3>The Story Behind the Name</h3>
-                <p class="date">January 20, 2025</p>
-                <p>Ever wondered why we're called BaobabCat? The baobab tree is known for its resilience and longevity, qualities we aspire to embody. And cats? Well, everyone loves cats!</p>
-            </article>
+                <article class="blog-card animate-on-scroll">
+                    <h3>Why We Started BaobabCat</h3>
+                    <p class="date">January 18, 2025</p>
+                    <p>The baobab tree symbolizes resilience, longevity, and strength—qualities we help businesses cultivate. Here's the story behind our name and our mission to transform how companies approach growth.</p>
+                </article>
+            </div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 BaobabCat. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff6b35"/>
+                                    <stop offset="100%" style="stop-color:#ff8c42"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M20 45 L20 28 Q20 25 18 23 L15 20 Q13 18 15 16 L18 14 Q20 12 20 10 L20 8 Q20 5 23 5 L27 5 Q30 5 30 8 L30 10 Q30 12 32 14 L35 16 Q37 18 35 20 L32 23 Q30 25 30 28 L30 45 Z" fill="url(#footerLogoGradient)"/>
+                            <ellipse cx="25" cy="6" rx="12" ry="5" fill="url(#footerLogoGradient)" opacity="0.9"/>
+                            <path d="M16 8 L13 2 L18 6 Z" fill="url(#footerLogoGradient)"/>
+                            <path d="M34 8 L37 2 L32 6 Z" fill="url(#footerLogoGradient)"/>
+                            <circle cx="21" cy="6" r="1.5" fill="#0a0a0f"/>
+                            <circle cx="29" cy="6" r="1.5" fill="#0a0a0f"/>
+                        </svg>
+                        <span class="logo-text">Baobab<span class="logo-accent">Cat</span></span>
+                    </a>
+                    <p>Strategic consulting for businesses ready to grow.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="index.html#testimonials">Testimonials</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:baobabcatllc@gmail.com">baobabcatllc@gmail.com</a></li>
+                            <li><a href="tel:+15102995399">(510) 299-5399</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BaobabCat. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="animations.js"></script>
 </body>
 </html>
