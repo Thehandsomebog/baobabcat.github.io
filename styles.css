@@ -1063,3 +1063,218 @@ body {
         font-size: 2rem;
     }
 }
+
+/* ========================================
+   AI Pulse Page - Twitter-like Feed
+   ======================================== */
+.ai-pulse-page {
+    padding-top: 100px;
+}
+
+.ai-pulse-page .page-header {
+    text-align: center;
+    padding: 60px 0 40px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 40px;
+}
+
+.ai-pulse-page .page-header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ai-pulse-page .page-header p {
+    color: var(--text-secondary);
+}
+
+/* Feed Container */
+.feed-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+/* Feed Filters */
+.feed-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    white-space: nowrap;
+    font-family: var(--font-family);
+}
+
+.filter-btn:hover {
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-color: transparent;
+    color: white;
+}
+
+/* Feed Posts */
+.feed {
+    display: flex;
+    flex-direction: column;
+}
+
+.feed-post {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition-fast);
+}
+
+.feed-post:hover {
+    background: rgba(255, 255, 255, 0.02);
+    margin: 0 -16px;
+    padding: 20px 16px;
+    border-radius: 8px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.post-category {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-primary);
+}
+
+.post-category[data-category="news"] {
+    color: #60a5fa;
+    background: rgba(96, 165, 250, 0.1);
+}
+
+.post-category[data-category="tools"] {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.1);
+}
+
+.post-category[data-category="business"] {
+    color: var(--accent-primary);
+    background: rgba(255, 107, 53, 0.1);
+}
+
+/* Category colors based on parent data-category */
+.feed-post[data-category="news"] .post-category {
+    color: #60a5fa;
+    background: rgba(96, 165, 250, 0.1);
+}
+
+.feed-post[data-category="tools"] .post-category {
+    color: #34d399;
+    background: rgba(52, 211, 153, 0.1);
+}
+
+.feed-post[data-category="business"] .post-category {
+    color: var(--accent-primary);
+    background: rgba(255, 107, 53, 0.1);
+}
+
+.post-time {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.post-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.post-content strong {
+    color: var(--accent-primary);
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    font-size: 0.8rem;
+    color: var(--accent-primary);
+    opacity: 0.8;
+    transition: var(--transition-fast);
+    cursor: default;
+}
+
+.tag:hover {
+    opacity: 1;
+}
+
+/* Feed Footer */
+.feed-footer {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.feed-end-message {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Responsive Feed */
+@media (max-width: 768px) {
+    .feed-container {
+        padding: 0 8px 60px;
+    }
+
+    .feed-filters {
+        gap: 6px;
+        padding-bottom: 12px;
+    }
+
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .feed-post {
+        padding: 16px 0;
+    }
+
+    .feed-post:hover {
+        margin: 0 -8px;
+        padding: 16px 8px;
+    }
+
+    .post-content {
+        font-size: 0.9rem;
+    }
+}

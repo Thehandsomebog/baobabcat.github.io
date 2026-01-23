@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Pulse - Stay updated with the latest AI news, tools, and insights for business">
+    <title>BaobabCat - AI Pulse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="ai-pulse-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="navLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b35"/>
+                            <stop offset="100%" style="stop-color:#ff8c42"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M20 45 L20 28 Q20 25 18 23 L15 20 Q13 18 15 16 L18 14 Q20 12 20 10 L20 8 Q20 5 23 5 L27 5 Q30 5 30 8 L30 10 Q30 12 32 14 L35 16 Q37 18 35 20 L32 23 Q30 25 30 28 L30 45 Z" fill="url(#navLogoGradient)"/>
+                    <ellipse cx="25" cy="6" rx="12" ry="5" fill="url(#navLogoGradient)" opacity="0.9"/>
+                    <path d="M16 8 L13 2 L18 6 Z" fill="url(#navLogoGradient)"/>
+                    <path d="M34 8 L37 2 L32 6 Z" fill="url(#navLogoGradient)"/>
+                    <circle cx="21" cy="6" r="1.5" fill="#0a0a0f"/>
+                    <circle cx="29" cy="6" r="1.5" fill="#0a0a0f"/>
+                </svg>
+                <span class="logo-text">Baobab<span class="logo-accent">Cat</span></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="ai-pulse.html" class="active">AI Pulse</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1>AI Pulse</h1>
+                <p>Your daily dose of AI news, tools, and insights</p>
+            </div>
+
+            <div class="feed-container">
+                <!-- Feed filters -->
+                <div class="feed-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="news">News</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                    <button class="filter-btn" data-filter="business">Business</button>
+                </div>
+
+                <!-- Feed posts -->
+                <div class="feed">
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">2h ago</span>
+                        </div>
+                        <p class="post-content">OpenAI announces GPT-5 is in final testing stages. Early reports suggest major improvements in reasoning, reduced hallucinations, and better long-form content generation.</p>
+                        <div class="post-tags">
+                            <span class="tag">#OpenAI</span>
+                            <span class="tag">#GPT5</span>
+                            <span class="tag">#LLMs</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="business">
+                        <div class="post-header">
+                            <span class="post-category">Business</span>
+                            <span class="post-time">4h ago</span>
+                        </div>
+                        <p class="post-content">McKinsey report: Companies using AI in operations see 25% productivity gains on average. The biggest wins? Customer service automation and data analysis.</p>
+                        <div class="post-tags">
+                            <span class="tag">#AIStrategy</span>
+                            <span class="tag">#Productivity</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="tools">
+                        <div class="post-header">
+                            <span class="post-category">Tools</span>
+                            <span class="post-time">6h ago</span>
+                        </div>
+                        <p class="post-content"><strong>Tool spotlight:</strong> Cursor AI is changing how developers write code. It's an AI-first code editor that predicts what you want to build and helps you get there faster.</p>
+                        <div class="post-tags">
+                            <span class="tag">#DevTools</span>
+                            <span class="tag">#CursorAI</span>
+                            <span class="tag">#Coding</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">8h ago</span>
+                        </div>
+                        <p class="post-content">Google DeepMind's new AI can now solve complex math problems at the level of a gold medalist in the International Mathematical Olympiad. Another milestone in reasoning capabilities.</p>
+                        <div class="post-tags">
+                            <span class="tag">#DeepMind</span>
+                            <span class="tag">#AIResearch</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="business">
+                        <div class="post-header">
+                            <span class="post-category">Business</span>
+                            <span class="post-time">12h ago</span>
+                        </div>
+                        <p class="post-content">Hot take: The companies winning with AI aren't the ones with the biggest budgets. They're the ones who started small, measured results, and scaled what worked.</p>
+                        <div class="post-tags">
+                            <span class="tag">#AIAdoption</span>
+                            <span class="tag">#Strategy</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="tools">
+                        <div class="post-header">
+                            <span class="post-category">Tools</span>
+                            <span class="post-time">1d ago</span>
+                        </div>
+                        <p class="post-content"><strong>Notion AI</strong> just got a major upgrade. You can now generate entire project plans, meeting summaries, and action items with a single prompt. Game-changer for project managers.</p>
+                        <div class="post-tags">
+                            <span class="tag">#NotionAI</span>
+                            <span class="tag">#Productivity</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">1d ago</span>
+                        </div>
+                        <p class="post-content">Anthropic raises $2B at $60B valuation. Claude continues to gain market share in enterprise AI. The AI race is heating up.</p>
+                        <div class="post-tags">
+                            <span class="tag">#Anthropic</span>
+                            <span class="tag">#Claude</span>
+                            <span class="tag">#Funding</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="business">
+                        <div class="post-header">
+                            <span class="post-category">Business</span>
+                            <span class="post-time">1d ago</span>
+                        </div>
+                        <p class="post-content">AI implementation tip: Don't try to automate everything at once. Pick ONE high-impact process, prove the ROI, then expand. Your team will thank you.</p>
+                        <div class="post-tags">
+                            <span class="tag">#AITips</span>
+                            <span class="tag">#Implementation</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="tools">
+                        <div class="post-header">
+                            <span class="post-category">Tools</span>
+                            <span class="post-time">2d ago</span>
+                        </div>
+                        <p class="post-content"><strong>Perplexity AI</strong> is becoming the go-to for research. It's like Google search, but it actually gives you answers with sources instead of making you click through 10 links.</p>
+                        <div class="post-tags">
+                            <span class="tag">#PerplexityAI</span>
+                            <span class="tag">#Research</span>
+                            <span class="tag">#Search</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">2d ago</span>
+                        </div>
+                        <p class="post-content">Meta releases Llama 3.1 405B as open source. The open-source AI community now has access to a model that rivals GPT-4. This changes everything for startups and researchers.</p>
+                        <div class="post-tags">
+                            <span class="tag">#Meta</span>
+                            <span class="tag">#Llama</span>
+                            <span class="tag">#OpenSource</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="business">
+                        <div class="post-header">
+                            <span class="post-category">Business</span>
+                            <span class="post-time">3d ago</span>
+                        </div>
+                        <p class="post-content">The AI skills gap is real. 67% of business leaders say they can't find enough AI-literate talent. Upskilling your existing team might be faster than hiring.</p>
+                        <div class="post-tags">
+                            <span class="tag">#AITalent</span>
+                            <span class="tag">#Hiring</span>
+                            <span class="tag">#Skills</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="tools">
+                        <div class="post-header">
+                            <span class="post-category">Tools</span>
+                            <span class="post-time">3d ago</span>
+                        </div>
+                        <p class="post-content"><strong>Midjourney v6</strong> now understands text in images. You can generate logos, posters, and marketing materials with actual readable text. Designers, take note.</p>
+                        <div class="post-tags">
+                            <span class="tag">#Midjourney</span>
+                            <span class="tag">#AIArt</span>
+                            <span class="tag">#Design</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load more -->
+                <div class="feed-footer">
+                    <p class="feed-end-message">You're all caught up! Check back later for more updates.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff6b35"/>
+                                    <stop offset="100%" style="stop-color:#ff8c42"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M20 45 L20 28 Q20 25 18 23 L15 20 Q13 18 15 16 L18 14 Q20 12 20 10 L20 8 Q20 5 23 5 L27 5 Q30 5 30 8 L30 10 Q30 12 32 14 L35 16 Q37 18 35 20 L32 23 Q30 25 30 28 L30 45 Z" fill="url(#footerLogoGradient)"/>
+                            <ellipse cx="25" cy="6" rx="12" ry="5" fill="url(#footerLogoGradient)" opacity="0.9"/>
+                            <path d="M16 8 L13 2 L18 6 Z" fill="url(#footerLogoGradient)"/>
+                            <path d="M34 8 L37 2 L32 6 Z" fill="url(#footerLogoGradient)"/>
+                            <circle cx="21" cy="6" r="1.5" fill="#0a0a0f"/>
+                            <circle cx="29" cy="6" r="1.5" fill="#0a0a0f"/>
+                        </svg>
+                        <span class="logo-text">Baobab<span class="logo-accent">Cat</span></span>
+                    </a>
+                    <p>Strategic consulting for businesses ready to grow.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="index.html#services">Services</a></li>
+                            <li><a href="ai-pulse.html">AI Pulse</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:baobabcatllc@gmail.com">baobabcatllc@gmail.com</a></li>
+                            <li><a href="tel:+15102995399">(510) 299-5399</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BaobabCat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+    <script>
+        // Feed filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const posts = document.querySelectorAll('.feed-post');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter posts
+                    const filter = this.dataset.filter;
+
+                    posts.forEach(post => {
+                        if (filter === 'all' || post.dataset.category === filter) {
+                            post.style.display = 'block';
+                            // Re-trigger animation
+                            post.classList.remove('visible');
+                            setTimeout(() => post.classList.add('visible'), 10);
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
