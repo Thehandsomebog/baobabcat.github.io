@@ -113,3 +113,30 @@ Redesign baobabcat.com as a modern consulting business website with a dark theme
 8. **Form Validation** - Basic client-side validation with visual feedback
 9. **SMS Compliance** - Consent checkbox and legal disclaimers preserved
 10. **Custom Logo** - Baobab tree + cat ears SVG logo
+
+---
+
+## Improvement Backlog
+
+### High Priority
+- [ ] **Optimize og-image.png** - Currently 5.5MB, compress to under 200KB and consider WebP format
+- [x] **Add 404 error page** - Create branded 404.html for broken links instead of generic error
+- [ ] **Add analytics** - Set up Google Analytics or Plausible to track visitor behavior and contact form conversions
+- [ ] **Improve form feedback** - Add visible success/error messages after Web3Forms submission so users know their message was sent
+
+### Medium Priority
+- [ ] **Expand test coverage** - Add Playwright tests for:
+  - Contact form submission
+  - Blog page functionality
+  - AI Pulse page and filters
+  - Responsive breakpoints (mobile/tablet/desktop)
+- [ ] **Add image lazy loading** - Add `loading="lazy"` attribute to images for better page load performance
+- [ ] **Client-side form validation** - Add real-time validation feedback (email format, required fields) before submission
+- [ ] **AI news error handling** - Show friendly message if news feed fails to load instead of empty content
+
+### Nice to Have
+- [ ] **Blog CMS integration** - Consider headless CMS (Contentful, Sanity) or static site generator (11ty) for easier blog updates
+- [ ] **Testimonial carousel** - If more than 3 testimonials, add carousel to showcase without overwhelming page
+- [ ] **Dark/light mode toggle** - Add theme toggle for users who prefer light mode
+- [ ] **Newsletter signup** - Add email capture form to build subscriber list
+- [ ] **Case studies page** - Add detailed success stories for more credibility beyond brief testimonials
