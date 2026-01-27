@@ -121,7 +121,7 @@ Redesign baobabcat.com as a modern consulting business website with a dark theme
 ### High Priority
 - [x] **Optimize og-image.png** - Converted to JPEG (104KB), resized to 1200x1200, updated all references
 - [x] **Add 404 error page** - Create branded 404.html for broken links instead of generic error
-- [ ] **Add analytics** - Requires GA4 Measurement ID from Google Analytics account to implement
+- [x] **Add analytics** - Added Google Analytics 4 (G-CH13JG6L1S) to all pages
 - [x] **Improve form feedback** - Added visible success/error messages after Web3Forms submission
 
 ### Medium Priority
@@ -137,6 +137,6 @@ Redesign baobabcat.com as a modern consulting business website with a dark theme
 ### Nice to Have
 - [ ] **Blog CMS integration** - Consider headless CMS (Contentful, Sanity) or static site generator (11ty) for easier blog updates
 - [ ] **Testimonial carousel** - If more than 3 testimonials, add carousel to showcase without overwhelming page
-- [ ] **Dark/light mode toggle** - Add theme toggle for users who prefer light mode
+- [x] **Dark/light mode toggle** - Added theme toggle button with localStorage persistence
 - [ ] **Newsletter signup** - Add email capture form to build subscriber list
 - [ ] **Case studies page** - Add detailed success stories for more credibility beyond brief testimonials

@@ -27,6 +27,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========================================
+    // Theme Toggle (Dark/Light Mode)
+    // ========================================
+    const themeToggle = document.querySelector('.theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Get saved theme or use system preference
+    function getTheme() {
+        const saved = localStorage.getItem('theme');
+        if (saved) return saved;
+        return prefersDark.matches ? 'dark' : 'dark'; // Default to dark
+    }
+
+    // Apply theme
+    function setTheme(theme) {
+        if (theme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+        localStorage.setItem('theme', theme);
+    }
+
+    // Initialize theme
+    setTheme(getTheme());
+
+    // Toggle theme on button click
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const newTheme = current === 'light' ? 'dark' : 'light';
+            setTheme(newTheme);
+        });
+    }
+
+    // ========================================
     // Scroll Animations (Intersection Observer)
     // ========================================
 
