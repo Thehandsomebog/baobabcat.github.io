@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none">
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35"/>
+      <stop offset="100%" style="stop-color:#ff8c42"/>
+    </linearGradient>
+  </defs>
+  <!-- Background circle for better visibility -->
+  <circle cx="25" cy="25" r="24" fill="#0a0a0f"/>
+  <!-- Baobab tree trunk -->
+  <path d="M20 45 L20 28 Q20 25 18 23 L15 20 Q13 18 15 16 L18 14 Q20 12 20 10 L20 8 Q20 5 23 5 L27 5 Q30 5 30 8 L30 10 Q30 12 32 14 L35 16 Q37 18 35 20 L32 23 Q30 25 30 28 L30 45 Z" fill="url(#faviconGradient)"/>
+  <!-- Tree crown/canopy -->
+  <ellipse cx="25" cy="6" rx="12" ry="5" fill="url(#faviconGradient)" opacity="0.9"/>
+  <!-- Cat ears -->
+  <path d="M16 8 L13 2 L18 6 Z" fill="url(#faviconGradient)"/>
+  <path d="M34 8 L37 2 L32 6 Z" fill="url(#faviconGradient)"/>
+  <!-- Cat eyes -->
+  <circle cx="21" cy="6" r="1.5" fill="#0a0a0f"/>
+  <circle cx="29" cy="6" r="1.5" fill="#0a0a0f"/>
+</svg>

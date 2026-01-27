@@ -1,0 +1,11 @@
+# robots.txt for baobabcat.com
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://baobabcat.com/sitemap.xml
+
+# Crawl-delay (optional, be nice to search engines)
+Crawl-delay: 1
