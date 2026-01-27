@@ -5,6 +5,28 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // ========================================
+    // Check for Form Submission Success
+    // ========================================
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('submitted') === 'true') {
+        const successMessage = document.querySelector('.form-success');
+        const form = document.querySelector('.contact-form');
+        if (successMessage && form) {
+            successMessage.style.display = 'flex';
+            form.reset();
+            // Scroll to contact section
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                setTimeout(() => {
+                    contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            }
+            // Clean up URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    }
+
+    // ========================================
     // Scroll Animations (Intersection Observer)
     // ========================================
 
@@ -111,34 +133,108 @@ document.addEventListener('DOMContentLoaded', function() {
     updateNavbar();
 
     // ========================================
-    // Form Enhancement
+    // Form Enhancement with Real-time Validation
     // ========================================
 
     const form = document.querySelector('.contact-form');
 
     if (form) {
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // Phone validation regex (accepts common formats)
+        const phoneRegex = /^[\d\s\-\(\)\+]{10,}$/;
+
+        // Helper to show field error
+        function showFieldError(field, message) {
+            field.style.borderColor = '#ef4444';
+            let errorEl = field.parentElement.querySelector('.field-error');
+            if (!errorEl) {
+                errorEl = document.createElement('span');
+                errorEl.className = 'field-error';
+                errorEl.style.cssText = 'color: #ef4444; font-size: 0.8rem; margin-top: 4px; display: block;';
+                field.parentElement.appendChild(errorEl);
+            }
+            errorEl.textContent = message;
+        }
+
+        // Helper to clear field error
+        function clearFieldError(field) {
+            field.style.borderColor = '';
+            const errorEl = field.parentElement.querySelector('.field-error');
+            if (errorEl) errorEl.remove();
+        }
+
+        // Validate individual field
+        function validateField(field) {
+            const value = field.value.trim();
+
+            if (field.type === 'checkbox') {
+                if (field.required && !field.checked) {
+                    field.parentElement.style.color = '#ef4444';
+                    return false;
+                }
+                field.parentElement.style.color = '';
+                return true;
+            }
+
+            if (field.required && !value) {
+                showFieldError(field, 'This field is required');
+                return false;
+            }
+
+            if (field.type === 'email' && value && !emailRegex.test(value)) {
+                showFieldError(field, 'Please enter a valid email address');
+                return false;
+            }
+
+            if (field.type === 'tel' && value && !phoneRegex.test(value)) {
+                showFieldError(field, 'Please enter a valid phone number');
+                return false;
+            }
+
+            clearFieldError(field);
+            return true;
+        }
+
+        // Real-time validation on blur
+        const inputs = form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+
+            input.addEventListener('input', function() {
+                // Clear error on input, but only if field was previously invalid
+                if (this.style.borderColor === 'rgb(239, 68, 68)') {
+                    clearFieldError(this);
+                }
+            });
+        });
+
+        // Checkbox validation
+        const checkbox = form.querySelector('input[type="checkbox"]');
+        if (checkbox) {
+            checkbox.addEventListener('change', function() {
+                validateField(this);
+            });
+        }
+
         form.addEventListener('submit', function(e) {
-            // Basic validation before allowing submission
-            const requiredFields = form.querySelectorAll('[required]');
+            // Validate all fields before submission
+            const allFields = form.querySelectorAll('input[required], textarea[required]');
             let isValid = true;
 
-            requiredFields.forEach(field => {
-                if (field.type === 'checkbox' && !field.checked) {
+            allFields.forEach(field => {
+                if (!validateField(field)) {
                     isValid = false;
-                    field.parentElement.style.color = '#ff4444';
-                } else if (field.type !== 'checkbox' && !field.value.trim()) {
-                    isValid = false;
-                    field.style.borderColor = '#ff4444';
-                } else {
-                    field.style.borderColor = '';
-                    if (field.type === 'checkbox') {
-                        field.parentElement.style.color = '';
-                    }
                 }
             });
 
             if (!isValid) {
                 e.preventDefault();
+                // Focus first invalid field
+                const firstInvalid = form.querySelector('[style*="border-color: rgb(239, 68, 68)"]');
+                if (firstInvalid) firstInvalid.focus();
                 return;
             }
 
@@ -148,14 +244,6 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.disabled = true;
 
             // Form will submit naturally to Web3Forms
-        });
-
-        // Clear error styling on input
-        const inputs = form.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('input', function() {
-                this.style.borderColor = '';
-            });
         });
     }
 

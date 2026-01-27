@@ -715,6 +715,35 @@ body {
     text-decoration: underline;
 }
 
+/* Form Messages */
+.form-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+.form-message svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.form-success {
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    color: #34d399;
+}
+
+.form-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
 /* ========================================
    Footer
    ======================================== */

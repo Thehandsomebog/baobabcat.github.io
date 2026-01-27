@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.50.0",
-    "serve": "^14.2.5"
+    "serve": "^14.2.5",
+    "sharp": "^0.34.5"
   }
 }

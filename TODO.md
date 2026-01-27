@@ -59,12 +59,12 @@ Redesign baobabcat.com as a modern consulting business website with a dark theme
 - [x] Optimize for performance
 
 ## Phase 6: Testing & Launch
-- [ ] Test on mobile devices
-- [ ] Test on tablet
-- [ ] Test on desktop
-- [ ] Verify contact form works
-- [ ] Check all links
-- [ ] Validate HTML/CSS
+- [x] Test on mobile devices (via Playwright responsive tests)
+- [x] Test on tablet (via Playwright responsive tests)
+- [x] Test on desktop (via Playwright responsive tests)
+- [x] Verify contact form works (via Playwright tests)
+- [x] Check all links
+- [x] Validate HTML/CSS
 - [x] Commit and push to GitHub
 
 ---
@@ -119,20 +119,20 @@ Redesign baobabcat.com as a modern consulting business website with a dark theme
 ## Improvement Backlog
 
 ### High Priority
-- [ ] **Optimize og-image.png** - Currently 5.5MB, compress to under 200KB and consider WebP format
+- [x] **Optimize og-image.png** - Converted to JPEG (104KB), resized to 1200x1200, updated all references
 - [x] **Add 404 error page** - Create branded 404.html for broken links instead of generic error
-- [ ] **Add analytics** - Set up Google Analytics or Plausible to track visitor behavior and contact form conversions
-- [ ] **Improve form feedback** - Add visible success/error messages after Web3Forms submission so users know their message was sent
+- [ ] **Add analytics** - Requires GA4 Measurement ID from Google Analytics account to implement
+- [x] **Improve form feedback** - Added visible success/error messages after Web3Forms submission
 
 ### Medium Priority
-- [ ] **Expand test coverage** - Add Playwright tests for:
-  - Contact form submission
+- [x] **Expand test coverage** - Added Playwright tests for:
+  - Contact form validation and success messages
   - Blog page functionality
   - AI Pulse page and filters
   - Responsive breakpoints (mobile/tablet/desktop)
-- [ ] **Add image lazy loading** - Add `loading="lazy"` attribute to images for better page load performance
-- [ ] **Client-side form validation** - Add real-time validation feedback (email format, required fields) before submission
-- [ ] **AI news error handling** - Show friendly message if news feed fails to load instead of empty content
+- [x] **Add image lazy loading** - N/A: Only logo images exist which are above-the-fold and shouldn't be lazy loaded
+- [x] **Client-side form validation** - Added real-time validation on blur with email/phone format checking
+- [x] **AI news error handling** - N/A: News is statically pre-rendered at build time, no client-side fetching
 
 ### Nice to Have
 - [ ] **Blog CMS integration** - Consider headless CMS (Contentful, Sanity) or static site generator (11ty) for easier blog updates
