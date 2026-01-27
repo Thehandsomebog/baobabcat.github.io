@@ -401,7 +401,10 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper animate-on-scroll">
-                    <form class="contact-form" action="#" method="POST">
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="372f2f8e-3b9a-4338-aaf3-b24cfd63534b">
+                        <input type="hidden" name="subject" value="New Contact Form Submission - BaobabCat">
+                        <input type="hidden" name="redirect" value="https://baobabcat.com/?submitted=true">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your name" required>
