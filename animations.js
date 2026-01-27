@@ -118,44 +118,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (form) {
         form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-
-            // Basic validation
+            // Basic validation before allowing submission
             const requiredFields = form.querySelectorAll('[required]');
             let isValid = true;
 
             requiredFields.forEach(field => {
-                if (!field.value.trim()) {
+                if (field.type === 'checkbox' && !field.checked) {
+                    isValid = false;
+                    field.parentElement.style.color = '#ff4444';
+                } else if (field.type !== 'checkbox' && !field.value.trim()) {
                     isValid = false;
                     field.style.borderColor = '#ff4444';
                 } else {
                     field.style.borderColor = '';
+                    if (field.type === 'checkbox') {
+                        field.parentElement.style.color = '';
+                    }
                 }
             });
 
             if (!isValid) {
+                e.preventDefault();
                 return;
             }
 
-            // Show success message (in a real implementation, this would send data to a server)
+            // Show sending state
             const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-
-            submitBtn.textContent = 'Message Sent!';
-            submitBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+            submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            // Reset form
-            setTimeout(() => {
-                form.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.style.background = '';
-                submitBtn.disabled = false;
-            }, 3000);
+            // Form will submit naturally to Web3Forms
         });
 
         // Clear error styling on input
