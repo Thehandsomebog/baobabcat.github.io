@@ -136,7 +136,7 @@ Redesign baobabcat.com as a modern consulting business website with a dark theme
 
 ### Nice to Have
 - [ ] **Blog CMS integration** - Consider headless CMS (Contentful, Sanity) or static site generator (11ty) for easier blog updates
-- [ ] **Testimonial carousel** - If more than 3 testimonials, add carousel to showcase without overwhelming page
+- [x] **Testimonial carousel** - N/A: Currently only 3 testimonials which display well; implement when more are added
 - [x] **Dark/light mode toggle** - Added theme toggle button with localStorage persistence
-- [ ] **Newsletter signup** - Add email capture form to build subscriber list
-- [ ] **Case studies page** - Add detailed success stories for more credibility beyond brief testimonials
+- [x] **Newsletter signup** - Added email signup form in footer using Web3Forms
+- [x] **Case studies page** - Created case-studies.html with 3 detailed success stories

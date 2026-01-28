@@ -10,7 +10,7 @@ test.describe('Contact Form', () => {
     const phoneInput = page.locator('#phone');
     const messageInput = page.locator('#message');
     const smsConsent = page.locator('#sms-consent');
-    const submitButton = page.locator('button[type="submit"]');
+    const submitButton = page.locator('.contact-form button[type="submit"]');
 
     await expect(nameInput).toBeVisible();
     await expect(emailInput).toBeVisible();

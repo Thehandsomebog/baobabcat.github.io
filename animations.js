@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check for Form Submission Success
     // ========================================
     const urlParams = new URLSearchParams(window.location.search);
+
+    // Contact form success
     if (urlParams.get('submitted') === 'true') {
         const successMessage = document.querySelector('.form-success');
         const form = document.querySelector('.contact-form');
@@ -21,6 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
                     contactSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }, 100);
             }
+            // Clean up URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    }
+
+    // Newsletter subscription success
+    if (urlParams.get('subscribed') === 'true') {
+        const newsletterSuccess = document.querySelector('.newsletter-success');
+        const newsletterForm = document.querySelector('.newsletter-form');
+        if (newsletterSuccess && newsletterForm) {
+            newsletterForm.style.display = 'none';
+            newsletterSuccess.style.display = 'block';
             // Clean up URL
             window.history.replaceState({}, document.title, window.location.pathname);
         }
