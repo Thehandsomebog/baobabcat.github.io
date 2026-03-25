@@ -8,16 +8,31 @@ test.describe('Homepage', () => {
 
   test('should have navigation links', async ({ page }) => {
     await page.goto('/');
-
-    // Check for main navigation elements
     const nav = page.locator('nav');
     await expect(nav).toBeVisible();
   });
 
+  test('should have video hero section', async ({ page }) => {
+    await page.goto('/');
+    const video = page.locator('.hero-video');
+    await expect(video).toBeVisible();
+  });
+
+  test('should have hero headline', async ({ page }) => {
+    await page.goto('/');
+    const title = page.locator('.hero-title');
+    await expect(title).toContainText("The future");
+    await expect(title).toContainText("doesn't wait");
+  });
+
+  test('should have bottom bar with missions', async ({ page }) => {
+    await page.goto('/');
+    const bottomBar = page.locator('.hero-bottom-bar');
+    await expect(bottomBar).toBeVisible();
+  });
+
   test('should navigate to AI Pulse page', async ({ page }) => {
     await page.goto('/');
-
-    // Find and click AI Pulse link
     await page.click('a[href*="ai-pulse"]');
     await expect(page).toHaveURL(/ai-pulse/);
   });

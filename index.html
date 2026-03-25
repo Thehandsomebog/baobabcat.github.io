@@ -50,7 +50,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
     <!-- Structured Data - Organization -->
@@ -182,11 +182,11 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="index.html" class="nav-link-active liquid-glass">Home</a></li>
+                <li><a href="#about">The Team</a></li>
+                <li><a href="#services">What We Build</a></li>
                 <li><a href="ai-pulse.html">AI Pulse</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Let's Talk</a></li>
             </ul>
             <button type="button" class="theme-toggle" aria-label="Toggle theme">
                 <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -197,21 +197,45 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source src="assets/hero-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-fade-rise">
             <h1 class="hero-title">
-                <span class="reveal-word">AI</span>
-                <span class="reveal-word">Consulting</span>
-                <span class="reveal-word">for</span>
-                <span class="reveal-word highlight">Smarter</span>
-                <span class="reveal-word highlight">Business</span>
+                The future <em class="hero-muted">doesn't wait.</em><br>
+                Neither should <em class="hero-muted">you.</em>
             </h1>
-            <p class="hero-subtitle reveal-text">
-                We help businesses harness the power of AI to automate workflows, deploy intelligent assistants, and make data-driven decisions that accelerate growth.
+            <p class="hero-subtitle animate-fade-rise-delay">
+                We architect AI systems that sharpen decisions, automate complexity, and give forward-thinking businesses the edge they need — before the competition catches up.
             </p>
-            <div class="hero-cta reveal-text">
-                <a href="#contact" class="btn btn-primary">Get Started</a>
-                <a href="#services" class="btn btn-secondary">Our Services</a>
+            <div class="hero-cta animate-fade-rise-delay-2">
+                <a href="#contact" class="btn-hero liquid-glass">Begin Journey &rarr;</a>
+            </div>
+        </div>
+        <div class="hero-bottom-bar animate-fade-rise-delay-3">
+            <div class="bottom-bar-reel">
+                <div class="reel-icon">&#9654;</div>
+                <div class="reel-text">
+                    <span class="reel-label">Our Reel</span>
+                    <span class="reel-title">AI Showreel</span>
+                </div>
+            </div>
+            <div class="bottom-bar-missions">
+                <div class="mission-item">
+                    <span class="mission-number">1</span>
+                    <p>To deliver intelligent AI systems that empower businesses to make sharper, faster decisions.</p>
+                </div>
+                <div class="mission-item">
+                    <span class="mission-number">2</span>
+                    <p>To bridge the gap between human ambition and machine intelligence, building a future worth leading.</p>
+                </div>
+            </div>
+            <div class="bottom-bar-socials">
+                <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+                <a href="#" class="social-icon" aria-label="Instagram">ig</a>
+                <a href="#" class="social-icon" aria-label="X">X</a>
             </div>
         </div>
     </section>

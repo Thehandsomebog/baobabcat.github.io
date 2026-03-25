@@ -170,11 +170,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateNavbar() {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(10, 10, 15, 0.95)';
-            navbar.style.borderBottomColor = 'rgba(42, 42, 58, 0.5)';
+            navbar.style.background = 'rgba(10, 14, 26, 0.95)';
+            navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.06)';
         } else {
-            navbar.style.background = 'rgba(10, 10, 15, 0.8)';
-            navbar.style.borderBottomColor = 'rgba(31, 31, 46, 1)';
+            navbar.style.background = 'rgba(10, 14, 26, 0.6)';
+            navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.06)';
         }
     }
 
