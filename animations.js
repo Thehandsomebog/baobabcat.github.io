@@ -147,6 +147,60 @@ document.addEventListener('DOMContentLoaded', function() {
     updateNavbar();
 
     // ========================================
+    // Active Nav Link — Glass Pill Follows Current Section
+    // ========================================
+
+    const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    // Map section IDs to their nav links
+    const sectionNavMap = {};
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            sectionNavMap[href.substring(1)] = link;
+        }
+    });
+
+    // Find the "Home" link (points to index.html, not a #section)
+    const homeLink = document.querySelector('.nav-menu .nav-link[href="index.html"]');
+
+    function setActiveNavLink(link) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        if (link) link.classList.add('active');
+    }
+
+    // Use Intersection Observer to detect which section is in view
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                if (sectionNavMap[id]) {
+                    setActiveNavLink(sectionNavMap[id]);
+                }
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '-40% 0px -40% 0px',
+        threshold: 0
+    });
+
+    sections.forEach(section => {
+        if (sectionNavMap[section.id]) {
+            sectionObserver.observe(section);
+        }
+    });
+
+    // When scrolled to top (hero area), highlight Home
+    window.addEventListener('scroll', function() {
+        const heroBottom = document.querySelector('.hero');
+        if (heroBottom && window.scrollY < heroBottom.offsetHeight * 0.5) {
+            setActiveNavLink(homeLink);
+        }
+    });
+
+    // ========================================
     // Form Enhancement with Real-time Validation
     // ========================================
 
