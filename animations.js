@@ -135,11 +135,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateNavbar() {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(10, 14, 26, 0.4)';
-            navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
+            navbar.style.background = 'rgba(10, 14, 26, 0.2)';
+            navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.1)';
         } else {
-            navbar.style.background = 'rgba(10, 14, 26, 0.25)';
-            navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
+            navbar.style.background = 'rgba(10, 14, 26, 0.12)';
+            navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.1)';
         }
     }
 
