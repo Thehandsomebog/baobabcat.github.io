@@ -1851,7 +1851,8 @@ a.service-card:hover .service-link {
 }
 
 .ai-pulse-page .page-header p {
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Feed Container — glass panel */
