@@ -1814,12 +1814,28 @@ a.service-card:hover .service-link {
    ======================================== */
 .ai-pulse-page {
     padding-top: 100px;
+    background: url('assets/ai-pulse-bg.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Dark overlay for readability */
+.ai-pulse-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 14, 26, 0.5);
+    z-index: 0;
+}
+
+.ai-pulse-page > main {
+    position: relative;
+    z-index: 1;
 }
 
 .ai-pulse-page .page-header {
     text-align: center;
     padding: 60px 0 40px;
-    border-bottom: 1px solid var(--border-color);
     margin-bottom: 40px;
 }
 
@@ -1838,66 +1854,79 @@ a.service-card:hover .service-link {
     color: var(--text-secondary);
 }
 
-/* Feed Container */
+/* Feed Container — glass panel */
 .feed-container {
-    max-width: 600px;
+    max-width: 680px;
     margin: 0 auto;
+    padding: 32px;
     padding-bottom: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-/* Feed Filters */
+/* Feed Filters — glass pills */
 .feed-filters {
     display: flex;
     gap: 8px;
     margin-bottom: 24px;
     padding-bottom: 16px;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
 
 .filter-btn {
     padding: 8px 16px;
-    background: transparent;
-    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     color: var(--text-secondary);
     font-size: 0.875rem;
     font-weight: 500;
     cursor: pointer;
-    transition: var(--transition-fast);
+    transition: all var(--transition-medium);
     white-space: nowrap;
     font-family: var(--font-family);
 }
 
 .filter-btn:hover {
-    border-color: var(--text-muted);
+    border-color: rgba(255, 255, 255, 0.2);
     color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .filter-btn.active {
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    border-color: transparent;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-color: rgba(0, 220, 200, 0.4);
     color: white;
+    box-shadow: 0 0 12px rgba(0, 220, 200, 0.15);
 }
 
-/* Feed Posts */
+/* Feed Posts — glass cards */
 .feed {
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
 .feed-post {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--border-color);
-    transition: var(--transition-fast);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    transition: all var(--transition-medium);
 }
 
 .feed-post:hover {
-    background: rgba(255, 255, 255, 0.02);
-    margin: 0 -16px;
-    padding: 20px 16px;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .post-header {
@@ -1910,8 +1939,8 @@ a.service-card:hover .service-link {
 .post-category {
     display: inline-block;
     padding: 4px 10px;
-    background: var(--bg-tertiary);
-    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -2013,7 +2042,10 @@ a.service-card:hover .service-link {
 /* Responsive Feed */
 @media (max-width: 768px) {
     .feed-container {
-        padding: 0 8px 60px;
+        padding: 16px;
+        padding-bottom: 60px;
+        margin: 0 8px;
+        border-radius: 16px;
     }
 
     .feed-filters {
@@ -2027,12 +2059,7 @@ a.service-card:hover .service-link {
     }
 
     .feed-post {
-        padding: 16px 0;
-    }
-
-    .feed-post:hover {
-        margin: 0 -8px;
-        padding: 16px 8px;
+        padding: 16px;
     }
 
     .post-content {
