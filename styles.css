@@ -1835,8 +1835,14 @@ a.service-card:hover .service-link {
 
 .ai-pulse-page .page-header {
     text-align: center;
-    padding: 60px 0 40px;
-    margin-bottom: 40px;
+    padding: 40px 48px;
+    margin: 0 auto 40px;
+    max-width: 680px;
+    background: rgba(10, 14, 26, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
 }
 
 .ai-pulse-page .page-header h1 {
