@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH13JG6L1S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CH13JG6L1S');
+    </script>
+
+    <title>Contact | BaobabCat AI Consulting</title>
+    <meta name="description" content="Get in touch with BaobabCat. AI consulting for businesses ready to grow.">
+    <meta name="author" content="BaobabCat LLC">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://baobabcat.com/contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baobabcat.com/contact.html">
+    <meta property="og:title" content="Contact | BaobabCat">
+    <meta property="og:description" content="Get in touch with BaobabCat for AI consulting.">
+    <meta property="og:image" content="https://baobabcat.com/og-image.jpg">
+    <meta property="og:site_name" content="BaobabCat">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-contact">
+    <main class="pane contact-pane">
+        <div class="traffic-lights">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+        </div>
+        <div class="pane__label">~/contact</div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <div class="contact-info__cmd">$ cat contact.txt</div>
+            <div class="contact-info__line">
+                <span class="contact-info__key">name     : </span>
+                <span class="contact-info__value">BaobabCat LLC</span>
+            </div>
+            <div class="contact-info__line">
+                <span class="contact-info__key">location : </span>
+                <span class="contact-info__value">3122 Produce Row, Houston, TX 77023</span>
+            </div>
+            <div class="contact-info__line">
+                <span class="contact-info__key">email    : </span>
+                <span class="contact-info__value"><a href="mailto:baobabcatllc@gmail.com">baobabcatllc@gmail.com</a></span>
+            </div>
+            <div class="contact-info__line">
+                <span class="contact-info__key">phone    : </span>
+                <span class="contact-info__value"><a href="tel:+15102995399">(510) 299-5399</a></span>
+            </div>
+            <div class="contact-info__line">
+                <span class="contact-info__key">founder  : </span>
+                <span class="contact-info__value">Dan Djaker</span>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="372f2f8e-3b9a-4338-aaf3-b24cfd63534b">
+            <input type="hidden" name="redirect" value="https://baobabcat.com/?submitted=true">
+            <input type="hidden" name="subject" value="New Contact from BaobabCat Website">
+
+            <div class="form-field">
+                <label for="name">name    : </label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+                <label for="email">email   : </label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+                <label for="phone">phone   : </label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-field">
+                <label for="message">message : </label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <label class="form-checkbox">
+                <input type="checkbox" name="sms_consent">
+                <span class="form-checkbox__indicator"></span>
+                I consent to receive SMS messages from BaobabCat
+            </label>
+
+            <div class="contact-submit">
+                <button type="submit" class="btn-terminal btn-terminal--primary">$ send --message</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Status Bar -->
+    <nav class="status-bar">
+        <span class="status-bar__session">BaobabCat</span>
+        <ul class="status-bar__tabs">
+            <li class="status-bar__tab"><a href="index.html">0:home</a></li>
+            <li class="status-bar__tab"><a href="manifesto.html">1:manifesto</a></li>
+            <li class="status-bar__tab"><a href="what-we-do.html">2:what-we-do</a></li>
+            <li class="status-bar__tab"><a href="blog.html">3:blog</a></li>
+            <li class="status-bar__tab active"><a href="contact.html">4:contact</a></li>
+        </ul>
+    </nav>
+
+    <script src="terminal.js"></script>
+</body>
+</html>

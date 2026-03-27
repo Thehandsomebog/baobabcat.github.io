@@ -413,3 +413,110 @@ body {
     font-size: 13px;
     padding-left: 16px;
 }
+
+/* === CONTACT PAGE === */
+.contact-pane {
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.contact-info {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.contact-info__cmd {
+    color: var(--accent-green);
+    margin-bottom: 16px;
+}
+
+.contact-info__line {
+    margin-bottom: 4px;
+}
+
+.contact-info__key {
+    color: var(--text-muted);
+}
+
+.contact-info__value {
+    color: var(--accent-yellow);
+}
+
+.contact-info__value a {
+    color: var(--accent-yellow);
+}
+
+.contact-info__value a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 24px 32px 40px;
+}
+
+.form-field {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 16px;
+}
+
+.form-field label {
+    color: var(--text-muted);
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.form-field input,
+.form-field textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    padding: 6px 4px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-bottom-color: var(--accent-yellow);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Terminal-style checkbox */
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.form-checkbox__indicator::before {
+    content: '[ ]';
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+}
+
+.form-checkbox input:checked + .form-checkbox__indicator::before {
+    content: '[x]';
+    color: var(--accent-green);
+}
+
+.contact-submit {
+    margin-top: 24px;
+}
