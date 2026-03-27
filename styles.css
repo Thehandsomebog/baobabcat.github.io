@@ -650,3 +650,105 @@ body {
     border-radius: 2px;
     font-size: 13px;
 }
+
+/* === RESPONSIVE === */
+
+/* Tablet */
+@media (max-width: 1023px) {
+    .home-hero__content {
+        padding: 32px;
+    }
+
+    .home-hero__prompt {
+        font-size: 28px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    /* Stack home panes vertically */
+    .home-split {
+        flex-direction: column;
+    }
+
+    .home-hero {
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .home-stats {
+        flex: none;
+    }
+
+    .home-hero__content {
+        padding: 24px 20px;
+    }
+
+    .home-hero__prompt {
+        font-size: 22px;
+        min-height: auto;
+    }
+
+    .home-hero__cta {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Status bar compact */
+    .status-bar {
+        font-size: 11px;
+        padding: 0 8px;
+        overflow-x: auto;
+    }
+
+    .status-bar__session {
+        display: none;
+    }
+
+    .status-bar__tab {
+        padding: 6px 10px;
+    }
+
+    /* Blog: no split on mobile */
+    .blog-list.split {
+        flex: 1;
+    }
+
+    .blog-reader {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        z-index: 999;
+    }
+
+    .blog-entry {
+        flex-wrap: wrap;
+        gap: 4px 12px;
+    }
+
+    .blog-entry__perms {
+        display: none;
+    }
+
+    /* Contact form stack */
+    .form-field {
+        flex-direction: column;
+    }
+
+    .form-field label {
+        margin-bottom: 4px;
+    }
+
+    /* Pane padding */
+    .manifesto-content,
+    .contact-form,
+    .contact-info {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
