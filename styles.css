@@ -269,3 +269,50 @@ body {
     color: var(--accent-green);
     margin-top: 12px;
 }
+
+/* === MANIFESTO PAGE === */
+.manifesto-pane {
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.manifesto-content {
+    padding: 24px 32px 40px;
+}
+
+.manifesto-content h2 {
+    color: var(--accent-yellow);
+    font-size: 20px;
+    margin: 32px 0 12px;
+}
+
+.manifesto-content h2:first-child {
+    margin-top: 0;
+}
+
+.manifesto-content p {
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.manifesto-content hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 24px 0;
+}
+
+.manifesto-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.manifesto-content ul li::before {
+    content: '- ';
+    color: var(--text-muted);
+}
+
+.manifesto-cmd {
+    color: var(--accent-green);
+    margin-bottom: 20px;
+    padding: 12px;
+}
