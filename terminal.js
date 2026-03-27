@@ -102,7 +102,9 @@ function animateStats() {
  */
 function setActiveTab() {
     const path = window.location.pathname;
-    const page = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+    const pageFull = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+    // Normalize: strip .html extension for comparison
+    const page = pageFull.replace(/\.html$/, '') || 'index';
 
     const tabs = document.querySelectorAll('.status-bar__tab');
     tabs.forEach(tab => {
@@ -110,7 +112,9 @@ function setActiveTab() {
         const link = tab.querySelector('a');
         if (link) {
             const href = link.getAttribute('href');
-            if (href === page || (page === '' && href === 'index.html')) {
+            // Normalize href the same way
+            const hrefBase = href ? href.replace(/\.html$/, '') : '';
+            if (hrefBase === page || (page === 'index' && hrefBase === 'index')) {
                 tab.classList.add('active');
             }
         }
