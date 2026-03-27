@@ -520,3 +520,133 @@ body {
 .contact-submit {
     margin-top: 24px;
 }
+
+/* === BLOG PAGE === */
+.blog-container {
+    display: flex;
+    min-height: calc(100vh - var(--status-bar-height));
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-list {
+    flex: 1;
+    padding: 40px 32px;
+    transition: flex 0.3s ease;
+    min-width: 0;
+}
+
+.blog-list.split {
+    flex: 0 0 35%;
+}
+
+.blog-list__header {
+    color: var(--accent-green);
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.blog-entry {
+    display: flex;
+    gap: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s;
+    font-size: 13px;
+}
+
+.blog-entry:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.blog-entry__perms {
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.blog-entry__date {
+    color: var(--text-muted);
+    flex-shrink: 0;
+    min-width: 60px;
+}
+
+.blog-entry__time {
+    color: var(--text-muted);
+    flex-shrink: 0;
+    min-width: 40px;
+}
+
+.blog-entry__name {
+    color: var(--accent-yellow);
+}
+
+/* Blog Reader Pane */
+.blog-reader {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+    background: var(--bg-panel);
+    border-left: 1px solid var(--border);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-reader.open {
+    transform: translateX(0);
+}
+
+.blog-reader__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.blog-reader__label {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.blog-reader__close {
+    color: var(--accent-red);
+    cursor: pointer;
+    font-size: 13px;
+    background: none;
+    border: none;
+    font-family: var(--font-mono);
+    padding: 4px 8px;
+}
+
+.blog-reader__close:hover {
+    color: #ff8a8a;
+}
+
+.blog-reader__content {
+    padding: 24px 32px 40px;
+    flex: 1;
+}
+
+.blog-reader__content h2 {
+    color: var(--accent-yellow);
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.blog-reader__content p {
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.blog-reader__content code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 13px;
+}
