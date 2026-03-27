@@ -122,6 +122,53 @@ function setActiveTab() {
 }
 
 /**
+ * Blog split-pane reader.
+ * Clicking an entry opens the reader pane and shrinks the list.
+ */
+function initBlog() {
+    const list = document.querySelector('.blog-list');
+    const reader = document.querySelector('.blog-reader');
+    const readerContent = document.querySelector('.blog-reader__content');
+    const readerLabel = document.querySelector('.blog-reader__label');
+    const closeBtn = document.querySelector('.blog-reader__close');
+
+    if (!list || !reader) return;
+
+    // Entry click handler
+    document.querySelectorAll('.blog-entry').forEach(entry => {
+        entry.addEventListener('click', () => {
+            const postId = entry.dataset.post;
+            const template = document.getElementById('post-' + postId);
+            if (!template) return;
+
+            // Clear and populate reader using DOM cloning
+            while (readerContent.firstChild) {
+                readerContent.removeChild(readerContent.firstChild);
+            }
+            const content = template.content.cloneNode(true);
+            readerContent.appendChild(content);
+
+            // Update pane label
+            if (readerLabel) {
+                readerLabel.textContent = '~/blog/' + postId + '.md';
+            }
+
+            // Open split
+            list.classList.add('split');
+            reader.classList.add('open');
+        });
+    });
+
+    // Close handler
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            reader.classList.remove('open');
+            list.classList.remove('split');
+        });
+    }
+}
+
+/**
  * Initialize on DOM ready.
  */
 document.addEventListener('DOMContentLoaded', () => {
@@ -131,5 +178,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.body.classList.contains('page-home')) {
         animateHero();
         animateStats();
+    }
+
+    // Blog page
+    if (document.body.classList.contains('page-blog')) {
+        initBlog();
     }
 });
