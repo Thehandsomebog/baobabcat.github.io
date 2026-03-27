@@ -1,42 +1,40 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Blog Page', () => {
-  test('should load the blog page', async ({ page }) => {
-    await page.goto('/blog.html');
-    await expect(page).toHaveTitle(/Blog|Insights/i);
-  });
+    test.beforeEach(async ({ page }) => {
+        await page.goto('/blog.html');
+    });
 
-  test('should display blog cards', async ({ page }) => {
-    await page.goto('/blog.html');
+    test('has correct tab active', async ({ page }) => {
+        const activeTab = page.locator('.status-bar__tab.active');
+        await expect(activeTab).toContainText('3:blog');
+    });
 
-    // Check that blog cards exist
-    const blogCards = page.locator('.blog-card');
-    await expect(blogCards.first()).toBeVisible();
+    test('shows blog entries', async ({ page }) => {
+        const entries = page.locator('.blog-entry');
+        await expect(entries).toHaveCount(3);
+    });
 
-    // Verify at least one post is present
-    const count = await blogCards.count();
-    expect(count).toBeGreaterThan(0);
-  });
+    test('clicking entry opens reader pane', async ({ page }) => {
+        const reader = page.locator('.blog-reader');
+        await expect(reader).not.toHaveClass(/open/);
 
-  test('should have page header with title', async ({ page }) => {
-    await page.goto('/blog.html');
+        await page.locator('.blog-entry').first().click();
+        await expect(reader).toHaveClass(/open/);
+    });
 
-    const header = page.locator('.page-header h1');
-    await expect(header).toBeVisible();
-    await expect(header).toContainText(/Insights|Updates/i);
-  });
+    test('close button hides reader pane', async ({ page }) => {
+        await page.locator('.blog-entry').first().click();
+        const reader = page.locator('.blog-reader');
+        await expect(reader).toHaveClass(/open/);
 
-  test('should have navigation', async ({ page }) => {
-    await page.goto('/blog.html');
+        await page.locator('.blog-reader__close').click();
+        await expect(reader).not.toHaveClass(/open/);
+    });
 
-    const nav = page.locator('nav');
-    await expect(nav).toBeVisible();
-  });
-
-  test('should navigate back to homepage', async ({ page }) => {
-    await page.goto('/blog.html');
-
-    await page.click('.nav-logo');
-    await expect(page).toHaveURL(/index\.html|\/$/);
-  });
+    test('reader shows post content', async ({ page }) => {
+        await page.locator('.blog-entry').first().click();
+        const content = page.locator('.blog-reader__content');
+        await expect(content).not.toBeEmpty();
+    });
 });
