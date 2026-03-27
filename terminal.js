@@ -169,10 +169,34 @@ function initBlog() {
 }
 
 /**
+ * Updates the tmux-style clock in the status bar.
+ * Format: "HH:MM DD-Mon-YY" matching real tmux.
+ */
+function initClock() {
+    const el = document.getElementById('tmux-clock');
+    if (!el) return;
+
+    function update() {
+        const now = new Date();
+        const h = String(now.getHours()).padStart(2, '0');
+        const m = String(now.getMinutes()).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        const mon = months[now.getMonth()];
+        const yr = String(now.getFullYear()).slice(-2);
+        el.textContent = '"* BaobabCat" ' + h + ':' + m + ' ' + day + '-' + mon + '-' + yr;
+    }
+
+    update();
+    setInterval(update, 10000);
+}
+
+/**
  * Initialize on DOM ready.
  */
 document.addEventListener('DOMContentLoaded', () => {
     setActiveTab();
+    initClock();
 
     // Home page animations
     if (document.body.classList.contains('page-home')) {

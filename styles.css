@@ -92,6 +92,12 @@ a:hover {
     color: inherit;
 }
 
+.status-bar__clock {
+    margin-left: auto;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
 /* Page content must not be hidden behind status bar */
 body {
     padding-bottom: var(--status-bar-height);
@@ -706,7 +712,8 @@ body {
         overflow-x: auto;
     }
 
-    .status-bar__session {
+    .status-bar__session,
+    .status-bar__clock {
         display: none;
     }
 
