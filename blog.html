@@ -1,128 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH13JG6L1S"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CH13JG6L1S');
-    </script>
-
-    <title>Blog | BaobabCat AI Consulting</title>
-    <meta name="description" content="AI insights, automation tips, and practical guides for businesses from BaobabCat.">
-    <meta name="author" content="BaobabCat LLC">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://baobabcat.com/blog.html">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://baobabcat.com/blog.html">
-    <meta property="og:title" content="Blog | BaobabCat">
-    <meta property="og:description" content="AI insights and practical guides for businesses.">
-    <meta property="og:image" content="https://baobabcat.com/og-image.jpg">
-    <meta property="og:site_name" content="BaobabCat">
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH13JG6L1S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CH13JG6L1S');
+  </script>
+  <title>Blog | BaobabCat AI Consulting</title>
+  <meta name="description" content="AI insights, automation tips, and practical guides for businesses from BaobabCat.">
+  <meta name="author" content="BaobabCat LLC">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://baobabcat.com/blog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://baobabcat.com/blog.html">
+  <meta property="og:title" content="Blog | BaobabCat">
+  <meta property="og:description" content="AI insights and practical guides for businesses.">
+  <meta property="og:image" content="https://baobabcat.com/og-image.jpg">
+  <meta property="og:site_name" content="BaobabCat">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-blog">
-    <main class="blog-container">
-        <!-- Blog List (directory listing) -->
-        <div class="blog-list">
-            <div class="blog-list__header">$ ls -la ~/blog/</div>
-
-            <div class="blog-entry" data-post="how-we-cut-response-time">
-                <span class="blog-entry__perms">-rw-r--r--</span>
-                <span class="blog-entry__date">Mar 26</span>
-                <span class="blog-entry__time">8min</span>
-                <span class="blog-entry__name">how-we-cut-response-time-80-percent.md</span>
-            </div>
-
-            <div class="blog-entry" data-post="ai-automation-small-business">
-                <span class="blog-entry__perms">-rw-r--r--</span>
-                <span class="blog-entry__date">Mar 20</span>
-                <span class="blog-entry__time">5min</span>
-                <span class="blog-entry__name">ai-automation-for-small-business.md</span>
-            </div>
-
-            <div class="blog-entry" data-post="deploy-ai-stay-human">
-                <span class="blog-entry__perms">-rw-r--r--</span>
-                <span class="blog-entry__date">Mar 15</span>
-                <span class="blog-entry__time">6min</span>
-                <span class="blog-entry__name">why-deploy-ai-stay-human.md</span>
-            </div>
-        </div>
-
-        <!-- Blog Reader Pane (hidden by default) -->
-        <aside class="blog-reader">
-            <div class="blog-reader__header">
-                <span class="blog-reader__label">~/blog/</span>
-                <button class="blog-reader__close">[x] close</button>
-            </div>
-            <div class="blog-reader__content"></div>
-        </aside>
-    </main>
-
-    <!-- Blog Post Templates -->
-    <template id="post-how-we-cut-response-time">
-        <h2># How We Cut Response Time by 80%</h2>
-        <p>When TechFlow Solutions came to us, their customer support team was drowning. Average response time: 4 hours. Customer satisfaction: declining. Team morale: worse.</p>
-        <p>We deployed OpenClaw — our AI-powered customer service platform — and within 6 weeks, response times dropped to under 45 minutes. Here's exactly how we did it.</p>
-        <h2>## The Problem</h2>
-        <p>TechFlow's support team of 12 was handling 500+ tickets daily. Most were repetitive questions that didn't need human expertise. But every ticket went through the same queue, creating bottlenecks for the issues that actually needed a person.</p>
-        <h2>## The Solution</h2>
-        <p>We implemented a three-layer approach: AI triage to categorize and route tickets, automated responses for common questions (about 60% of volume), and smart escalation for complex issues that flagged the right specialist automatically.</p>
-        <h2>## The Results</h2>
-        <p>Response time: 4 hours → 45 minutes. Customer satisfaction: up 23%. Support team now focuses on complex, high-value interactions instead of answering the same questions repeatedly.</p>
-    </template>
-
-    <template id="post-ai-automation-small-business">
-        <h2># AI Automation for Small Business</h2>
-        <p>You don't need a massive budget or a data science team to start using AI. Here are five practical automations that any small business can implement this month.</p>
-        <h2>## 1. Email Triage</h2>
-        <p>Use AI to automatically categorize incoming emails, flag urgent ones, and draft responses for common inquiries. Tools like n8n make this surprisingly easy to set up.</p>
-        <h2>## 2. Meeting Summaries</h2>
-        <p>Stop spending 30 minutes writing meeting notes. AI can transcribe, summarize, and extract action items from any meeting recording.</p>
-        <h2>## 3. Document Processing</h2>
-        <p>Invoices, contracts, applications — AI can extract structured data from documents faster and more accurately than manual data entry.</p>
-        <h2>## 4. Customer FAQ Bot</h2>
-        <p>Build a simple chatbot trained on your existing FAQ and documentation. It handles the easy questions so your team can focus on complex ones.</p>
-        <h2>## 5. Social Media Scheduling</h2>
-        <p>AI can help generate post ideas, write drafts, and optimize posting schedules based on your audience engagement patterns.</p>
-    </template>
-
-    <template id="post-deploy-ai-stay-human">
-        <h2># Why "Deploy AI. Stay Human."</h2>
-        <p>Our tagline isn't just marketing. It's a philosophy that guides every engagement we take on.</p>
-        <p>The AI industry is full of hype. Every week there's a new headline about AI replacing jobs, AI achieving human-level reasoning, AI solving everything. Most of it is noise.</p>
-        <h2>## What We Actually Believe</h2>
-        <p>AI is a tool. A powerful one, but still a tool. The best results happen when you pair smart technology with smart people. When AI handles the repetitive, data-heavy work, humans are free to do what they do best: think creatively, build relationships, make judgment calls.</p>
-        <h2>## What This Means in Practice</h2>
-        <p>We never recommend replacing your team with AI. Instead, we augment them. We find the tasks that drain their time and energy, automate those, and let your people focus on the work that actually matters.</p>
-        <p>That's what "Deploy AI. Stay human." means. Use the technology. Keep the humanity.</p>
-    </template>
-
-    <!-- Status Bar -->
-    <nav class="status-bar">
-        <span class="status-bar__session">BaobabCat</span>
-        <ul class="status-bar__tabs">
-            <li class="status-bar__tab"><a href="index.html">0:home</a></li>
-            <li class="status-bar__tab"><a href="manifesto.html">1:manifesto</a></li>
-            <li class="status-bar__tab"><a href="what-we-do.html">2:what-we-do</a></li>
-            <li class="status-bar__tab active"><a href="blog.html">3:blog</a></li>
-            <li class="status-bar__tab"><a href="contact.html">4:contact</a></li>
-        </ul>
-        <span class="status-bar__clock" id="tmux-clock"></span>
-    </nav>
-
-    <script src="terminal.js"></script>
+  <main class="blog-container">
+    <div class="blog-list">
+      <div class="blog-list__header">$ ls -la ~/blog/</div>
+      <div class="blog-entry" data-post="age-of-ai-agents">
+        <span class="blog-entry__perms">-rw-r--r--</span>
+        <span class="blog-entry__date">Mar 30</span>
+        <span class="blog-entry__time">7min</span>
+        <span class="blog-entry__name">the-age-of-ai-agents.md</span>
+      </div>
+      <div class="blog-entry" data-post="how-we-cut-response-time">
+        <span class="blog-entry__perms">-rw-r--r--</span>
+        <span class="blog-entry__date">Mar 26</span>
+        <span class="blog-entry__time">8min</span>
+        <span class="blog-entry__name">how-we-cut-response-time-80-percent.md</span>
+      </div>
+      <div class="blog-entry" data-post="ai-automation-small-business">
+        <span class="blog-entry__perms">-rw-r--r--</span>
+        <span class="blog-entry__date">Mar 20</span>
+        <span class="blog-entry__time">5min</span>
+        <span class="blog-entry__name">ai-automation-for-small-business.md</span>
+      </div>
+      <div class="blog-entry" data-post="deploy-ai-stay-human">
+        <span class="blog-entry__perms">-rw-r--r--</span>
+        <span class="blog-entry__date">Mar 15</span>
+        <span class="blog-entry__time">6min</span>
+        <span class="blog-entry__name">why-deploy-ai-stay-human.md</span>
+      </div>
+    </div>
+    <aside class="blog-reader">
+      <div class="blog-reader__header">
+        <span class="blog-reader__label">~/blog/</span>
+        <button class="blog-reader__close">[x] close</button>
+      </div>
+      <div class="blog-reader__content"></div>
+    </aside>
+  </main>
+  <template id="post-age-of-ai-agents">
+    <h2># The Age of AI Agents: From Assistant to Colleague</h2>
+    <p>We have spent the last few years talking about AI as a co-pilot, a tool that answers questions, drafts emails, and explains code. But in 2026, the conversation has shifted. AI agents are not just assisting humans anymore. They are completing tasks end-to-end, autonomously.</p>
+    <p>So what changed? And what does it mean for how we work?</p>
+    <h2>## From Chatbots to Agents</h2>
+    <p>The original wave of large language models impressed us with their fluency. Ask a question, get an answer. One turn in, one turn out. Agents are different. They operate across multiple steps using tools, browsing the web, writing and running code, managing files, and looping back on their own mistakes.</p>
+    <p>The mental model shifts from assistant to colleague you can delegate to. And delegation requires trust built over time, not just impressive single-shot performance.</p>
+    <h2>## What Is Actually Working Now</h2>
+    <p><strong>Data pipelines and automation.</strong> Agents that read from one source, transform data, and push it somewhere else are doing real production work. The task is structured, the failure modes are predictable, the loop is tight enough to catch errors.</p>
+    <p><strong>Software development workflows.</strong> From writing unit tests to reviewing pull requests to generating documentation, AI agents are embedded in developer toolchains at most tech companies. The programmer still owns the architecture, agents handle enormous amounts of mechanical work.</p>
+    <p><strong>Research summarization.</strong> Agents that browse, read, synthesize, and produce briefs across dozens of sources in minutes have become indispensable for analysts, lawyers, journalists, and executives.</p>
+    <h2>## What Is Still Hard</h2>
+    <p><strong>Long-horizon planning.</strong> Agents are good at the next step. They are less good at holding a 30-step plan while adapting to surprises. Human intuition still beats most agents in messy, open-ended work.</p>
+    <p><strong>Knowing when to stop and ask.</strong> The most frustrating agent failures are not wrong answers. They are agents that proceed confidently down the wrong path for 20 steps before anyone notices.</p>
+    <h2>## The Bigger Picture</h2>
+    <p>What agents are doing is unbounding human effort. A single person working with well-configured AI agents can now accomplish what would have required a small team. That is not displacement, it is amplification. The challenge for organizations right now is figuring out how to integrate agentic AI without losing the judgment, accountability, and human context that agents cannot replicate. That is exactly what we help businesses navigate.</p>
+  </template>
+  <template id="post-how-we-cut-response-time">
+    <h2># How We Cut Response Time by 80%</h2>
+    <p>When TechFlow Solutions came to us, their customer support team was drowning. Average response time: 4 hours. Customer satisfaction: declining. Team morale: worse.</p>
+    <p>We deployed OpenClaw, our AI-powered customer service platform, and within 6 weeks response times dropped to under 45 minutes. Here is exactly how we did it.</p>
+    <h2>## The Problem</h2>
+    <p>TechFlow support team of 12 was handling 500+ tickets daily. Most were repetitive questions that did not need human expertise. But every ticket went through the same queue, creating bottlenecks for the issues that actually needed a person.</p>
+    <h2>## The Solution</h2>
+    <p>We implemented a three-layer approach: AI triage to categorize and route tickets, automated responses for common questions covering about 60% of volume, and smart escalation for complex issues that flagged the right specialist automatically.</p>
+    <h2>## The Results</h2>
+    <p>Response time: 4 hours to 45 minutes. Customer satisfaction: up 23%. Support team now focuses on complex, high-value interactions instead of answering the same questions repeatedly.</p>
+  </template>
+  <template id="post-ai-automation-small-business">
+    <h2># AI Automation for Small Business</h2>
+    <p>You do not need a massive budget or a data science team to start using AI. Here are five practical automations that any small business can implement this month.</p>
+    <h2>## 1. Email Triage</h2>
+    <p>Use AI to automatically categorize incoming emails, flag urgent ones, and draft responses for common inquiries. Tools like n8n make this surprisingly easy to set up.</p>
+    <h2>## 2. Meeting Summaries</h2>
+    <p>Stop spending 30 minutes writing meeting notes. AI can transcribe, summarize, and extract action items from any meeting recording.</p>
+    <h2>## 3. Document Processing</h2>
+    <p>Invoices, contracts, applications. AI can extract structured data from documents faster and more accurately than manual data entry.</p>
+    <h2>## 4. Customer FAQ Bot</h2>
+    <p>Build a simple chatbot trained on your existing FAQ and documentation. It handles the easy questions so your team can focus on complex ones.</p>
+    <h2>## 5. Social Media Scheduling</h2>
+    <p>AI can help generate post ideas, write drafts, and optimize posting schedules based on your audience engagement patterns.</p>
+  </template>
+  <template id="post-deploy-ai-stay-human">
+    <h2># Why Deploy AI. Stay Human.</h2>
+    <p>Our tagline is not just marketing. It is a philosophy that guides every engagement we take on.</p>
+    <p>The AI industry is full of hype. Every week there is a new headline about AI replacing jobs, AI achieving human-level reasoning, AI solving everything. Most of it is noise.</p>
+    <h2>## What We Actually Believe</h2>
+    <p>AI is a tool. A powerful one, but still a tool. The best results happen when you pair smart technology with smart people. When AI handles the repetitive, data-heavy work, humans are free to do what they do best: think creatively, build relationships, make judgment calls.</p>
+    <h2>## What This Means in Practice</h2>
+    <p>We never recommend replacing your team with AI. Instead, we augment them. We find the tasks that drain their time and energy, automate those, and let your people focus on the work that actually matters.</p>
+    <p>Deploy AI. Stay human. Use the technology. Keep the humanity.</p>
+  </template>
+  <nav class="status-bar">
+    <span class="status-bar__session">BaobabCat</span>
+    <ul class="status-bar__tabs">
+      <li class="status-bar__tab"><a href="index.html">0:home</a></li>
+      <li class="status-bar__tab"><a href="manifesto.html">1:manifesto</a></li>
+      <li class="status-bar__tab"><a href="what-we-do.html">2:what-we-do</a></li>
+      <li class="status-bar__tab active"><a href="blog.html">3:blog</a></li>
+      <li class="status-bar__tab"><a href="contact.html">4:contact</a></li>
+    </ul>
+    <span class="status-bar__clock" id="tmux-clock"></span>
+  </nav>
+  <script src="terminal.js"></script>
 </body>
 </html>
