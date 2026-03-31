@@ -32,6 +32,12 @@
   <main class="blog-container">
     <div class="blog-list">
       <div class="blog-list__header">$ ls -la ~/blog/</div>
+      <div class="blog-entry" data-post="why-ai-pilots-stall">
+        <span class="blog-entry__perms">-rw-r--r--</span>
+        <span class="blog-entry__date">Mar 31</span>
+        <span class="blog-entry__time">6min</span>
+        <span class="blog-entry__name">why-ai-pilots-stall.md</span>
+      </div>
       <div class="blog-entry" data-post="age-of-ai-agents">
         <span class="blog-entry__perms">-rw-r--r--</span>
         <span class="blog-entry__date">Mar 30</span>
@@ -65,6 +71,30 @@
       <div class="blog-reader__content"></div>
     </aside>
   </main>
+
+  <template id="post-why-ai-pilots-stall">
+    <h2># Why Your AI Pilot Keeps Stalling (And How to Fix It)</h2>
+    <p>You ran the pilot. The demo looked great. Leadership signed off. And then... nothing. Six months later, the AI tool is barely used, the team has reverted to spreadsheets, and someone is asking if you should try a different vendor.</p>
+    <p>This is not a technology problem. It is a deployment problem. And it is more common than anyone in the AI industry wants to admit.</p>
+    <h2>## The Gap Between Demo and Production</h2>
+    <p>AI pilots fail in predictable ways. The demo environment is clean: curated data, cooperative users, a single well-defined use case. Production is messy: inconsistent data formats, resistant workflows, edge cases nobody thought to test.</p>
+    <p>The technical performance of the model itself is rarely the issue. At the enterprise level, today's models are good enough for most business tasks. What breaks is the integration between the AI and the actual work.</p>
+    <h2>## The Three Most Common Failure Modes</h2>
+    <p><strong>Nobody owns it.</strong> AI deployments that succeed have a champion — someone whose job is tied to making it work. Pilots that stall are everyone's responsibility, which means no one's. When the first friction appears (and it always does), there is no one empowered to push through it.</p>
+    <p><strong>The workflow wasn't redesigned.</strong> This is the most painful one to diagnose. You cannot drop AI into an existing process and expect it to improve. The process was designed around human constraints: working memory, attention span, communication overhead. AI has different constraints. If you hand an AI tool to your team without changing the workflow around it, you are adding complexity, not reducing it.</p>
+    <p><strong>The feedback loop is broken.</strong> AI systems need to be corrected, refined, and improved over time. Most pilots launch without any mechanism for collecting feedback, flagging errors, or iterating on prompts and configuration. The system degrades. People lose trust. Adoption drops.</p>
+    <h2>## What a Successful Deployment Actually Looks Like</h2>
+    <p>Start smaller than you think you need to. Not a pilot across three departments — one workflow, one team, one person who cares about making it work. Get that right before you scale.</p>
+    <p>Redesign the workflow before you launch the tool. Map the current process step by step. Identify which steps are bottlenecks, which are low-judgment, which require human context that AI cannot access. Build the AI into the gaps, not the whole thing.</p>
+    <p>Build feedback in from day one. Even a simple channel where the team can flag when the AI gets something wrong is better than nothing. The signal you collect in the first 30 days is more valuable than anything a vendor will tell you.</p>
+    <p>Measure the right things. Not "do people use it" — that is a lagging indicator. Measure time-to-completion on specific tasks, error rates, and whether the people using it feel like it helps. Talk to them directly. Regularly.</p>
+    <h2>## The Uncomfortable Truth</h2>
+    <p>Most AI pilots are not really pilots. They are demos that ran a little longer. A real pilot has a hypothesis ("we believe this will reduce processing time by 30%"), a measurement plan, a defined timeline, and a decision point at the end.</p>
+    <p>If your pilot does not have those things, you are not testing whether AI can help you. You are paying for an extended demonstration.</p>
+    <p>The gap between "AI is promising" and "AI is working in our business" is not filled by better models or bigger budgets. It is filled by disciplined implementation, honest feedback loops, and someone with enough authority to say: we are going to do this differently than we did it before.</p>
+    <p>That is the work we do. Not selling AI, but making it land.</p>
+  </template>
+
   <template id="post-age-of-ai-agents">
     <h2># The Age of AI Agents: From Assistant to Colleague</h2>
     <p>We have spent the last few years talking about AI as a co-pilot, a tool that answers questions, drafts emails, and explains code. But in 2026, the conversation has shifted. AI agents are not just assisting humans anymore. They are completing tasks end-to-end, autonomously.</p>
@@ -82,6 +112,7 @@
     <h2>## The Bigger Picture</h2>
     <p>What agents are doing is unbounding human effort. A single person working with well-configured AI agents can now accomplish what would have required a small team. That is not displacement, it is amplification. The challenge for organizations right now is figuring out how to integrate agentic AI without losing the judgment, accountability, and human context that agents cannot replicate. That is exactly what we help businesses navigate.</p>
   </template>
+
   <template id="post-how-we-cut-response-time">
     <h2># How We Cut Response Time by 80%</h2>
     <p>When TechFlow Solutions came to us, their customer support team was drowning. Average response time: 4 hours. Customer satisfaction: declining. Team morale: worse.</p>
@@ -93,6 +124,7 @@
     <h2>## The Results</h2>
     <p>Response time: 4 hours to 45 minutes. Customer satisfaction: up 23%. Support team now focuses on complex, high-value interactions instead of answering the same questions repeatedly.</p>
   </template>
+
   <template id="post-ai-automation-small-business">
     <h2># AI Automation for Small Business</h2>
     <p>You do not need a massive budget or a data science team to start using AI. Here are five practical automations that any small business can implement this month.</p>
@@ -107,6 +139,7 @@
     <h2>## 5. Social Media Scheduling</h2>
     <p>AI can help generate post ideas, write drafts, and optimize posting schedules based on your audience engagement patterns.</p>
   </template>
+
   <template id="post-deploy-ai-stay-human">
     <h2># Why Deploy AI. Stay Human.</h2>
     <p>Our tagline is not just marketing. It is a philosophy that guides every engagement we take on.</p>
@@ -117,6 +150,7 @@
     <p>We never recommend replacing your team with AI. Instead, we augment them. We find the tasks that drain their time and energy, automate those, and let your people focus on the work that actually matters.</p>
     <p>Deploy AI. Stay human. Use the technology. Keep the humanity.</p>
   </template>
+
   <nav class="status-bar">
     <span class="status-bar__session">BaobabCat</span>
     <ul class="status-bar__tabs">
