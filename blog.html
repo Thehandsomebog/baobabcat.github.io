@@ -32,6 +32,12 @@
   <main class="blog-container">
     <div class="blog-list">
       <div class="blog-list__header">$ ls -la ~/blog/</div>
+      <div class="blog-entry" data-post="measuring-ai-roi">
+      <span class="blog-entry__perms">-rw-r--r--</span>
+      <span class="blog-entry__date">Apr 01</span>
+      <span class="blog-entry__time">7min</span>
+      <span class="blog-entry__name">measuring-ai-roi.md</span>
+    </div>
       <div class="blog-entry" data-post="why-ai-pilots-stall">
         <span class="blog-entry__perms">-rw-r--r--</span>
         <span class="blog-entry__date">Mar 31</span>
@@ -71,6 +77,36 @@
       <div class="blog-reader__content"></div>
     </aside>
   </main>
+
+  <template id="post-measuring-ai-roi">
+  <h2># Measuring AI ROI: The Metrics That Actually Matter</h2>
+  <p>Every executive wants to know the same thing before signing off on an AI project: what's the return? It's a fair question. But the way most teams try to answer it — vague gestures at "productivity gains" or a single before-and-after comparison — sets projects up for disappointment. Here's how to measure AI ROI in a way that actually holds up.</p>
+
+  <h2>## Why Most AI ROI Calculations Miss the Mark</h2>
+  <p>The most common mistake is treating AI like a software license: buy it, deploy it, watch the savings roll in. Real deployments don't work that way. An AI tool that handles 70% of your customer inquiries automatically is genuinely valuable — but only if you've measured what the baseline looked like, accounted for the edge cases humans still need to handle, and tracked quality alongside volume.</p>
+  <p>Measuring only cost reduction misses a large part of the picture. Faster turnaround, fewer errors, better consistency, and employee time redirected to higher-value work all compound in ways that a simple cost comparison won't capture.</p>
+
+  <h2>## Set Your Baseline Before You Deploy</h2>
+  <p>This sounds obvious, but most teams skip it. Before you flip the switch on any AI system, document the current state in hard numbers: average handle time per task, error rate, throughput per employee per week, and cost per unit of output. Without this, you're guessing at the improvement later.</p>
+  <p>If you're automating invoice processing, count how long it takes a human to process a batch today, what the error rate is, and how many exceptions require manual review. Those numbers become your baseline. Everything after deployment gets measured against them.</p>
+
+  <h2>## The Metrics That Actually Tell You Something</h2>
+  <p><strong>Throughput per hour</strong> is usually the cleanest signal. If your team processes 40 support tickets per day and the AI system handles 200, that's a meaningful change you can quantify. Pair it with a quality check — customer satisfaction scores, resolution accuracy, or escalation rates — so you're not just measuring speed.</p>
+  <p><strong>Error and exception rate</strong> matters more than most people realize. An AI that handles high volume but generates a wave of exceptions for humans to fix can actually increase workload. Track the percentage of tasks the system completes without any human intervention, and track whether that percentage holds stable or degrades over time.</p>
+  <p><strong>Time-to-completion</strong> for processes end-to-end, not just the AI's portion. Sometimes AI speeds up one step while creating a bottleneck somewhere else. The metric you care about is the whole workflow, not just the automated slice.</p>
+  <p><strong>Employee time reallocation</strong> is the metric most teams forget to close the loop on. If the AI handles routine tasks, what did the team actually do with the reclaimed hours? If the answer is "more of the same backlog," the ROI story is solid. If the hours weren't redirected, that's a management and workflow issue worth addressing.</p>
+
+  <h2>## What Soft Benefits Are Worth Counting</h2>
+  <p>Consistency is real value. A human team will produce slightly different outputs depending on who handles a task and when. An AI system produces the same output at 2am on a Sunday as it does Monday morning. For compliance-heavy workflows, customer communications, or quality-sensitive operations, that consistency has monetary value — even if it's harder to put a number on it directly.</p>
+  <p>Scalability headroom is another one. If you can double order volume without doubling headcount, that's a structural cost advantage that shows up in margin when growth comes. It doesn't show up in today's ROI calculation, but it's worth noting in any business case.</p>
+
+  <h2>## A Simple 90-Day Review Framework</h2>
+  <p>At the 30-day mark, focus on stability: is the system behaving as expected, and are the baseline metrics moving in the right direction? At 60 days, compare throughput, error rates, and time-to-completion against your pre-deployment baseline. At 90 days, calculate the actual cost-per-unit-of-output and compare it to the human baseline. By then you should also have enough quality data to assess whether the improvement is holding.</p>
+  <p>If the numbers look good at 90 days, you have a real case for expanding scope. If they don't, you have specific metrics to diagnose against rather than a vague sense that something isn't working.</p>
+
+  <h2>## The Bottom Line</h2>
+  <p>AI ROI is measurable, but it requires discipline before deployment, not just after. Set your baselines, pick metrics that reflect the full workflow, and check in at regular intervals. The teams that do this consistently are the ones that can point to real numbers when leadership asks — and the ones that catch problems early enough to fix them.</p>
+</template>
 
   <template id="post-why-ai-pilots-stall">
     <h2># Why Your AI Pilot Keeps Stalling (And How to Fix It)</h2>
