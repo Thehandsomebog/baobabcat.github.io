@@ -32,12 +32,18 @@
   <main class="blog-container">
     <div class="blog-list">
       <div class="blog-list__header">$ ls -la ~/blog/</div>
+      <div class="blog-entry" data-post="fine-tune-vs-prompt">
+        <span class="blog-entry__perms">-rw-r--r--</span>
+        <span class="blog-entry__date">Apr 07</span>
+        <span class="blog-entry__time">6min</span>
+        <span class="blog-entry__name">fine-tune-vs-prompt.md</span>
+      </div>
       <div class="blog-entry" data-post="measuring-ai-roi">
-      <span class="blog-entry__perms">-rw-r--r--</span>
-      <span class="blog-entry__date">Apr 01</span>
-      <span class="blog-entry__time">7min</span>
-      <span class="blog-entry__name">measuring-ai-roi.md</span>
-    </div>
+        <span class="blog-entry__perms">-rw-r--r--</span>
+        <span class="blog-entry__date">Apr 01</span>
+        <span class="blog-entry__time">7min</span>
+        <span class="blog-entry__name">measuring-ai-roi.md</span>
+      </div>
       <div class="blog-entry" data-post="why-ai-pilots-stall">
         <span class="blog-entry__perms">-rw-r--r--</span>
         <span class="blog-entry__date">Mar 31</span>
@@ -78,35 +84,52 @@
     </aside>
   </main>
 
+  <template id="post-fine-tune-vs-prompt">
+    <h2># Fine-Tune or Prompt? A Practical Decision Guide</h2>
+    <p>Every business team that has been working with AI for more than a few months eventually hits the same question: should we fine-tune a model on our data, or can we get what we need through better prompts? The answer matters because the two paths are very different in cost, time, and maintenance overhead. Here is a practical framework for making the call.</p>
+    <h2>## What Fine-Tuning Actually Does</h2>
+    <p>Fine-tuning takes a pre-trained model and continues training it on your specific data. The model learns patterns from your examples: your terminology, your tone, your typical inputs and outputs. Done well, it produces a model that behaves more consistently for your specific use case and often performs better on narrowly defined tasks.</p>
+    <p>What it does not do: make the model smarter, give it knowledge it does not have, or fix fundamental capability gaps. If the base model cannot do a task, fine-tuning on a few hundred examples will not change that.</p>
+    <h2>## When Prompting Is Enough</h2>
+    <p>For most business use cases, prompting â including system instructions, few-shot examples, and retrieval-augmented generation â is the right starting point. The reasons are practical.</p>
+    <p><strong>Fast iteration.</strong> A prompt can be revised in minutes. A fine-tuning run takes hours and costs money. If you are still figuring out what you need, stay flexible. <strong>Low volume.</strong> If you are running a few hundred AI operations per day, the cost difference between a fine-tuned model and a well-prompted general model is rarely worth the overhead. <strong>Evolving requirements.</strong> If your use case is still changing â new categories, new data formats, new edge cases â you want to update behavior by editing a prompt file, not by re-training.</p>
+    <p>Retrieval-augmented generation (RAG) also solves most data freshness problems without fine-tuning. If your use case requires access to current or proprietary information, build a retrieval layer first. In many cases it fully eliminates the need for custom training.</p>
+    <h2>## When Fine-Tuning Earns Its Keep</h2>
+    <p>There are real cases where fine-tuning is the right call, but they are more specific than people assume.</p>
+    <p><strong>Consistent output format.</strong> If your downstream system needs AI output to follow a rigid schema â a specific JSON structure, fixed field names, strict formatting rules â fine-tuning can make that behavior more stable and reduce the prompt overhead required to enforce it.</p>
+    <p><strong>Domain-specific terminology.</strong> Legal, medical, manufacturing, finance: if your business uses language that general models handle imprecisely, fine-tuning on domain examples can meaningfully improve accuracy and reduce hallucinations in that vocabulary.</p>
+    <p><strong>Latency and cost at scale.</strong> A smaller fine-tuned model can sometimes outperform a much larger general model on a narrow task. If you are running millions of operations and cost-per-call matters, a purpose-built smaller model may make economic sense.</p>
+    <p><strong>Proprietary style at high volume.</strong> If brand voice consistency matters and you are producing enormous volumes of content, fine-tuning can encode style more reliably than prompting alone â especially where prompt tokens are expensive at scale.</p>
+    <h2>## A Simple Decision Framework</h2>
+    <p>Start with prompting. Measure the results. If you can reach 80â90% of your target quality with well-designed prompts and a retrieval layer, ship that. Fine-tuning is an investment: it requires curating training data, managing model versions, and re-running fine-tunes when the base model updates. That overhead is only worth it when you have a clearly defined and stable task, enough high-quality labeled examples (typically hundreds to thousands), and you have already hit the ceiling of what prompting can deliver.</p>
+    <p>The mistake most teams make is jumping to fine-tuning because it feels more rigorous, or because a vendor demo made it look easy. The teams getting the most out of AI right now are, with few exceptions, doing it with well-architected prompts and retrieval â not custom models.</p>
+    <h2>## The Bottom Line</h2>
+    <p>Prompt first. Measure carefully. Fine-tune when the data is clean, the task is stable, and the ceiling on prompting is real. In most cases, you will not need to â and starting with prompts keeps you moving fast enough to find out.</p>
+  </template>
+
   <template id="post-measuring-ai-roi">
-  <h2># Measuring AI ROI: The Metrics That Actually Matter</h2>
-  <p>Every executive wants to know the same thing before signing off on an AI project: what's the return? It's a fair question. But the way most teams try to answer it — vague gestures at "productivity gains" or a single before-and-after comparison — sets projects up for disappointment. Here's how to measure AI ROI in a way that actually holds up.</p>
-
-  <h2>## Why Most AI ROI Calculations Miss the Mark</h2>
-  <p>The most common mistake is treating AI like a software license: buy it, deploy it, watch the savings roll in. Real deployments don't work that way. An AI tool that handles 70% of your customer inquiries automatically is genuinely valuable — but only if you've measured what the baseline looked like, accounted for the edge cases humans still need to handle, and tracked quality alongside volume.</p>
-  <p>Measuring only cost reduction misses a large part of the picture. Faster turnaround, fewer errors, better consistency, and employee time redirected to higher-value work all compound in ways that a simple cost comparison won't capture.</p>
-
-  <h2>## Set Your Baseline Before You Deploy</h2>
-  <p>This sounds obvious, but most teams skip it. Before you flip the switch on any AI system, document the current state in hard numbers: average handle time per task, error rate, throughput per employee per week, and cost per unit of output. Without this, you're guessing at the improvement later.</p>
-  <p>If you're automating invoice processing, count how long it takes a human to process a batch today, what the error rate is, and how many exceptions require manual review. Those numbers become your baseline. Everything after deployment gets measured against them.</p>
-
-  <h2>## The Metrics That Actually Tell You Something</h2>
-  <p><strong>Throughput per hour</strong> is usually the cleanest signal. If your team processes 40 support tickets per day and the AI system handles 200, that's a meaningful change you can quantify. Pair it with a quality check — customer satisfaction scores, resolution accuracy, or escalation rates — so you're not just measuring speed.</p>
-  <p><strong>Error and exception rate</strong> matters more than most people realize. An AI that handles high volume but generates a wave of exceptions for humans to fix can actually increase workload. Track the percentage of tasks the system completes without any human intervention, and track whether that percentage holds stable or degrades over time.</p>
-  <p><strong>Time-to-completion</strong> for processes end-to-end, not just the AI's portion. Sometimes AI speeds up one step while creating a bottleneck somewhere else. The metric you care about is the whole workflow, not just the automated slice.</p>
-  <p><strong>Employee time reallocation</strong> is the metric most teams forget to close the loop on. If the AI handles routine tasks, what did the team actually do with the reclaimed hours? If the answer is "more of the same backlog," the ROI story is solid. If the hours weren't redirected, that's a management and workflow issue worth addressing.</p>
-
-  <h2>## What Soft Benefits Are Worth Counting</h2>
-  <p>Consistency is real value. A human team will produce slightly different outputs depending on who handles a task and when. An AI system produces the same output at 2am on a Sunday as it does Monday morning. For compliance-heavy workflows, customer communications, or quality-sensitive operations, that consistency has monetary value — even if it's harder to put a number on it directly.</p>
-  <p>Scalability headroom is another one. If you can double order volume without doubling headcount, that's a structural cost advantage that shows up in margin when growth comes. It doesn't show up in today's ROI calculation, but it's worth noting in any business case.</p>
-
-  <h2>## A Simple 90-Day Review Framework</h2>
-  <p>At the 30-day mark, focus on stability: is the system behaving as expected, and are the baseline metrics moving in the right direction? At 60 days, compare throughput, error rates, and time-to-completion against your pre-deployment baseline. At 90 days, calculate the actual cost-per-unit-of-output and compare it to the human baseline. By then you should also have enough quality data to assess whether the improvement is holding.</p>
-  <p>If the numbers look good at 90 days, you have a real case for expanding scope. If they don't, you have specific metrics to diagnose against rather than a vague sense that something isn't working.</p>
-
-  <h2>## The Bottom Line</h2>
-  <p>AI ROI is measurable, but it requires discipline before deployment, not just after. Set your baselines, pick metrics that reflect the full workflow, and check in at regular intervals. The teams that do this consistently are the ones that can point to real numbers when leadership asks — and the ones that catch problems early enough to fix them.</p>
-</template>
+    <h2># Measuring AI ROI: The Metrics That Actually Matter</h2>
+    <p>Every executive wants to know the same thing before signing off on an AI project: what's the return? It's a fair question. But the way most teams try to answer it â vague gestures at "productivity gains" or a single before-and-after comparison â sets projects up for disappointment. Here's how to measure AI ROI in a way that actually holds up.</p>
+    <h2>## Why Most AI ROI Calculations Miss the Mark</h2>
+    <p>The most common mistake is treating AI like a software license: buy it, deploy it, watch the savings roll in. Real deployments don't work that way. An AI tool that handles 70% of your customer inquiries automatically is genuinely valuable â but only if you've measured what the baseline looked like, accounted for the edge cases humans still need to handle, and tracked quality alongside volume.</p>
+    <p>Measuring only cost reduction misses a large part of the picture. Faster turnaround, fewer errors, better consistency, and employee time redirected to higher-value work all compound in ways that a simple cost comparison won't capture.</p>
+    <h2>## Set Your Baseline Before You Deploy</h2>
+    <p>This sounds obvious, but most teams skip it. Before you flip the switch on any AI system, document the current state in hard numbers: average handle time per task, error rate, throughput per employee per week, and cost per unit of output. Without this, you're guessing at the improvement later.</p>
+    <p>If you're automating invoice processing, count how long it takes a human to process a batch today, what the error rate is, and how many exceptions require manual review. Those numbers become your baseline. Everything after deployment gets measured against them.</p>
+    <h2>## The Metrics That Actually Tell You Something</h2>
+    <p><strong>Throughput per hour</strong> is usually the cleanest signal. If your team processes 40 support tickets per day and the AI system handles 200, that's a meaningful change you can quantify. Pair it with a quality check â customer satisfaction scores, resolution accuracy, or escalation rates â so you're not just measuring speed.</p>
+    <p><strong>Error and exception rate</strong> matters more than most people realize. An AI that handles high volume but generates a wave of exceptions for humans to fix can actually increase workload. Track the percentage of tasks the system completes without any human intervention, and track whether that percentage holds stable or degrades over time.</p>
+    <p><strong>Time-to-completion</strong> for processes end-to-end, not just the AI's portion. Sometimes AI speeds up one step while creating a bottleneck somewhere else. The metric you care about is the whole workflow, not just the automated slice.</p>
+    <p><strong>Employee time reallocation</strong> is the metric most teams forget to close the loop on. If the AI handles routine tasks, what did the team actually do with the reclaimed hours? If the answer is "more of the same backlog," the ROI story is solid. If the hours weren't redirected, that's a management and workflow issue worth addressing.</p>
+    <h2>## What Soft Benefits Are Worth Counting</h2>
+    <p>Consistency is real value. A human team will produce slightly different outputs depending on who handles a task and when. An AI system produces the same output at 2am on a Sunday as it does Monday morning. For compliance-heavy workflows, customer communications, or quality-sensitive operations, that consistency has monetary value â even if it's harder to put a number on it directly.</p>
+    <p>Scalability headroom is another one. If you can double order volume without doubling headcount, that's a structural cost advantage that shows up in margin when growth comes. It doesn't show up in today's ROI calculation, but it's worth noting in any business case.</p>
+    <h2>## A Simple 90-Day Review Framework</h2>
+    <p>At the 30-day mark, focus on stability: is the system behaving as expected, and are the baseline metrics moving in the right direction? At 60 days, compare throughput, error rates, and time-to-completion against your pre-deployment baseline. At 90 days, calculate the actual cost-per-unit-of-output and compare it to the human baseline. By then you should also have enough quality data to assess whether the improvement is holding.</p>
+    <p>If the numbers look good at 90 days, you have a real case for expanding scope. If they don't, you have specific metrics to diagnose against rather than a vague sense that something isn't working.</p>
+    <h2>## The Bottom Line</h2>
+    <p>AI ROI is measurable, but it requires discipline before deployment, not just after. Set your baselines, pick metrics that reflect the full workflow, and check in at regular intervals. The teams that do this consistently are the ones that can point to real numbers when leadership asks â and the ones that catch problems early enough to fix them.</p>
+  </template>
 
   <template id="post-why-ai-pilots-stall">
     <h2># Why Your AI Pilot Keeps Stalling (And How to Fix It)</h2>
@@ -116,14 +139,14 @@
     <p>AI pilots fail in predictable ways. The demo environment is clean: curated data, cooperative users, a single well-defined use case. Production is messy: inconsistent data formats, resistant workflows, edge cases nobody thought to test.</p>
     <p>The technical performance of the model itself is rarely the issue. At the enterprise level, today's models are good enough for most business tasks. What breaks is the integration between the AI and the actual work.</p>
     <h2>## The Three Most Common Failure Modes</h2>
-    <p><strong>Nobody owns it.</strong> AI deployments that succeed have a champion — someone whose job is tied to making it work. Pilots that stall are everyone's responsibility, which means no one's. When the first friction appears (and it always does), there is no one empowered to push through it.</p>
+    <p><strong>Nobody owns it.</strong> AI deployments that succeed have a champion â someone whose job is tied to making it work. Pilots that stall are everyone's responsibility, which means no one's. When the first friction appears (and it always does), there is no one empowered to push through it.</p>
     <p><strong>The workflow wasn't redesigned.</strong> This is the most painful one to diagnose. You cannot drop AI into an existing process and expect it to improve. The process was designed around human constraints: working memory, attention span, communication overhead. AI has different constraints. If you hand an AI tool to your team without changing the workflow around it, you are adding complexity, not reducing it.</p>
     <p><strong>The feedback loop is broken.</strong> AI systems need to be corrected, refined, and improved over time. Most pilots launch without any mechanism for collecting feedback, flagging errors, or iterating on prompts and configuration. The system degrades. People lose trust. Adoption drops.</p>
     <h2>## What a Successful Deployment Actually Looks Like</h2>
-    <p>Start smaller than you think you need to. Not a pilot across three departments — one workflow, one team, one person who cares about making it work. Get that right before you scale.</p>
+    <p>Start smaller than you think you need to. Not a pilot across three departments â one workflow, one team, one person who cares about making it work. Get that right before you scale.</p>
     <p>Redesign the workflow before you launch the tool. Map the current process step by step. Identify which steps are bottlenecks, which are low-judgment, which require human context that AI cannot access. Build the AI into the gaps, not the whole thing.</p>
     <p>Build feedback in from day one. Even a simple channel where the team can flag when the AI gets something wrong is better than nothing. The signal you collect in the first 30 days is more valuable than anything a vendor will tell you.</p>
-    <p>Measure the right things. Not "do people use it" — that is a lagging indicator. Measure time-to-completion on specific tasks, error rates, and whether the people using it feel like it helps. Talk to them directly. Regularly.</p>
+    <p>Measure the right things. Not "do people use it" â that is a lagging indicator. Measure time-to-completion on specific tasks, error rates, and whether the people using it feel like it helps. Talk to them directly. Regularly.</p>
     <h2>## The Uncomfortable Truth</h2>
     <p>Most AI pilots are not really pilots. They are demos that ran a little longer. A real pilot has a hypothesis ("we believe this will reduce processing time by 30%"), a measurement plan, a defined timeline, and a decision point at the end.</p>
     <p>If your pilot does not have those things, you are not testing whether AI can help you. You are paying for an extended demonstration.</p>
