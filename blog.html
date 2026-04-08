@@ -32,6 +32,12 @@
   <main class="blog-container">
     <div class="blog-list">
       <div class="blog-list__header">$ ls -la ~/blog/</div>
+      <div class="blog-entry" data-post="model-selection-hierarchy">
+        <span class="blog-entry__perms">-rw-r--r--</span>
+        <span class="blog-entry__date">Apr 08</span>
+        <span class="blog-entry__time">6min</span>
+        <span class="blog-entry__name">model-selection-hierarchy.md</span>
+      </div>
       <div class="blog-entry" data-post="fine-tune-vs-prompt">
         <span class="blog-entry__perms">-rw-r--r--</span>
         <span class="blog-entry__date">Apr 07</span>
@@ -83,6 +89,24 @@
       <div class="blog-reader__content"></div>
     </aside>
   </main>
+
+  <template id="post-model-selection-hierarchy">
+    <h2># Picking the Right Model for the Job</h2>
+    <p>Most businesses making serious use of AI in 2026 are running more than one model. A large, capable model for complex reasoning. A faster, cheaper model for high-volume simple work. Increasingly, specialized models for specific domains. The question is no longer which model is best — that changes every few months anyway — but how do you route the right work to the right model?</p>
+    <h2>## The Three Tiers Worth Knowing</h2>
+    <p><strong>Tier 1: Large, capable models.</strong> Frontier models handling complex reasoning, nuanced writing, multi-step analysis. Right for tasks where quality matters most and volume is manageable: drafting legal summaries, analyzing edge cases, handling escalations requiring contextual judgment. The tradeoff is cost and latency. Running everything through your most powerful model is expensive and slower than necessary.</p>
+    <p><strong>Tier 2: Fast, efficient models.</strong> The mid-tier has gotten surprisingly capable. Tasks that needed a large model 18 months ago — classification, extraction, summarization, basic Q&A — now run well on smaller, faster models at a fraction of the cost. For high-volume operations processing thousands of requests per day, this tier is where most ROI lives.</p>
+    <p><strong>Tier 3: Specialized or fine-tuned models.</strong> Domain-specific models trained on legal, medical, financial, or industry data can outperform general models on narrow tasks at lower cost. Not the right starting point for most businesses, but worth evaluating if you are at scale in a specialized domain.</p>
+    <h2>## How to Route</h2>
+    <p>The practical question: how do you decide which model handles which request? <strong>Start with task complexity as your primary signal.</strong> Most business AI workflows break into a few task types: classification, extraction, generation, and reasoning. Classification and extraction are almost always Tier 2 work. Multi-step reasoning or anything requiring nuanced judgment belongs in Tier 1.</p>
+    <p><strong>Build a routing layer.</strong> Rather than hardcoding one model across your entire application, route requests programmatically based on task type or a lightweight complexity check. A simple classifier can decide whether a request needs deep reasoning or a quick answer — and send it to the right model accordingly. This does not have to be sophisticated to start. Even a rules-based router based on task category delivers most of the benefit.</p>
+    <p><strong>Use cost and quality data to calibrate.</strong> Once routing is in place, pull the actual numbers. You will often find that 60 to 70 percent of volume can shift down a tier without any quality degradation. That compound savings matters at scale.</p>
+    <h2>## The Mistake Most Teams Make</h2>
+    <p>Defaulting to one model for everything — usually the most capable one — because it feels safer. The reasoning is understandable: nobody wants to own quality problems that come from using a cheaper model. But ignoring the cost side leads to budgets that cannot scale, and projects that get canceled before they prove their value.</p>
+    <p>The inverse mistake is equally common: aggressively cutting to the cheapest tier and discovering that quality problems create downstream rework that costs more than the model savings. The goal is not minimizing model cost in isolation. It is finding the tier that delivers acceptable quality at sustainable cost for each task type, and measuring that rigorously rather than guessing.</p>
+    <h2>## The Bottom Line</h2>
+    <p>Model capabilities are evolving fast enough that specific recommendations will be outdated in months. What stays constant is the principle: match the tool to the job. Build a routing layer, monitor quality at each tier, and let the data tell you where you are over- or under-invested. That discipline will serve you regardless of what models are available next quarter.</p>
+  </template>
 
   <template id="post-fine-tune-vs-prompt">
     <h2># Fine-Tune or Prompt? A Practical Decision Guide</h2>
