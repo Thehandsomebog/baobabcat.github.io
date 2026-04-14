@@ -17,6 +17,7 @@ test.describe('Home Page', () => {
   test('renders homepage sections for services, blog preview, and contact CTA', async ({ page }) => {
     await expect(page.locator('.section-title').filter({ hasText: 'Services' })).toBeVisible();
     await expect(page.locator('.section-title').filter({ hasText: 'Recent blog posts' })).toBeVisible();
+    await expect(page.locator('.post-preview')).toHaveCount(3);
     await expect(page.locator('.section-title').filter({ hasText: 'Need help turning AI into working systems?' })).toBeVisible();
   });
 

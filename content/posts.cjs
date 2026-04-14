@@ -1,0 +1,160 @@
+module.exports = [
+    {
+        slug: "why-ai-pilots-stall",
+        title: "Why AI pilots stall after the demo",
+        date: "2026-04-13",
+        readTime: "10m",
+        category: "practical AI tips",
+        filename: "why-ai-pilots-stall.md",
+        status: "published",
+        summary: "What actually kills an AI pilot after leadership approval, and what a disciplined rollout looks like instead.",
+        homeSummary: "What actually kills an AI pilot after leadership approval, and what a disciplined rollout looks like instead.",
+        bodyHtml: `
+<h2>Why AI pilots stall after the demo</h2>
+<p>Most AI pilots do not die because the model is embarrassingly bad. They die because the business never turns the pilot into an operating system. Leadership gets excited by the demo, someone approves a budget, a vendor says rollout will be fast, and then the team tries to drop the new tool into a workflow that was designed for entirely different constraints. Three months later nobody is sure whether the pilot failed or whether it just quietly drifted into irrelevance.</p>
+<p>The pattern is predictable. In the demo environment everything is clean. The documents are consistent, the use case is narrow, the users are cooperative, and the edge cases are hidden. In production the exact opposite is true. Inputs are messy, handoffs are political, priorities change daily, and the people who actually have to use the system already have a full-time job. If the AI tool adds one more decision, one more dashboard, or one more exception path without removing anything else, adoption usually collapses.</p>
+<h3>The first failure is ownership</h3>
+<p>An AI pilot needs a real operator, not a vague sponsor. The sponsor says the initiative matters. The operator makes the thing work when reality pushes back. Without that person, every problem becomes someone else&rsquo;s problem. Prompt accuracy drifts, edge cases pile up, and the team reverts to the old process because the old process, while slow, is at least familiar.</p>
+<p>Teams often assume ownership will emerge naturally once the value is obvious. It usually does not. Ownership has to be assigned, and it has to come with permission to change process. If the person responsible for the pilot cannot alter queue rules, handoff logic, or review behavior, they are not really responsible for the outcome. They are just the person answering questions in meetings.</p>
+<h3>The second failure is workflow design</h3>
+<p>The most common mistake is treating AI like a layer you can lay on top of the existing process. That is almost never true. A useful deployment changes the shape of the work. It decides what gets triaged automatically, what still requires human judgment, what gets escalated, and what gets measured. If none of that changes, the team ends up doing the old workflow plus the new AI maintenance overhead.</p>
+<p>A good question is not &ldquo;Can the model do this task?&rdquo; A better question is &ldquo;What should the human no longer have to do if this model exists?&rdquo; If the answer is unclear, the pilot is probably still too abstract. Until a business can name the removed step, the shortened queue, or the simplified review path, it is not really redesigning work. It is experimenting in the abstract.</p>
+<h3>The third failure is feedback architecture</h3>
+<p>Even a strong deployment needs correction. People need a way to say the output was wrong, that the escalations were noisy, or that the assistant handled the right problem in the wrong tone. Without that loop the system does not improve. Worse, trust erodes silently. People stop relying on the AI before leadership notices the disengagement in the metrics.</p>
+<p>This is why disciplined pilots usually start smaller than leadership expects. One workflow. One team. One owner. One measurable outcome. The goal is not to &ldquo;roll out AI.&rdquo; The goal is to prove that a redesigned process can outperform the old one under live conditions. Once that is true, scaling becomes much easier because the organization has a reference point for what good looks like.</p>
+<h3>What actually works</h3>
+<p>Start with a workflow where volume is real, judgment is unevenly distributed, and the business can name a concrete operational result. Map the process as it exists today. Then decide what the system should absorb, what the human should keep, and how exceptions move. Build the review path before the automation path. Define a measurement window. Put one person in charge of the outcome. That is what separates a pilot from a prolonged demo.</p>
+<p>That distinction matters because most companies are not suffering from a shortage of AI options. They are suffering from a shortage of operational clarity. The businesses getting value out of AI are not necessarily buying better models than everyone else. They are doing a better job of matching the model to the workflow and the workflow to the people responsible for results.</p>
+<div class="inline-cta">
+    If this is the problem you have, start with <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a> or go straight to <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
+        slug: "age-of-ai-agents",
+        title: "The age of AI agents: what is actually working",
+        date: "2026-04-11",
+        readTime: "9m",
+        category: "strategy / opinion",
+        filename: "the-age-of-ai-agents.md",
+        status: "published",
+        summary: "A longer read on where agents produce leverage and where teams are still kidding themselves.",
+        homeSummary: "A longer read on where agents produce leverage and where teams are still kidding themselves.",
+        bodyHtml: `
+<h2>The age of AI agents: what is actually working</h2>
+<p>There is now enough distance between the first chatbot wave and the current agent wave to say something useful: AI agents are real, but the strongest use cases are narrower and more operational than the hype suggests. They are not magic employees. They are software systems that can reason across steps, use tools, and adapt within constraints. When those constraints are explicit, agents can produce enormous leverage. When those constraints are vague, agents mostly create expensive confusion.</p>
+<p>The reason the conversation changed is simple. Earlier systems were good at one-turn interaction: summarize this, draft that, answer this question. Agents can sustain a thread of action. They can inspect data, make decisions, call tools, and continue until a task is complete or blocked. That makes them fundamentally more useful inside operations. It also makes failure more expensive because the system can now be wrong for twelve steps in a row instead of one.</p>
+<h3>Where agents are genuinely working</h3>
+<p>Research is a strong use case because the output is valuable, the source material is large, and the process can still be reviewed. A good agent can gather documents, compare findings, synthesize positions, and present a working brief much faster than a human doing the same work from scratch. The human still validates conclusions, but the expensive gathering and drafting layer shrinks dramatically.</p>
+<p>Structured operations are another good fit. Intake and triage, document transformation, repetitive handoffs, internal knowledge retrieval, and controlled routing tasks all reward systems that can reason over a bounded set of rules. These are not glamorous deployments, but they are the ones actually reducing labor drag inside teams. They work because the operating context is narrow enough for the agent to stay useful and broad enough for the savings to matter.</p>
+<p>Agents also perform well in environments where every step leaves a trace. That trace is what makes improvement possible. If a tool call fails, if a decision is noisy, or if the output format is wrong, the system can be debugged. This is another reason operations and software workflows are ahead of more ambiguous knowledge work. The feedback loop is tighter, and the business can tell whether the agent helped or got in the way.</p>
+<h3>Where the hype still outruns reality</h3>
+<p>Agents are much weaker in open-ended environments where nobody agrees on the success condition. If the assignment is &ldquo;figure out our AI strategy&rdquo; or &ldquo;handle whatever comes in&rdquo; without clear rules, the agent usually becomes a projection screen for wishful thinking. It may look capable in a few examples, but it will not hold up under real ambiguity unless a human is still actively shaping the work.</p>
+<p>High-stakes approvals are another bad fit when businesses try to remove review too early. The problem is not that agents can never help here. The problem is that companies are tempted to skip the human checkpoint because the early results feel smooth. That is exactly when the risk compounds. A well-designed agent should make review easier, not optional.</p>
+<h3>What managers should actually ask</h3>
+<p>The right question is not whether an agent can do a job end to end. The right question is whether an agent can reliably own the middle of the process while humans retain the parts that involve accountability, judgment, and exception handling. That framing is more useful because it matches how good operations are built in the first place: work gets decomposed, routinized where possible, and escalated where necessary.</p>
+<p>The organizations getting real value from agents are not chasing maximum autonomy. They are designing good operating envelopes. They know what the system can touch, how it asks for help, where it hands off, and how outcomes are reviewed. That is less dramatic than the &ldquo;AI colleague&rdquo; narrative, but it is the difference between leverage and liability.</p>
+<div class="inline-cta">
+    Related services: <a href="services/custom-ai.html">Custom AI Solutions</a> and <a href="services/ai-automation.html">AI Workflow Automation</a>.
+</div>`,
+    },
+    {
+        slug: "response-time",
+        title: "How we cut support response time by 80%",
+        date: "2026-04-08",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "how-we-cut-response-time-80-percent.md",
+        status: "published",
+        summary: "A breakdown of queue design, triage logic, and escalation rules that made the number believable.",
+        homeSummary: "A breakdown of queue design, triage logic, and escalation rules that made the number believable.",
+        bodyHtml: `
+<h2>How we cut support response time by 80%</h2>
+<p>Support response time is one of those metrics that leadership loves because it is easy to understand and easy to misuse. Many teams try to improve it by adding people, asking agents to move faster, or introducing an assistant that answers whatever it can. Those changes sometimes improve the number for a week or two, but they usually fail because they do not alter the structure of the queue. If the queue logic is wrong, speed at the edge does not fix the system.</p>
+<p>The support environment behind this result had three classic problems. First, a large percentage of requests were repetitive and did not require human judgment. Second, everything entered the same queue, so the simple work crowded out the important work. Third, by the time a complex request reached a person, the person often had to re-read the entire context from scratch. That meant even escalated tickets started slowly.</p>
+<h3>What changed</h3>
+<p>The first intervention was not the assistant itself. It was queue architecture. We separated common requests, ambiguous requests, and clearly human-required requests into different operating paths. OpenClaw handled the front-line conversation for the repetitive issues, but just as importantly it collected the right information for the complex ones. That reduced both first response time and the cost of escalation.</p>
+<p>The second intervention was classification discipline. Instead of asking the system to be &ldquo;smart&rdquo; in the abstract, we forced a smaller set of decisions: what type of request is this, what confidence threshold exists, what context needs to be gathered before handoff, and when should a human step in immediately. That simplicity matters. Support systems become noisy when they try to reason about everything at once. They improve when they do a few steps reliably.</p>
+<p>The third intervention was handoff quality. A handoff is not useful just because a human is now in the loop. A useful handoff arrives with a summary, the relevant context, what the assistant already tried, and why the escalation happened. That is where much of the time savings came from. We did not just move tickets faster. We removed the repeated context reconstruction that human agents were doing all day.</p>
+<h3>Why the result held</h3>
+<p>The queue improved because the humans were no longer doing low-value sorting work. They spent more time on the cases that actually needed expertise, and those cases arrived with enough context to act. That combination creates a compounding effect: the assistant does not need to solve every ticket, it just needs to keep humans from spending their best energy on the wrong tickets.</p>
+<p>This is why support transformations should be evaluated as operating redesign, not just as AI deployment. A business that measures only bot resolution rate can miss the more important effect: whether the queue is healthier, whether specialists are seeing the right issues, and whether customers are getting to the right path faster. Response time improved because the whole system got simpler.</p>
+<p>That is also why this kind of work is repeatable. The exact tooling may change, but the principles do not. Good routing, good escalation, and good handoff design are durable. AI simply makes it more feasible to execute those principles at scale.</p>
+<div class="inline-cta">
+    Read the related <a href="case-studies.html">case studies</a> or review <a href="services/openclaw.html">OpenClaw Deployment</a>.
+</div>`,
+    },
+    {
+        slug: "automation-small-business",
+        title: "AI automation for small business",
+        date: "2026-04-05",
+        readTime: "8m",
+        category: "practical AI tips",
+        filename: "ai-automation-for-small-business.md",
+        status: "published",
+        summary: "How smaller businesses should decide what to automate first, and where AI creates relief instead of overhead.",
+        homeSummary: "How smaller businesses should decide what to automate first, and where AI creates relief instead of overhead.",
+        bodyHtml: `
+<h2>AI automation for small business</h2>
+<p>Small businesses get bad AI advice because the market talks to them as if they were scaled software companies. They are told to build strategy frameworks, experiment with a dozen tools, or think about transformation in broad terms. Most of the time that is the wrong entry point. A smaller business should begin with labor drag. Where is time leaking? Where are the same decisions being made over and over? Where are people stuck moving information between systems instead of actually serving customers?</p>
+<p>The reason this matters is simple: small teams do not have organizational slack. A bad AI initiative is not just a strategic miss; it steals attention from a company that was already short on attention. The best starting point is almost always a single workflow where the pain is obvious, the judgment required is limited, and the output is easy to review. If you cannot identify that workflow, you are not ready to automate anything yet.</p>
+<h3>Email triage is usually low-hanging fruit</h3>
+<p>Many small businesses still run on one or two overloaded inboxes. Everything lands in the same place: new leads, customer questions, invoices, scheduling requests, urgent internal issues, and low-value noise. AI is useful here not because it writes beautiful replies, but because it can classify, route, prioritize, and gather the basics before a human ever opens the thread. That immediately reduces decision fatigue.</p>
+<h3>Meeting and document workflows add hidden labor</h3>
+<p>Teams lose hours not just in meetings, but after meetings. Notes get rewritten, action items get restated, and decisions vanish into scattered tools. The same is true for documents. Contracts, forms, invoices, applications, and intake packets all create small repetitive tasks that accumulate into real operational cost. AI helps when it extracts, structures, and routes the information so a person only touches the exception path.</p>
+<h3>Customer-facing automation should start narrow</h3>
+<p>A small business does not need a giant conversational AI rollout to get value. It needs a careful decision about what a system should answer, when it should hand off, and what source material it can trust. FAQs, scheduling, intake, and status questions are usually stronger places to start than broad &ldquo;virtual assistant&rdquo; ambitions. Narrower scope makes quality easier to maintain.</p>
+<p>The real test for a small-business automation is whether it gives time back without increasing supervision overhead. If the owner or operations lead now has to babysit a flaky system, the automation failed even if the demo looked efficient. A good automation should feel like one less person the team has to manage, not one more.</p>
+<p>That is why smaller businesses should stay disciplined about sequence. Pick one workflow. Improve it. Measure the result. Then decide what comes next. Momentum comes from visible relief, not from buying the most sophisticated tool on the market.</p>
+<div class="inline-cta">
+    This is usually an <a href="services/ai-automation.html">AI Workflow Automation</a> engagement. If the workflow is unclear, use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
+        slug: "openclaw-fit",
+        title: "When OpenClaw is the right fit",
+        date: "2026-04-01",
+        readTime: "7m",
+        category: "implementation guidance",
+        filename: "when-openclaw-is-the-right-fit.md",
+        status: "published",
+        summary: "How to tell when OpenClaw is a strong operational fit, and when another service should come first.",
+        homeSummary: "How to tell when OpenClaw is a strong operational fit, and when another service should come first.",
+        bodyHtml: `
+<h2>When OpenClaw is the right fit</h2>
+<p>OpenClaw is powerful in the right context and distracting in the wrong one. That matters because once a business hears &ldquo;multi-channel assistant,&rdquo; it is easy for the imagination to outrun the workflow. The right way to evaluate OpenClaw is not as a generic AI capability. It is as an operating layer for businesses that have enough incoming conversation volume, enough repeatability, and enough need for structured escalation that a channel-spanning assistant can actually simplify the business.</p>
+<p>When OpenClaw fits, it usually fits for practical reasons. There is already meaningful traffic coming through support, intake, or service channels. The business already has source material such as FAQs, policies, product knowledge, or historical interactions. The team already knows what should stay human. In other words, the environment is ready for a controlled assistant because the business has something real to operationalize.</p>
+<h3>The strongest fit signals</h3>
+<p>Multi-channel demand is the first signal. If your customers show up through web chat, email, messaging, or support systems and the team is trying to maintain consistency across all of them, OpenClaw can create useful standardization. The second signal is repetition. If every conversation is unique, the economics are weak. If the same clusters of questions appear again and again, the system has room to help.</p>
+<p>The third signal is handoff discipline. A strong deployment does not ask the assistant to impersonate a human indefinitely. It decides what should be resolved automatically, what should be routed, and how the human receives the context. That handoff layer is where many businesses either win or fail. OpenClaw becomes much more valuable when it is part of an operating design instead of a loose chatbot experiment.</p>
+<h3>When it is the wrong first move</h3>
+<p>If a company is still unclear on what workflow it wants to improve, OpenClaw is probably not the first service it needs. The same is true if the source material is poor, the team cannot agree on escalation rules, or the real issue is internal process rather than customer-facing communication. In those cases a strategy or automation engagement is often the better opening move because the business needs clarity before it needs an assistant.</p>
+<p>This is why OpenClaw sits inside the service set rather than above it. It is important, but it is not the answer to every AI question. The businesses that get the most value from it are usually the ones that resisted treating it like a magic shortcut and instead deployed it where the process was already mature enough to support it.</p>
+<div class="inline-cta">
+    If those conditions exist, review <a href="services/openclaw.html">OpenClaw Deployment</a>. If not, the broader <a href="services.html">services page</a> is the better starting point.
+</div>`,
+    },
+    {
+        slug: "stay-human",
+        title: "Why deploy AI. Stay human.",
+        date: "2026-03-28",
+        readTime: "7m",
+        category: "strategy / opinion",
+        filename: "why-deploy-ai-stay-human.md",
+        status: "published",
+        summary: "Why preserving human judgment is the operating principle behind a sane AI deployment.",
+        homeSummary: "Why preserving human judgment is the operating principle behind a sane AI deployment.",
+        bodyHtml: `
+<h2>Why deploy AI. Stay human.</h2>
+<p>The line is not just branding. It is the guardrail. &ldquo;Deploy AI. Stay human.&rdquo; is a reminder that the goal is not to flatten judgment out of a business. The goal is to remove avoidable friction, speed up repetitive work, and strengthen the parts of a workflow where human attention is expensive. Without that guardrail, AI projects drift into two bad extremes: either they become shallow theater, or they become careless attempts to replace the parts of work that actually require responsibility.</p>
+<p>There is a reason so much AI marketing feels off. It often assumes the highest form of progress is removing people from the process. That sounds efficient until you remember what people are doing in a healthy operation. They are resolving ambiguity, navigating relationships, making tradeoffs, and absorbing edge cases that do not fit the policy manual. Those are not bugs in the workflow. They are often the reason the workflow works.</p>
+<h3>Where AI belongs</h3>
+<p>AI belongs in the layers of work that are repetitive, pattern-heavy, and expensive mainly because they consume attention. Summaries, routing, first-pass drafting, data extraction, classification, and structured recommendations are all good examples. In those cases AI frees a human to work at a higher level. The point is not novelty. The point is reallocating scarce attention toward judgment.</p>
+<p>That distinction matters because many teams confuse speed with progress. A process can become faster while becoming less trustworthy. It can become more automated while becoming more fragile. A business that deploys AI well is not just asking &ldquo;Can we automate this?&rdquo; It is also asking &ldquo;What kind of mistake becomes more likely if we do?&rdquo; and &ldquo;Who needs to remain accountable when the system is uncertain?&rdquo; Those are human questions, and they remain human questions even after the tooling improves.</p>
+<h3>What &ldquo;stay human&rdquo; means operationally</h3>
+<p>It means preserving escalation paths. It means making sure a human can review, intervene, and override. It means being explicit about where the system is allowed to act and where it must ask for help. It means understanding that customer trust, internal trust, and operator trust are as important as throughput. A system nobody trusts is not a modern workflow. It is dead weight with better branding.</p>
+<p>In practice this principle is also what keeps AI deployments sane. It reduces the temptation to give a system too much autonomy too early. It forces the team to think about operations instead of just capability. It pushes the work toward good design instead of abstract optimism. That is why the line stays. It is not there to sound nice. It is there to stop the work from drifting into bad incentives.</p>
+<div class="inline-cta">
+    That philosophy is expanded on the <a href="manifesto.html">manifesto page</a> and carried into the <a href="services.html">services page</a>.
+</div>`,
+    },
+];

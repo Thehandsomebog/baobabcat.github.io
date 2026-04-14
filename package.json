@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "BaobabCat Consulting website with Playwright testing",
   "scripts": {
+    "generate:blog": "node scripts/generate-blog.js",
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
