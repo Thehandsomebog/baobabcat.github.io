@@ -3,111 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH13JG6L1S"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CH13JG6L1S');
-    </script>
-
-    <title>Contact | BaobabCat AI Consulting</title>
-    <meta name="description" content="Get in touch with BaobabCat. AI consulting for businesses ready to grow.">
-    <meta name="author" content="BaobabCat LLC">
+    <title>Contact | BaobabCat</title>
+    <meta name="description" content="Contact BaobabCat about AI strategy, automation, OpenClaw deployment, analytics, or training.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://baobabcat.com/contact.html">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://baobabcat.com/contact.html">
-    <meta property="og:title" content="Contact | BaobabCat">
-    <meta property="og:description" content="Get in touch with BaobabCat for AI consulting.">
-    <meta property="og:image" content="https://baobabcat.com/og-image.jpg">
-    <meta property="og:site_name" content="BaobabCat">
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-contact">
-    <main class="pane contact-pane">
-        <div class="pane__label">~/contact</div>
+    <main class="site-wrap page-shell">
+        <section class="page-intro">
+            <div class="eyebrow">contact</div>
+            <h1>Main conversion page</h1>
+            <p>Use this page if you want to scope an engagement, review a bottleneck, or ask whether OpenClaw or another AI workflow belongs in your stack.</p>
+        </section>
 
-        <!-- Contact Info -->
-        <div class="contact-info">
-            <div class="contact-info__cmd">$ cat contact.txt</div>
-            <div class="contact-info__line">
-                <span class="contact-info__key">name     : </span>
-                <span class="contact-info__value">BaobabCat LLC</span>
-            </div>
-            <div class="contact-info__line">
-                <span class="contact-info__key">location : </span>
-                <span class="contact-info__value">3122 Produce Row, Houston, TX 77023</span>
-            </div>
-            <div class="contact-info__line">
-                <span class="contact-info__key">email    : </span>
-                <span class="contact-info__value"><a href="mailto:baobabcatllc@gmail.com">baobabcatllc@gmail.com</a></span>
-            </div>
-            <div class="contact-info__line">
-                <span class="contact-info__key">phone    : </span>
-                <span class="contact-info__value"><a href="tel:+15102995399">(510) 299-5399</a></span>
-            </div>
-            <div class="contact-info__line">
-                <span class="contact-info__key">status   : </span>
-                <span class="contact-info__value">accepting new clients ✓</span>
-            </div>
+        <div id="form-success" class="success-banner">
+            <div class="cmd">$ contact submit --status ok</div>
+            <p>Your message was sent. BaobabCat has your request and the site now shows a visible success state instead of relying on a silent redirect.</p>
         </div>
 
-        <!-- Contact Form -->
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="372f2f8e-3b9a-4338-aaf3-b24cfd63534b">
-            <input type="hidden" name="redirect" value="https://baobabcat.com/?submitted=true">
-            <input type="hidden" name="subject" value="New Contact from BaobabCat Website">
+        <section class="contact-layout">
+            <article class="contact-info">
+                <div class="cmd">$ cat contact.txt</div>
+                <div class="contact-line"><span class="contact-line__key">company :</span> <span class="contact-line__value">BaobabCat LLC</span></div>
+                <div class="contact-line"><span class="contact-line__key">email   :</span> <span class="contact-line__value"><a href="mailto:baobabcatllc@gmail.com">baobabcatllc@gmail.com</a></span></div>
+                <div class="contact-line"><span class="contact-line__key">phone   :</span> <span class="contact-line__value"><a href="tel:+15102995399">(510) 299-5399</a></span></div>
+                <div class="contact-line"><span class="contact-line__key">focus   :</span> <span class="contact-line__value">strategy, implementation, training, analytics</span></div>
+                <div class="contact-line"><span class="contact-line__key">note    :</span> <span class="contact-line__value">Describe the workflow, not just the tool wish list.</span></div>
+            </article>
 
-            <div class="form-field">
-                <label for="name">name    : </label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-field">
-                <label for="email">email   : </label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-field">
-                <label for="phone">phone   : </label>
-                <input type="tel" id="phone" name="phone">
-            </div>
-            <div class="form-field">
-                <label for="message">message : </label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
+            <div class="contact-form-wrap">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="372f2f8e-3b9a-4338-aaf3-b24cfd63534b">
+                    <input type="hidden" name="redirect" value="https://baobabcat.com/contact.html?submitted=true">
+                    <input type="hidden" name="subject" value="New Contact from BaobabCat Website">
 
-            <label class="form-checkbox">
-                <input type="checkbox" name="sms_consent">
-                <span class="form-checkbox__indicator"></span>
-                I consent to receive SMS messages from BaobabCat
-            </label>
+                    <div class="form-field">
+                        <label for="name">name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone">phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-field">
+                        <label for="message">what needs to change</label>
+                        <textarea id="message" name="message" required placeholder="Example: our support team is buried in repeat requests and we need triage + escalation to stop living in one inbox."></textarea>
+                    </div>
 
-            <div class="contact-submit">
-                <button type="submit" class="btn-terminal btn-terminal--primary">$ send --message</button>
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="sms_consent">
+                        <span>I consent to receive SMS messages from BaobabCat.</span>
+                    </label>
+
+                    <button type="submit" class="btn-terminal btn-terminal--primary">$ send --message</button>
+                </form>
             </div>
-        </form>
+        </section>
+
+        <section class="pane">
+            <div class="pane__label">
+                <span>~/next-step</span>
+                <span>alternate conversion point</span>
+            </div>
+            <div class="pane__body cta-strip">
+                <div>
+                    <div class="section-title">Prefer to review the offers first?</div>
+                    <p class="section-copy">The services hub links to every detail page, and every detail page routes back here.</p>
+                </div>
+                <div class="cta-strip__actions">
+                    <a href="services.html" class="btn-terminal">[Open services]</a>
+                    <a href="blog.html" class="btn-terminal">[Read blog]</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Status Bar -->
     <nav class="status-bar">
         <span class="status-bar__session">BaobabCat</span>
         <ul class="status-bar__tabs">
             <li class="status-bar__tab"><a href="index.html">0:home</a></li>
-            <li class="status-bar__tab"><a href="manifesto.html">1:manifesto</a></li>
-            <li class="status-bar__tab"><a href="what-we-do.html">2:what-we-do</a></li>
-            <li class="status-bar__tab"><a href="blog.html">3:blog</a></li>
-            <li class="status-bar__tab active"><a href="contact.html">4:contact</a></li>
+            <li class="status-bar__tab"><a href="services.html">1:services</a></li>
+            <li class="status-bar__tab"><a href="blog.html">2:blog</a></li>
+            <li class="status-bar__tab"><a href="case-studies.html">3:cases</a></li>
+            <li class="status-bar__tab"><a href="contact.html">4:contact</a></li>
         </ul>
-        <span class="status-bar__clock" id="tmux-clock"></span>
+        <span id="tmux-clock" class="status-bar__clock"></span>
     </nav>
 
     <script src="terminal.js"></script>

@@ -3,81 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH13JG6L1S"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CH13JG6L1S');
-    </script>
-
-    <title>BaobabCat | Deploy AI. Stay human.</title>
-    <meta name="description" content="AI consulting for businesses ready to grow. Strategy, automation, and custom AI solutions.">
-    <meta name="keywords" content="AI consulting, AI automation, business AI, AI strategy">
+    <title>BaobabCat | Terminal-first AI consulting for operators and teams</title>
+    <meta name="description" content="BaobabCat helps teams deploy AI into operations, support, analytics, and internal workflows. Strategy, implementation, training, and OpenClaw deployment in one terminal-style site.">
     <meta name="author" content="BaobabCat LLC">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://baobabcat.com/">
-
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://baobabcat.com/">
-    <meta property="og:title" content="BaobabCat | Deploy AI. Stay human.">
-    <meta property="og:description" content="AI consulting for businesses ready to grow.">
+    <meta property="og:title" content="BaobabCat | Terminal-first AI consulting for operators and teams">
+    <meta property="og:description" content="Deploy AI into real business workflows without losing the human layer that makes them work.">
     <meta property="og:image" content="https://baobabcat.com/og-image.jpg">
-    <meta property="og:site_name" content="BaobabCat">
-
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BaobabCat | Deploy AI. Stay human.">
-    <meta name="twitter:description" content="AI consulting for businesses ready to grow.">
-
+    <meta name="twitter:title" content="BaobabCat | Terminal-first AI consulting for operators and teams">
+    <meta name="twitter:description" content="AI strategy, automation, training, analytics, and OpenClaw deployment for companies that need execution.">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-home">
-    <main class="home-split">
-        <!-- Left Pane: Hero -->
-        <section class="pane home-hero">
-            <div class="pane__label">~/baobabcat</div>
+    <main class="home-screen">
+        <section class="home-hero">
             <div class="home-hero__content">
-                <div class="home-hero__prompt">
-                    <span class="prompt-symbol">$ </span>
-                    <span id="typed-output" class="typed-text"></span>
-                    <span class="cursor">█</span>
+                <div class="home-screen__label">
+                    <span>~/baobabcat/home</span>
+                    <span>terminal entrance</span>
                 </div>
-                <p class="home-hero__subtitle" id="subtitle-text"></p>
-                <div class="home-hero__cta">
-                    <a href="contact.html" class="btn-terminal btn-terminal--primary">[Begin →]</a>
-                    <a href="manifesto.html" class="btn-terminal">[Learn More]</a>
+                <div class="home-hero__inner">
+                    <div class="eyebrow">main seo homepage</div>
+                    <div class="home-hero__prompt">
+                        <span class="prompt-symbol">$</span>
+                        <span id="typed-output" class="typed-text"></span>
+                        <span class="cursor">█</span>
+                    </div>
+                    <p id="subtitle-text" class="home-hero__subtitle"></p>
+                    <div class="home-hero__actions">
+                        <button type="button" class="btn-terminal btn-terminal--primary" data-continue="#home-content">[Continue]</button>
+                        <a href="contact.html" class="btn-terminal">[Book a working session]</a>
+                        <a href="manifesto.html" class="btn-terminal">[Read manifesto]</a>
+                    </div>
+                    <p class="home-hero__support">Strategy if needed. Implementation when useful. Training when adoption matters.</p>
                 </div>
             </div>
+            <aside class="home-hero__stats">
+                <div class="home-screen__label">
+                    <span>~/session/status</span>
+                    <span>live preview</span>
+                </div>
+                <div class="home-hero__stats-inner">
+                    <div class="cmd">$ baobabcat preview --scope active-site</div>
+                    <div id="stats-output" class="stats-lines"></div>
+                </div>
+            </aside>
         </section>
 
-        <!-- Right Pane: Stats -->
-        <section class="pane home-stats">
-            <div class="pane__label">~/stats</div>
-            <div class="home-stats__content">
-                <div class="stats-prompt">$ baobabcat status</div>
-                <div id="stats-output" class="stats-lines"></div>
-            </div>
-        </section>
+        <div id="home-content" class="home-content">
+            <section class="screen-band">
+                <div class="screen-band__inner">
+                    <div class="home-copy-block">
+                        <div class="home-screen__label">
+                            <span>~/value-proposition</span>
+                            <span>why this site exists</span>
+                        </div>
+                        <div class="home-copy-block__body">
+                            <div class="section-title">AI work that lands in operations</div>
+                            <p class="section-copy">BaobabCat works with teams that want less AI theater and more functioning systems. We map where AI belongs, build the workflow, train the humans around it, and leave the business with something that can keep running.</p>
+                        </div>
+                    </div>
+
+                    <div class="terminal-note">
+                        <div class="cmd">$ cat operating-principles.txt</div>
+                        <p>Focus on operator pain, not abstract AI ambition. Keep the human handoff visible. Ship the smallest useful system first. Train the team that has to trust it.</p>
+                    </div>
+
+                    <div class="home-sequence">
+                        <div class="home-screen__label">
+                            <span>~/engagement-model</span>
+                            <span>how the work starts</span>
+                        </div>
+                        <ul class="terminal-list">
+                            <li>Find the workflow that should change first.</li>
+                            <li>Define business outcomes before tooling.</li>
+                            <li>Build the smallest useful system.</li>
+                            <li>Train the team that has to live with it.</li>
+                            <li>Iterate from actual usage, not promises.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="screen-band">
+                <div class="screen-band__inner">
+                    <div class="home-screen__label">
+                        <span>~/operator-workspace</span>
+                        <a href="services.html">open services hub</a>
+                    </div>
+                    <div class="home-feature-layout">
+                        <div class="home-feature-rail">
+                            <div class="screen-band__intro">
+                                <div class="section-title">Services and proof, in one lane</div>
+                                <p class="section-copy">The homepage should not feel like six separate pitches. This section keeps the offer and the proof path together so the scan is cleaner and more like a working terminal workspace.</p>
+                            </div>
+                            <div class="terminal-note">
+                                <div class="cmd">$ ls services/</div>
+                                <p>Strategy, automation, custom systems, enablement, analytics, and OpenClaw when it fits the workflow instead of driving the conversation.</p>
+                            </div>
+                            <article class="case-preview-card compact-proof">
+                                <div class="case-preview-card__meta">proof path</div>
+                                <h3><a href="case-studies.html">Case studies stay close to the offer</a></h3>
+                                <p>The proof page is structured and ready for real metrics, approvals, and logos without redesigning the site again.</p>
+                            </article>
+                        </div>
+                        <div class="service-preview-grid">
+                            <article class="service-preview-card">
+                                <div class="service-preview-card__meta">AI strategy</div>
+                                <h3><a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a></h3>
+                                <p>Prioritize use cases, identify constraints, and set a roadmap your operators can execute.</p>
+                            </article>
+                            <article class="service-preview-card">
+                                <div class="service-preview-card__meta">automation</div>
+                                <h3><a href="services/ai-automation.html">AI Workflow Automation</a></h3>
+                                <p>Reduce repetitive work across support, intake, handoffs, and internal operations.</p>
+                            </article>
+                            <article class="service-preview-card">
+                                <div class="service-preview-card__meta">platform</div>
+                                <h3><a href="services/openclaw.html">OpenClaw Deployment</a></h3>
+                                <p>Deploy OpenClaw as one service option when a multi-channel assistant actually fits the business.</p>
+                            </article>
+                            <article class="service-preview-card">
+                                <div class="service-preview-card__meta">build</div>
+                                <h3><a href="services/custom-ai.html">Custom AI Solutions</a></h3>
+                                <p>Design internal copilots, document systems, and bespoke workflow tools around real constraints.</p>
+                            </article>
+                            <article class="service-preview-card">
+                                <div class="service-preview-card__meta">enablement</div>
+                                <h3><a href="services/ai-training.html">AI Training &amp; Enablement</a></h3>
+                                <p>Help leaders and teams adopt tools with policy, process, and confidence.</p>
+                            </article>
+                            <article class="service-preview-card">
+                                <div class="service-preview-card__meta">analytics</div>
+                                <h3><a href="services/ai-analytics.html">AI Data &amp; Analytics</a></h3>
+                                <p>Turn operational data into forecasts, reporting, and decision support your team can trust.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="screen-band">
+                <div class="screen-band__inner">
+                    <div class="home-screen__label">
+                        <span>~/blog/recent</span>
+                        <a href="blog.html">read all posts</a>
+                    </div>
+                    <div class="screen-band__intro">
+                        <div class="section-title">Recent blog posts</div>
+                        <p class="section-copy">The blog is the active content engine for the terminal site: practical AI tips, implementation guidance, strategic opinion, and OpenClaw-adjacent writing where it belongs.</p>
+                    </div>
+                    <div class="post-preview-list">
+                        <article class="post-preview">
+                            <div class="post-preview__meta">practical AI tips</div>
+                            <h3><a href="blog.html#post-why-ai-pilots-stall">Why AI pilots stall after the demo</a></h3>
+                            <p>What actually kills an AI pilot after leadership approval, and what a disciplined rollout looks like instead.</p>
+                        </article>
+                        <article class="post-preview">
+                            <div class="post-preview__meta">implementation guidance</div>
+                            <h3><a href="blog.html#post-response-time">How we cut support response time by 80%</a></h3>
+                            <p>A breakdown of queue design, triage logic, and escalation rules that made the number believable.</p>
+                        </article>
+                        <article class="post-preview">
+                            <div class="post-preview__meta">strategy / opinion</div>
+                            <h3><a href="blog.html#post-age-of-ai-agents">The age of AI agents: what is actually working</a></h3>
+                            <p>A longer read on where agents produce leverage and where teams are still kidding themselves.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="screen-band screen-band--cta">
+                <div class="screen-band__inner cta-strip">
+                    <div>
+                        <div class="section-title">Need an AI working session, not a pitch deck?</div>
+                        <p class="section-copy">Use the contact page as the primary conversion destination. If you already know the workflow you want to fix, say that directly. If you do not, describe the bottleneck.</p>
+                    </div>
+                    <div class="cta-strip__actions">
+                        <a href="contact.html" class="btn-terminal btn-terminal--primary">[Open contact page]</a>
+                        <a href="services.html" class="btn-terminal">[Review services first]</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="screen-band screen-band--footer">
+                <div class="screen-band__inner">
+                    <div class="home-screen__label">
+                        <span>~/footer</span>
+                        <span>secondary routes</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="manifesto.html">Manifesto</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="case-studies.html">Case Studies</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </main>
 
-    <!-- Status Bar -->
     <nav class="status-bar">
         <span class="status-bar__session">BaobabCat</span>
         <ul class="status-bar__tabs">
-            <li class="status-bar__tab active"><a href="index.html">0:home</a></li>
-            <li class="status-bar__tab"><a href="manifesto.html">1:manifesto</a></li>
-            <li class="status-bar__tab"><a href="what-we-do.html">2:what-we-do</a></li>
-            <li class="status-bar__tab"><a href="blog.html">3:blog</a></li>
+            <li class="status-bar__tab"><a href="index.html">0:home</a></li>
+            <li class="status-bar__tab"><a href="services.html">1:services</a></li>
+            <li class="status-bar__tab"><a href="blog.html">2:blog</a></li>
+            <li class="status-bar__tab"><a href="case-studies.html">3:cases</a></li>
             <li class="status-bar__tab"><a href="contact.html">4:contact</a></li>
         </ul>
-        <span class="status-bar__clock" id="tmux-clock"></span>
+        <span id="tmux-clock" class="status-bar__clock"></span>
     </nav>
 
     <script src="terminal.js"></script>

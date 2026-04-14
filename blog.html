@@ -1,250 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH13JG6L1S"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CH13JG6L1S');
-  </script>
-  <title>Blog | BaobabCat AI Consulting</title>
-  <meta name="description" content="AI insights, automation tips, and practical guides for businesses from BaobabCat.">
-  <meta name="author" content="BaobabCat LLC">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://baobabcat.com/blog.html">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://baobabcat.com/blog.html">
-  <meta property="og:title" content="Blog | BaobabCat">
-  <meta property="og:description" content="AI insights and practical guides for businesses.">
-  <meta property="og:image" content="https://baobabcat.com/og-image.jpg">
-  <meta property="og:site_name" content="BaobabCat">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | BaobabCat</title>
+    <meta name="description" content="BaobabCat blog: practical AI tips, strategy and opinion, implementation guidance, and OpenClaw-relevant posts.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://baobabcat.com/blog.html">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-blog">
-  <main class="blog-container">
-    <div class="blog-list">
-      <div class="blog-list__header">$ ls -la ~/blog/</div>
-      <div class="blog-entry" data-post="model-selection-hierarchy">
-        <span class="blog-entry__perms">-rw-r--r--</span>
-        <span class="blog-entry__date">Apr 08</span>
-        <span class="blog-entry__time">6min</span>
-        <span class="blog-entry__name">model-selection-hierarchy.md</span>
-      </div>
-      <div class="blog-entry" data-post="fine-tune-vs-prompt">
-        <span class="blog-entry__perms">-rw-r--r--</span>
-        <span class="blog-entry__date">Apr 07</span>
-        <span class="blog-entry__time">6min</span>
-        <span class="blog-entry__name">fine-tune-vs-prompt.md</span>
-      </div>
-      <div class="blog-entry" data-post="measuring-ai-roi">
-        <span class="blog-entry__perms">-rw-r--r--</span>
-        <span class="blog-entry__date">Apr 01</span>
-        <span class="blog-entry__time">7min</span>
-        <span class="blog-entry__name">measuring-ai-roi.md</span>
-      </div>
-      <div class="blog-entry" data-post="why-ai-pilots-stall">
-        <span class="blog-entry__perms">-rw-r--r--</span>
-        <span class="blog-entry__date">Mar 31</span>
-        <span class="blog-entry__time">6min</span>
-        <span class="blog-entry__name">why-ai-pilots-stall.md</span>
-      </div>
-      <div class="blog-entry" data-post="age-of-ai-agents">
-        <span class="blog-entry__perms">-rw-r--r--</span>
-        <span class="blog-entry__date">Mar 30</span>
-        <span class="blog-entry__time">7min</span>
-        <span class="blog-entry__name">the-age-of-ai-agents.md</span>
-      </div>
-      <div class="blog-entry" data-post="how-we-cut-response-time">
-        <span class="blog-entry__perms">-rw-r--r--</span>
-        <span class="blog-entry__date">Mar 26</span>
-        <span class="blog-entry__time">8min</span>
-        <span class="blog-entry__name">how-we-cut-response-time-80-percent.md</span>
-      </div>
-      <div class="blog-entry" data-post="ai-automation-small-business">
-        <span class="blog-entry__perms">-rw-r--r--</span>
-        <span class="blog-entry__date">Mar 20</span>
-        <span class="blog-entry__time">5min</span>
-        <span class="blog-entry__name">ai-automation-for-small-business.md</span>
-      </div>
-      <div class="blog-entry" data-post="deploy-ai-stay-human">
-        <span class="blog-entry__perms">-rw-r--r--</span>
-        <span class="blog-entry__date">Mar 15</span>
-        <span class="blog-entry__time">6min</span>
-        <span class="blog-entry__name">why-deploy-ai-stay-human.md</span>
-      </div>
-    </div>
-    <aside class="blog-reader">
-      <div class="blog-reader__header">
-        <span class="blog-reader__label">~/blog/</span>
-        <button class="blog-reader__close">[x] close</button>
-      </div>
-      <div class="blog-reader__content"></div>
-    </aside>
-  </main>
+    <main class="site-wrap blog-layout">
+        <section class="blog-top">
+            <article class="pane">
+                <div class="pane__label">~/blog</div>
+                <div class="pane__body page-copy">
+                    <div class="section-title">Blog as the content engine</div>
+                    <p>The blog supports discovery for the whole site. Posts link to services and contact. Services link back to implementation guidance. The homepage highlights a few posts, but this page is where the archive actually lives.</p>
+                </div>
+            </article>
+            <article class="pane">
+                <div class="pane__label">~/editorial-strategy</div>
+                <div class="pane__body">
+                    <ul class="terminal-list">
+                        <li>practical AI tips for operators</li>
+                        <li>strategy and opinion for leaders</li>
+                        <li>implementation guidance for deployment work</li>
+                        <li>OpenClaw-relevant content when it supports the larger offer set</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
 
-  <template id="post-model-selection-hierarchy">
-    <h2># Picking the Right Model for the Job</h2>
-    <p>Most businesses making serious use of AI in 2026 are running more than one model. A large, capable model for complex reasoning. A faster, cheaper model for high-volume simple work. Increasingly, specialized models for specific domains. The question is no longer which model is best — that changes every few months anyway — but how do you route the right work to the right model?</p>
-    <h2>## The Three Tiers Worth Knowing</h2>
-    <p><strong>Tier 1: Large, capable models.</strong> Frontier models handling complex reasoning, nuanced writing, multi-step analysis. Right for tasks where quality matters most and volume is manageable: drafting legal summaries, analyzing edge cases, handling escalations requiring contextual judgment. The tradeoff is cost and latency. Running everything through your most powerful model is expensive and slower than necessary.</p>
-    <p><strong>Tier 2: Fast, efficient models.</strong> The mid-tier has gotten surprisingly capable. Tasks that needed a large model 18 months ago — classification, extraction, summarization, basic Q&A — now run well on smaller, faster models at a fraction of the cost. For high-volume operations processing thousands of requests per day, this tier is where most ROI lives.</p>
-    <p><strong>Tier 3: Specialized or fine-tuned models.</strong> Domain-specific models trained on legal, medical, financial, or industry data can outperform general models on narrow tasks at lower cost. Not the right starting point for most businesses, but worth evaluating if you are at scale in a specialized domain.</p>
-    <h2>## How to Route</h2>
-    <p>The practical question: how do you decide which model handles which request? <strong>Start with task complexity as your primary signal.</strong> Most business AI workflows break into a few task types: classification, extraction, generation, and reasoning. Classification and extraction are almost always Tier 2 work. Multi-step reasoning or anything requiring nuanced judgment belongs in Tier 1.</p>
-    <p><strong>Build a routing layer.</strong> Rather than hardcoding one model across your entire application, route requests programmatically based on task type or a lightweight complexity check. A simple classifier can decide whether a request needs deep reasoning or a quick answer — and send it to the right model accordingly. This does not have to be sophisticated to start. Even a rules-based router based on task category delivers most of the benefit.</p>
-    <p><strong>Use cost and quality data to calibrate.</strong> Once routing is in place, pull the actual numbers. You will often find that 60 to 70 percent of volume can shift down a tier without any quality degradation. That compound savings matters at scale.</p>
-    <h2>## The Mistake Most Teams Make</h2>
-    <p>Defaulting to one model for everything — usually the most capable one — because it feels safer. The reasoning is understandable: nobody wants to own quality problems that come from using a cheaper model. But ignoring the cost side leads to budgets that cannot scale, and projects that get canceled before they prove their value.</p>
-    <p>The inverse mistake is equally common: aggressively cutting to the cheapest tier and discovering that quality problems create downstream rework that costs more than the model savings. The goal is not minimizing model cost in isolation. It is finding the tier that delivers acceptable quality at sustainable cost for each task type, and measuring that rigorously rather than guessing.</p>
-    <h2>## The Bottom Line</h2>
-    <p>Model capabilities are evolving fast enough that specific recommendations will be outdated in months. What stays constant is the principle: match the tool to the job. Build a routing layer, monitor quality at each tier, and let the data tell you where you are over- or under-invested. That discipline will serve you regardless of what models are available next quarter.</p>
-  </template>
+        <section class="pane blog-container">
+            <div class="blog-list">
+                <div class="blog-list__header">$ ls -la ~/blog/</div>
+                <div class="blog-entry" data-post="why-ai-pilots-stall">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Apr 13</span>
+                    <span class="blog-entry__time">10m</span>
+                    <span class="blog-entry__name">why-ai-pilots-stall.md</span>
+                </div>
+                <div class="blog-entry" data-post="age-of-ai-agents">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Apr 11</span>
+                    <span class="blog-entry__time">9m</span>
+                    <span class="blog-entry__name">the-age-of-ai-agents.md</span>
+                </div>
+                <div class="blog-entry" data-post="response-time">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Apr 08</span>
+                    <span class="blog-entry__time">8m</span>
+                    <span class="blog-entry__name">how-we-cut-response-time-80-percent.md</span>
+                </div>
+                <div class="blog-entry" data-post="automation-small-business">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Apr 05</span>
+                    <span class="blog-entry__time">8m</span>
+                    <span class="blog-entry__name">ai-automation-for-small-business.md</span>
+                </div>
+                <div class="blog-entry" data-post="openclaw-fit">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Apr 01</span>
+                    <span class="blog-entry__time">7m</span>
+                    <span class="blog-entry__name">when-openclaw-is-the-right-fit.md</span>
+                </div>
+                <div class="blog-entry" data-post="stay-human">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Mar 28</span>
+                    <span class="blog-entry__time">7m</span>
+                    <span class="blog-entry__name">why-deploy-ai-stay-human.md</span>
+                </div>
+            </div>
+            <aside class="blog-reader">
+                <div class="blog-reader__header">
+                    <span class="blog-reader__label">~/blog/</span>
+                    <button class="blog-reader__close">[x] close</button>
+                </div>
+                <div class="blog-reader__content"></div>
+            </aside>
+        </section>
 
-  <template id="post-fine-tune-vs-prompt">
-    <h2># Fine-Tune or Prompt? A Practical Decision Guide</h2>
-    <p>Every business team that has been working with AI for more than a few months eventually hits the same question: should we fine-tune a model on our data, or can we get what we need through better prompts? The answer matters because the two paths are very different in cost, time, and maintenance overhead. Here is a practical framework for making the call.</p>
-    <h2>## What Fine-Tuning Actually Does</h2>
-    <p>Fine-tuning takes a pre-trained model and continues training it on your specific data. The model learns patterns from your examples: your terminology, your tone, your typical inputs and outputs. Done well, it produces a model that behaves more consistently for your specific use case and often performs better on narrowly defined tasks.</p>
-    <p>What it does not do: make the model smarter, give it knowledge it does not have, or fix fundamental capability gaps. If the base model cannot do a task, fine-tuning on a few hundred examples will not change that.</p>
-    <h2>## When Prompting Is Enough</h2>
-    <p>For most business use cases, prompting â including system instructions, few-shot examples, and retrieval-augmented generation â is the right starting point. The reasons are practical.</p>
-    <p><strong>Fast iteration.</strong> A prompt can be revised in minutes. A fine-tuning run takes hours and costs money. If you are still figuring out what you need, stay flexible. <strong>Low volume.</strong> If you are running a few hundred AI operations per day, the cost difference between a fine-tuned model and a well-prompted general model is rarely worth the overhead. <strong>Evolving requirements.</strong> If your use case is still changing â new categories, new data formats, new edge cases â you want to update behavior by editing a prompt file, not by re-training.</p>
-    <p>Retrieval-augmented generation (RAG) also solves most data freshness problems without fine-tuning. If your use case requires access to current or proprietary information, build a retrieval layer first. In many cases it fully eliminates the need for custom training.</p>
-    <h2>## When Fine-Tuning Earns Its Keep</h2>
-    <p>There are real cases where fine-tuning is the right call, but they are more specific than people assume.</p>
-    <p><strong>Consistent output format.</strong> If your downstream system needs AI output to follow a rigid schema â a specific JSON structure, fixed field names, strict formatting rules â fine-tuning can make that behavior more stable and reduce the prompt overhead required to enforce it.</p>
-    <p><strong>Domain-specific terminology.</strong> Legal, medical, manufacturing, finance: if your business uses language that general models handle imprecisely, fine-tuning on domain examples can meaningfully improve accuracy and reduce hallucinations in that vocabulary.</p>
-    <p><strong>Latency and cost at scale.</strong> A smaller fine-tuned model can sometimes outperform a much larger general model on a narrow task. If you are running millions of operations and cost-per-call matters, a purpose-built smaller model may make economic sense.</p>
-    <p><strong>Proprietary style at high volume.</strong> If brand voice consistency matters and you are producing enormous volumes of content, fine-tuning can encode style more reliably than prompting alone â especially where prompt tokens are expensive at scale.</p>
-    <h2>## A Simple Decision Framework</h2>
-    <p>Start with prompting. Measure the results. If you can reach 80â90% of your target quality with well-designed prompts and a retrieval layer, ship that. Fine-tuning is an investment: it requires curating training data, managing model versions, and re-running fine-tunes when the base model updates. That overhead is only worth it when you have a clearly defined and stable task, enough high-quality labeled examples (typically hundreds to thousands), and you have already hit the ceiling of what prompting can deliver.</p>
-    <p>The mistake most teams make is jumping to fine-tuning because it feels more rigorous, or because a vendor demo made it look easy. The teams getting the most out of AI right now are, with few exceptions, doing it with well-architected prompts and retrieval â not custom models.</p>
-    <h2>## The Bottom Line</h2>
-    <p>Prompt first. Measure carefully. Fine-tune when the data is clean, the task is stable, and the ceiling on prompting is real. In most cases, you will not need to â and starting with prompts keeps you moving fast enough to find out.</p>
-  </template>
+        <template id="post-why-ai-pilots-stall">
+            <h2>Why AI pilots stall after the demo</h2>
+            <p>Most AI pilots do not die because the model is embarrassingly bad. They die because the business never turns the pilot into an operating system. Leadership gets excited by the demo, someone approves a budget, a vendor says rollout will be fast, and then the team tries to drop the new tool into a workflow that was designed for entirely different constraints. Three months later nobody is sure whether the pilot failed or whether it just quietly drifted into irrelevance.</p>
+            <p>The pattern is predictable. In the demo environment everything is clean. The documents are consistent, the use case is narrow, the users are cooperative, and the edge cases are hidden. In production the exact opposite is true. Inputs are messy, handoffs are political, priorities change daily, and the people who actually have to use the system already have a full-time job. If the AI tool adds one more decision, one more dashboard, or one more exception path without removing anything else, adoption usually collapses.</p>
+            <h3>The first failure is ownership</h3>
+            <p>An AI pilot needs a real operator, not a vague sponsor. The sponsor says the initiative matters. The operator makes the thing work when reality pushes back. Without that person, every problem becomes someone else&rsquo;s problem. Prompt accuracy drifts, edge cases pile up, and the team reverts to the old process because the old process, while slow, is at least familiar.</p>
+            <p>Teams often assume ownership will emerge naturally once the value is obvious. It usually does not. Ownership has to be assigned, and it has to come with permission to change process. If the person responsible for the pilot cannot alter queue rules, handoff logic, or review behavior, they are not really responsible for the outcome. They are just the person answering questions in meetings.</p>
+            <h3>The second failure is workflow design</h3>
+            <p>The most common mistake is treating AI like a layer you can lay on top of the existing process. That is almost never true. A useful deployment changes the shape of the work. It decides what gets triaged automatically, what still requires human judgment, what gets escalated, and what gets measured. If none of that changes, the team ends up doing the old workflow plus the new AI maintenance overhead.</p>
+            <p>A good question is not “Can the model do this task?” A better question is “What should the human no longer have to do if this model exists?” If the answer is unclear, the pilot is probably still too abstract. Until a business can name the removed step, the shortened queue, or the simplified review path, it is not really redesigning work. It is experimenting in the abstract.</p>
+            <h3>The third failure is feedback architecture</h3>
+            <p>Even a strong deployment needs correction. People need a way to say the output was wrong, that the escalations were noisy, or that the assistant handled the right problem in the wrong tone. Without that loop the system does not improve. Worse, trust erodes silently. People stop relying on the AI before leadership notices the disengagement in the metrics.</p>
+            <p>This is why disciplined pilots usually start smaller than leadership expects. One workflow. One team. One owner. One measurable outcome. The goal is not to “roll out AI.” The goal is to prove that a redesigned process can outperform the old one under live conditions. Once that is true, scaling becomes much easier because the organization has a reference point for what good looks like.</p>
+            <h3>What actually works</h3>
+            <p>Start with a workflow where volume is real, judgment is unevenly distributed, and the business can name a concrete operational result. Map the process as it exists today. Then decide what the system should absorb, what the human should keep, and how exceptions move. Build the review path before the automation path. Define a measurement window. Put one person in charge of the outcome. That is what separates a pilot from a prolonged demo.</p>
+            <p>That distinction matters because most companies are not suffering from a shortage of AI options. They are suffering from a shortage of operational clarity. The businesses getting value out of AI are not necessarily buying better models than everyone else. They are doing a better job of matching the model to the workflow and the workflow to the people responsible for results.</p>
+            <div class="inline-cta">
+                If this is the problem you have, start with <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a> or go straight to <a href="contact.html">contact</a>.
+            </div>
+        </template>
 
-  <template id="post-measuring-ai-roi">
-    <h2># Measuring AI ROI: The Metrics That Actually Matter</h2>
-    <p>Every executive wants to know the same thing before signing off on an AI project: what's the return? It's a fair question. But the way most teams try to answer it â vague gestures at "productivity gains" or a single before-and-after comparison â sets projects up for disappointment. Here's how to measure AI ROI in a way that actually holds up.</p>
-    <h2>## Why Most AI ROI Calculations Miss the Mark</h2>
-    <p>The most common mistake is treating AI like a software license: buy it, deploy it, watch the savings roll in. Real deployments don't work that way. An AI tool that handles 70% of your customer inquiries automatically is genuinely valuable â but only if you've measured what the baseline looked like, accounted for the edge cases humans still need to handle, and tracked quality alongside volume.</p>
-    <p>Measuring only cost reduction misses a large part of the picture. Faster turnaround, fewer errors, better consistency, and employee time redirected to higher-value work all compound in ways that a simple cost comparison won't capture.</p>
-    <h2>## Set Your Baseline Before You Deploy</h2>
-    <p>This sounds obvious, but most teams skip it. Before you flip the switch on any AI system, document the current state in hard numbers: average handle time per task, error rate, throughput per employee per week, and cost per unit of output. Without this, you're guessing at the improvement later.</p>
-    <p>If you're automating invoice processing, count how long it takes a human to process a batch today, what the error rate is, and how many exceptions require manual review. Those numbers become your baseline. Everything after deployment gets measured against them.</p>
-    <h2>## The Metrics That Actually Tell You Something</h2>
-    <p><strong>Throughput per hour</strong> is usually the cleanest signal. If your team processes 40 support tickets per day and the AI system handles 200, that's a meaningful change you can quantify. Pair it with a quality check â customer satisfaction scores, resolution accuracy, or escalation rates â so you're not just measuring speed.</p>
-    <p><strong>Error and exception rate</strong> matters more than most people realize. An AI that handles high volume but generates a wave of exceptions for humans to fix can actually increase workload. Track the percentage of tasks the system completes without any human intervention, and track whether that percentage holds stable or degrades over time.</p>
-    <p><strong>Time-to-completion</strong> for processes end-to-end, not just the AI's portion. Sometimes AI speeds up one step while creating a bottleneck somewhere else. The metric you care about is the whole workflow, not just the automated slice.</p>
-    <p><strong>Employee time reallocation</strong> is the metric most teams forget to close the loop on. If the AI handles routine tasks, what did the team actually do with the reclaimed hours? If the answer is "more of the same backlog," the ROI story is solid. If the hours weren't redirected, that's a management and workflow issue worth addressing.</p>
-    <h2>## What Soft Benefits Are Worth Counting</h2>
-    <p>Consistency is real value. A human team will produce slightly different outputs depending on who handles a task and when. An AI system produces the same output at 2am on a Sunday as it does Monday morning. For compliance-heavy workflows, customer communications, or quality-sensitive operations, that consistency has monetary value â even if it's harder to put a number on it directly.</p>
-    <p>Scalability headroom is another one. If you can double order volume without doubling headcount, that's a structural cost advantage that shows up in margin when growth comes. It doesn't show up in today's ROI calculation, but it's worth noting in any business case.</p>
-    <h2>## A Simple 90-Day Review Framework</h2>
-    <p>At the 30-day mark, focus on stability: is the system behaving as expected, and are the baseline metrics moving in the right direction? At 60 days, compare throughput, error rates, and time-to-completion against your pre-deployment baseline. At 90 days, calculate the actual cost-per-unit-of-output and compare it to the human baseline. By then you should also have enough quality data to assess whether the improvement is holding.</p>
-    <p>If the numbers look good at 90 days, you have a real case for expanding scope. If they don't, you have specific metrics to diagnose against rather than a vague sense that something isn't working.</p>
-    <h2>## The Bottom Line</h2>
-    <p>AI ROI is measurable, but it requires discipline before deployment, not just after. Set your baselines, pick metrics that reflect the full workflow, and check in at regular intervals. The teams that do this consistently are the ones that can point to real numbers when leadership asks â and the ones that catch problems early enough to fix them.</p>
-  </template>
+        <template id="post-age-of-ai-agents">
+            <h2>The age of AI agents: what is actually working</h2>
+            <p>There is now enough distance between the first chatbot wave and the current agent wave to say something useful: AI agents are real, but the strongest use cases are narrower and more operational than the hype suggests. They are not magic employees. They are software systems that can reason across steps, use tools, and adapt within constraints. When those constraints are explicit, agents can produce enormous leverage. When those constraints are vague, agents mostly create expensive confusion.</p>
+            <p>The reason the conversation changed is simple. Earlier systems were good at one-turn interaction: summarize this, draft that, answer this question. Agents can sustain a thread of action. They can inspect data, make decisions, call tools, and continue until a task is complete or blocked. That makes them fundamentally more useful inside operations. It also makes failure more expensive because the system can now be wrong for twelve steps in a row instead of one.</p>
+            <h3>Where agents are genuinely working</h3>
+            <p>Research is a strong use case because the output is valuable, the source material is large, and the process can still be reviewed. A good agent can gather documents, compare findings, synthesize positions, and present a working brief much faster than a human doing the same work from scratch. The human still validates conclusions, but the expensive gathering and drafting layer shrinks dramatically.</p>
+            <p>Structured operations are another good fit. Intake and triage, document transformation, repetitive handoffs, internal knowledge retrieval, and controlled routing tasks all reward systems that can reason over a bounded set of rules. These are not glamorous deployments, but they are the ones actually reducing labor drag inside teams. They work because the operating context is narrow enough for the agent to stay useful and broad enough for the savings to matter.</p>
+            <p>Agents also perform well in environments where every step leaves a trace. That trace is what makes improvement possible. If a tool call fails, if a decision is noisy, or if the output format is wrong, the system can be debugged. This is another reason operations and software workflows are ahead of more ambiguous knowledge work. The feedback loop is tighter, and the business can tell whether the agent helped or got in the way.</p>
+            <h3>Where the hype still outruns reality</h3>
+            <p>Agents are much weaker in open-ended environments where nobody agrees on the success condition. If the assignment is “figure out our AI strategy” or “handle whatever comes in” without clear rules, the agent usually becomes a projection screen for wishful thinking. It may look capable in a few examples, but it will not hold up under real ambiguity unless a human is still actively shaping the work.</p>
+            <p>High-stakes approvals are another bad fit when businesses try to remove review too early. The problem is not that agents can never help here. The problem is that companies are tempted to skip the human checkpoint because the early results feel smooth. That is exactly when the risk compounds. A well-designed agent should make review easier, not optional.</p>
+            <h3>What managers should actually ask</h3>
+            <p>The right question is not whether an agent can do a job end to end. The right question is whether an agent can reliably own the middle of the process while humans retain the parts that involve accountability, judgment, and exception handling. That framing is more useful because it matches how good operations are built in the first place: work gets decomposed, routinized where possible, and escalated where necessary.</p>
+            <p>The organizations getting real value from agents are not chasing maximum autonomy. They are designing good operating envelopes. They know what the system can touch, how it asks for help, where it hands off, and how outcomes are reviewed. That is less dramatic than the “AI colleague” narrative, but it is the difference between leverage and liability.</p>
+            <div class="inline-cta">
+                Related services: <a href="services/custom-ai.html">Custom AI Solutions</a> and <a href="services/ai-automation.html">AI Workflow Automation</a>.
+            </div>
+        </template>
 
-  <template id="post-why-ai-pilots-stall">
-    <h2># Why Your AI Pilot Keeps Stalling (And How to Fix It)</h2>
-    <p>You ran the pilot. The demo looked great. Leadership signed off. And then... nothing. Six months later, the AI tool is barely used, the team has reverted to spreadsheets, and someone is asking if you should try a different vendor.</p>
-    <p>This is not a technology problem. It is a deployment problem. And it is more common than anyone in the AI industry wants to admit.</p>
-    <h2>## The Gap Between Demo and Production</h2>
-    <p>AI pilots fail in predictable ways. The demo environment is clean: curated data, cooperative users, a single well-defined use case. Production is messy: inconsistent data formats, resistant workflows, edge cases nobody thought to test.</p>
-    <p>The technical performance of the model itself is rarely the issue. At the enterprise level, today's models are good enough for most business tasks. What breaks is the integration between the AI and the actual work.</p>
-    <h2>## The Three Most Common Failure Modes</h2>
-    <p><strong>Nobody owns it.</strong> AI deployments that succeed have a champion â someone whose job is tied to making it work. Pilots that stall are everyone's responsibility, which means no one's. When the first friction appears (and it always does), there is no one empowered to push through it.</p>
-    <p><strong>The workflow wasn't redesigned.</strong> This is the most painful one to diagnose. You cannot drop AI into an existing process and expect it to improve. The process was designed around human constraints: working memory, attention span, communication overhead. AI has different constraints. If you hand an AI tool to your team without changing the workflow around it, you are adding complexity, not reducing it.</p>
-    <p><strong>The feedback loop is broken.</strong> AI systems need to be corrected, refined, and improved over time. Most pilots launch without any mechanism for collecting feedback, flagging errors, or iterating on prompts and configuration. The system degrades. People lose trust. Adoption drops.</p>
-    <h2>## What a Successful Deployment Actually Looks Like</h2>
-    <p>Start smaller than you think you need to. Not a pilot across three departments â one workflow, one team, one person who cares about making it work. Get that right before you scale.</p>
-    <p>Redesign the workflow before you launch the tool. Map the current process step by step. Identify which steps are bottlenecks, which are low-judgment, which require human context that AI cannot access. Build the AI into the gaps, not the whole thing.</p>
-    <p>Build feedback in from day one. Even a simple channel where the team can flag when the AI gets something wrong is better than nothing. The signal you collect in the first 30 days is more valuable than anything a vendor will tell you.</p>
-    <p>Measure the right things. Not "do people use it" â that is a lagging indicator. Measure time-to-completion on specific tasks, error rates, and whether the people using it feel like it helps. Talk to them directly. Regularly.</p>
-    <h2>## The Uncomfortable Truth</h2>
-    <p>Most AI pilots are not really pilots. They are demos that ran a little longer. A real pilot has a hypothesis ("we believe this will reduce processing time by 30%"), a measurement plan, a defined timeline, and a decision point at the end.</p>
-    <p>If your pilot does not have those things, you are not testing whether AI can help you. You are paying for an extended demonstration.</p>
-    <p>The gap between "AI is promising" and "AI is working in our business" is not filled by better models or bigger budgets. It is filled by disciplined implementation, honest feedback loops, and someone with enough authority to say: we are going to do this differently than we did it before.</p>
-    <p>That is the work we do. Not selling AI, but making it land.</p>
-  </template>
+        <template id="post-response-time">
+            <h2>How we cut response time by 80%</h2>
+            <p>Support response time is one of those metrics that leadership loves because it is easy to understand and easy to misuse. Many teams try to improve it by adding people, asking agents to move faster, or introducing an assistant that answers whatever it can. Those changes sometimes improve the number for a week or two, but they usually fail because they do not alter the structure of the queue. If the queue logic is wrong, speed at the edge does not fix the system.</p>
+            <p>The support environment behind this result had three classic problems. First, a large percentage of requests were repetitive and did not require human judgment. Second, everything entered the same queue, so the simple work crowded out the important work. Third, by the time a complex request reached a person, the person often had to re-read the entire context from scratch. That meant even escalated tickets started slowly.</p>
+            <h3>What changed</h3>
+            <p>The first intervention was not the assistant itself. It was queue architecture. We separated common requests, ambiguous requests, and clearly human-required requests into different operating paths. OpenClaw handled the front-line conversation for the repetitive issues, but just as importantly it collected the right information for the complex ones. That reduced both first response time and the cost of escalation.</p>
+            <p>The second intervention was classification discipline. Instead of asking the system to be “smart” in the abstract, we forced a smaller set of decisions: what type of request is this, what confidence threshold exists, what context needs to be gathered before handoff, and when should a human step in immediately. That simplicity matters. Support systems become noisy when they try to reason about everything at once. They improve when they do a few steps reliably.</p>
+            <p>The third intervention was handoff quality. A handoff is not useful just because a human is now in the loop. A useful handoff arrives with a summary, the relevant context, what the assistant already tried, and why the escalation happened. That is where much of the time savings came from. We did not just move tickets faster. We removed the repeated context reconstruction that human agents were doing all day.</p>
+            <h3>Why the result held</h3>
+            <p>The queue improved because the humans were no longer doing low-value sorting work. They spent more time on the cases that actually needed expertise, and those cases arrived with enough context to act. That combination creates a compounding effect: the assistant does not need to solve every ticket, it just needs to keep humans from spending their best energy on the wrong tickets.</p>
+            <p>This is why support transformations should be evaluated as operating redesign, not just as AI deployment. A business that measures only bot resolution rate can miss the more important effect: whether the queue is healthier, whether specialists are seeing the right issues, and whether customers are getting to the right path faster. Response time improved because the whole system got simpler.</p>
+            <p>That is also why this kind of work is repeatable. The exact tooling may change, but the principles do not. Good routing, good escalation, and good handoff design are durable. AI simply makes it more feasible to execute those principles at scale.</p>
+            <div class="inline-cta">
+                Read the related <a href="case-studies.html">case study preview</a> or review <a href="services/openclaw.html">OpenClaw Deployment</a>.
+            </div>
+        </template>
 
-  <template id="post-age-of-ai-agents">
-    <h2># The Age of AI Agents: From Assistant to Colleague</h2>
-    <p>We have spent the last few years talking about AI as a co-pilot, a tool that answers questions, drafts emails, and explains code. But in 2026, the conversation has shifted. AI agents are not just assisting humans anymore. They are completing tasks end-to-end, autonomously.</p>
-    <p>So what changed? And what does it mean for how we work?</p>
-    <h2>## From Chatbots to Agents</h2>
-    <p>The original wave of large language models impressed us with their fluency. Ask a question, get an answer. One turn in, one turn out. Agents are different. They operate across multiple steps using tools, browsing the web, writing and running code, managing files, and looping back on their own mistakes.</p>
-    <p>The mental model shifts from assistant to colleague you can delegate to. And delegation requires trust built over time, not just impressive single-shot performance.</p>
-    <h2>## What Is Actually Working Now</h2>
-    <p><strong>Data pipelines and automation.</strong> Agents that read from one source, transform data, and push it somewhere else are doing real production work. The task is structured, the failure modes are predictable, the loop is tight enough to catch errors.</p>
-    <p><strong>Software development workflows.</strong> From writing unit tests to reviewing pull requests to generating documentation, AI agents are embedded in developer toolchains at most tech companies. The programmer still owns the architecture, agents handle enormous amounts of mechanical work.</p>
-    <p><strong>Research summarization.</strong> Agents that browse, read, synthesize, and produce briefs across dozens of sources in minutes have become indispensable for analysts, lawyers, journalists, and executives.</p>
-    <h2>## What Is Still Hard</h2>
-    <p><strong>Long-horizon planning.</strong> Agents are good at the next step. They are less good at holding a 30-step plan while adapting to surprises. Human intuition still beats most agents in messy, open-ended work.</p>
-    <p><strong>Knowing when to stop and ask.</strong> The most frustrating agent failures are not wrong answers. They are agents that proceed confidently down the wrong path for 20 steps before anyone notices.</p>
-    <h2>## The Bigger Picture</h2>
-    <p>What agents are doing is unbounding human effort. A single person working with well-configured AI agents can now accomplish what would have required a small team. That is not displacement, it is amplification. The challenge for organizations right now is figuring out how to integrate agentic AI without losing the judgment, accountability, and human context that agents cannot replicate. That is exactly what we help businesses navigate.</p>
-  </template>
+        <template id="post-automation-small-business">
+            <h2>AI automation for small business</h2>
+            <p>Small businesses get bad AI advice because the market talks to them as if they were scaled software companies. They are told to build strategy frameworks, experiment with a dozen tools, or think about transformation in broad terms. Most of the time that is the wrong entry point. A smaller business should begin with labor drag. Where is time leaking? Where are the same decisions being made over and over? Where are people stuck moving information between systems instead of actually serving customers?</p>
+            <p>The reason this matters is simple: small teams do not have organizational slack. A bad AI initiative is not just a strategic miss; it steals attention from a company that was already short on attention. The best starting point is almost always a single workflow where the pain is obvious, the judgment required is limited, and the output is easy to review. If you cannot identify that workflow, you are not ready to automate anything yet.</p>
+            <h3>Email triage is usually low-hanging fruit</h3>
+            <p>Many small businesses still run on one or two overloaded inboxes. Everything lands in the same place: new leads, customer questions, invoices, scheduling requests, urgent internal issues, and low-value noise. AI is useful here not because it writes beautiful replies, but because it can classify, route, prioritize, and gather the basics before a human ever opens the thread. That immediately reduces decision fatigue.</p>
+            <h3>Meeting and document workflows add hidden labor</h3>
+            <p>Teams lose hours not just in meetings, but after meetings. Notes get rewritten, action items get restated, and decisions vanish into scattered tools. The same is true for documents. Contracts, forms, invoices, applications, and intake packets all create small repetitive tasks that accumulate into real operational cost. AI helps when it extracts, structures, and routes the information so a person only touches the exception path.</p>
+            <h3>Customer-facing automation should start narrow</h3>
+            <p>A small business does not need a giant conversational AI rollout to get value. It needs a careful decision about what a system should answer, when it should hand off, and what source material it can trust. FAQs, scheduling, intake, and status questions are usually stronger places to start than broad “virtual assistant” ambitions. Narrower scope makes quality easier to maintain.</p>
+            <p>The real test for a small-business automation is whether it gives time back without increasing supervision overhead. If the owner or operations lead now has to babysit a flaky system, the automation failed even if the demo looked efficient. A good automation should feel like one less person the team has to manage, not one more.</p>
+            <p>That is why smaller businesses should stay disciplined about sequence. Pick one workflow. Improve it. Measure the result. Then decide what comes next. Momentum comes from visible relief, not from buying the most sophisticated tool on the market.</p>
+            <div class="inline-cta">
+                This is usually an <a href="services/ai-automation.html">AI Workflow Automation</a> engagement. If the workflow is unclear, use <a href="contact.html">contact</a>.
+            </div>
+        </template>
 
-  <template id="post-how-we-cut-response-time">
-    <h2># How We Cut Response Time by 80%</h2>
-    <p>When TechFlow Solutions came to us, their customer support team was drowning. Average response time: 4 hours. Customer satisfaction: declining. Team morale: worse.</p>
-    <p>We deployed OpenClaw, our AI-powered customer service platform, and within 6 weeks response times dropped to under 45 minutes. Here is exactly how we did it.</p>
-    <h2>## The Problem</h2>
-    <p>TechFlow support team of 12 was handling 500+ tickets daily. Most were repetitive questions that did not need human expertise. But every ticket went through the same queue, creating bottlenecks for the issues that actually needed a person.</p>
-    <h2>## The Solution</h2>
-    <p>We implemented a three-layer approach: AI triage to categorize and route tickets, automated responses for common questions covering about 60% of volume, and smart escalation for complex issues that flagged the right specialist automatically.</p>
-    <h2>## The Results</h2>
-    <p>Response time: 4 hours to 45 minutes. Customer satisfaction: up 23%. Support team now focuses on complex, high-value interactions instead of answering the same questions repeatedly.</p>
-  </template>
+        <template id="post-openclaw-fit">
+            <h2>When OpenClaw is the right fit</h2>
+            <p>OpenClaw is powerful in the right context and distracting in the wrong one. That matters because once a business hears “multi-channel assistant,” it is easy for the imagination to outrun the workflow. The right way to evaluate OpenClaw is not as a generic AI capability. It is as an operating layer for businesses that have enough incoming conversation volume, enough repeatability, and enough need for structured escalation that a channel-spanning assistant can actually simplify the business.</p>
+            <p>When OpenClaw fits, it usually fits for practical reasons. There is already meaningful traffic coming through support, intake, or service channels. The business already has source material such as FAQs, policies, product knowledge, or historical interactions. The team already knows what should stay human. In other words, the environment is ready for a controlled assistant because the business has something real to operationalize.</p>
+            <h3>The strongest fit signals</h3>
+            <p>Multi-channel demand is the first signal. If your customers show up through web chat, email, messaging, or support systems and the team is trying to maintain consistency across all of them, OpenClaw can create useful standardization. The second signal is repetition. If every conversation is unique, the economics are weak. If the same clusters of questions appear again and again, the system has room to help.</p>
+            <p>The third signal is handoff discipline. A strong deployment does not ask the assistant to impersonate a human indefinitely. It decides what should be resolved automatically, what should be routed, and how the human receives the context. That handoff layer is where many businesses either win or fail. OpenClaw becomes much more valuable when it is part of an operating design instead of a loose chatbot experiment.</p>
+            <h3>When it is the wrong first move</h3>
+            <p>If a company is still unclear on what workflow it wants to improve, OpenClaw is probably not the first service it needs. The same is true if the source material is poor, the team cannot agree on escalation rules, or the real issue is internal process rather than customer-facing communication. In those cases a strategy or automation engagement is often the better opening move because the business needs clarity before it needs an assistant.</p>
+            <p>This is why OpenClaw sits inside the service set rather than above it. It is important, but it is not the answer to every AI question. The businesses that get the most value from it are usually the ones that resisted treating it like a magic shortcut and instead deployed it where the process was already mature enough to support it.</p>
+            <div class="inline-cta">
+                If those conditions exist, review <a href="services/openclaw.html">OpenClaw Deployment</a>. If not, the broader <a href="services.html">services hub</a> is the better starting point.
+            </div>
+        </template>
 
-  <template id="post-ai-automation-small-business">
-    <h2># AI Automation for Small Business</h2>
-    <p>You do not need a massive budget or a data science team to start using AI. Here are five practical automations that any small business can implement this month.</p>
-    <h2>## 1. Email Triage</h2>
-    <p>Use AI to automatically categorize incoming emails, flag urgent ones, and draft responses for common inquiries. Tools like n8n make this surprisingly easy to set up.</p>
-    <h2>## 2. Meeting Summaries</h2>
-    <p>Stop spending 30 minutes writing meeting notes. AI can transcribe, summarize, and extract action items from any meeting recording.</p>
-    <h2>## 3. Document Processing</h2>
-    <p>Invoices, contracts, applications. AI can extract structured data from documents faster and more accurately than manual data entry.</p>
-    <h2>## 4. Customer FAQ Bot</h2>
-    <p>Build a simple chatbot trained on your existing FAQ and documentation. It handles the easy questions so your team can focus on complex ones.</p>
-    <h2>## 5. Social Media Scheduling</h2>
-    <p>AI can help generate post ideas, write drafts, and optimize posting schedules based on your audience engagement patterns.</p>
-  </template>
+        <template id="post-stay-human">
+            <h2>Why deploy AI. Stay human.</h2>
+            <p>The line is not just branding. It is the guardrail. “Deploy AI. Stay human.” is a reminder that the goal is not to flatten judgment out of a business. The goal is to remove avoidable friction, speed up repetitive work, and strengthen the parts of the system where human attention is expensive. Without that guardrail, AI projects drift into two bad extremes: either they become shallow theater, or they become careless attempts to replace the parts of work that actually require responsibility.</p>
+            <p>There is a reason so much AI marketing feels off. It often assumes the highest form of progress is removing people from the process. That sounds efficient until you remember what people are doing in a healthy operation. They are resolving ambiguity, navigating relationships, making tradeoffs, and absorbing edge cases that do not fit the policy manual. Those are not bugs in the workflow. They are often the reason the workflow works.</p>
+            <h3>Where AI belongs</h3>
+            <p>AI belongs in the layers of work that are repetitive, pattern-heavy, and expensive mainly because they consume attention. Summaries, routing, first-pass drafting, data extraction, classification, and structured recommendations are all good examples. In those cases AI frees a human to work at a higher level. The point is not novelty. The point is reallocating scarce attention toward judgment.</p>
+            <p>That distinction matters because many teams confuse speed with progress. A process can become faster while becoming less trustworthy. It can become more automated while becoming more fragile. A business that deploys AI well is not just asking “Can we automate this?” It is also asking “What kind of mistake becomes more likely if we do?” and “Who needs to remain accountable when the system is uncertain?” Those are human questions, and they remain human questions even after the tooling improves.</p>
+            <h3>What “stay human” means operationally</h3>
+            <p>It means preserving escalation paths. It means making sure a human can review, intervene, and override. It means being explicit about where the system is allowed to act and where it must ask for help. It means understanding that customer trust, internal trust, and operator trust are as important as throughput. A system nobody trusts is not a modern workflow. It is dead weight with better branding.</p>
+            <p>In practice this principle is also what keeps AI deployments sane. It reduces the temptation to give a system too much autonomy too early. It forces the team to think about operations instead of just capability. It pushes the work toward good design instead of abstract optimism. That is why the line stays. It is not there to sound nice. It is there to stop the work from drifting into bad incentives.</p>
+            <div class="inline-cta">
+                That philosophy is expanded on the <a href="manifesto.html">manifesto page</a> and operationalized through the <a href="services.html">services hub</a>.
+            </div>
+        </template>
+    </main>
 
-  <template id="post-deploy-ai-stay-human">
-    <h2># Why Deploy AI. Stay Human.</h2>
-    <p>Our tagline is not just marketing. It is a philosophy that guides every engagement we take on.</p>
-    <p>The AI industry is full of hype. Every week there is a new headline about AI replacing jobs, AI achieving human-level reasoning, AI solving everything. Most of it is noise.</p>
-    <h2>## What We Actually Believe</h2>
-    <p>AI is a tool. A powerful one, but still a tool. The best results happen when you pair smart technology with smart people. When AI handles the repetitive, data-heavy work, humans are free to do what they do best: think creatively, build relationships, make judgment calls.</p>
-    <h2>## What This Means in Practice</h2>
-    <p>We never recommend replacing your team with AI. Instead, we augment them. We find the tasks that drain their time and energy, automate those, and let your people focus on the work that actually matters.</p>
-    <p>Deploy AI. Stay human. Use the technology. Keep the humanity.</p>
-  </template>
+    <nav class="status-bar">
+        <span class="status-bar__session">BaobabCat</span>
+        <ul class="status-bar__tabs">
+            <li class="status-bar__tab"><a href="index.html">0:home</a></li>
+            <li class="status-bar__tab"><a href="services.html">1:services</a></li>
+            <li class="status-bar__tab"><a href="blog.html">2:blog</a></li>
+            <li class="status-bar__tab"><a href="case-studies.html">3:cases</a></li>
+            <li class="status-bar__tab"><a href="contact.html">4:contact</a></li>
+        </ul>
+        <span id="tmux-clock" class="status-bar__clock"></span>
+    </nav>
 
-  <nav class="status-bar">
-    <span class="status-bar__session">BaobabCat</span>
-    <ul class="status-bar__tabs">
-      <li class="status-bar__tab"><a href="index.html">0:home</a></li>
-      <li class="status-bar__tab"><a href="manifesto.html">1:manifesto</a></li>
-      <li class="status-bar__tab"><a href="what-we-do.html">2:what-we-do</a></li>
-      <li class="status-bar__tab active"><a href="blog.html">3:blog</a></li>
-      <li class="status-bar__tab"><a href="contact.html">4:contact</a></li>
-    </ul>
-    <span class="status-bar__clock" id="tmux-clock"></span>
-  </nav>
-  <script src="terminal.js"></script>
+    <script src="terminal.js"></script>
 </body>
 </html>

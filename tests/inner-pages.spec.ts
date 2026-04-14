@@ -1,61 +1,60 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Manifesto Page', () => {
-    test('loads and has correct tab active', async ({ page }) => {
-        await page.goto('/manifesto.html');
-        const activeTab = page.locator('.status-bar__tab.active');
-        await expect(activeTab).toContainText('1:manifesto');
-    });
+test.describe('Core page existence', () => {
+  test('services page exists', async ({ page }) => {
+    await page.goto('/services.html');
+    await expect(page.locator('.status-bar__tab.active')).toContainText('1:services');
+    await expect(page.locator('h1')).toContainText('Services');
+  });
 
-    test('shows manifesto content', async ({ page }) => {
-        await page.goto('/manifesto.html');
-        await expect(page.locator('.manifesto-pane')).toBeVisible();
-        await expect(page.locator('.manifesto-cmd').first()).toContainText('cat MANIFESTO.md');
-    });
+  test('case studies page exists', async ({ page }) => {
+    await page.goto('/case-studies.html');
+    await expect(page.locator('.status-bar__tab.active')).toContainText('3:cases');
+    await expect(page.locator('h1')).toContainText('Proof');
+  });
+
+  test('contact page contains the contact form', async ({ page }) => {
+    await page.goto('/contact.html');
+    await expect(page.locator('form.contact-form')).toBeVisible();
+    await expect(page.locator('input[name="name"]')).toBeVisible();
+    await expect(page.locator('input[name="email"]')).toBeVisible();
+    await expect(page.locator('textarea[name="message"]')).toBeVisible();
+  });
+
+  test('privacy page exists', async ({ page }) => {
+    await page.goto('/privacy.html');
+    await expect(page.locator('h1')).toContainText('Privacy');
+  });
+
+  test('404 page exists', async ({ page }) => {
+    await page.goto('/404.html');
+    await expect(page.locator('.error-code')).toContainText('404');
+  });
 });
 
-test.describe('What We Do Page', () => {
-    test('loads and has correct tab active', async ({ page }) => {
-        await page.goto('/what-we-do.html');
-        const activeTab = page.locator('.status-bar__tab.active');
-        await expect(activeTab).toContainText('2:what-we-do');
-    });
+test.describe('Service hub and detail pages', () => {
+  const detailPages = [
+    '/services/ai-strategy.html',
+    '/services/ai-automation.html',
+    '/services/openclaw.html',
+    '/services/custom-ai.html',
+    '/services/ai-training.html',
+    '/services/ai-analytics.html',
+  ];
 
-    test('shows 6 service cards', async ({ page }) => {
-        await page.goto('/what-we-do.html');
-        const cards = page.locator('.service-card');
-        await expect(cards).toHaveCount(6);
-    });
+  test('services hub links to every detail page', async ({ page }) => {
+    await page.goto('/services.html');
+    for (const path of detailPages) {
+      await expect(page.locator(`a[href="${path.replace(/^\//, '')}"]`).first()).toBeVisible();
+    }
+  });
 
-    test('shows testimonials', async ({ page }) => {
-        await page.goto('/what-we-do.html');
-        const testimonials = page.locator('.testimonial');
-        await expect(testimonials).toHaveCount(3);
+  for (const path of detailPages) {
+    test(`detail page ${path} renders and keeps services nav active`, async ({ page }) => {
+      await page.goto(path);
+      await expect(page.locator('.status-bar__tab.active')).toContainText('1:services');
+      await expect(page.locator('.service-offer h1')).toBeVisible();
+      await expect(page.getByRole('link', { name: '[Contact]' })).toBeVisible();
     });
-});
-
-test.describe('Contact Page', () => {
-    test('loads and has correct tab active', async ({ page }) => {
-        await page.goto('/contact.html');
-        const activeTab = page.locator('.status-bar__tab.active');
-        await expect(activeTab).toContainText('4:contact');
-    });
-
-    test('shows contact info', async ({ page }) => {
-        await page.goto('/contact.html');
-        await expect(page.locator('.contact-info')).toBeVisible();
-    });
-
-    test('contact form has required fields', async ({ page }) => {
-        await page.goto('/contact.html');
-        await expect(page.locator('input[name="name"]')).toBeVisible();
-        await expect(page.locator('input[name="email"]')).toBeVisible();
-        await expect(page.locator('textarea[name="message"]')).toBeVisible();
-    });
-
-    test('form has Web3Forms hidden key', async ({ page }) => {
-        await page.goto('/contact.html');
-        const key = page.locator('input[name="access_key"]');
-        await expect(key).toHaveValue('372f2f8e-3b9a-4338-aaf3-b24cfd63534b');
-    });
+  }
 });

@@ -1,49 +1,32 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Home Page', () => {
-    test.beforeEach(async ({ page }) => {
-        await page.goto('/');
-    });
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/');
+  });
 
-    test('has correct title', async ({ page }) => {
-        await expect(page).toHaveTitle(/BaobabCat/);
-    });
+  test('has the home tab active', async ({ page }) => {
+    await expect(page.locator('.status-bar__tab.active')).toContainText('0:home');
+  });
 
-    test('status bar is visible with 5 tabs', async ({ page }) => {
-        const statusBar = page.locator('.status-bar');
-        await expect(statusBar).toBeVisible();
-        const tabs = statusBar.locator('.status-bar__tab');
-        await expect(tabs).toHaveCount(5);
-    });
+  test('shows the terminal entrance and continue interaction', async ({ page }) => {
+    await expect(page.locator('#typed-output')).toBeVisible();
+    await expect(page.locator('[data-continue]')).toBeVisible();
+  });
 
-    test('home tab is active', async ({ page }) => {
-        const homeTab = page.locator('.status-bar__tab.active');
-        await expect(homeTab).toContainText('0:home');
-    });
+  test('renders homepage sections for services, blog preview, and contact CTA', async ({ page }) => {
+    await expect(page.locator('.section-title').filter({ hasText: 'Services' })).toBeVisible();
+    await expect(page.locator('.section-title').filter({ hasText: 'Recent blog posts' })).toBeVisible();
+    await expect(page.locator('.section-title').filter({ hasText: 'Need an AI working session, not a pitch deck?' })).toBeVisible();
+  });
 
-    test('hero section has typing output area', async ({ page }) => {
-        const output = page.locator('#typed-output');
-        await expect(output).toBeVisible();
-    });
-
-    test('stats section exists', async ({ page }) => {
-        const stats = page.locator('.home-stats');
-        await expect(stats).toBeVisible();
-    });
-
-    test('CTA buttons link to correct pages', async ({ page }) => {
-        const beginBtn = page.locator('a.btn-terminal--primary');
-        await expect(beginBtn).toHaveAttribute('href', 'contact.html');
-
-        const learnBtn = page.locator('a.btn-terminal:not(.btn-terminal--primary)');
-        await expect(learnBtn).toHaveAttribute('href', 'manifesto.html');
-    });
-
-    test('typing animation starts', async ({ page }) => {
-        // Wait for first character to appear
-        await page.waitForFunction(() => {
-            const el = document.getElementById('typed-output');
-            return el && el.textContent && el.textContent.length > 0;
-        }, null, { timeout: 5000 });
-    });
+  test('top-level nav points to active terminal pages only', async ({ page }) => {
+    const links = page.locator('.status-bar__tab a');
+    await expect(links).toHaveCount(5);
+    await expect(links.nth(0)).toHaveAttribute('href', 'index.html');
+    await expect(links.nth(1)).toHaveAttribute('href', 'services.html');
+    await expect(links.nth(2)).toHaveAttribute('href', 'blog.html');
+    await expect(links.nth(3)).toHaveAttribute('href', 'case-studies.html');
+    await expect(links.nth(4)).toHaveAttribute('href', 'contact.html');
+  });
 });

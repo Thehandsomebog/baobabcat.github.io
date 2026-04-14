@@ -3,81 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH13JG6L1S"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CH13JG6L1S');
-    </script>
-
     <title>Manifesto | BaobabCat</title>
-    <meta name="description" content="Deploy AI. Stay human. Our philosophy on practical AI consulting for businesses.">
-    <meta name="author" content="BaobabCat LLC">
+    <meta name="description" content="BaobabCat's operating philosophy for practical AI work: deploy useful systems, preserve human judgment, and build around business constraints.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://baobabcat.com/manifesto.html">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://baobabcat.com/manifesto.html">
-    <meta property="og:title" content="Manifesto | BaobabCat">
-    <meta property="og:description" content="Deploy AI. Stay human. Our philosophy on practical AI consulting.">
-    <meta property="og:image" content="https://baobabcat.com/og-image.jpg">
-    <meta property="og:site_name" content="BaobabCat">
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page-manifesto">
-    <main class="pane manifesto-pane">
-        <div class="pane__label">~/manifesto</div>
-        <div class="manifesto-cmd">$ cat MANIFESTO.md</div>
-        <div class="manifesto-content">
-            <h2># Deploy AI. Stay human.</h2>
-            <p>We believe AI should amplify human capability, not replace it. Technology is a tool — the best results come when smart people wield smart tools. That's why we exist: to help businesses deploy AI that actually works, without losing the human touch that makes them great.</p>
-
-            <hr>
-
-            <h2># Our Approach</h2>
-            <p>We don't sell hype. We don't promise magic. We look at your business, find where AI creates real value, and build solutions that your team can actually use. Every engagement starts with understanding your people, your processes, and your goals — then we figure out where AI fits.</p>
-            <p>Practical over theoretical. Results over demos. Long-term value over quick wins.</p>
-
-            <hr>
-
-            <h2># stack.txt</h2>
-            <div class="manifesto-cmd">$ cat stack.txt</div>
-            <ul>
-                <li>Claude (Anthropic)</li>
-                <li>GPT-4 (OpenAI)</li>
-                <li>n8n (workflow automation)</li>
-                <li>Python (custom tooling)</li>
-                <li>Make (integrations)</li>
-            </ul>
-
-            <hr>
-
-            <h2># Why AI, Why Now</h2>
-            <p>AI is moving faster than most businesses can keep up with. Every month brings new models, new tools, new possibilities. The gap between companies using AI and those that aren't is widening fast — and it's not closing on its own.</p>
-            <p>We exist to close that gap. The baobab tree symbolizes resilience and strength — qualities we help businesses build through AI that actually works, not hype that wastes your budget.</p>
-        </div>
+    <main class="site-wrap page-shell">
+        <section class="pane">
+            <div class="pane__label">
+                <span>~/manifesto</span>
+                <span>secondary page</span>
+            </div>
+            <div class="pane__body page-copy">
+                <div class="cmd">$ cat MANIFESTO.md</div>
+                <h1 class="section-title">Deploy AI. Stay human.</h1>
+                <p>BaobabCat is not trying to replace the human layer in a business. The work is to remove drag, speed up decision support, and automate the parts of a workflow that do not deserve senior human attention.</p>
+                <p>That means strategy is only useful if it leads to implementation. Implementation is only useful if the team can adopt it. Adoption only sticks when the operating reality is respected.</p>
+                <div class="terminal-rule">────────────────────────────────────────────────────────</div>
+                <h2 class="section-title">Operating assumptions</h2>
+                <ul class="terminal-list">
+                    <li>Most AI failures are workflow failures, not model failures.</li>
+                    <li>Business outcomes matter more than feature novelty.</li>
+                    <li>Human escalation, review, and ownership are product features.</li>
+                    <li>The smallest useful deployment is usually the right first deployment.</li>
+                </ul>
+                <div class="terminal-rule">────────────────────────────────────────────────────────</div>
+                <h2 class="section-title">Preferred stack</h2>
+                <ul class="terminal-list">
+                    <li>LLMs where they help reasoning, drafting, or classification.</li>
+                    <li>Workflow systems where reliability matters more than spectacle.</li>
+                    <li>Operational dashboards where teams need visibility, not noise.</li>
+                    <li>Human review loops where the cost of being wrong is meaningful.</li>
+                </ul>
+                <p><a href="contact.html">Use the contact page</a> if you want to talk through an actual deployment problem.</p>
+            </div>
+        </section>
     </main>
 
-    <!-- Status Bar -->
     <nav class="status-bar">
         <span class="status-bar__session">BaobabCat</span>
         <ul class="status-bar__tabs">
             <li class="status-bar__tab"><a href="index.html">0:home</a></li>
-            <li class="status-bar__tab active"><a href="manifesto.html">1:manifesto</a></li>
-            <li class="status-bar__tab"><a href="what-we-do.html">2:what-we-do</a></li>
-            <li class="status-bar__tab"><a href="blog.html">3:blog</a></li>
+            <li class="status-bar__tab"><a href="services.html">1:services</a></li>
+            <li class="status-bar__tab"><a href="blog.html">2:blog</a></li>
+            <li class="status-bar__tab"><a href="case-studies.html">3:cases</a></li>
             <li class="status-bar__tab"><a href="contact.html">4:contact</a></li>
         </ul>
-        <span class="status-bar__clock" id="tmux-clock"></span>
+        <span id="tmux-clock" class="status-bar__clock"></span>
     </nav>
 
     <script src="terminal.js"></script>

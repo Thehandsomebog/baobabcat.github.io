@@ -1,211 +1,225 @@
-// terminal.js — Typing animations and interactions
-
-/**
- * Types text character by character into an element.
- * @param {HTMLElement} element - Target element
- * @param {string} text - Text to type
- * @param {number} speed - ms per character
- * @returns {Promise} resolves when done
- */
-function typeText(element, text, speed = 50) {
-    return new Promise(resolve => {
+function typeText(element, text, speed = 40) {
+    return new Promise((resolve) => {
         let i = 0;
+
         function tick() {
             if (i < text.length) {
                 element.textContent += text.charAt(i);
-                i++;
-                setTimeout(tick, speed);
-            } else {
-                resolve();
+                i += 1;
+                window.setTimeout(tick, speed);
+                return;
             }
+
+            resolve();
         }
+
         tick();
     });
 }
 
-/**
- * Runs the hero typing animation sequence.
- * Line 1: "Deploy AI." in green
- * Line 2: "Stay human." in yellow
- * Then subtitle types out.
- */
 async function animateHero() {
-    const output = document.getElementById('typed-output');
-    const subtitle = document.getElementById('subtitle-text');
-    if (!output || !subtitle) return;
+    const output = document.getElementById("typed-output");
+    const subtitle = document.getElementById("subtitle-text");
+    if (!output || !subtitle) {
+        return;
+    }
 
-    // Create line 1 span
-    const line1 = document.createElement('span');
-    line1.style.color = 'var(--accent-green)';
+    const line1 = document.createElement("span");
+    line1.style.color = "var(--accent-green)";
     output.appendChild(line1);
-    await typeText(line1, 'Deploy AI.', 50);
+    await typeText(line1, "Deploy AI.", 42);
 
-    // Line break
-    output.appendChild(document.createTextNode('\n'));
+    output.appendChild(document.createTextNode("\n"));
 
-    // Create line 2 span
-    const line2 = document.createElement('span');
-    line2.style.color = 'var(--accent-yellow)';
+    const line2 = document.createElement("span");
+    line2.style.color = "var(--accent-yellow)";
     output.appendChild(line2);
-    await typeText(line2, 'Stay human.', 50);
+    await typeText(line2, "Stay human.", 42);
 
-    // Pause, then type subtitle
-    await new Promise(r => setTimeout(r, 400));
-    await typeText(subtitle, 'AI consulting for businesses ready to grow.', 30);
+    await new Promise((resolve) => window.setTimeout(resolve, 260));
+    await typeText(subtitle, "Practical AI systems for companies that want measurable business outcomes, not demos.", 16);
 }
 
-/**
- * Animates the stats pane, revealing lines one by one.
- */
 function animateStats() {
-    const container = document.getElementById('stats-output');
-    if (!container) return;
+    const container = document.getElementById("stats-output");
+    if (!container) {
+        return;
+    }
 
     const stats = [
-        { key: 'models_deployed    ', value: ': 50+' },
-        { key: 'hours_saved_weekly ', value: ': 500+' },
-        { key: 'client_satisfaction', value: ': 98%' },
-        { key: 'efficiency_gain    ', value: ': 10x' },
-        { key: '', value: '' },
-        { status: 'status: all systems operational ✓' }
+        { key: "engagement_model     ", value: ": strategy -> ship -> train" },
+        { key: "preferred_clients    ", value: ": operators, founders, service teams" },
+        { key: "delivery_bias        ", value: ": working systems over slide decks" },
+        { key: "channels             ", value: ": internal tools, support, ops, analytics" },
+        { status: "status: terminal site preview ready" }
     ];
 
-    stats.forEach((stat, i) => {
-        const line = document.createElement('div');
-        line.className = 'stat-line';
+    stats.forEach((stat, index) => {
+        const line = document.createElement("div");
+        line.className = "stat-line";
 
         if (stat.status) {
-            line.className += ' stat-status';
+            line.className += " stat-status";
             line.textContent = stat.status;
-        } else if (stat.key) {
-            const keySpan = document.createElement('span');
-            keySpan.className = 'stat-key';
-            keySpan.textContent = stat.key;
-            line.appendChild(keySpan);
+        } else {
+            const key = document.createElement("span");
+            key.className = "stat-key";
+            key.textContent = stat.key;
 
-            const valSpan = document.createElement('span');
-            valSpan.className = 'stat-value';
-            valSpan.textContent = stat.value;
-            line.appendChild(valSpan);
+            const value = document.createElement("span");
+            value.className = "stat-value";
+            value.textContent = stat.value;
+
+            line.appendChild(key);
+            line.appendChild(value);
         }
 
         container.appendChild(line);
-
-        setTimeout(() => {
-            line.classList.add('visible');
-        }, 800 + (i * 300));
+        window.setTimeout(() => line.classList.add("visible"), 450 + index * 170);
     });
 }
 
-/**
- * Highlights the active status bar tab based on current page filename.
- */
 function setActiveTab() {
-    const path = window.location.pathname;
-    const pageFull = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
-    // Normalize: strip .html extension for comparison
-    const page = pageFull.replace(/\.html$/, '') || 'index';
+    const path = window.location.pathname.replace(/^\//, "");
+    const page = path || "index.html";
+    const currentRoute = page.replace(/(?:index)?\.html$/, "").replace(/\/$/, "") || "index";
 
-    const tabs = document.querySelectorAll('.status-bar__tab');
-    tabs.forEach(tab => {
-        tab.classList.remove('active');
-        const link = tab.querySelector('a');
-        if (link) {
-            const href = link.getAttribute('href');
-            // Normalize href the same way
-            const hrefBase = href ? href.replace(/\.html$/, '') : '';
-            if (hrefBase === page || (page === 'index' && hrefBase === 'index')) {
-                tab.classList.add('active');
-            }
+    document.querySelectorAll(".status-bar__tab").forEach((tab) => {
+        tab.classList.remove("active");
+        const link = tab.querySelector("a");
+        if (!link) {
+            return;
+        }
+
+        const href = link.getAttribute("href");
+        if (!href) {
+            return;
+        }
+
+        const normalizedHref = href.replace(/^(\.\/|\.\.\/)+/, "");
+        const normalizedRoute = normalizedHref.replace(/(?:index)?\.html$/, "").replace(/\/$/, "") || "index";
+        const serviceDetail = page.startsWith("services/");
+        if (normalizedRoute === currentRoute) {
+            tab.classList.add("active");
+        } else if (serviceDetail && normalizedHref === "services.html") {
+            tab.classList.add("active");
         }
     });
 }
 
-/**
- * Blog split-pane reader.
- * Clicking an entry opens the reader pane and shrinks the list.
- */
 function initBlog() {
-    const list = document.querySelector('.blog-list');
-    const reader = document.querySelector('.blog-reader');
-    const readerContent = document.querySelector('.blog-reader__content');
-    const readerLabel = document.querySelector('.blog-reader__label');
-    const closeBtn = document.querySelector('.blog-reader__close');
+    const list = document.querySelector(".blog-list");
+    const reader = document.querySelector(".blog-reader");
+    const readerContent = document.querySelector(".blog-reader__content");
+    const readerLabel = document.querySelector(".blog-reader__label");
+    const closeBtn = document.querySelector(".blog-reader__close");
+    const entries = document.querySelectorAll(".blog-entry");
 
-    if (!list || !reader) return;
+    if (!list || !reader || !readerContent || entries.length === 0) {
+        return;
+    }
 
-    // Entry click handler
-    document.querySelectorAll('.blog-entry').forEach(entry => {
-        entry.addEventListener('click', () => {
-            const postId = entry.dataset.post;
-            const template = document.getElementById('post-' + postId);
-            if (!template) return;
+    function openPost(entry) {
+        entries.forEach((item) => item.classList.remove("active"));
+        entry.classList.add("active");
 
-            // Clear and populate reader using DOM cloning
-            while (readerContent.firstChild) {
-                readerContent.removeChild(readerContent.firstChild);
-            }
-            const content = template.content.cloneNode(true);
-            readerContent.appendChild(content);
+        const postId = entry.dataset.post;
+        const template = postId ? document.getElementById(`post-${postId}`) : null;
+        if (!template) {
+            return;
+        }
 
-            // Update pane label
-            if (readerLabel) {
-                readerLabel.textContent = '~/blog/' + postId + '.md';
-            }
+        readerContent.replaceChildren(template.content.cloneNode(true));
+        if (readerLabel) {
+            readerLabel.textContent = `~/blog/${postId}.md`;
+        }
 
-            // Open split
-            list.classList.add('split');
-            reader.classList.add('open');
-        });
+        list.classList.add("split");
+        reader.classList.add("open");
+        window.location.hash = `post-${postId}`;
+    }
+
+    entries.forEach((entry) => {
+        entry.addEventListener("click", () => openPost(entry));
     });
 
-    // Close handler
     if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            reader.classList.remove('open');
-            list.classList.remove('split');
+        closeBtn.addEventListener("click", () => {
+            reader.classList.remove("open");
+            list.classList.remove("split");
+            entries.forEach((item) => item.classList.remove("active"));
+            history.replaceState(null, "", window.location.pathname);
         });
+    }
+
+    const hash = window.location.hash.replace(/^#/, "");
+    if (hash.startsWith("post-")) {
+        const entry = document.querySelector(`.blog-entry[data-post="${hash.replace(/^post-/, "")}"]`);
+        if (entry) {
+            openPost(entry);
+        }
     }
 }
 
-/**
- * Updates the tmux-style clock in the status bar.
- * Format: "HH:MM DD-Mon-YY" matching real tmux.
- */
 function initClock() {
-    const el = document.getElementById('tmux-clock');
-    if (!el) return;
+    const el = document.getElementById("tmux-clock");
+    if (!el) {
+        return;
+    }
 
     function update() {
         const now = new Date();
-        const h = String(now.getHours()).padStart(2, '0');
-        const m = String(now.getMinutes()).padStart(2, '0');
-        const day = String(now.getDate()).padStart(2, '0');
-        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        const h = String(now.getHours()).padStart(2, "0");
+        const m = String(now.getMinutes()).padStart(2, "0");
+        const day = String(now.getDate()).padStart(2, "0");
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         const mon = months[now.getMonth()];
         const yr = String(now.getFullYear()).slice(-2);
-        el.textContent = '"* BaobabCat" ' + h + ':' + m + ' ' + day + '-' + mon + '-' + yr;
+        el.textContent = `"* BaobabCat" ${h}:${m} ${day}-${mon}-${yr}`;
     }
 
     update();
-    setInterval(update, 10000);
+    window.setInterval(update, 10000);
 }
 
-/**
- * Initialize on DOM ready.
- */
-document.addEventListener('DOMContentLoaded', () => {
+function initContinue() {
+    const button = document.querySelector("[data-continue]");
+    if (!button) {
+        return;
+    }
+
+    button.addEventListener("click", () => {
+        const target = document.querySelector(button.getAttribute("data-continue"));
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    });
+}
+
+function initSuccessState() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("submitted") !== "true") {
+        return;
+    }
+
+    const banner = document.getElementById("form-success");
+    if (banner) {
+        banner.classList.add("is-visible");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
     setActiveTab();
     initClock();
+    initContinue();
+    initSuccessState();
 
-    // Home page animations
-    if (document.body.classList.contains('page-home')) {
+    if (document.body.classList.contains("page-home")) {
         animateHero();
         animateStats();
     }
 
-    // Blog page
-    if (document.body.classList.contains('page-blog')) {
+    if (document.body.classList.contains("page-blog")) {
         initBlog();
     }
 });

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CH13JG6L1S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CH13JG6L1S');
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>AI Pulse | Latest AI News &amp; Business Insights | BaobabCat</title>
+    <meta name="title" content="AI Pulse | Latest AI News & Business Insights | BaobabCat">
+    <meta name="description" content="Bite-sized AI insights for busy minds. Stay updated with the latest AI news, tools, and trends—curated daily coverage of OpenAI, Google AI, and enterprise AI solutions.">
+    <meta name="keywords" content="AI news, artificial intelligence, business AI, OpenAI news, Google AI, AI tools, machine learning, AI for business, AI trends, enterprise AI">
+    <meta name="author" content="BaobabCat Consulting">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://baobabcat.com/ai-pulse.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://baobabcat.com/ai-pulse.html">
+    <meta property="og:title" content="AI Pulse | Latest AI News & Business Insights">
+    <meta property="og:description" content="Stay updated with the latest AI news, tools, and insights for business. Curated daily coverage of artificial intelligence trends.">
+    <meta property="og:image" content="https://baobabcat.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="BaobabCat Consulting">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://baobabcat.com/ai-pulse.html">
+    <meta name="twitter:title" content="AI Pulse | Latest AI News & Business Insights">
+    <meta name="twitter:description" content="Stay updated with the latest AI news, tools, and insights for business. Curated daily coverage of artificial intelligence trends.">
+    <meta name="twitter:image" content="https://baobabcat.com/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data - WebPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "AI Pulse - AI News Feed",
+        "description": "Stay updated with the latest AI news, tools, and insights for business",
+        "url": "https://baobabcat.com/ai-pulse.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "BaobabCat Consulting",
+            "url": "https://baobabcat.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "BaobabCat Consulting",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://baobabcat.com/logo.svg"
+            }
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "AI News Feed",
+            "description": "Curated AI news and insights updated hourly"
+        }
+    }
+    </script>
+
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://baobabcat.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "AI Pulse",
+                "item": "https://baobabcat.com/ai-pulse.html"
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="ai-pulse-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img class="logo-icon" src="assets/nav-logo.png" alt="BaobabCat Logo">
+                <span class="logo-text">BaobabCat</span>
+            </a>
+            <button type="button" class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">The Team</a></li>
+                <li><a href="index.html#services" class="nav-link">What We Build</a></li>
+                <li><a href="ai-pulse.html" class="nav-link active">AI Pulse</a></li>
+                <li><a href="index.html#contact" class="nav-link">Let's Talk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1>AI Pulse</h1>
+                <p>Bite-sized AI insights for busy minds</p>
+            </div>
+
+            <div class="feed-container">
+                <!-- Feed filters -->
+                <div class="feed-filters">
+                    <button type="button" class="filter-btn active" data-filter="all">All</button>
+                    <button type="button" class="filter-btn" data-filter="news">News</button>
+                    <button type="button" class="filter-btn" data-filter="tools">Tools</button>
+                    <button type="button" class="filter-btn" data-filter="business">Business</button>
+                </div>
+
+                <!-- Feed posts -->
+                <div class="feed">
+                    <!-- Last updated: 2026-03-31T16:03:49.019Z -->
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">10m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxORHgzSDB3T19FSnV2ZnBxbkNvQnFoazQ4ZEU1djR1SHl4QTNSTEZ3Y1ZxT3dvOGZUN1NLaWd0c2dyZGZJRXVfTEkxMHpvcmdMeDA4Y3BoUldPLWVMaHlnR0h6bkNGUW5kUWhvRVFWLURjZmNCQWxkT2JoaEptUWRzTkVKT3BkTllRSTZ1RUE1OU9xWWdiR05yRFVqNGdQb29LOGozLV80dWpRdUFS?oc=5" target="_blank" rel="noopener noreferrer">Montana State symposium explores possibilities of artificial intelligence - Montana State University</a> <span class="post-source">— Montana State University</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">11m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxOdVpWUFpTT3MyeWw3QmFxQzNKbzFHRGFpZk5peHA1bzFyTFpJd1JNMzRORko0Uy1ib3ZIalYxem91ZlpCM08zZ2wxTGo1RjFMWGVWTTRoM2N3SWgzbHEwYmlWQUtGZWZpeVkzeUVwOXUzdHk4aTJGQ0dMRVJXdkwyVHlBUWExdDZDM3NwMlhKOVJ6MUU?oc=5" target="_blank" rel="noopener noreferrer">Education and relationships in the age of AI, April 7 - Marquette Today</a> <span class="post-source">— Marquette Today</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">16m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE1yZGpRbWxpNkk4NDVuZWV4djA5VjFjVm9oOGNCNmZ0WU52cmc0Rzk0N2hBT2pjeHU1SHZQZm1IREpIbzJ6cjVHR25QMjEteDgzRktqWXp5RTQyYnY5Mmtr?oc=5" target="_blank" rel="noopener noreferrer">Rapid and noninvasive artificial intelligence-assisted diagnostic method for oral squamous cell carcinoma - Nature</a> <span class="post-source">— Nature</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">27m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxOaHdjWXRZazV2LUxySFI0czFiSXYtMUhQMHVxLVhNSTlRaVM3NmtzVW0xSHUwaWplTjNLcmFQeWRIZFVPeEJmVTV1NktfbTFUSjc2NWNrRnREeDdBT0VEOWJuajdWcEdhMzQ3b3lQWE13cmdUVE5lbEFiemg0cmRONGtuSDAxeVBEY1JiT0VlU0JMdUNKWU84VmFSeElPMTNXaTE0MUY5T1liT2ZydGM5Q2RRRzNFYnUwRzZKUFY4em5NTURfVUlBSzRPcU13NnM0MzcxYlhR?oc=5" target="_blank" rel="noopener noreferrer">Can your governance keep pace with your AI ambitions? AI risk intelligence in the agentic era - Amazon Web Services (AWS)</a> <span class="post-source">— Amazon Web Services (AWS)</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">28m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPT0RoUHZjZlZ3RXhTM1MzX1FyN3Z6ZXR3eDVwX1dUYVo3TlgyUjhVek5kN0wwcnlzY1dqSWxuTkU4WXgyLTA4ejVPYVJJUmxkc3VVWjhtTTNSS1l0RVdneldZZ2NRbjBHcUNFYjFPU29XZG5tNkJwS2t1RnU2OFVqQlpYWjZNOGFod01QaXphY3NhN0dzaGcyekxzVWw2cnBaV2Z2aGdBWnQ?oc=5" target="_blank" rel="noopener noreferrer">The Fed, AI, and economic uncertainty: What investors need to know - MIT Sloan</a> <span class="post-source">— MIT Sloan</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">33m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQTmRBX2tySmJZbWR4VHZiMk1uelROUUlaWHFoeUF1SzVER3RtbDBJc1JOcFZlUklXN0xVV1F1UWl4N3FYM2NkaGNhZjVsVXdfZXdYenkzQzdHMWtWd0NPVEcyOWlQcUVXV3dad25qdHZraVktVGlkMWhDdUpRam1GWWJ0Uk81Z2NOMnl1OV9naGxJbmZwSzBPaVhFZzZJeWduYm1aaU94Y1JsQmx3cVU3QUFBZEhOMkswNmoxVVZhVlBjWVZkNUI3V3c1Zw?oc=5" target="_blank" rel="noopener noreferrer">AITX (NASDAQ: AITX) CEO-backed consent cuts authorized common shares by 15.5B - Stock Titan</a> <span class="post-source">— Stock Titan</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">33m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxOUlM5TUZBeVVscUdBT08zSElVTFdzNkp1aTN4MHFxcEdQX0UyUnlldjNWXy1lT1EtLUdUWU9JRk1qdzQ2TGVRVXIySlN5azhBV1dhYW5WamktaVlvQlVueHZoaTF1UWp5YkdEbXpEc0tqbklHY3lnWDFiRWhGNXZLcFgzbzJkQ3Qzb2FYV3BkaXAxUjZKbFVKQzJYY1VVcGZBSDcybGZzTnFvVXU0OEE?oc=5" target="_blank" rel="noopener noreferrer">CustomerInsights.AI Wins 2026 Artificial Intelligence Excellence Award in Agentic AI - Yahoo Finance</a> <span class="post-source">— Yahoo Finance</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="business">
+                        <div class="post-header">
+                            <span class="post-category">Business</span>
+                            <span class="post-time">35m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOb3ZCRWthbVdHOXduOU41dm9xR2xsdHRhSGpadFN3NURQXzhWWXotNEdla3ExSzZZN3JjRU5FYXBBZzcyODFrNFZOdkZWa1VBTl81bGVRdWpoblRCbHdlRDlqUG1OUUZ3R045QjlLcjJJR1VGbThVZVg1VVdhUl8zUHF3djVmZzgzQ2c?oc=5" target="_blank" rel="noopener noreferrer">Risk #3: Five Considerations for Advisers Implementing AI in Investment Decisions - JD Supra</a> <span class="post-source">— JD Supra</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#Funding</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="business">
+                        <div class="post-header">
+                            <span class="post-category">Business</span>
+                            <span class="post-time">37m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOQTlMZ2E4NVM2dUh2VkdBZnR0ODhxbUpESjlZUm1adUthREI0ZTRrdG81LWFKZm00TGQ0ZE50TFVwZVh5WmVWWldrNjZQMzJXaXl0TkpNOVJfUUtVbVhZWjFvaDgwYmZ3alNsZG5JajBwMWVQNVJmb0I0eEI4LUVEZVZDVFEtaDlaaENkVkh5QVpzMi1WUFptTGRB?oc=5" target="_blank" rel="noopener noreferrer">California imposes new AI regulations on businesses in "first-of-its-kind" executive order signed by Newsom - CBS News</a> <span class="post-source">— CBS News</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#Business</span>
+                            <span class="tag">#Regulation</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">40m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQOUxyc0NiWlcxX19ySk1qMWRIOHBXVlNPZUxZb3M5dUlYUDVoTjZYQ0FaUnVMQkxNUG56eWxNbjdnbmQ1bkl2VE5MS1dRVG1QS3lNZ0lEYXA1TGZROWVpd2Fycl9jcDJlTmdhSktnSnczdU1mZk9qTUZ4UlBBLUUtT1k0dmxPU3UwOEoyNTczaWFBUHF1UTR3MTEwdm5ad1NDRGJHTEhERUI?oc=5" target="_blank" rel="noopener noreferrer">SAP and ANYbotics drive industrial adoption of physical AI - AI News</a> <span class="post-source">— AI News</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="tools">
+                        <div class="post-header">
+                            <span class="post-category">Tools</span>
+                            <span class="post-time">53m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMi-wFBVV95cUxQSTR4WDVFUzFMMXUwZS1NUDN0LW9TZkFZbExVOFQ0Zk1ZeHUtejlxTVEzbWoxcmgzSmY4M0otemd6aTNWU0p5bFkxQVl5YjVxQnBNcVltT1lJMXZNSUJ1UVk0VjZIVWRSdmVXa1llckpDMEIxWlVOZjBHUm1pcklUM0xMbmdIZzdQeFBad3JvcFJvckcwYkd1RWZzNmgtMnE5dlJHVXpHaFpORVRVZDFyTzlQcmk2dUlHMG5ZUEc0WW0zQXF6enRHZ1BHaDVJVVJmeUV6ZGljVEcxSmdpdFd0MWVWSkNTUXJ2OVZLWWE1MnBsWWE1QXFRQkFPSQ?oc=5" target="_blank" rel="noopener noreferrer">Fusemachines Expands Distribution of Its AI Agents Through Global Teams AI Reseller Agreement, Launching with Interview AI Agent - AiThority</a> <span class="post-source">— AiThority</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">56m ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQelZLWDQ2NXpSUEt3NGJ1MERKRmlnNEZnTjVVWmQ2X3pDdTlRZ2w1LXp6S2hKS1RTYWdEcS1XdjVZbFJ6OExuSXFwQkdncDRBZHRvcUdRM0JkN2psLUFPODdFTnQwbU9wNHJPV2J2dXNJUUZ2SDBSbFB6R05pLXVaaUhpUFNaaWtFQjJCX19YeENPTTJSVkJXc1RMQlVQUGF5eWc?oc=5" target="_blank" rel="noopener noreferrer">Oracle layoffs reported as AI spending ramps up - Austin American-Statesman</a> <span class="post-source">— Austin American-Statesman</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="business">
+                        <div class="post-header">
+                            <span class="post-category">Business</span>
+                            <span class="post-time">1h ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMixwJBVV95cUxNb1ozNlgwN0JnNEU2dFRPVlp4VEF2MThnMWxjZ2FTM3EtTklHOTZPSDFwT0JmdDk3ODNnVHF3UXJrbmZfOGNPVVhkaTNuZ3E2TVlSakpnRkJneE41Mlh5d0tPV1ZqUGlUaGx3T0ZmbURETlZRVkFPWXdLRW1ZTnV3N3RtYl9wenFDR2RJV0ZwMFJCd3dwQjhhRGswTTZONGgyOHRUbXU5bjI3Y29NeWpsQXpPMUM5TTl6OUJ5UFJBYUNvNS05WmhEUXlTQS1uMm5lVFNtNzhKMm5pYWkwVFpiNHdmLXFwcnF5aVRoRFUtRHI5eTBPT093YVpyVDJBQ1psWk94U0JLV20wQzA1Vk8wVnk5NWJuRW1pTVR1bHlHZXZ6NFQ2azdzYTczZUdVODl1ejdEbG92aGRVNEFmZEM5U2cySE12Z1E?oc=5" target="_blank" rel="noopener noreferrer">Cubic Digital Intelligence Assessed "Awardable" for Department of War Work in the Chief Digital and Artificial Intelligence Office's (CDAO)Tradewinds Solutions Marketplace - palmbeachpost.com</a> <span class="post-source">— palmbeachpost.com</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">1h ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxQNlUtU0ZJSXZ4YjB4cElzaTB3SG5CUkFFSXJRcDZvVV9SajcwU2VsbWVQSlBqYmdKSFg2VmJabkVkLVFxQlNEN2ZpZTdGeDZ6THIwcUt5b1dQV3pZbVEzOFp5VTdsdlZMVDIwckk5R092QnNWOTM0bGY3a3lwaGRBNl9tTWhjYVJnZkpOOG5CMFdHaUtPS2lWUFlSZHBhWW1XaVBGVkFLWk1qN0UtMHd1Z1hVTE4?oc=5" target="_blank" rel="noopener noreferrer">Meet the Man Trying to Bring Emotional Intelligence to a Billion People - inc.com</a> <span class="post-source">— inc.com</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+
+                    <article class="feed-post animate-on-scroll" data-category="news">
+                        <div class="post-header">
+                            <span class="post-category">News</span>
+                            <span class="post-time">1h ago</span>
+                        </div>
+                        <p class="post-content"><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOak1adlJVd19WMlFEQmFvRjNyeGM3elItbWJaRDdDLWdsNXZsSTR5VEFkM0FINTZPbkJSYXNNM3pJM3JadkVhektKNmszX1BleklRN3JpMllkUzhydGxSWkdzMXdtTUlQbVhXUF9FdXBESVhzLXAzZDFYbjgyendWYURNZ2VjY0x0a1hmd2FvbG9vemNmOFhERUQ1RFFIQkdhbmJUaQ?oc=5" target="_blank" rel="noopener noreferrer">AI dominates the floor at WSIA Underwriting Summit - theinsurer.com</a> <span class="post-source">— theinsurer.com</span></p>
+                        <div class="post-tags">
+                            <span class="tag">#AI</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load more -->
+                <div class="feed-footer">
+                    <p class="feed-end-message">You're all caught up! Check back later for more updates.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <img class="logo-icon" src="assets/nav-logo.png" alt="BaobabCat Logo">
+                        <span class="logo-text">BaobabCat</span>
+                    </a>
+                    <p>AI consulting for businesses ready to grow.</p>
+                    <div class="newsletter-signup">
+                        <h4>Stay Updated</h4>
+                        <p>Get insights and tips delivered to your inbox.</p>
+                        <form class="newsletter-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="372f2f8e-3b9a-4338-aaf3-b24cfd63534b">
+                            <input type="hidden" name="subject" value="New Newsletter Subscriber">
+                            <input type="hidden" name="from_name" value="BaobabCat Newsletter">
+                            <input type="hidden" name="redirect" value="https://baobabcat.com/ai-pulse.html?subscribed=true">
+                            <div class="newsletter-input-group">
+                                <input type="email" name="email" placeholder="Enter your email" required>
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </form>
+                        <p class="newsletter-success" style="display: none;">Thanks for subscribing!</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services/ai-strategy.html">AI Strategy & Readiness</a></li>
+                            <li><a href="services/ai-automation.html">AI Workflow Automation</a></li>
+                            <li><a href="services/openclaw.html">OpenClaw Deployment</a></li>
+                            <li><a href="services/custom-ai.html">Custom AI Solutions</a></li>
+                            <li><a href="services/ai-training.html">AI Training & Enablement</a></li>
+                            <li><a href="services/ai-analytics.html">AI Data & Analytics</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="index.html#about">The Team</a></li>
+                            <li><a href="ai-pulse.html">AI Pulse</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:baobabcatllc@gmail.com">baobabcatllc@gmail.com</a></li>
+                            <li><a href="tel:+15102995399">(510)&nbsp;299&#8209;5399</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BaobabCat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+    <script>
+        // Feed filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const posts = document.querySelectorAll('.feed-post');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active button
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter posts
+                    const filter = this.dataset.filter;
+
+                    posts.forEach(post => {
+                        if (filter === 'all' || post.dataset.category === filter) {
+                            post.style.display = 'block';
+                            // Re-trigger animation
+                            post.classList.remove('visible');
+                            setTimeout(() => post.classList.add('visible'), 10);
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
