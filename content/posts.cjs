@@ -7,6 +7,7 @@ module.exports = [
         category: "implementation guidance",
         filename: "ai-after-hours-intake-without-next-day-cleanup.md",
         status: "published",
+        featured: false,
         summary: "How service businesses can use AI for after-hours intake without creating a mess for the morning team.",
         homeSummary: "How service businesses can use AI for after-hours intake without creating a mess for the morning team.",
         bodyHtml: `
@@ -38,6 +39,7 @@ module.exports = [
         category: "practical AI tips",
         filename: "why-ai-pilots-stall.md",
         status: "published",
+        featured: true,
         summary: "What actually kills an AI pilot after leadership approval, and what a disciplined rollout looks like instead.",
         homeSummary: "What actually kills an AI pilot after leadership approval, and what a disciplined rollout looks like instead.",
         bodyHtml: `
@@ -68,6 +70,7 @@ module.exports = [
         category: "strategy / opinion",
         filename: "the-age-of-ai-agents.md",
         status: "published",
+        featured: true,
         summary: "A longer read on where agents produce leverage and where teams are still kidding themselves.",
         homeSummary: "A longer read on where agents produce leverage and where teams are still kidding themselves.",
         bodyHtml: `
@@ -96,6 +99,7 @@ module.exports = [
         category: "implementation guidance",
         filename: "how-we-cut-response-time-80-percent.md",
         status: "published",
+        featured: true,
         summary: "A breakdown of queue design, triage logic, and escalation rules that made the number believable.",
         homeSummary: "A breakdown of queue design, triage logic, and escalation rules that made the number believable.",
         bodyHtml: `
@@ -122,6 +126,7 @@ module.exports = [
         category: "practical AI tips",
         filename: "ai-automation-for-small-business.md",
         status: "published",
+        featured: false,
         summary: "How smaller businesses should decide what to automate first, and where AI creates relief instead of overhead.",
         homeSummary: "How smaller businesses should decide what to automate first, and where AI creates relief instead of overhead.",
         bodyHtml: `
@@ -148,6 +153,7 @@ module.exports = [
         category: "implementation guidance",
         filename: "when-openclaw-is-the-right-fit.md",
         status: "published",
+        featured: false,
         summary: "How to tell when OpenClaw is a strong operational fit, and when another service should come first.",
         homeSummary: "How to tell when OpenClaw is a strong operational fit, and when another service should come first.",
         bodyHtml: `
@@ -172,6 +178,7 @@ module.exports = [
         category: "strategy / opinion",
         filename: "why-deploy-ai-stay-human.md",
         status: "published",
+        featured: false,
         summary: "Why preserving human judgment is the operating principle behind a sane AI deployment.",
         homeSummary: "Why preserving human judgment is the operating principle behind a sane AI deployment.",
         bodyHtml: `

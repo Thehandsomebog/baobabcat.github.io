@@ -13,9 +13,11 @@ Use Codex Automations against this repo only after connecting the repository and
 1. Add one new post object to `content/posts.cjs`
 2. Keep `status: "published"` if the automation should post immediately
 3. Use `status: "draft"` if you want the post written but not rendered yet
-4. Run `npm run generate:blog`
-5. Run `npm test`
-6. Leave the result in review or open a PR instead of force-pushing blind
+4. Keep `featured: false` by default so the homepage stays curated
+5. Set `featured: true` only when you intentionally want a post on the homepage
+6. Run `npm run generate:blog`
+7. Run `npm test`
+8. Leave the result in review or open a PR instead of force-pushing blind
 
 ## Required post fields
 
@@ -26,6 +28,7 @@ Use Codex Automations against this repo only after connecting the repository and
 - `category`
 - `filename`
 - `status`
+- `featured`
 - `summary`
 - `homeSummary`
 - `bodyHtml`
@@ -38,6 +41,7 @@ Use Codex Automations against this repo only after connecting the repository and
 - Include at least one internal link to a relevant service or contact page
 - Keep OpenClaw content in proportion; it is one service, not the whole business
 - Prefer operational topics: workflow design, support automation, deployment discipline, adoption, analytics, and AI ROI
+- Default to `featured: false` unless the task explicitly says to promote the post to the homepage
 
 ## Example Codex Automation prompt
 
@@ -50,6 +54,7 @@ Requirements:
 - no fake claims, fake metrics, or fake case-study details
 - include a strong internal CTA to a relevant service or the contact page
 - keep the post customer-facing and public-safe
+- keep featured as false unless explicitly told otherwise
 
 After writing:
 - run npm run generate:blog

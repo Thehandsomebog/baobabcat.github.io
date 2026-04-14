@@ -88,7 +88,10 @@ ${indentBlock(post.bodyHtml, "            ")}
 }
 
 function renderHomePosts(postsToRender) {
-    return postsToRender.slice(0, 3).map((post) => `                        <article class="post-preview">
+    const featuredPosts = postsToRender.filter((post) => post.featured === true).slice(0, 3);
+    const homepagePosts = featuredPosts.length > 0 ? featuredPosts : postsToRender.slice(0, 3);
+
+    return homepagePosts.map((post) => `                        <article class="post-preview">
                             <div class="post-preview__meta">${post.category}</div>
                             <h3><a href="blog.html#post-${post.slug}">${post.title}</a></h3>
                             <p>${post.homeSummary || post.summary}</p>
