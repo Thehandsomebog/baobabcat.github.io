@@ -47,11 +47,11 @@ function animateStats() {
     }
 
     const stats = [
-        { key: "engagement_model     ", value: ": strategy -> ship -> train" },
-        { key: "preferred_clients    ", value: ": operators, founders, service teams" },
-        { key: "delivery_bias        ", value: ": working systems over slide decks" },
-        { key: "channels             ", value: ": internal tools, support, ops, analytics" },
-        { status: "status: terminal site preview ready" }
+        { key: "services             ", value: ": strategy, automation, training" },
+        { key: "industries           ", value: ": support, service, ops teams" },
+        { key: "delivery             ", value: ": working systems over slide decks" },
+        { key: "focus                ", value: ": support, workflows, analytics" },
+        { status: "status: available for new client work" }
     ];
 
     stats.forEach((stat, index) => {

@@ -17,7 +17,7 @@ test.describe('Home Page', () => {
   test('renders homepage sections for services, blog preview, and contact CTA', async ({ page }) => {
     await expect(page.locator('.section-title').filter({ hasText: 'Services' })).toBeVisible();
     await expect(page.locator('.section-title').filter({ hasText: 'Recent blog posts' })).toBeVisible();
-    await expect(page.locator('.section-title').filter({ hasText: 'Need an AI working session, not a pitch deck?' })).toBeVisible();
+    await expect(page.locator('.section-title').filter({ hasText: 'Need help turning AI into working systems?' })).toBeVisible();
   });
 
   test('top-level nav points to active terminal pages only', async ({ page }) => {

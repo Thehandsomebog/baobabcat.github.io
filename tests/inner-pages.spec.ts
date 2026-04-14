@@ -10,7 +10,7 @@ test.describe('Core page existence', () => {
   test('case studies page exists', async ({ page }) => {
     await page.goto('/case-studies.html');
     await expect(page.locator('.status-bar__tab.active')).toContainText('3:cases');
-    await expect(page.locator('h1')).toContainText('Proof');
+    await expect(page.locator('h1')).toContainText('Case studies');
   });
 
   test('contact page contains the contact form', async ({ page }) => {
