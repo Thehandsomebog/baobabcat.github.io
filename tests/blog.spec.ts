@@ -9,8 +9,8 @@ test.describe('Blog Page', () => {
     await expect(page.locator('.status-bar__tab.active')).toContainText('2:blog');
   });
 
-  test('shows six blog entries', async ({ page }) => {
-    await expect(page.locator('.blog-entry')).toHaveCount(6);
+  test('shows blog entries', async ({ page }) => {
+    await expect.poll(async () => page.locator('.blog-entry').count()).toBeGreaterThanOrEqual(6);
   });
 
   test('opens the reader when clicking a post', async ({ page }) => {

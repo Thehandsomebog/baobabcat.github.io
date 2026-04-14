@@ -746,10 +746,25 @@ main {
     gap: 22px;
 }
 
+.blog-screen {
+    display: grid;
+}
+
 .blog-top {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 18px;
+}
+
+.blog-band__inner {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.blog-container__label {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
 }
 
 .blog-container {
@@ -757,6 +772,7 @@ main {
     min-height: 640px;
     position: relative;
     overflow: hidden;
+    border-top: 0;
 }
 
 .blog-list {
@@ -1046,6 +1062,10 @@ main {
 
     .site-wrap {
         padding: 16px 12px 72px;
+    }
+
+    .blog-band__inner {
+        max-width: none;
     }
 
     .pane__body,
