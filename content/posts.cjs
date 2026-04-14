@@ -1,5 +1,36 @@
 module.exports = [
     {
+        slug: "after-hours-ai-intake",
+        title: "AI after-hours intake without next-day cleanup",
+        date: "2026-04-14",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-after-hours-intake-without-next-day-cleanup.md",
+        status: "published",
+        summary: "How service businesses can use AI for after-hours intake without creating a mess for the morning team.",
+        homeSummary: "How service businesses can use AI for after-hours intake without creating a mess for the morning team.",
+        bodyHtml: `
+<h2>AI after-hours intake without next-day cleanup</h2>
+<p>After-hours intake looks like an easy AI win because the pain is obvious. Calls come in when the office is closed. Web forms sit untouched until morning. Voicemails pile up. Customers want a response now, not at 8:07 the next day. The temptation is to put an AI assistant in front of the problem and assume the morning team will inherit a cleaner queue.</p>
+<p>That only works if the intake system is designed for operations instead of appearance. Many businesses deploy an after-hours assistant that sounds responsive but creates more cleanup the next day. The assistant collects partial information, mislabels urgency, fails to separate sales from service, or leaves the team with transcripts that still have to be interpreted by hand. The business feels modern at night and disorganized by morning.</p>
+<h3>Good intake is not the same as good conversation</h3>
+<p>This is where a lot of teams get misled. A smooth conversation is useful, but it is not the main success condition. The real question is whether the system leaves the next shift with something actionable. Can the dispatcher or coordinator see what happened, what the customer needs, how urgent it is, what data is still missing, and what should happen next? If not, the assistant did not reduce labor. It just moved the labor downstream.</p>
+<p>For service businesses, the intake target is usually simple. Capture the issue. Identify the customer. Confirm the location or account. Determine urgency. Route the request into the right next step. If a system cannot do those things reliably, it should not be asked to improvise around them.</p>
+<h3>What the morning team actually needs</h3>
+<p>The first requirement is structured intake, not a wall of text. The overnight queue should show a concise summary, contact details, service context, urgency signal, and any missing fields that still need confirmation. A transcript can exist underneath that, but it should not be the primary artifact. Operators should not have to read six paragraphs to discover that the customer really just needs a reschedule.</p>
+<p>The second requirement is routing discipline. Not every overnight interaction belongs in the same pile. Emergency issues, routine service requests, quote inquiries, billing questions, and general contact messages should not arrive as one undifferentiated list. An AI system can help here, but only if the routing rules are explicit. When the rules are vague, every message becomes a judgment call and the team ends up re-triaging the entire queue manually.</p>
+<p>The third requirement is a clear failure path. If the assistant is uncertain, missing key information, or dealing with something potentially urgent, it should say so and escalate cleanly. Businesses get into trouble when they expect the assistant to sound confident instead of being operationally honest. A flagged exception is much cheaper than a false sense of completion.</p>
+<h3>Where teams usually overreach</h3>
+<p>The common mistake is trying to turn after-hours intake into full customer service. That is usually too much scope for a first deployment. The system does not need to solve every issue overnight. It needs to gather enough context, keep the customer from feeling ignored, and prepare the next human step. If it can do that consistently, it is already creating value.</p>
+<p>This is also why OpenClaw should be kept in proportion. For some businesses, a multi-channel assistant is the right implementation layer because requests are arriving across chat, text, web, and other channels. For others, the bigger need is the workflow underneath: intake fields, routing rules, escalation paths, and queue design. The assistant matters, but the operating logic matters more.</p>
+<h3>A practical starting point</h3>
+<p>Start with one overnight workflow. Define what counts as urgent, what fields are mandatory, what the assistant is allowed to promise, and what the morning team should see when they open the queue. Then test the handoff, not just the interaction. If the day team can act faster with less interpretation, the system is helping. If they still have to reconstruct the request from scratch, the deployment is not ready.</p>
+<p>That framing is useful because it keeps the project grounded. After-hours AI does not have to be magical to be worthwhile. It just has to reduce missed requests, improve routing, and make the first human touchpoint better informed. For most service teams, that is the difference between a tool that sounds impressive and a system that actually improves operations.</p>
+<div class="inline-cta">
+    If after-hours requests are piling up, start with <a href="services/ai-automation.html">AI Workflow Automation</a> or go straight to <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "why-ai-pilots-stall",
         title: "Why AI pilots stall after the demo",
         date: "2026-04-13",
