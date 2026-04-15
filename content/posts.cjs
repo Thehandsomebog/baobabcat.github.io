@@ -1,5 +1,39 @@
 module.exports = [
     {
+        slug: "ai-shift-handoffs-service-teams",
+        title: "AI shift handoffs for service teams",
+        date: "2026-04-15",
+        readTime: "9m",
+        category: "implementation guidance",
+        filename: "ai-shift-handoffs-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to tighten shift handoffs without turning every update into more admin work.",
+        homeSummary: "How service teams can use AI to tighten shift handoffs without turning every update into more admin work.",
+        bodyHtml: `
+<h2>AI shift handoffs for service teams</h2>
+<p>Most service teams do not lose time because people refuse to work hard. They lose time in the gap between one person finishing a job and the next person figuring out what actually happened. A field tech leaves notes that are too thin. A dispatcher has to call back for missing context. A support rep inherits a ticket with half the story. The next shift starts by reconstructing reality instead of moving the work forward.</p>
+<p>This is a good AI problem, but only if the goal is operational clarity. Many businesses hear &ldquo;AI notes&rdquo; and imagine perfect summaries floating into the system automatically. What they usually need is simpler: a clean handoff that tells the next person what was done, what is still open, what matters now, and what should happen next. If AI can produce that reliably, it saves time. If it just writes prettier paragraphs, it becomes one more thing nobody trusts.</p>
+<h3>Why handoffs break down</h3>
+<p>Most teams already have places where handoff information can live. The problem is that the information arrives in the wrong form. Voice notes are fast but inconsistent. Freeform ticket updates are detailed but hard to scan. Text messages carry urgency but disappear into side channels. Spreadsheets and dispatch systems may hold the official record, but not the reasoning behind the last decision.</p>
+<p>That mismatch creates drag everywhere. The office team cannot tell whether a job needs follow-up, the next rep cannot tell whether the customer was already updated, and management cannot tell whether recurring issues are process failures or just documentation failures. People compensate by over-communicating in some places and under-documenting in others.</p>
+<h3>What a useful AI handoff actually contains</h3>
+<p>A good handoff is structured enough to act on quickly. For service work, that usually means the next owner, current status, customer impact, unresolved blockers, promised follow-up, and any missing information that still needs confirmation. The handoff can be short, but it cannot be vague. &ldquo;Customer called, issue handled&rdquo; is not a handoff. It is a placeholder.</p>
+<p>This is where AI can help without overreaching. The system can turn messy raw inputs into a consistent handoff format. It can extract commitments, flag missing details, identify whether a return visit is implied, and separate customer-facing updates from internal notes. That kind of standardization matters because the next shift does not need the entire conversation. It needs the operational truth.</p>
+<h3>Keep the source inputs simple</h3>
+<p>The mistake is forcing the team to perform for the AI. If the workflow requires technicians, coordinators, or support reps to write perfect notes just so the system can summarize them, adoption will collapse. The better approach is to accept the inputs the team already produces, then normalize them downstream. Short dictated notes, quick ticket updates, checklist items, and dispatch status changes are usually enough if the transformation rules are clear.</p>
+<p>That design choice matters for owners and operators because it protects throughput. The point is not to create a more elegant recordkeeping ritual. The point is to keep the day moving while making the next handoff less expensive.</p>
+<h3>Where teams should draw the line</h3>
+<p>AI should not be inventing facts, smoothing over uncertainty, or pretending a commitment was made when it was only implied. If the source is incomplete, the handoff should say so directly. Honest incompleteness is much safer than confident fiction. The receiving team can work with a flagged gap. It cannot work with a false sense of closure.</p>
+<p>This is also where product choice should stay in proportion. OpenClaw can be part of a broader communication workflow when handoffs are crossing channels, but many teams do not need a channel-spanning assistant to fix this problem. They need disciplined workflow automation, defined note structure, and a clear destination for the handoff itself.</p>
+<h3>A practical starting point</h3>
+<p>Start with one transition point that creates repeat friction. It might be field-to-office, tier-one-to-tier-two support, estimator-to-project manager, or day shift to after-hours coverage. Define the minimum handoff fields, collect examples of bad handoffs, and decide what the next owner must know before touching the work. Then test whether the AI output reduces back-and-forth instead of just making the notes sound more polished.</p>
+<p>That is the standard worth using. A handoff system is working when the next person can act quickly without chasing context across three tools and two people. For service teams, that is where AI stops being marketing language and starts acting like real operating leverage.</p>
+<div class="inline-cta">
+    If shift handoffs are slowing down the team, start with <a href="services/ai-automation.html">AI Workflow Automation</a> or use <a href="contact.html">contact</a> to map the workflow.
+</div>`,
+    },
+    {
         slug: "after-hours-ai-intake",
         title: "AI after-hours intake without next-day cleanup",
         date: "2026-04-14",
