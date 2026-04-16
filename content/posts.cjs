@@ -1,5 +1,39 @@
 module.exports = [
     {
+        slug: "ai-sop-retrieval-frontline-teams",
+        title: "AI SOP retrieval for frontline teams",
+        date: "2026-04-16",
+        readTime: "9m",
+        category: "implementation guidance",
+        filename: "ai-sop-retrieval-for-frontline-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service and support teams can use AI to find the right procedure faster without turning every answer into a trust problem.",
+        homeSummary: "How service and support teams can use AI to find the right procedure faster without turning every answer into a trust problem.",
+        bodyHtml: `
+<h2>AI SOP retrieval for frontline teams</h2>
+<p>A lot of teams say they want an AI assistant when what they actually need is faster access to the procedures they already have. Support reps need to know what the return policy says in the weird edge case. Service coordinators need the current scheduling rules. Field teams need the right checklist without digging through a shared drive, an old PDF, and three Slack messages. The friction is not always lack of intelligence. It is often lack of retrieval.</p>
+<p>This matters because frontline work is full of small decisions made under time pressure. When the right answer is buried, people either ask a coworker, rely on memory, or make a judgment call that may or may not match the business rule. None of those are stable operating systems. AI can help here, but only if the deployment is built around reliable source material and clear answer boundaries.</p>
+<h3>The real problem is usually document sprawl</h3>
+<p>Most businesses already have SOPs, policy notes, training documents, and exception rules. The problem is that they live in too many places and age at different speeds. One version is in a Google Doc, another in a help center article, another in an onboarding PDF, and the tribal knowledge is sitting with the person who has worked there the longest. When a rep or dispatcher asks a question, they are not searching one system. They are searching the business.</p>
+<p>That creates predictable waste. Answers take too long to find. Different team members give different responses. Managers get pulled into repeat clarification work. New hires take longer to become useful because experienced staff become the lookup layer. If AI is going to help, this is one of the cleaner starting points because the goal is narrow: find the best answer from approved material and show the supporting source.</p>
+<h3>Good retrieval is different from good chat</h3>
+<p>This is where teams go sideways. They evaluate the tool by whether the conversation feels smooth instead of whether the answer is grounded. For internal SOP use, the important question is not whether the assistant sounds confident. It is whether the team can see where the answer came from, whether the source is current, and whether uncertainty is handled honestly.</p>
+<p>A useful retrieval system should cite the underlying document, pull the relevant section, and say when the source material is incomplete or conflicting. If the answer requires a manager decision, the system should say that instead of improvising. Frontline teams can work with an answer that includes a source and a limit. They cannot work safely with fluent guessing.</p>
+<h3>Start with one class of operational questions</h3>
+<p>Owners and operators often make this too broad on day one. They want one assistant that can answer everything for everyone. That usually produces a noisy system because the documents are inconsistent and the rules are not equally mature across departments. A better starting point is one class of recurring questions: warranty handling, dispatch rules, onboarding procedures, escalation criteria, billing exceptions, or field checklists.</p>
+<p>That narrower scope gives the business a real chance to clean up the source material, define who owns it, and decide what the assistant should do when it cannot find a reliable answer. Once that works, expanding scope becomes much easier because the team has a reference model for quality.</p>
+<h3>Retrieval still needs ownership</h3>
+<p>An internal assistant does not remove the need for document governance. In some ways it makes that need more visible. If the SOP is outdated, contradictory, or written for policy rather than execution, AI will expose the weakness quickly. That is useful, but only if someone is responsible for fixing the source material. Otherwise the team ends up blaming the tool for a documentation problem.</p>
+<p>This is also where OpenClaw should stay in proportion. If the business needs knowledge access across customer channels and internal workflows, OpenClaw may be part of the stack. But many SOP retrieval projects do not start there. They start with document cleanup, answer boundaries, retrieval design, and team adoption. In other words, they start with operations.</p>
+<h3>What success actually looks like</h3>
+<p>Success is not the team saying the assistant is impressive. Success is fewer interruptions, faster answers for repeat questions, more consistent decisions, and less dependence on the same two experienced employees to interpret policy all day. The win is operational steadiness. If the assistant reduces lookup friction while keeping people inside approved rules, it is doing the job.</p>
+<p>That is why retrieval can be a strong first AI move for service and support teams. It does not require pretending the system can handle every judgment call. It just needs to make the existing operating knowledge easier to use under live conditions. For many businesses, that is enough to create real relief without adding a lot of theater.</p>
+<div class="inline-cta">
+    If the team keeps losing time to policy lookups and repeat questions, start with <a href="services/ai-training.html">AI Training &amp; Enablement</a>, review <a href="services/ai-automation.html">AI Workflow Automation</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-shift-handoffs-service-teams",
         title: "AI shift handoffs for service teams",
         date: "2026-04-15",
