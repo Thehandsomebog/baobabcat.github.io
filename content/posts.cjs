@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-dispatch-prioritization-service-teams",
+        title: "AI dispatch prioritization for service teams",
+        date: "2026-04-19",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-dispatch-prioritization-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service businesses can use AI to reprioritize daily work without turning the dispatch board into a trust problem.",
+        homeSummary: "How service businesses can use AI to reprioritize daily work without turning the dispatch board into a trust problem.",
+        bodyHtml: `
+<h2>AI dispatch prioritization for service teams</h2>
+<p>Most service businesses do not struggle because the schedule was poorly planned at 7:00 a.m. They struggle because the day refuses to stay still. A technician runs long. A customer calls back with new urgency. A part does not arrive. A route that looked efficient in the morning becomes the wrong route by noon. The dispatcher, coordinator, or owner spends the rest of the day deciding which commitments move, which jobs stay put, and which fires are real enough to disrupt the board.</p>
+<p>This is a useful AI problem because the pain is constant and the decisions are repetitive, but only if the business keeps the goal narrow. The point is not to let AI run the entire field operation. The point is to help the team re-rank work when conditions change, surface the reasons clearly, and reduce the amount of manual reshuffling required to keep the day under control.</p>
+<h3>The real issue is decision congestion</h3>
+<p>Dispatch teams rarely lack raw information. They have job types, promised windows, technician availability, travel time, customer notes, service-level expectations, and whatever has already gone wrong that day. The problem is that the information arrives faster than a person can continuously re-evaluate it. Under pressure, teams default to whichever signal is loudest: the angriest customer, the newest message, or the job someone remembers most clearly.</p>
+<p>That is how a schedule turns unstable. Lower-value work can crowd out higher-impact work. Small delays cascade because no one has time to re-check the full board. Customers get inconsistent communication because the office and field team are reacting to different versions of priority. AI can help by turning those shifting inputs into a ranked recommendation instead of a constant stream of interruptions.</p>
+<h3>What useful prioritization actually looks like</h3>
+<p>A good system does not just say which job should be next. It shows why. Emergency status, customer impact, promised window, technician fit, route friction, parts readiness, and downstream scheduling risk should all be visible factors. If the system changes the order, the dispatcher should be able to see the logic quickly enough to accept it, reject it, or override it without guessing what the model saw.</p>
+<p>That visibility matters because dispatch is an operations function, not a chatbot demo. If the team cannot explain why a schedule changed, they will stop trusting the system the first time it makes a questionable move. AI recommendations only become useful when they are legible enough for humans to manage under real conditions.</p>
+<h3>Where teams usually go wrong</h3>
+<p>The first mistake is trying to optimize everything at once. Travel time, revenue, urgency, technician skill, contract obligations, customer history, and parts availability all matter, but not all with the same weight. If the business has not decided what actually outranks what, the system will reflect that ambiguity. It will not solve it.</p>
+<p>The second mistake is confusing auto-prioritization with auto-dispatch. Many teams would benefit from AI recommendations long before they should let the system rearrange live work on its own. A ranked suggestion queue, with clear reasons and override controls, is often the better first step because it improves decision speed without removing accountability from the human who owns the board.</p>
+<p>The third mistake is making one product seem like the whole answer. OpenClaw may have a place when schedule changes need to be reflected across customer conversations and inbound channels, but dispatch prioritization is a broader workflow problem. It depends on operating rules, job data quality, exception handling, and how the team communicates schedule changes internally.</p>
+<h3>A practical way to start</h3>
+<p>Start with one service line or one dispatch queue, not the whole business. Define the inputs that should affect priority, identify the few reasons a job should jump the line, and write down the conditions that should always force human review. Then compare the recommendations against how the team would have prioritized the same day manually. That gap is where the real work is. If the differences are useful, refine the ranking logic. If they are noisy, fix the rules before adding more automation.</p>
+<p>For owners and operators, this is the standard that matters: does the system reduce decision congestion and make the day easier to run? If dispatchers can re-rank work faster, communicate changes more consistently, and spend less time arguing with the board, the AI is earning its place. If it only creates more explanations and overrides, it is not ready.</p>
+<div class="inline-cta">
+    If dispatch decisions are getting rebuilt all day, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Analytics &amp; Insights</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-quote-qualification-service-teams",
         title: "AI quote qualification for service teams",
         date: "2026-04-18",
