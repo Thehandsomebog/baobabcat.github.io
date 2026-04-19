@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-quote-qualification-service-teams",
+        title: "AI quote qualification for service teams",
+        date: "2026-04-18",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-quote-qualification-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service businesses can use AI to qualify quote requests without creating extra cleanup for sales or operations.",
+        homeSummary: "How service businesses can use AI to qualify quote requests without creating extra cleanup for sales or operations.",
+        bodyHtml: `
+<h2>AI quote qualification for service teams</h2>
+<p>Quote requests are one of the easiest places for service businesses to waste expensive human time. A request comes in through a form, inbox, text, or phone call. Somebody has to figure out whether it is a real fit, whether the job is urgent, whether the scope is clear, and whether the team even has enough information to price it responsibly. When that first pass is inconsistent, the business pays in slow follow-up, messy handoffs, and estimates that start before the facts are stable.</p>
+<p>This is where AI can help without turning the process into theater. The useful job is not replacing the estimator or promising instant prices for everything. The useful job is qualifying the request, collecting the missing details, structuring the intake, and routing the opportunity into the right next step. For operators, coordinators, and support teams, that is usually the difference between a workable quoting pipeline and a queue full of half-formed jobs.</p>
+<h3>The operational problem is incomplete intake</h3>
+<p>Most quote delays do not come from pricing complexity alone. They come from starting too early with bad inputs. The customer describes the job vaguely. The team has to chase photos, measurements, location details, timing constraints, access issues, or service history. Then the request gets passed between office staff and field staff with a different version of the story each time. By the time someone is ready to scope the work, the business has already spent more labor than it should have on qualification alone.</p>
+<p>A disciplined AI layer can reduce that drag. It can ask follow-up questions based on service type, identify what is still missing, separate real quote opportunities from general inquiries, and package the result into a format the team can actually use. That is not glamorous, but it is practical. Better qualification shortens the time between first contact and real next step.</p>
+<h3>What good AI qualification looks like</h3>
+<p>A good system does not pretend every request can be priced automatically. It does something more useful. It standardizes intake before the human touches the job. For example, if the business handles installation, repair, and recurring service, the system should know which questions belong to each path. It should ask for photos when photos matter, confirm location when travel matters, and flag urgency when scheduling pressure matters.</p>
+<p>The output should be concise and operational. Service type. Customer details. Scope summary. Missing information. Urgency. Recommended next step. If the request still needs human review, that review should begin with structure instead of guesswork. Support teams should not have to read a transcript and reconstruct the job from scratch every time.</p>
+<h3>Where businesses usually get this wrong</h3>
+<p>The first mistake is asking AI to generate quotes before the business has defined qualification rules. If the team does not agree on which jobs need site visits, which jobs need photos, which jobs can be ballparked, and which jobs should be declined quickly, the model will not fix that ambiguity. It will just move the ambiguity faster.</p>
+<p>The second mistake is confusing responsiveness with progress. A fast reply is not enough if the request still lands in the queue missing the details the estimator needs. Businesses often celebrate that the customer got an answer in two minutes, then ignore that the office still had to spend the next day chasing the same missing facts.</p>
+<p>The third mistake is over-centering the assistant brand. OpenClaw can be one useful service layer when quote requests arrive across multiple channels and need conversational intake, but it is not the whole project. The larger issue is process design: intake fields, routing rules, pricing boundaries, and clean handoff to the human who owns the estimate.</p>
+<h3>A practical starting point</h3>
+<p>Start with one quote category that already creates repetitive back-and-forth. Define the minimum details required before a human should review the request. Decide what the system can ask, what it should never promise, and when it should escalate immediately. Then test the handoff quality, not just the conversation quality. If the estimator or coordinator opens the request and can act faster with fewer follow-up messages, the workflow is improving.</p>
+<p>That is the right standard for business owners and operators. Not whether the AI sounded polished. Whether it reduced qualification drag, improved routing, and made the quoting process easier to run. If it does that consistently, it earns a place in the stack. If not, it is just one more layer between the customer and the team.</p>
+<div class="inline-cta">
+    If quote requests are arriving half-scoped and hard to route, start with <a href="services/ai-automation.html">AI Workflow Automation</a> or <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-sop-retrieval-frontline-teams",
         title: "AI SOP retrieval for frontline teams",
         date: "2026-04-16",
