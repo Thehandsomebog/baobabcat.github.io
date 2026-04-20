@@ -48,6 +48,12 @@
                     <div class="blog-list">
                 <div class="blog-list__header">$ ls -la ~/blog/</div>
                 <!-- GENERATED_BLOG_ENTRIES_START -->
+                <div class="blog-entry" data-post="ai-warranty-triage-support-teams">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Apr 20</span>
+                    <span class="blog-entry__time">8m</span>
+                    <span class="blog-entry__name">ai-warranty-triage-for-support-teams.md</span>
+                </div>
                 <div class="blog-entry" data-post="ai-dispatch-prioritization-service-teams">
                     <span class="blog-entry__perms">-rw-r--r--</span>
                     <span class="blog-entry__date">Apr 19</span>
@@ -128,6 +134,28 @@
         </section>
 
         <!-- GENERATED_BLOG_TEMPLATES_START -->
+        <template id="post-ai-warranty-triage-support-teams">
+            <h2>AI warranty triage for support teams</h2>
+            <p>Warranty work creates a specific kind of operational drag because the issue is rarely just whether something is broken. The team has to determine whether the request is actually covered, whether the customer supplied the right proof, whether the timing still qualifies, whether the issue belongs to service, support, billing, or a vendor, and what should happen next. When that logic lives mostly in experienced employees' heads, the queue slows down fast.</p>
+            <p>This is a practical AI use case because the work is repetitive, rules-based, and still full of edge conditions that need human review. The point is not to let AI approve every claim automatically. The point is to make first-pass triage cleaner so the team is not spending half the day sorting obvious fits, obvious non-fits, and incomplete requests by hand.</p>
+            <h3>The real problem is inconsistent first-pass review</h3>
+            <p>Many businesses already have a warranty policy, but that does not mean the intake is consistent. One rep asks for a serial number and proof of purchase right away. Another forwards the request to operations without checking the dates. A field team gets dragged in before anyone confirmed whether the issue is covered. Customers get different answers depending on who touched the request first, and the back office ends up cleaning up the inconsistency later.</p>
+            <p>That creates two expensive outcomes. Covered claims move too slowly, which frustrates customers and ties up staff in status updates. Non-covered or incomplete claims move too far downstream, which wastes technician time, manager attention, or vendor coordination on work that should have been filtered earlier. AI can help if it standardizes the first pass and makes the next action clearer.</p>
+            <h3>What useful warranty triage actually does</h3>
+            <p>A useful system starts by identifying the facts that matter. Product or service type. Install or purchase date. Reported issue. Proof of purchase or service history. Signs of misuse, exclusions, or third-party responsibility. Missing information should be flagged immediately instead of buried in a transcript.</p>
+            <p>The output should be operational, not conversational. Something like: likely covered, likely excluded, or needs human review, plus the reason and the missing inputs. That gives the support team a stable first-pass structure. It also gives operations a cleaner handoff when a site visit, replacement, or escalated review is actually warranted.</p>
+            <h3>Where teams usually get this wrong</h3>
+            <p>The first mistake is letting the assistant sound definitive when the policy is not definitive. Warranty rules often contain exceptions, vendor-specific terms, and gray areas around installation quality, usage conditions, or elapsed time. If the source policy is ambiguous, the system should route the case for review instead of pretending certainty.</p>
+            <p>The second mistake is using AI to write softer denial language without fixing the intake logic. A polished message does not help if the team still failed to collect the information needed to make the decision. Businesses sometimes focus on tone before they fix qualification, and that just creates nicer-looking rework.</p>
+            <p>The third mistake is making one product look bigger than the actual workflow. OpenClaw can be useful when warranty requests are arriving through multiple channels and need structured intake, but warranty triage is not mainly a chatbot problem. It is a policy interpretation, routing, and exception-handling problem. The workflow design matters more than the assistant label.</p>
+            <h3>A practical way to start</h3>
+            <p>Start with one warranty category that creates repeat friction. Define the minimum evidence required for first-pass review. List the cases that should be auto-routed for human review no matter what. Then compare AI triage against how an experienced coordinator or support lead would sort the same queue. The important question is not whether the system sounds smart. It is whether it reduces rework, improves consistency, and keeps questionable cases from moving too far without review.</p>
+            <p>That is the standard business owners and operators should use. If the team can process straightforward warranty requests faster, decline weak requests more consistently, and escalate gray-area cases with cleaner context, the system is doing useful work. If it only adds another layer of explanation between the request and the person who has to decide, it is not ready.</p>
+            <div class="inline-cta">
+                If warranty requests are eating up support time, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+            </div>
+        </template>
+
         <template id="post-ai-dispatch-prioritization-service-teams">
             <h2>AI dispatch prioritization for service teams</h2>
             <p>Most service businesses do not struggle because the schedule was poorly planned at 7:00 a.m. They struggle because the day refuses to stay still. A technician runs long. A customer calls back with new urgency. A part does not arrive. A route that looked efficient in the morning becomes the wrong route by noon. The dispatcher, coordinator, or owner spends the rest of the day deciding which commitments move, which jobs stay put, and which fires are real enough to disrupt the board.</p>
