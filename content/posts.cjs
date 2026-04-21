@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-escalation-screening-support-teams",
+        title: "AI escalation screening for support teams",
+        date: "2026-04-21",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-escalation-screening-for-support-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How support teams can use AI to screen escalations more consistently without burying managers in noisy handoffs.",
+        homeSummary: "How support teams can use AI to screen escalations more consistently without burying managers in noisy handoffs.",
+        bodyHtml: `
+<h2>AI escalation screening for support teams</h2>
+<p>Escalations are expensive partly because they are necessary and partly because many of them are not. A rep marks something urgent because the customer sounds frustrated. A ticket gets forwarded to a supervisor because nobody wants to make the wrong call. Another case reaches operations before basic troubleshooting was finished. By the time a manager opens the queue, they are dealing with a mix of real edge cases, incomplete handoffs, and avoidable noise.</p>
+<p>This is one of the more practical places to apply AI. The useful job is not to replace the person who owns difficult decisions. The useful job is to screen incoming cases, check whether the stated reason for escalation is actually present, identify what is missing, and route obvious non-escalations back into the normal workflow with better structure. That reduces manager drag without pretending judgment is optional.</p>
+<h3>The real problem is threshold drift</h3>
+<p>Most businesses have some idea of what should trigger escalation. Safety issues. Contract risk. Repeat failures. Billing exceptions above a certain level. Customer complaints that carry reputational or legal implications. The problem is that those thresholds drift in live operations. One rep escalates early to stay safe. Another waits too long because they think they should solve it themselves. A new hire forwards anything tense. An experienced rep escalates only after the situation is already messy.</p>
+<p>That inconsistency creates two bad outcomes at once. Managers get pulled into cases that should have stayed with the frontline team, and the truly important cases do not always arrive with the right context. AI can help if it standardizes the first review against defined escalation triggers and makes the reasoning visible.</p>
+<h3>What useful screening actually does</h3>
+<p>A useful screening layer looks for the facts behind the escalation label. What happened already. What policy or service commitment may be at risk. Whether the customer is reporting repeat failure, financial impact, safety concern, or a time-sensitive commitment. Whether required steps were already completed. Whether the case is missing notes, attachments, order details, or prior contact history that a manager would need anyway.</p>
+<p>The output should be operational. Something like: keep with frontline, escalate to team lead, escalate to operations, or escalate to owner-level review, with a short rationale and a list of missing information. That helps the support queue stay honest. It also prevents escalations from becoming a vague emotional category instead of a business rule.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is optimizing for sentiment alone. A frustrated customer is important, but frustration by itself is not always an escalation trigger. If the model treats strong language as the main signal, the business will flood managers with noise. Tone matters, but it has to be weighed alongside service level, account history, exception rules, and actual business risk.</p>
+<p>The second mistake is hiding the decision criteria. If reps cannot see why a case was screened up or down, they will override the system or stop trusting it entirely. Good escalation screening should make the logic legible enough that supervisors can coach the team from it. A black box may look clever for a week and then become one more source of argument.</p>
+<p>The third mistake is over-centering one channel or one product. OpenClaw can be useful when escalations originate across chat, text, and web conversations and need consistent intake, but escalation screening is not mainly a chatbot project. It is an operating-rules project. The hard part is defining thresholds, review paths, and handoff quality across the team.</p>
+<h3>A practical way to start</h3>
+<p>Start with one escalation class that already creates management drag. Billing exceptions, repeat-service complaints, cancellation threats, or service recovery issues are common candidates. Write down the triggers that should move a case upward, the cases that should never move without more information, and the facts a reviewer should always see. Then compare AI screening against how your strongest lead would sort the same queue.</p>
+<p>That is the standard owners and operators should use. If managers are seeing fewer weak escalations, frontline reps are getting clearer guidance, and the cases that do rise are arriving with tighter context, the system is doing useful work. If the queue still depends on everyone interpreting urgency differently, the workflow is not ready no matter how polished the assistant sounds.</p>
+<div class="inline-cta">
+    If escalations are consuming supervisor time, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-invoice-dispute-triage-support-ops",
         title: "AI invoice dispute triage for support and ops teams",
         date: "2026-04-21",
