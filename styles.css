@@ -389,7 +389,34 @@ main {
 .home-hero__stats-inner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.hero-ascii-wrap {
+    display: grid;
+    gap: 14px;
+    align-self: flex-start;
+}
+
+.hero-ascii-wrap__label {
+    color: var(--text-faint);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-ascii-logo {
+    margin: 0;
+    color: var(--accent-green);
+    font-size: clamp(12px, 1.25vw, 18px);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 18px rgba(111, 213, 111, 0.08);
+}
+
+.home-hero__stats-panel {
+    display: grid;
     gap: 18px;
 }
 
@@ -1089,6 +1116,10 @@ main {
     .home-hero__stats-inner,
     .screen-band__inner {
         padding: 22px 16px;
+    }
+
+    .hero-ascii-logo {
+        font-size: 12px;
     }
 
     .home-hero__actions,
