@@ -389,7 +389,7 @@ main {
 .home-hero__stats-inner {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 28px;
 }
 
@@ -418,6 +418,7 @@ main {
 .home-hero__stats-panel {
     display: grid;
     gap: 18px;
+    margin-top: 8px;
 }
 
 .home-hero__prompt {
