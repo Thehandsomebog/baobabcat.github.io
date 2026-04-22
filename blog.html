@@ -48,6 +48,12 @@
                     <div class="blog-list">
                 <div class="blog-list__header">$ ls -la ~/blog/</div>
                 <!-- GENERATED_BLOG_ENTRIES_START -->
+                <div class="blog-entry" data-post="ai-parts-order-exception-handling-service-teams">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Apr 22</span>
+                    <span class="blog-entry__time">8m</span>
+                    <span class="blog-entry__name">ai-parts-order-exception-handling-for-service-teams.md</span>
+                </div>
                 <div class="blog-entry" data-post="ai-escalation-screening-support-teams">
                     <span class="blog-entry__perms">-rw-r--r--</span>
                     <span class="blog-entry__date">Apr 21</span>
@@ -146,6 +152,28 @@
         </section>
 
         <!-- GENERATED_BLOG_TEMPLATES_START -->
+        <template id="post-ai-parts-order-exception-handling-service-teams">
+            <h2>AI parts-order exception handling for service teams</h2>
+            <p>Many service businesses do not lose margin on the big decisions. They lose it in the small failures around parts. A technician finds the wrong part on site. A coordinator places an order with incomplete job details. A backordered item does not get surfaced until the day before the appointment. A substitute part gets approved informally but never tied back to the original work order. By the time someone notices the mismatch, dispatch, support, and the customer are all dealing with preventable disruption.</p>
+            <p>This is a useful AI problem because the front end of parts exceptions is repetitive and information-heavy. The goal is not to let AI approve procurement decisions on its own. The goal is to detect likely exceptions early, identify what is missing, and route the issue to the right human before the job schedule starts absorbing the mistake.</p>
+            <h3>The real issue is broken context between teams</h3>
+            <p>Parts problems rarely begin in the warehouse. They usually begin in the handoff between diagnosis, quoting, purchasing, scheduling, and field execution. One team knows the equipment model but not the customer promise date. Another team sees the order status but not the service priority. Someone else knows a substitute might work but cannot tell whether the customer already approved the change. The business has the facts, but they are spread across people and systems that do not naturally stay aligned.</p>
+            <p>That is why exception handling matters. A parts issue should not first become visible when a technician is already rolling to the site or when a customer calls asking why the appointment moved. AI can help by reviewing incoming orders, status changes, and job context for the few signals that tend to create operational damage: missing compatibility data, unresolved backorders, substitute-part ambiguity, timing conflicts, or open approvals that should have been closed before scheduling.</p>
+            <h3>What useful exception handling actually does</h3>
+            <p>A useful system checks whether the order record and the service record agree on the basics. Equipment or product details. Required quantity. Promised service date. Shipping status. Vendor notes. Approved substitutions. Required customer authorization. It should also look for timing problems that humans miss under pressure, like a critical part scheduled to arrive after the appointment window or a job that still depends on a part with uncertain availability.</p>
+            <p>The output should be operational, not abstract. Flag the exception type, show the reason, identify the owner, and recommend the next step. That might mean confirm model compatibility, request updated ETA, hold scheduling, request customer approval for a substitute, or escalate to operations review. A coordinator should be able to open the item and understand quickly whether the issue belongs with purchasing, dispatch, service management, or direct customer communication.</p>
+            <h3>Where teams usually get this wrong</h3>
+            <p>The first mistake is treating every parts issue like a purchasing problem. Some exceptions are really scheduling problems or communication problems. If the system only monitors vendor status and ignores service commitments, it will catch the wrong failures too late. Businesses need workflow visibility, not just order visibility.</p>
+            <p>The second mistake is assuming a substitute part is a simple match whenever the description looks close enough. In many service environments, compatibility depends on equipment version, install conditions, warranty implications, or field judgment. If the data is incomplete, the system should force review instead of acting certain.</p>
+            <p>The third mistake is over-centering one assistant or channel layer. OpenClaw can help if customers need consistent updates when parts delays affect appointments, but parts exception handling is not mainly a chatbot project. It is a coordination project between purchasing, dispatch, support, and field operations. The value comes from better signals and cleaner handoffs, not from a louder AI label.</p>
+            <h3>A practical way to start</h3>
+            <p>Start with one service line where parts issues create repeat reschedules or callback work. List the few conditions that should always raise a flag before the job is confirmed or kept on the board. Then decide who owns each exception type and what evidence they need to resolve it. Compare that workflow against how your best coordinator already spots problems manually. That is the benchmark, not whether the system produces polished summaries.</p>
+            <p>For owners and operators, the standard is simple. If the team catches more parts-related risks before they hit the schedule, reduces avoidable reschedules, and routes exceptions with clearer ownership, the system is helping. If the same surprises still reach the day of service and people just get a nicer explanation afterward, it is not doing enough.</p>
+            <div class="inline-cta">
+                If parts exceptions keep breaking the schedule, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Analytics &amp; Insights</a>, or use <a href="contact.html">contact</a>.
+            </div>
+        </template>
+
         <template id="post-ai-escalation-screening-support-teams">
             <h2>AI escalation screening for support teams</h2>
             <p>Escalations are expensive partly because they are necessary and partly because many of them are not. A rep marks something urgent because the customer sounds frustrated. A ticket gets forwarded to a supervisor because nobody wants to make the wrong call. Another case reaches operations before basic troubleshooting was finished. By the time a manager opens the queue, they are dealing with a mix of real edge cases, incomplete handoffs, and avoidable noise.</p>
