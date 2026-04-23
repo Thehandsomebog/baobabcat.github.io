@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-work-order-closure-review-service-teams",
+        title: "AI work-order closure review for service teams",
+        date: "2026-04-23",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-work-order-closure-review-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to catch bad closeouts before incomplete work orders turn into billing and callback problems.",
+        homeSummary: "How service teams can use AI to catch bad closeouts before incomplete work orders turn into billing and callback problems.",
+        bodyHtml: `
+<h2>AI work-order closure review for service teams</h2>
+<p>A lot of service businesses think the job is done when the technician leaves the site. Operationally, that is often when the next problem starts. The work order gets closed with thin notes. Photos are missing. Recommended follow-up work is buried in a paragraph. A customer signature was skipped. The invoice moves forward anyway. Later the office has to answer a billing question, schedule a return visit, or figure out why the job looked complete in one system but unresolved in another.</p>
+<p>This is a practical AI use case because the pain is repetitive and the pattern is familiar. The goal is not to let AI certify that every job was done correctly. The goal is to review the closeout package, identify what is incomplete or contradictory, and stop weak work orders from moving downstream as if they were clean. That protects billing, follow-up scheduling, warranty review, and the support team that inherits the record later.</p>
+<h3>The real issue is closure quality, not note-taking style</h3>
+<p>Most teams already know what a complete closeout should contain. Problem found. Work performed. Parts used. Photos if required. Customer signoff if required. Recommendation for next steps when the issue is only partially resolved. The problem is that those requirements get applied inconsistently under field pressure. One technician writes useful detail. Another writes the minimum. One coordinator notices the gap before invoicing. Another does not see it until the customer pushes back.</p>
+<p>That inconsistency creates expensive downstream work. Billing has to decode whether the visit was actually complete. Dispatch cannot tell whether a return trip is required. Support cannot answer a customer question without chasing the technician. Managers end up reviewing avoidable exceptions because the first closeout pass was too loose.</p>
+<h3>What useful closure review actually does</h3>
+<p>A useful system checks the work order against the business rules for closeout. Are the required fields present. Do the notes support the status code. Was a part marked installed without any matching detail. Does the record imply a follow-up need even though the job is marked complete. Are recommended repairs, safety concerns, or unresolved issues buried in free text that should have triggered a next step instead of a final close.</p>
+<p>The output should be operational. Ready to close. Ready to invoice but missing non-blocking detail. Needs coordinator review. Needs technician clarification. Needs return-visit review. That is more useful than a generic summary because the office team can act on it immediately. The point is to reduce interpretation work, not decorate it.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating every incomplete closeout like a technician training problem. Sometimes it is. Often it is a workflow design problem. If the system allows jobs to be closed without the fields the next team actually needs, people will keep creating cleanup work no matter how often they are reminded.</p>
+<p>The second mistake is using AI to rewrite bad notes so they look more professional. Cleaner wording does not fix missing facts. If the closeout does not establish what happened, what remains open, and what the customer should expect next, the system should flag the record for review instead of polishing the language.</p>
+<p>The third mistake is making one service look larger than the workflow. OpenClaw can help when customers need consistent follow-up after a flagged closeout, but work-order review is not mainly a chatbot problem. It is a field-to-office control problem involving completion rules, billing readiness, and exception handling.</p>
+<h3>A practical way to start</h3>
+<p>Start with one job type that regularly creates billing corrections, callback work, or avoidable manager review. Define the minimum closeout evidence for that job. Decide which missing items are blockers, which ones just need follow-up, and which phrases in technician notes should always trigger human review. Then compare the AI review against how your strongest coordinator or service manager screens completed work orders today.</p>
+<p>That is the standard owners and operators should use. If the business catches weak closeouts earlier, reduces avoidable back-and-forth between the office and field, and keeps bad records from turning into customer-facing confusion, the system is helping. If it only produces nicer summaries while the same downstream cleanup still happens, it is not doing enough.</p>
+<div class="inline-cta">
+    If weak closeouts keep turning into billing and follow-up issues, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-parts-order-exception-handling-service-teams",
         title: "AI parts-order exception handling for service teams",
         date: "2026-04-22",
