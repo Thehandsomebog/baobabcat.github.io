@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-backlog-aging-review-support-teams",
+        title: "AI backlog aging review for support teams",
+        date: "2026-04-24",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-backlog-aging-review-for-support-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How support teams can use AI to catch aging work before old tickets quietly turn into churn, escalations, and messy queue cleanup.",
+        homeSummary: "How support teams can use AI to catch aging work before old tickets quietly turn into churn, escalations, and messy queue cleanup.",
+        bodyHtml: `
+<h2>AI backlog aging review for support teams</h2>
+<p>Support queues rarely break all at once. More often, they decay slowly. A ticket waits for a reply that never comes. Another sits in pending even though the next move belongs to the company. A case looks inactive because the customer stopped responding, but the underlying problem is still unresolved. By the time leadership notices the backlog is aging, the queue already contains a mix of neglected work, mislabeled status, and requests that should have been handled very differently days earlier.</p>
+<p>This is a practical AI use case because the work is repetitive, rules-driven, and easy to miss when the team is focused on whatever is newest. The goal is not to let AI close old tickets automatically just because they crossed a time threshold. The goal is to review aging work, identify why it is still open, and push the right items back into active handling before the backlog turns into avoidable churn, escalations, or manager cleanup.</p>
+<h3>The real problem is false queue health</h3>
+<p>Many businesses judge support health by today&apos;s inbox, not by what has quietly gone stale. That creates false confidence. New tickets are getting answered, but older cases may be sitting in the wrong status, waiting on the wrong person, or carrying a vague promise that no one re-checked. A queue can look manageable on the surface while a second layer of aging work keeps growing underneath it.</p>
+<p>That hidden layer is expensive. Older tickets take longer to reconstruct. Customers are more likely to arrive frustrated because they have already waited. Supervisors have to read history before they can decide whether the issue still matters. Teams end up doing both kinds of work at once: fresh intake and backlog archaeology. AI can help if it keeps the aging layer visible and gives the team a cleaner first pass on what actually needs attention.</p>
+<h3>What useful backlog aging review actually does</h3>
+<p>A useful system reviews ticket age together with the context around it. Current status. Last customer reply. Last internal action. Any promised follow-up date. Whether the case is blocked on missing information, internal ownership, vendor action, or nothing at all. Whether the ticket is old for a valid reason or old because it drifted without a clear next step.</p>
+<p>The output should be operational. Needs outbound follow-up. Needs internal owner reassignment. Safe to close after policy check. Needs supervisor review. Waiting correctly. That structure matters because a support lead should be able to open the aging report and act quickly instead of rereading every transcript from scratch. The system should reduce interpretation work, not create another dashboard full of soft warnings.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating ticket age as the problem by itself. Age matters, but only in context. Some old cases are correctly waiting on the customer, a carrier, a vendor, or a scheduled event. Others are old because nobody owns the next move. If the workflow cannot distinguish those conditions, the team will chase noise and miss the tickets that are actually degrading service.</p>
+<p>The second mistake is using AI to summarize stale tickets without forcing a decision. A polished recap is not enough if nobody knows whether the case should be reactivated, escalated, reassigned, or closed under policy. Businesses should expect the system to support action, not just shorten reading time.</p>
+<p>The third mistake is over-centering one channel or one product. OpenClaw can help if aging work needs consistent follow-up across customer-facing channels, but backlog aging review is not mainly a chatbot project. It is a queue-governance project involving status rules, ownership discipline, service-level expectations, and cleanup logic.</p>
+<h3>A practical way to start</h3>
+<p>Start with one aging band that already causes pain, such as tickets older than three business days, seven days, or whatever threshold reliably produces supervisor review and customer frustration in your operation. Define the few reasons a ticket is allowed to stay open that long, the signals that should force human review, and the next-step categories the team can actually use. Then compare the AI review against how your strongest support lead would audit the same backlog manually.</p>
+<p>That is the standard owners and operators should use. If the team is surfacing neglected work earlier, reducing stale-ticket cleanup, and giving support leads a faster way to separate valid waiting from process drift, the system is helping. If the queue still ages in silence and people only get a cleaner summary of old problems, it is not doing enough.</p>
+<div class="inline-cta">
+    If old tickets keep turning into escalations and cleanup work, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Analytics &amp; Insights</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-work-order-closure-review-service-teams",
         title: "AI work-order closure review for service teams",
         date: "2026-04-23",
