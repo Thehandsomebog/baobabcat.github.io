@@ -48,6 +48,12 @@
                     <div class="blog-list">
                 <div class="blog-list__header">$ ls -la ~/blog/</div>
                 <!-- GENERATED_BLOG_ENTRIES_START -->
+                <div class="blog-entry" data-post="ai-quality-review-support-teams">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Apr 25</span>
+                    <span class="blog-entry__time">8m</span>
+                    <span class="blog-entry__name">ai-quality-review-for-support-teams.md</span>
+                </div>
                 <div class="blog-entry" data-post="ai-backlog-aging-review-support-teams">
                     <span class="blog-entry__perms">-rw-r--r--</span>
                     <span class="blog-entry__date">Apr 24</span>
@@ -170,6 +176,28 @@
         </section>
 
         <!-- GENERATED_BLOG_TEMPLATES_START -->
+        <template id="post-ai-quality-review-support-teams">
+            <h2>AI quality review for support teams</h2>
+            <p>Most support teams do not have a quality problem because nobody cares about service. They have a quality problem because review capacity is limited. Managers sample a few tickets, listen to a few calls, notice a few patterns, and hope that is enough to catch the coaching issues that actually affect customers. It usually is not. Weak explanations, missed policy steps, poor expectation setting, and inconsistent documentation can sit in the queue for weeks before anyone sees the pattern clearly enough to act.</p>
+            <p>This is a practical AI use case because the first pass is repetitive, high-volume, and easy to standardize. The goal is not to let AI become the final judge of every customer interaction. The goal is to review more of the queue against defined quality standards, surface the conversations that need human attention, and give supervisors a cleaner way to coach the team without spending all day sampling blindly.</p>
+            <h3>The real problem is sparse visibility</h3>
+            <p>Most businesses are reviewing too little to manage quality confidently. One rep may be missing key troubleshooting steps. Another may be promising timelines too loosely. A third may be resolving issues correctly but documenting them in a way that creates confusion for the next team. If those patterns only show up in a small random sample, leadership ends up coaching based on fragments instead of the real operating pattern.</p>
+            <p>That creates predictable drag. Customer experience becomes uneven across reps and shifts. Supervisors spend review time hunting for examples instead of coaching from a clear pattern. Training gets built around anecdotes rather than recurring failure modes. AI can help if it increases coverage and organizes review around the few standards that actually matter in live support.</p>
+            <h3>What useful quality review actually does</h3>
+            <p>A useful system checks interactions against explicit review points. Did the rep identify the issue clearly. Did they follow the required troubleshooting or policy path. Did they set the next step honestly. Did they capture the right notes for handoff. Did they miss signals that should have triggered escalation, refund review, or supervisor involvement. The point is not elegant scoring for its own sake. The point is to give supervisors a faster route to the interactions that deserve attention.</p>
+            <p>The output should be operational. Flag the likely issue type, show the excerpt or evidence, note the relevant standard, and route the item into the right next step: coaching review, policy clarification, process fix, or no action needed. That matters because most support leaders do not need another dashboard full of abstract scores. They need review items they can use in the next one-on-one, calibration session, or process meeting.</p>
+            <h3>Where teams usually get this wrong</h3>
+            <p>The first mistake is treating AI QA as a replacement for management judgment. Quality review always carries context. A rep may have skipped a normal step because the customer had already completed it. A firm reply may have been appropriate because the issue involved policy abuse. If the system cannot distinguish likely variance from likely failure, it should flag the case for review instead of pretending certainty.</p>
+            <p>The second mistake is scoring everything and improving nothing. Many businesses get excited about automated scorecards, then fail to connect those findings to coaching, SOP cleanup, or workflow changes. If the same weak expectation setting shows up every week and nobody changes the script, policy, or training, the system is just producing evidence of neglect faster.</p>
+            <p>The third mistake is making one service sound like the whole answer. OpenClaw can help if customer conversations are already flowing through a structured assistant layer and need the same review standards applied consistently, but support QA is not mainly an assistant project. It is a review-design project involving standards, escalation rules, documentation expectations, and supervisor follow-through.</p>
+            <h3>A practical way to start</h3>
+            <p>Start with one review standard that already creates visible cost. Maybe it is poor expectation setting, inconsistent troubleshooting, weak ticket notes, or missed escalation triggers. Define what good and bad look like in plain operating language. Decide what evidence the system should surface and which cases should always stay with a human reviewer. Then compare the AI findings against how your strongest support lead would review the same set of interactions manually.</p>
+            <p>That is the standard owners and operators should use. If supervisors are seeing more of the queue, coaching gets more specific, and repeat quality failures are easier to spot and fix, the system is helping. If it only produces cleaner-looking scores while support quality stays uneven, it is not doing enough.</p>
+            <div class="inline-cta">
+                If support QA is too sample-based to manage confidently, start with <a href="services/ai-training.html">AI Training &amp; Enablement</a>, review <a href="services/ai-analytics.html">AI Analytics &amp; Insights</a>, or use <a href="contact.html">contact</a>.
+            </div>
+        </template>
+
         <template id="post-ai-backlog-aging-review-support-teams">
             <h2>AI backlog aging review for support teams</h2>
             <p>Support queues rarely break all at once. More often, they decay slowly. A ticket waits for a reply that never comes. Another sits in pending even though the next move belongs to the company. A case looks inactive because the customer stopped responding, but the underlying problem is still unresolved. By the time leadership notices the backlog is aging, the queue already contains a mix of neglected work, mislabeled status, and requests that should have been handled very differently days earlier.</p>
