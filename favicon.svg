@@ -1,20 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ff6b35"/>
-      <stop offset="100%" style="stop-color:#ff8c42"/>
+    <linearGradient id="shell" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171c19"/>
+      <stop offset="1" stop-color="#0b0d0c"/>
+    </linearGradient>
+    <linearGradient id="baobab" x1="22" y1="12" x2="42" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f5c451"/>
+      <stop offset="1" stop-color="#6fd56f"/>
     </linearGradient>
   </defs>
-  <!-- Background circle for better visibility -->
-  <circle cx="25" cy="25" r="24" fill="#0a0a0f"/>
-  <!-- Baobab tree trunk -->
-  <path d="M20 45 L20 28 Q20 25 18 23 L15 20 Q13 18 15 16 L18 14 Q20 12 20 10 L20 8 Q20 5 23 5 L27 5 Q30 5 30 8 L30 10 Q30 12 32 14 L35 16 Q37 18 35 20 L32 23 Q30 25 30 28 L30 45 Z" fill="url(#faviconGradient)"/>
-  <!-- Tree crown/canopy -->
-  <ellipse cx="25" cy="6" rx="12" ry="5" fill="url(#faviconGradient)" opacity="0.9"/>
-  <!-- Cat ears -->
-  <path d="M16 8 L13 2 L18 6 Z" fill="url(#faviconGradient)"/>
-  <path d="M34 8 L37 2 L32 6 Z" fill="url(#faviconGradient)"/>
-  <!-- Cat eyes -->
-  <circle cx="21" cy="6" r="1.5" fill="#0a0a0f"/>
-  <circle cx="29" cy="6" r="1.5" fill="#0a0a0f"/>
+  <rect x="3.5" y="3.5" width="57" height="57" rx="14" fill="url(#shell)" stroke="#36413a" stroke-width="3"/>
+  <path d="M16 18L24 10L26 21H38L40 10L48 18L43 25C45.4 27 47 30 47 33.5C47 42.1 40.3 49 32 49C23.7 49 17 42.1 17 33.5C17 30 18.6 27 21 25L16 18Z" fill="#0b0d0c" stroke="#6fd56f" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M25 50V32C25 29.8 26.8 28 29 28H35C37.2 28 39 29.8 39 32V50" stroke="url(#baobab)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M20 24C23 20.5 27.2 19 32 19C36.8 19 41 20.5 44 24" stroke="#f5c451" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="27" cy="32" r="2.5" fill="#f5c451"/>
+  <circle cx="37" cy="32" r="2.5" fill="#f5c451"/>
+  <path d="M17 49H47" stroke="#77b8d8" stroke-width="3" stroke-linecap="round"/>
 </svg>
