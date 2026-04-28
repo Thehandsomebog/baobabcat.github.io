@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-estimate-aging-review-service-teams",
+        title: "AI estimate-aging review for service teams",
+        date: "2026-04-28",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-estimate-aging-review-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to review aging estimates before stalled approvals turn into lost jobs, awkward follow-up, and forecast noise.",
+        homeSummary: "How service teams can use AI to review aging estimates before stalled approvals turn into lost jobs, awkward follow-up, and forecast noise.",
+        bodyHtml: `
+<h2>AI estimate-aging review for service teams</h2>
+<p>Many service businesses do not lose quotes because the price was obviously wrong. They lose them because the estimate sat too long without a clear next step. A customer needed financing details that never got answered. A recommended repair was sent without enough context to justify urgency. A coordinator meant to follow up but the item disappeared into a crowded day. By the time someone checks the aging quote list, the opportunity is already colder, the schedule forecast is less reliable, and the team is guessing why the work did not move.</p>
+<p>This is a practical AI use case because the first pass is repetitive, information-heavy, and usually spread across inboxes, CRM notes, work orders, and estimate status fields. The goal is not to let AI pressure customers into saying yes. The goal is to review aging estimates, identify what is actually blocking movement, and route the next action to the right human before stale quotes quietly become write-offs.</p>
+<h3>The real problem is false pipeline health</h3>
+<p>Owners and operators often look at open estimate volume as if it were a clean picture of future work. It usually is not. Some quotes are genuinely active. Some are waiting on customer budget cycles. Some were never explained well enough to earn a decision. Some should have been closed-lost weeks ago but stayed open because nobody wanted to make the call. When those cases sit together in one undifferentiated list, leadership gets bad visibility and the frontline team gets vague follow-up pressure instead of useful direction.</p>
+<p>That creates ordinary but expensive drag. Coordinators chase the wrong jobs. Technicians do revisits or answer the same scope questions twice. Support fields inbound questions without enough estimate context. Sales and operations argue about whether demand is soft or whether the process is weak. AI can help if it turns a stale estimate list into a structured review instead of one more report nobody trusts.</p>
+<h3>What useful estimate-aging review actually does</h3>
+<p>A useful system looks for the few signals that explain why estimates stall. How long the quote has been open. Whether follow-up happened and when. Whether the customer asked a question that never got resolved. Whether photos, options, financing details, permit questions, or scheduling assumptions are still hanging out in notes. Whether the recommended work was marked urgent but no one closed the loop. The output should not be a generic nudge to &ldquo;follow up.&rdquo; It should tell the team what kind of follow-up is likely needed and why.</p>
+<p>The output should be operational. Ready for direct follow-up. Needs scope clarification. Needs financing or pricing explanation. Needs manager review. Safe to close-lost after policy check. That is the level of structure an office manager, dispatcher, or estimator can act on quickly. The point is to reduce interpretation work, not send more polished reminders into the same broken process.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating every aging estimate like a sales-rep discipline problem. Sometimes the delay is follow-up quality. Sometimes the estimate itself is confusing, the scope changed after the visit, or the customer is waiting on a landlord, board approval, insurance, or financing. If the workflow jumps straight to blame, the business will miss the process issues that keep making quotes stall.</p>
+<p>The second mistake is measuring touch count instead of decision readiness. More calls, texts, or emails do not help if the customer still lacks the information needed to approve the work confidently. If the business rewards activity without checking whether the real blocker was resolved, the team will create noise and still lose the job.</p>
+<p>The third mistake is making one service sound bigger than the operating problem. OpenClaw can help when estimate follow-up needs to stay consistent across web, text, and support channels, but estimate-aging review is not mainly an assistant project. It is a pipeline-discipline project involving estimate clarity, ownership, follow-up standards, and close-lost rules.</p>
+<h3>A practical way to start</h3>
+<p>Start with one estimate class that regularly sits too long. Maybe it is high-ticket repairs, replacement options, commercial proposals, or jobs that require customer approval after a site visit. Define what counts as aging in that workflow, which unresolved questions should always trigger review, and when an open estimate should be reclassified instead of chased indefinitely. Then compare the AI review against how your strongest coordinator, estimator, or service manager would sort the same aging list manually.</p>
+<p>That is the standard business owners and operators should use. If the team gets cleaner visibility into which estimates are truly active, which ones need specific intervention, and which ones should stop distorting the pipeline, the system is helping. If it only sends nicer follow-up language while the same old quotes keep sitting open, it is not doing enough.</p>
+<div class="inline-cta">
+    If aging estimates are muddying demand and follow-up, start with <a href="services/ai-analytics.html">AI Analytics &amp; Insights</a>, review <a href="services/ai-automation.html">AI Workflow Automation</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-callback-pattern-review-service-teams",
         title: "AI callback-pattern review for service teams",
         date: "2026-04-27",
