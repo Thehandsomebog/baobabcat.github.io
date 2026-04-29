@@ -48,6 +48,12 @@
                     <div class="blog-list">
                 <div class="blog-list__header">$ ls -la ~/blog/</div>
                 <!-- GENERATED_BLOG_ENTRIES_START -->
+                <div class="blog-entry" data-post="what-to-document-before-ai-touches-support-inbox">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Apr 29</span>
+                    <span class="blog-entry__time">9m</span>
+                    <span class="blog-entry__name">what-to-document-before-ai-touches-your-support-inbox.md</span>
+                </div>
                 <div class="blog-entry" data-post="ai-estimate-aging-review-service-teams">
                     <span class="blog-entry__perms">-rw-r--r--</span>
                     <span class="blog-entry__date">Apr 28</span>
@@ -194,6 +200,34 @@
         </section>
 
         <!-- GENERATED_BLOG_TEMPLATES_START -->
+        <template id="post-what-to-document-before-ai-touches-support-inbox">
+            <h2>What to document before AI touches your support inbox</h2>
+            <p>A lot of businesses want AI in the inbox before they have decided what the inbox is actually allowed to do. That is where preventable failures start. The system gets connected to email, chat, or a shared support queue, and now it has to guess which answers are safe, which requests need escalation, and which policies still live only in someone&rsquo;s head. When that setup is loose, the assistant does not create leverage. It creates cleanup.</p>
+            <p>This is not mainly a model problem. It is a documentation problem. Business owners, operators, and support leaders do not need a perfect internal wiki before they start. They do need the basic operating rules written down clearly enough that a human reviewer could tell when the system stayed inside policy and when it drifted outside it.</p>
+            <h3>The first thing to document is answer authority</h3>
+            <p>Most support inboxes contain a mix of safe questions and risky ones. Hours, status checks, simple process questions, and standard document requests are usually manageable. Pricing exceptions, refunds, cancellations, legal commitments, technical edge cases, and anything involving customer harm or financial exposure usually are not. If those boundaries are not explicit, the assistant will treat them as style questions instead of authority questions.</p>
+            <p>That is the first document many teams skip. What can AI answer directly. What must it collect and route. What must always stay with a human. That list does not need to be long, but it does need to be real. Otherwise every future issue turns into case-by-case interpretation under pressure.</p>
+            <h3>The second thing to document is source hierarchy</h3>
+            <p>Support teams often assume the assistant will somehow know which information source matters most. It will not. The help center says one thing, a newer internal SOP says another, and a manager gave a one-off exception in Slack last week. If the business has not defined the source hierarchy, the system can pull from stale or conflicting material while sounding confident.</p>
+            <p>Write down which sources are authoritative, which are supplemental, and which should not be used without review. A practical hierarchy might be published policy first, current internal SOP second, ticket history only as context, and ad hoc chat guidance not authoritative unless converted into a documented rule. That kind of structure protects both the customer experience and the team that has to audit outcomes later.</p>
+            <h3>The third thing to document is escalation triggers</h3>
+            <p>Many AI inbox deployments fail because they rely on vague phrases like &ldquo;escalate when needed.&rdquo; Needed according to what. Good escalation rules are concrete. Escalate when the customer disputes a charge. Escalate when the request involves cancellation or contract change. Escalate when identity cannot be verified. Escalate when the conversation shows frustration after a prior unresolved issue. Escalate when the answer would require guessing beyond approved documentation.</p>
+            <p>Support leaders should want that list because it reduces two bad outcomes at once. The first is over-automation, where the assistant tries to smooth over risky requests. The second is under-automation, where the system punts easy work because nobody defined the boundary well enough to trust it.</p>
+            <h3>The fourth thing to document is the handoff package</h3>
+            <p>A human handoff is not good just because the system stopped talking. The handoff has to arrive with the right facts. What the customer asked. What account or order context is relevant. What the assistant already checked. Which policy or knowledge source it used. Why it escalated. What the likely next step is. If the human has to reconstruct the conversation from scratch, the business kept the risk and lost the efficiency.</p>
+            <p>This is why inbox automation should be reviewed as an operating workflow, not as a writing feature. The useful outcome is not polished replies. The useful outcome is fewer low-value decisions for the team and cleaner exception handling when the issue is not safe to automate.</p>
+            <h3>Where teams usually get this wrong</h3>
+            <p>The first mistake is documenting tone before documenting authority. Voice matters, but it is secondary. A perfectly on-brand message that breaks refund policy or promises the wrong next step is still a bad support outcome.</p>
+            <p>The second mistake is assuming the most experienced rep can stay in everyone&rsquo;s head forever. If the business depends on one person to know the real rule behind messy cases, that is exactly the knowledge that should be turned into documentation before AI touches the queue.</p>
+            <p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can be a good fit when the inbox needs a controlled assistant across channels, but the deeper issue is readiness. If the source material is conflicting and the escalation rules are vague, a broader <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a> or <a href="services/ai-training.html">AI Training &amp; Enablement</a> engagement usually comes first.</p>
+            <h3>A practical way to start</h3>
+            <p>Pick one inbox category that is repetitive enough to matter but contained enough to review. Write the allowed-answer types, the forbidden-answer types, the approved sources, and the escalation triggers on one page. Then test that page against real tickets with the strongest support lead or operator in the room. If smart humans disagree about how the system should behave, the documentation is not ready yet.</p>
+            <p>That is the standard to use. If the written rules make it easier to review output, train the team, and keep the assistant inside a clear operating envelope, the business is moving in the right direction. If the project still depends on tribal knowledge and after-the-fact corrections, the tooling is ahead of the process.</p>
+            <div class="inline-cta">
+                If inbox automation feels unclear because the rules are still in people&apos;s heads, start with <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+            </div>
+        </template>
+
         <template id="post-ai-estimate-aging-review-service-teams">
             <h2>AI estimate-aging review for service teams</h2>
             <p>Many service businesses do not lose quotes because the price was obviously wrong. They lose them because the estimate sat too long without a clear next step. A customer needed financing details that never got answered. A recommended repair was sent without enough context to justify urgency. A coordinator meant to follow up but the item disappeared into a crowded day. By the time someone checks the aging quote list, the opportunity is already colder, the schedule forecast is less reliable, and the team is guessing why the work did not move.</p>
