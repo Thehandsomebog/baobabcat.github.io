@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-scope-change-review-service-teams",
+        title: "AI scope-change review for service teams",
+        date: "2026-05-02",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-scope-change-review-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to catch scope changes early enough to protect estimates, scheduling, and customer expectations.",
+        homeSummary: "How service teams can use AI to catch scope changes early enough to protect estimates, scheduling, and customer expectations.",
+        bodyHtml: `
+<h2>AI scope-change review for service teams</h2>
+<p>Many service businesses do not lose control of a job because the original estimate was careless. They lose control because the scope changed after the estimate and nobody handled that change cleanly. The technician finds added damage. The install crew discovers a site condition that was not documented. The office learns the customer wants extra work bundled into the same visit. Everyone knows the job is no longer the same, but the schedule, price, approvals, and customer expectations are still tied to the old version.</p>
+<p>This is a practical AI use case because the first-pass review is repetitive and easy to miss when teams are moving fast. The goal is not to let AI approve change orders on its own. The goal is to identify likely scope changes, show why the work is no longer aligned with the original plan, and route the issue to the right human before the team creates avoidable rework or margin damage.</p>
+<h3>The real problem is uncontrolled midstream change</h3>
+<p>Scope drift usually starts in ordinary ways. A field note mentions additional equipment. A technician photo shows a condition that changes the repair path. A customer asks for adjacent work while the crew is already onsite. A support rep promises a small add-on without realizing it changes labor, parts, or timing. None of that is unusual. The problem is that many businesses still handle those changes through scattered texts, verbal approvals, or half-updated notes.</p>
+<p>That creates operational drag fast. Dispatch thinks the job is still on the original duration. Billing thinks the estimate is still current. The customer thinks the team already agreed to the extra work. The field team thinks the office knows what changed. AI can help by reviewing job notes, photos, estimate history, and customer messages for signals that the scope moved and the workflow did not catch up.</p>
+<h3>What useful scope-change review actually does</h3>
+<p>A useful system looks for the details that usually mean the original plan is no longer safe to trust. Added tasks not reflected in the estimate. New material requirements. Customer requests that change duration or crew needs. Site conditions that invalidate the original assumption. Notes that mention approval, pricing, or scheduling uncertainty. The point is not to summarize the visit more elegantly. The point is to force an operational check before the business keeps running the job as if nothing changed.</p>
+<p>The output should be simple enough to act on. Likely scope change. Reason. Affected area. Recommended owner. Recommended next step. That next step might be issue a revised estimate, request approval before continuing, update schedule duration, order additional materials, or escalate to management review. Owners, coordinators, and service managers need a clear handoff, not another transcript to decode.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating every scope change like a sales opportunity. Sometimes the right response is an updated estimate. Sometimes it is a stop-and-review decision because the added work creates timing, safety, or authorization risk. If the workflow assumes every change should simply be upsold, the business will create confusion and distrust.</p>
+<p>The second mistake is separating the commercial side from the scheduling side. A revised price does not solve the problem if the board still assumes the original duration, parts plan, or technician assignment. Scope-change review has to connect estimate control with scheduling control or the same job will break somewhere else downstream.</p>
+<p>The third mistake is making OpenClaw sound bigger than the underlying workflow. OpenClaw can help if approvals, explanations, or follow-up questions are arriving across text, chat, and web channels, but scope-change control is not mainly a chatbot project. It is a service-operations project involving estimate discipline, field documentation, approval rules, and cleaner handoffs between office and field.</p>
+<h3>A practical way to start</h3>
+<p>Start with one job type where scope changes routinely create friction. Maybe it is installs, larger repairs, commercial service calls, or any work where the original estimate often meets new field conditions. Define the few signals that should always trigger review, the cases that must pause for human approval, and the owner for each decision path. Then compare the AI review against how your strongest coordinator or service manager would catch the same changes manually.</p>
+<p>That is the standard business owners and operators should use. If the team is spotting scope drift earlier, revising estimates and schedules with less confusion, and reducing the amount of day-of improvisation around changed work, the system is helping. If the same jobs are still turning into pricing arguments and schedule damage while everyone gets cleaner summaries, it is not doing enough.</p>
+<div class="inline-cta">
+    If scope changes keep breaking estimates and schedules, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-recommended-work-follow-up-review-service-teams",
         title: "AI recommended-work follow-up review for service teams",
         date: "2026-05-01",
