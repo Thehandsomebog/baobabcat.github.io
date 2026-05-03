@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-duplicate-work-order-detection-service-teams",
+        title: "AI duplicate work-order detection for service teams",
+        date: "2026-05-03",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-duplicate-work-order-detection-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to catch duplicate work orders before double-booking, crossed wires, and avoidable rework spread across the day.",
+        homeSummary: "How service teams can use AI to catch duplicate work orders before double-booking, crossed wires, and avoidable rework spread across the day.",
+        bodyHtml: `
+<h2>AI duplicate work-order detection for service teams</h2>
+<p>Duplicate work orders usually do not start as a dramatic system failure. They start because the same customer reaches out twice, a dispatcher opens a new job instead of attaching notes to the existing one, or support and service both create records from slightly different versions of the same issue. The damage shows up later. Two people follow up on one request. A technician gets routed to a job that was already handled. Parts get ordered twice. Billing has to sort out which record is real. The business ends up wasting labor on confusion it created for itself.</p>
+<p>This is a practical AI use case because duplicate detection is repetitive, cross-channel, and easy to miss when the team is moving quickly. The goal is not to let AI merge records automatically without review. The goal is to identify likely duplicates early, show why they appear related, and route the decision to the person who actually owns the workflow before the duplicate spreads into dispatch, parts, billing, or customer communication.</p>
+<h3>The real problem is fragmented intake</h3>
+<p>Most operators already know duplicates happen. What they usually do not have is a clean first-pass review when the same issue enters from different paths. A customer calls after sending a web form. A property manager emails while the tenant texts the service line. A support rep opens a follow-up ticket while dispatch creates a fresh work order from a voicemail. Each action looks reasonable on its own. The problem is that nobody is comparing them fast enough to see that the business may be opening parallel workflows around the same job.</p>
+<p>That fragmentation creates ordinary but expensive drag. Office staff waste time reading overlapping notes. Customers get inconsistent updates because different team members are looking at different records. Technicians arrive with partial context. Managers lose visibility because job volume looks higher than the real workload. AI can help by reviewing customer identifiers, location data, issue descriptions, timestamps, job history, and channel activity for the signals that usually point to duplicate work.</p>
+<h3>What useful duplicate detection actually does</h3>
+<p>A useful system looks for more than exact matches. Same customer and address with a similar issue inside a short time window. Same asset or equipment reference described two different ways. A reopened problem that was logged as a new job. A support ticket and a work order that point to the same unresolved visit. Notes that mention an earlier appointment, estimate, or open case the current record failed to reference. Those are the situations where a business needs review before the duplicate starts driving real cost.</p>
+<p>The output should be operational. Likely duplicate. Reason for review. Related record or records. Recommended owner. Recommended next step. That next step might be merge after human confirmation, attach the new information to the original job, cancel the redundant dispatch, consolidate customer communication, or hold new scheduling until the records are cleaned up. The value is not in clever matching. The value is in stopping one customer problem from turning into two or three internal workflows.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is forcing aggressive auto-merging. Some records look similar but should stay separate because the site has multiple assets, the customer reported a new symptom, or the second request changes the urgency. If the system acts too certain, it can bury real work under the wrong record. Duplicate review should support cleaner human decisions, not remove judgment where the facts are still thin.</p>
+<p>The second mistake is treating duplicates like a CRM housekeeping issue instead of an operations issue. A duplicate record is not harmless if it affects scheduling, quoting, parts ordering, or customer expectations. Owners and operators should care because duplicate workflows distort the board, the queue, and the numbers people use to run the business.</p>
+<p>The third mistake is making OpenClaw sound bigger than the underlying problem. OpenClaw can help when duplicate requests arrive through chat, web, and text channels that need one consistent intake layer, but duplicate detection is not mainly a chatbot project. It is a workflow-control project involving intake rules, record ownership, cross-team visibility, and clean handoffs between support, dispatch, and service management.</p>
+<h3>A practical way to start</h3>
+<p>Start with one queue where duplicates create visible waste. Maybe it is after-hours intake, recurring property-management requests, or any service line where the same issue often arrives through more than one channel. Define the few signals that should trigger review, the cases that must stay separate, and the owner who decides what happens next. Then compare the AI review against how your strongest coordinator or dispatcher already spots duplicates manually.</p>
+<p>That is the standard business owners and operators should use. If the team is catching more duplicate records before they affect dispatch or follow-up, reducing conflicting customer communication, and cleaning up job ownership faster, the system is helping. If duplicate jobs are still slipping into the board and the office is still untangling them after the fact, the workflow needs more work.</p>
+<div class="inline-cta">
+    If duplicate jobs are creating avoidable confusion, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Analytics &amp; Insights</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-schedule-gap-recovery-service-teams",
         title: "AI schedule-gap recovery for service teams",
         date: "2026-05-02",
