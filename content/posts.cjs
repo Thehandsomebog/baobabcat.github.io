@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-parts-readiness-check-service-teams",
+        title: "AI parts-readiness checks for service teams",
+        date: "2026-05-04",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-parts-readiness-checks-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to catch parts-readiness problems before a job gets dispatched into delays, second trips, and preventable customer frustration.",
+        homeSummary: "How service teams can use AI to catch parts-readiness problems before a job gets dispatched into delays, second trips, and preventable customer frustration.",
+        bodyHtml: `
+<h2>AI parts-readiness checks for service teams</h2>
+<p>Many service businesses do not lose margin because they lack demand. They lose it because a job gets put on the board before the materials question is actually settled. A coordinator sees an opening, a customer wants the soonest slot, and everyone assumes the needed part will be there in time. Then the technician arrives without the right item, the office scrambles to confirm availability, and what should have been one clean visit turns into delay, rescheduling, and a customer who now has less confidence in the whole operation.</p>
+<p>This is a practical AI use case because parts-readiness review is repetitive, cross-functional, and easy to rush when the team is moving fast. The goal is not to let AI approve dispatch by itself. The goal is to review the records that usually determine readiness, surface the missing pieces early, and help dispatch, support, and service managers separate jobs that are safe to schedule from jobs that still need a human decision.</p>
+<h3>The real problem is weak dispatch confidence</h3>
+<p>Most operators already know which jobs tend to create parts surprises. Follow-up repairs after diagnosis. Equipment-specific replacements. Warranty work with model-number uncertainty. Jobs where a technician recommended a part but the quote, PO, or inventory note never got tied back together cleanly. The problem is that the readiness logic often lives in fragments across technician notes, parts requests, vendor messages, inventory records, and office memory.</p>
+<p>When that context stays fragmented, the team fills the gap with optimism. Someone assumes the part is standard stock. Someone else assumes purchasing already handled it. Dispatch assumes the technician can figure it out in the field. Support tells the customer the appointment is locked. By the time anyone checks carefully, the day is already committed. AI can help because it is well suited to scanning for the signals that usually indicate whether the job is truly ready or only looks ready from one angle.</p>
+<h3>What useful parts-readiness review actually does</h3>
+<p>A useful system checks the few conditions that matter before a job is treated as dispatchable. Is the required part identified clearly enough. Has it been ordered if it is not stocked. Is the quantity resolved. Is the expected arrival date compatible with the appointment. Did anyone note an acceptable substitute or field workaround. Does the technician assignment depend on a specific tool, certification, or install condition beyond the part itself. Instead of producing a vague risk score, the review should label the job in operational terms: ready, blocked, or needs human confirmation.</p>
+<p>The output should also show why. Missing model match. Part ordered but ETA conflicts with the appointment. Inventory note is stale. Customer approved the repair but purchasing never started. Technician recommended multiple possible parts and nobody resolved which one is needed. Those are the explanations that let the office act quickly. The business does not need another dashboard if the next step is still unclear.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating parts-readiness like a warehouse problem only. It is really a coordination problem between field findings, quoting, purchasing, scheduling, and customer communication. If those handoffs stay weak, better inventory visibility alone will not stop preventable second trips.</p>
+<p>The second mistake is forcing certainty where the facts are still incomplete. Some jobs legitimately need a technician or manager to review photos, prior history, or vendor guidance before anyone can say the part plan is solid. If AI makes a thin record sound complete, the team will schedule false confidence into the day.</p>
+<p>The third mistake is making OpenClaw sound like the center of the solution. OpenClaw can help if customers need timely updates when a job is not yet ready to schedule or when an appointment has to move because materials changed. But the deeper issue is workflow control. In many cases, the better starting point is broader <a href="services/ai-automation.html">AI Workflow Automation</a> so the parts, dispatch, and customer-status signals stop living in separate places.</p>
+<h3>A practical way to start</h3>
+<p>Start with one repair category where missing or late parts regularly cause second trips or awkward reschedules. Define the minimum evidence required before that job can be scheduled, the exceptions that should always trigger human review, and the owner for each missing step. Then compare the AI review against how your strongest dispatcher, service manager, or parts coordinator would clear the same jobs manually.</p>
+<p>That is the standard business owners and operators should use. If the team is sending fewer technicians into preventable parts problems, rescheduling fewer customers at the last minute, and making dispatch decisions with cleaner evidence, the workflow is helping. If the office is still learning on the day of service that the materials plan was never really settled, it is not doing enough.</p>
+<div class="inline-cta">
+    If preventable parts issues keep breaking service days, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Analytics &amp; Insights</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-duplicate-work-order-detection-service-teams",
         title: "AI duplicate work-order detection for service teams",
         date: "2026-05-03",
