@@ -32,6 +32,38 @@ module.exports = [
 </div>`,
     },
     {
+        slug: "ai-technician-credential-review-commercial-service-teams",
+        title: "AI technician-credential review for commercial service teams",
+        date: "2026-05-11",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-technician-credential-review-for-commercial-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How commercial service teams can use AI to catch technician-qualification mismatches before the wrong person gets scheduled into the wrong job.",
+        homeSummary: "How commercial service teams can use AI to catch technician-qualification mismatches before the wrong person gets scheduled into the wrong job.",
+        bodyHtml: `
+<h2>AI technician-credential review for commercial service teams</h2>
+<p>Commercial service teams do not always lose time because demand is too high. They often lose it because the wrong technician gets assigned before anyone checks whether the job actually requires a specific credential, clearance, or training record. A site needs someone who can handle refrigerant work. A building requires lift certification. A customer expects a licensed trade on site for part of the scope. The work order mentions roof access and hot-work conditions, but the assignment was made like it was a routine call. By the time the mismatch is noticed, the day is already absorbing reschedules, supervisor calls, or an avoidable second trip.</p>
+<p>This is a practical AI use case because qualification review is repetitive, policy-heavy, and usually spread across dispatch notes, account rules, customer instructions, technician records, and job history. The goal is not to let AI make final crew decisions on its own. The goal is to review whether the job requirements and technician qualifications actually line up before dispatch hardens around the wrong assumption.</p>
+<h3>The real problem is hidden assignment risk</h3>
+<p>Most owners and operators already know that not every commercial call is interchangeable. Some jobs require a specific license, certification, background status, safety training, equipment familiarity, or customer-approved roster. The expensive part is that those requirements do not always live in one clean field. One detail is in the work order. Another is in an old customer note. A third lives in someone&apos;s memory because that site rejected a technician before. When that context is fragmented, dispatch fills the gap with speed.</p>
+<p>That creates ordinary but expensive drag. The technician arrives and cannot perform the full scope. The customer questions why the wrong person was sent. A supervisor scrambles to confirm whether the work can proceed partially or needs to stop. Support has to explain a preventable schedule change. AI can help because it is good at reviewing scattered assignment context and surfacing the few conditions that actually determine whether the chosen tech is a safe fit for the job.</p>
+<h3>What useful credential review actually does</h3>
+<p>A useful system checks the requirements that materially change who should be sent. Does the job call for a licensed trade, refrigerant handling certification, lift or fall-protection training, a badged technician, a background-cleared technician, or a customer-approved vendor roster. Do the site notes suggest a prior restriction on who can perform the work. Does the assigned technician record show the needed qualification clearly, or is the match uncertain. Instead of producing a generic confidence score, the workflow should label the assignment in operational terms: qualified as scheduled, qualified with condition, needs credential review, needs reassignment, or needs manager decision.</p>
+<p>The explanation matters as much as the label. Site requires badged technician and badge status is unclear. Job scope implies licensed electrical work but assignment notes do not show the right trade coverage. Customer-approved roster appears out of date. Roof work flagged but required training is not attached to the assigned technician profile. Those are the findings that help dispatch and service managers fix the assignment before the customer experiences the mismatch.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating qualification review like a staffing detail instead of a service-control issue. If the team checks credentials only after the route is built or after the technician is already on site, the business has already taken on the worst version of the risk.</p>
+<p>The second mistake is assuming a broad job title is enough. &ldquo;Senior tech&rdquo; or &ldquo;lead installer&rdquo; may be useful shorthand, but commercial jobs often depend on narrower requirements than rank alone. If the workflow cannot separate general experience from specific authorization, training, or customer approval requirements, it will keep making avoidable assignment errors.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when customer-side scheduling, document requests, or technician approval questions move across channels and the business wants one controlled front door. But technician-credential review is not mainly an assistant project. It is an assignment-control project involving workforce records, account rules, dispatch discipline, and cleaner job classification. In many cases, the better starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-training.html">AI Training &amp; Enablement</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one commercial job class where assignment mismatches already create visible waste. Maybe it is roof work, refrigeration service, customer-badged sites, regulated facilities, or any queue where dispatch regularly has to double-check who is allowed to perform the work. Define which requirements should always be checked before assignment, which cases should force human review, and which technician records are authoritative. Then compare the AI review against how your strongest dispatcher, service manager, or operations lead screens the same jobs manually.</p>
+<p>That is the standard business owners and operators should use. If the business is sending the right people more consistently, reducing avoidable reassignment churn, and making fewer customer promises that collapse on qualification details, the workflow is helping. If the office still finds out too late that the assigned technician was never the right fit, it is not doing enough.</p>
+<div class="inline-cta">
+    If technician assignment risk keeps getting discovered too late, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-invoice-package-readiness-commercial-service-teams",
         title: "AI invoice-package readiness for commercial service teams",
         date: "2026-05-09",
