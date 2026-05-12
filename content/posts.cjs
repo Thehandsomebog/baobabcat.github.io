@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-certificate-of-insurance-review-commercial-service-teams",
+        title: "AI certificate-of-insurance review for commercial service teams",
+        date: "2026-05-12",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-certificate-of-insurance-review-for-commercial-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How commercial service teams can use AI to catch vendor-compliance and insurance gaps before site rules block work already on the board.",
+        homeSummary: "How commercial service teams can use AI to catch vendor-compliance and insurance gaps before site rules block work already on the board.",
+        bodyHtml: `
+<h2>AI certificate-of-insurance review for commercial service teams</h2>
+<p>Commercial service teams do not always lose time because the field work is difficult. They often lose time because the job should never have reached dispatch in its current state. A property manager wants service this afternoon, but the customer site requires a current certificate of insurance. A vendor portal shows expired coverage. A building needs an additional insured endorsement that nobody attached to the record. Operations assumes compliance is fine because the account is not new. Support assumes someone else already handled the paperwork. By the time the gap is noticed, the technician is scheduled, the customer expects arrival, and the office is trying to fix a preventable document problem under live pressure.</p>
+<p>This is a practical AI use case because insurance and vendor-compliance review is repetitive, detail-heavy, and spread across too many systems to trust memory alone. The goal is not to let AI make legal coverage decisions or replace broker, risk, or management review. The goal is to review the job, account, site rules, and attached compliance records quickly enough to show whether work can move, what is missing, and who needs to act before the board absorbs the problem.</p>
+<h3>The real problem is hidden vendor-compliance friction</h3>
+<p>Most operators already know the pattern. One customer wants a current COI on file. Another requires specific limits, endorsements, or waiver language. A national account expects the paperwork to be loaded into a vendor portal before arrival. A facility will deny access if the record is expired, mismatched, or incomplete even if the service need is legitimate. None of that is unusual. The problem is that those requirements often live across site notes, email threads, portal screenshots, shared drives, and account memory instead of one clean operating checkpoint.</p>
+<p>That creates ordinary but expensive drag. A dispatcher thinks the job is ready because the time slot is filled. A coordinator finds out too late that the certificate expired last week. The customer assumes the service company dropped the ball. The office scrambles to confirm whether the issue is truly expired coverage, a missing endorsement, a portal upload problem, or a site record that was never updated. AI can help because it is good at reviewing scattered compliance signals and surfacing the few conditions that actually change whether the visit is safe to keep, should pause, or needs escalation.</p>
+<h3>What useful COI review actually does</h3>
+<p>A useful system checks whether the operating request and the compliance record agree on the basics. Is there a current certificate attached or referenced. Does the expiration date still cover the scheduled work date. Do the named insured, additional insured, or certificate holder details match the site requirement closely enough to proceed. Is there evidence the vendor portal still shows approval, or only evidence that someone attempted an upload. Are there site notes showing an exception, temporary approval, or customer-side override that changes how the team should handle the job.</p>
+<p>The output should stay operational. Compliant as scheduled. Likely compliant but needs portal confirmation. Hold for expired COI. Hold for missing endorsement. Escalate because the site rule and the account record do not agree. That is more useful than a polished summary because service managers, coordinators, support leads, and owners need the next move to be obvious. The point is to prevent the business from learning about compliance blockers only after customer expectations and technician time are already committed.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating certificate review like an annual admin chore instead of a dispatch-control issue. If the team checks vendor-compliance only when a customer pushes back or a site denies access, the business is already paying the most expensive version of the problem.</p>
+<p>The second mistake is assuming a certificate on file is the same as a usable certificate for this job. A PDF existing somewhere does not mean the dates, entities, endorsements, or portal status still match what the account requires. If the workflow cannot separate &ldquo;document exists&rdquo; from &ldquo;job is compliant enough to dispatch,&rdquo; the team will keep getting surprised at the worst possible time.</p>
+<p>The third mistake is making OpenClaw sound like the center of the solution. OpenClaw can help if customers, property managers, or site contacts are sending compliance questions and document requests across chat, text, and web channels and the business wants one controlled front door. But COI review is not mainly an assistant project. It is a vendor-compliance and operations-control project involving account standards, document handling, portal discipline, and clearer ownership between support and operations. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one account segment where compliance misses already break the day. Maybe it is property management, facilities work, retail locations, schools, healthcare sites, or any commercial queue where vendor paperwork can block access. Define which conditions should always hold a job, which ones can move with documented exception, and which records count as authoritative. Then compare the AI review against how your strongest coordinator, operations lead, or office manager screens the same jobs manually.</p>
+<p>That is the standard business owners and operators should use. If the business is catching expired or mismatched compliance records earlier, reducing day-of access failures, and spending less office time reconstructing whether the paperwork was ever actually valid, the workflow is helping. If the team still discovers insurance and portal issues only after the job is already on the board, it is not doing enough.</p>
+<div class="inline-cta">
+    If vendor-compliance gaps keep blocking service after the schedule is already committed, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-credit-hold-review-commercial-service-teams",
         title: "AI credit-hold review for commercial service teams",
         date: "2026-05-11",
