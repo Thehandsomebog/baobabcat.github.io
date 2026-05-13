@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-purchase-order-mismatch-review-commercial-service-teams",
+        title: "AI purchase-order mismatch review for commercial service teams",
+        date: "2026-05-13",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-purchase-order-mismatch-review-for-commercial-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How commercial service teams can use AI to catch purchase-order mismatches before scope, billing, and customer expectations drift apart.",
+        homeSummary: "How commercial service teams can use AI to catch purchase-order mismatches before scope, billing, and customer expectations drift apart.",
+        bodyHtml: `
+<h2>AI purchase-order mismatch review for commercial service teams</h2>
+<p>Commercial service businesses do not usually get stuck on purchase orders because the customer refused to issue one. They get stuck because the PO exists, but the team is not clear on whether it actually matches the work being requested. The site calls for service. A coordinator sees a PO number in the account. Dispatch assumes the job can move. Later the office finds out the PO was tied to a different location, a different scope, a capped amount, a prior quote, or a work type that does not match what the technician was sent to do. What looked like simple administrative support turns into billing friction, internal blame, and customer follow-up that should have happened earlier.</p>
+<p>This is a practical AI use case because first-pass PO review is repetitive, detail-heavy, and easy to rush when the board is busy. The goal is not to let AI decide contractual liability on its own. The goal is to review the request, the PO details, prior notes, quoted scope, and account rules quickly enough to show whether the paperwork and the work actually line up before more labor gets committed.</p>
+<h3>The real problem is false confidence from seeing any PO at all</h3>
+<p>Most owners and operators already know the pattern. Someone sees a valid-looking PO number and treats that as clearance to proceed. But commercial customers often use POs in narrower ways than the field expects. One PO may be tied to a quoted repair only. Another may cover a not-to-exceed amount that the current request will likely exceed. A third may belong to one site while the new call is coming from another. Sometimes the customer intends the PO for preventive work, while the office is trying to use it for billable repair. None of that is unusual. The problem is that the mismatch often gets discovered after the visit, after the quote, or after the invoice leaves.</p>
+<p>That timing creates avoidable drag. Dispatch thinks the job was administratively safe. Billing discovers the PO does not support the charge. Support gets caught explaining why the customer thought authorization already existed. Managers spend time reconstructing who knew what and when. AI can help because it is good at comparing request details against the specific constraints hidden inside PO notes, attachments, quote references, and account history.</p>
+<h3>What useful PO mismatch review actually does</h3>
+<p>A useful system checks whether the work request and the PO agree on the few details that usually matter most. Does the PO reference the same location. Does it match the approved scope, quote, or asset. Is the amount still workable for the current request. Has the PO already been consumed by earlier work. Is the work type aligned with what the customer authorized. Are there notes saying the customer requires a fresh PO for any added work, after-hours labor, rental equipment, or follow-up visits.</p>
+<p>The output should stay operational. PO appears usable as-is. PO appears usable but amount risk is present. Hold for revised PO. Hold for scope mismatch. Hold for location mismatch. Escalate because the customer instructions and the PO record do not agree. That is more useful than a polished summary because coordinators, dispatchers, billing leads, and service managers need the next move to be obvious. The point is to stop the business from treating partial authorization like full authorization.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating PO review like a billing task that can wait until invoicing. By then the business has already spent labor, set customer expectations, and reduced its leverage to cleanly fix the paperwork gap. If the team wants fewer billing surprises, the PO check has to happen closer to intake, quoting, or dispatch.</p>
+<p>The second mistake is confusing PO presence with PO fit. A valid PO number is not the same thing as a usable authorization for the exact work now being requested. If the workflow cannot separate those two ideas, the office will keep using old, partial, or mismatched paperwork as a shortcut.</p>
+<p>The third mistake is making OpenClaw sound like the center of the solution. OpenClaw can help when customers send PO updates, approvals, or follow-up instructions across text, chat, and web channels and the business wants one controlled front door. But PO mismatch review is not mainly an assistant project. It is an authorization-control project involving quote discipline, account rules, dispatch timing, and billing clarity. In many cases, broader <a href="services/ai-automation.html">AI Workflow Automation</a> plus focused <a href="services/ai-analytics.html">AI Data &amp; Analytics</a> is the better starting point, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one commercial workflow where PO confusion regularly slows service, quoting, or invoicing. Maybe it is national-account repair work, multi-site maintenance, or any queue where the office keeps asking whether the PO actually covers what the customer now wants. Define which mismatches should always block work, which ones should trigger manager review, and which ones can move under a narrow exception. Then compare the AI review against how your strongest billing coordinator, dispatcher, or service manager screens the same requests manually.</p>
+<p>That is the standard business owners and operators should use. If the team is catching PO mismatches earlier, reducing work that moves under weak authorization, and spending less time rebuilding the paperwork story after the fact, the workflow is helping. If the office still discovers the PO problem only when the invoice is challenged or the technician is already on site, it is not doing enough.</p>
+<div class="inline-cta">
+    If PO confusion keeps leaking into dispatch, quoting, and billing, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-account-mapping-review-multi-location-service-teams",
         title: "AI account-mapping review for multi-location service teams",
         date: "2026-05-13",
