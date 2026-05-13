@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-account-mapping-review-multi-location-service-teams",
+        title: "AI account-mapping review for multi-location service teams",
+        date: "2026-05-13",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-account-mapping-review-for-multi-location-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How multi-location service teams can use AI to catch customer-account mapping mistakes before the wrong site, bill-to, or approval path creates avoidable rework.",
+        homeSummary: "How multi-location service teams can use AI to catch customer-account mapping mistakes before the wrong site, bill-to, or approval path creates avoidable rework.",
+        bodyHtml: `
+<h2>AI account-mapping review for multi-location service teams</h2>
+<p>Many service businesses do not get into trouble because nobody answered the customer. They get into trouble because the team answered under the wrong account record. A caller reports an issue at one location, but the work order is attached to a sister site. The site contact is real, but the bill-to entity is different. A national account expects one approval path, while the branch-level record in the system points to another. Dispatch thinks the job is straightforward because the address looks familiar. Accounting later finds out the labor, invoice, or follow-up landed under the wrong customer structure entirely.</p>
+<p>This is a practical AI use case because account-mapping review is repetitive, detail-heavy, and hard to do consistently when names, locations, and contacts look close enough to feel correct. The goal is not to let AI rewrite the customer master or make final billing decisions on its own. The goal is to review the request, location details, account hierarchy, prior work history, and billing setup fast enough to show when the team is acting on a weak match before that weak match spreads into dispatch, approvals, and invoicing.</p>
+<h3>The real problem is false certainty around familiar accounts</h3>
+<p>Owners, operators, and support leads usually recognize the pattern. A customer has multiple locations with similar names. One property management company oversees several buildings with separate site rules. A franchise group shares branding across entities that do not actually share billing. A long-running commercial account has regional contacts, local contacts, and one central bill-to record. None of that is unusual. The expensive part is that the office often treats a familiar customer name as enough proof that the right account record is already in play.</p>
+<p>That false certainty creates avoidable drag. A coordinator opens the wrong site history and misses a location-specific access rule. Dispatch sends the job under the wrong customer account and later has to unwind notes, approvals, and invoice coding. Support gives a confident answer based on a similar location rather than the actual one. Accounting ends up cleaning up work that should have been attached correctly at intake. AI can help because it is good at comparing scattered account signals and surfacing the few mismatches that actually change how the work should move.</p>
+<h3>What useful account-mapping review actually does</h3>
+<p>A useful system checks whether the request matches the customer structure the team is about to use. Does the site address match the account record. Does the caller or email domain line up with the known contact list. Is the location under the same bill-to entity as the last visit, or is the business mixing sister accounts. Are there location-specific notes, asset records, or contract terms that belong to a different branch. Does the approval path point to national account rules, local property management rules, or a separate owner entity entirely.</p>
+<p>The output should stay operational. Correct account as entered. Likely wrong site match. Needs bill-to review. Needs hierarchy review before dispatch. Possible duplicate location record. That is more useful than a polished summary because coordinators, dispatchers, support leads, and owners need the next move to be obvious. The value is in stopping account confusion before the business creates a bigger cleanup job for itself.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is assuming the address alone settles the problem. In multi-location service work, the same customer may have neighboring sites, shared mailing addresses, or one office coordinating work for several properties. Address helps, but it is not enough by itself to prove that the correct account, bill-to, and approval path are attached.</p>
+<p>The second mistake is treating account mapping like a billing-only issue. By the time accounting notices the wrong entity or site record, operations may already have used the wrong notes, the field team may have arrived with the wrong context, and the customer may have been promised something under the wrong branch. This needs to be caught before the record becomes operationally live.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help if account requests, contact updates, and service intake are arriving through chat, text, and web channels and the business wants one controlled front door. But account-mapping review is not mainly an assistant project. It is a data-discipline and operations-control project involving customer master quality, location records, approval logic, and cleaner intake rules. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one multi-location account segment where site confusion already creates visible waste. Maybe it is property management, franchise operations, regional commercial accounts, or any customer group where similar names keep masking different billing or approval structures. Define which fields should always agree before a work order is treated as ready, which mismatches should force review, and which master records count as authoritative. Then compare the AI review against how your strongest coordinator, dispatcher, or office manager validates the same requests manually.</p>
+<p>That is the standard business owners and operators should use. If the team is attaching work to the right entity more consistently, catching site mismatches earlier, and spending less office time untangling bad account assumptions after the fact, the workflow is helping. If the business still discovers account confusion only after dispatch or invoicing has already moved, it is not doing enough.</p>
+<div class="inline-cta">
+    If multi-location account confusion keeps leaking into dispatch and billing, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-certificate-of-insurance-review-commercial-service-teams",
         title: "AI certificate-of-insurance review for commercial service teams",
         date: "2026-05-12",
