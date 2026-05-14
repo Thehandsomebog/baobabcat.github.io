@@ -96,6 +96,38 @@ module.exports = [
 </div>`,
     },
     {
+        slug: "ai-truck-stock-exception-review-service-teams",
+        title: "AI truck-stock exception review for service teams",
+        date: "2026-05-22",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-truck-stock-exception-review-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to catch truck-stock exceptions before avoidable return trips, parts confusion, and rushed purchasing hit the schedule.",
+        homeSummary: "How service teams can use AI to catch truck-stock exceptions before avoidable return trips, parts confusion, and rushed purchasing hit the schedule.",
+        bodyHtml: `
+<h2>AI truck-stock exception review for service teams</h2>
+<p>Service businesses do not only lose time when a part is missing. They lose time when the team assumes truck stock will cover the job, then discovers too late that the real problem is a quantity mismatch, the wrong variation, an undocumented substitute, or a replenishment gap that nobody surfaced before dispatch. A technician closes the prior day assuming common parts were restocked. A coordinator schedules a repair because the item is usually carried. A supervisor approves the route because the work looks routine. Then the visit turns into a parts chase, a return trip, or an avoidable delay that the customer experiences as disorganization.</p>
+<p>This is a practical AI use case because truck-stock exception review is repetitive, detail-heavy, and spread across work orders, replenishment habits, technician notes, and parts assumptions that often live in memory more than in a clean system. The goal is not to let AI certify inventory accuracy or replace the person who owns purchasing and field readiness. The goal is to review the job context quickly enough to show when a supposedly routine stock assumption is weak before that assumption turns into wasted field time.</p>
+<h3>The real problem is that familiar parts create false confidence</h3>
+<p>Owners, operators, and support leads usually recognize the pattern. The team carries contactors, capacitors, valves, igniters, fittings, belts, filters, or other commonly used items, so everyone starts acting as if availability is effectively guaranteed. But one truck used the last matching part yesterday. Another technician has a similar item, but not the right rating or configuration. The office believes a branch shelf has coverage, while the route timing makes pickup unrealistic without affecting other calls. None of that is unusual. The expensive part is that the business treats a likely stock assumption like confirmed readiness.</p>
+<p>That creates ordinary but expensive drag. Dispatch fills the board with jobs that are less ready than they look. Technicians lose productive time checking bins, calling the office, or leaving the site for a part run that should have been anticipated. Support has to explain why a simple repair suddenly needs another visit. Purchasing gets rushed into same-day cleanup instead of planned replenishment. AI can help because it is good at comparing the job scope, recent parts usage, van-stock patterns, and replenishment signals fast enough to surface the few cases that need a pause.</p>
+<h3>What useful truck-stock exception review actually does</h3>
+<p>A useful system checks whether the stock assumption behind the appointment is actually supported. Does the repair type usually consume a part that is flagged low, recently depleted, or inconsistent across trucks. Does the work order suggest multiple likely failure parts even though the route plan assumes one quick stock-based fix. Is there a model or equipment detail that makes the common part less common in this case. Did a prior visit note a specific part need that should have triggered a reservation or branch pickup instead of a generic truck-stock expectation. Are there route or branch constraints that make same-day fallback less realistic than the schedule implies.</p>
+<p>The output should stay operational. Stock assumption looks safe. Needs part reservation review. Likely low-stock exception. Needs branch pickup plan before dispatch. Needs technician confirmation on carried variant. That is more useful than a polished summary because dispatchers, coordinators, service managers, and owners need the next move to be obvious. The value is in challenging weak parts assumptions before they create a less efficient day in the field.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating truck stock like a fixed fact instead of a moving operating condition. In busy service environments, common parts move fast, substitutions happen informally, and replenishment discipline varies by person and branch. If the workflow acts like &ldquo;normally stocked&rdquo; means &ldquo;confirmed available,&rdquo; the business is choosing avoidable surprises.</p>
+<p>The second mistake is pushing all of this into the warehouse or the technician. By the time the field team proves the part is missing or wrong, dispatch and the customer are already paying for the assumption. This needs to be challenged before the visit becomes operationally live, not after the route is already in motion.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help if customers need consistent updates when a parts-based appointment must be adjusted across chat, text, or web channels. But truck-stock exception review is not mainly an assistant project. It is a workflow-control and readiness project involving parts habits, replenishment discipline, dispatch logic, and clearer exception handling. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one repair category where truck-stock misses already create visible waste. Maybe it is capacitor-and-contactor work, igniter and sensor replacements, plumbing rebuild kits, or any service line where the office keeps assuming the van has what the job needs. Define which parts are safe to treat as routine, which low-stock or variant conditions should force review, and which jobs should require reservation or pickup planning before they hit the route. Then compare the AI review against how your strongest dispatcher, parts lead, or service manager screens the same jobs manually.</p>
+<p>That is the standard business owners and operators should use. If the team is catching weak stock assumptions earlier, reducing avoidable part runs and return trips, and sending technicians into more truly ready appointments, the workflow is helping. If stock-related surprises still show up only after dispatch or on site, it is not doing enough.</p>
+<div class="inline-cta">
+    If truck-stock assumptions keep creating return trips and route noise, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-temporary-equipment-decision-review-commercial-service-teams",
         title: "AI temporary-equipment decision review for commercial service teams",
         date: "2026-05-22",
@@ -704,38 +736,6 @@ module.exports = [
  </div>`,
     },
     {
-        slug: "ai-sold-job-handoff-review-service-teams",
-        title: "AI sold-job handoff review for service teams",
-        date: "2026-05-04",
-        readTime: "8m",
-        category: "implementation guidance",
-        filename: "ai-sold-job-handoff-review-for-service-teams.md",
-        status: "published",
-        featured: false,
-        summary: "How service teams can use AI to catch weak sales-to-operations handoffs before booked work turns into preventable schedule and customer issues.",
-        homeSummary: "How service teams can use AI to catch weak sales-to-operations handoffs before booked work turns into preventable schedule and customer issues.",
-        bodyHtml: `
-<h2>AI sold-job handoff review for service teams</h2>
-<p>Many service businesses do not get into trouble because the team failed to sell the work. They get into trouble because the sold job crosses into operations with missing context, weak assumptions, or half-finished commitments. Sales thinks the job is booked. Operations thinks the job is still vague. The customer thinks the next step is already settled. By the time scheduling, purchasing, or field teams discover the gaps, the business is already spending labor on cleanup instead of execution.</p>
-<p>This is a practical AI use case because first-pass handoff review is repetitive and easy to rush. The goal is not to let AI approve jobs on its own. The goal is to identify where a booked job still lacks the details operations needs, show the likely risk clearly, and route the follow-up before the issue becomes a broken promise or a bad dispatch decision.</p>
-<h3>The real problem is handoff drift</h3>
-<p>Most operators have seen this pattern. The estimate is signed, but the note about site access is buried in email. The customer was told a timeline, but nobody marked whether materials are standard or special order. The salesperson captured the broad scope, but not the details that change crew, duration, or prep requirements. Support has part of the story, scheduling has another part, and the field team gets the rest only after the visit is already on the board.</p>
-<p>That drift creates expensive confusion. Jobs get scheduled before they are truly ready. Customers receive inconsistent answers about timing or next steps. Purchasing has to chase clarification that should have been attached at close. Field teams arrive without the context that would have changed the plan earlier. None of that is unusual in isolation, which is exactly why it survives. The business absorbs the cost in fragments.</p>
-<h3>What useful sold-job handoff review actually does</h3>
-<p>A useful system reviews the estimate, notes, messages, attachments, and required handoff fields for the job type. It checks whether the sale included the details operations actually needs to proceed safely. Scope summary. Customer commitments. Site constraints. Product or parts assumptions. Timing dependencies. Required approvals. Missing documents. It should not produce a long summary and call that value. It should show where the handoff is solid, where it is incomplete, and what owner needs to resolve the gap.</p>
-<p>The output should be operational. Ready for scheduling. Ready pending materials check. Needs site-access confirmation. Needs scope clarification. Needs customer expectation review. Needs manager review before operations accepts the job. That structure matters because business owners, office leads, and service managers do not need a nicer recap. They need a fast way to stop weak handoffs from quietly becoming rework.</p>
-<h3>Where teams usually get this wrong</h3>
-<p>The first mistake is treating the signed estimate as proof the handoff is complete. A sold job can still be operationally incomplete. If the business does not distinguish between commercial close and operational readiness, the schedule becomes the place where missing decisions get discovered too late.</p>
-<p>The second mistake is asking AI to summarize the sale without checking for handoff requirements by job type. Different work needs different minimum context. A maintenance agreement, a replacement install, and a multi-step repair should not all pass through the same generic checklist. If the review is not tied to the operating realities of the work, it will miss the gaps that actually create downstream pain.</p>
-<p>The third mistake is making OpenClaw sound like the entire answer. OpenClaw can help when customer follow-up, document collection, or expectation-setting needs to happen consistently across channels, but sold-job handoff review is not mainly an assistant project. It is a sales-to-operations control project involving process discipline, required fields, readiness standards, and clear ownership. In many cases, a broader <a href="services/ai-automation.html">AI Workflow Automation</a> engagement is the better starting point, with <a href="services/openclaw.html">OpenClaw</a> used where the customer communication layer genuinely needs it.</p>
-<h3>A practical way to start</h3>
-<p>Start with one job category where sales-to-operations confusion already creates avoidable drag. Maybe it is replacement work, larger repairs, project-based service, or anything that regularly produces post-sale clarification calls. Define the minimum handoff package for that category, the missing items that should always block scheduling, and the owner for each exception. Then compare the AI review against how your strongest operations coordinator or service manager would screen the same handoff manually.</p>
-<p>That is the standard business owners and operators should use. If the team is catching more weak handoffs before the schedule absorbs them, reducing customer expectation mismatches, and spending less time reconstructing booked work from scattered notes, the workflow is helping. If operations still has to discover basic sale context after the job is already moving, it is not doing enough.</p>
-<div class="inline-cta">
-    If sold work keeps arriving in operations with missing context, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, or use <a href="contact.html">contact</a>.
- </div>`,
-    },
-    {
         slug: "ai-customer-promise-tracking-support-service-teams",
         title: "AI customer-promise tracking for support and service teams",
         date: "2026-05-05",
@@ -766,6 +766,38 @@ module.exports = [
 <div class="inline-cta">
     If too many customer follow-ups start with “just checking back,” start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, or use <a href="contact.html">contact</a>.
 </div>`,
+    },
+    {
+        slug: "ai-sold-job-handoff-review-service-teams",
+        title: "AI sold-job handoff review for service teams",
+        date: "2026-05-04",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-sold-job-handoff-review-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to catch weak sales-to-operations handoffs before booked work turns into preventable schedule and customer issues.",
+        homeSummary: "How service teams can use AI to catch weak sales-to-operations handoffs before booked work turns into preventable schedule and customer issues.",
+        bodyHtml: `
+<h2>AI sold-job handoff review for service teams</h2>
+<p>Many service businesses do not get into trouble because the team failed to sell the work. They get into trouble because the sold job crosses into operations with missing context, weak assumptions, or half-finished commitments. Sales thinks the job is booked. Operations thinks the job is still vague. The customer thinks the next step is already settled. By the time scheduling, purchasing, or field teams discover the gaps, the business is already spending labor on cleanup instead of execution.</p>
+<p>This is a practical AI use case because first-pass handoff review is repetitive and easy to rush. The goal is not to let AI approve jobs on its own. The goal is to identify where a booked job still lacks the details operations needs, show the likely risk clearly, and route the follow-up before the issue becomes a broken promise or a bad dispatch decision.</p>
+<h3>The real problem is handoff drift</h3>
+<p>Most operators have seen this pattern. The estimate is signed, but the note about site access is buried in email. The customer was told a timeline, but nobody marked whether materials are standard or special order. The salesperson captured the broad scope, but not the details that change crew, duration, or prep requirements. Support has part of the story, scheduling has another part, and the field team gets the rest only after the visit is already on the board.</p>
+<p>That drift creates expensive confusion. Jobs get scheduled before they are truly ready. Customers receive inconsistent answers about timing or next steps. Purchasing has to chase clarification that should have been attached at close. Field teams arrive without the context that would have changed the plan earlier. None of that is unusual in isolation, which is exactly why it survives. The business absorbs the cost in fragments.</p>
+<h3>What useful sold-job handoff review actually does</h3>
+<p>A useful system reviews the estimate, notes, messages, attachments, and required handoff fields for the job type. It checks whether the sale included the details operations actually needs to proceed safely. Scope summary. Customer commitments. Site constraints. Product or parts assumptions. Timing dependencies. Required approvals. Missing documents. It should not produce a long summary and call that value. It should show where the handoff is solid, where it is incomplete, and what owner needs to resolve the gap.</p>
+<p>The output should be operational. Ready for scheduling. Ready pending materials check. Needs site-access confirmation. Needs scope clarification. Needs customer expectation review. Needs manager review before operations accepts the job. That structure matters because business owners, office leads, and service managers do not need a nicer recap. They need a fast way to stop weak handoffs from quietly becoming rework.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating the signed estimate as proof the handoff is complete. A sold job can still be operationally incomplete. If the business does not distinguish between commercial close and operational readiness, the schedule becomes the place where missing decisions get discovered too late.</p>
+<p>The second mistake is asking AI to summarize the sale without checking for handoff requirements by job type. Different work needs different minimum context. A maintenance agreement, a replacement install, and a multi-step repair should not all pass through the same generic checklist. If the review is not tied to the operating realities of the work, it will miss the gaps that actually create downstream pain.</p>
+<p>The third mistake is making OpenClaw sound like the entire answer. OpenClaw can help when customer follow-up, document collection, or expectation-setting needs to happen consistently across channels, but sold-job handoff review is not mainly an assistant project. It is a sales-to-operations control project involving process discipline, required fields, readiness standards, and clear ownership. In many cases, a broader <a href="services/ai-automation.html">AI Workflow Automation</a> engagement is the better starting point, with <a href="services/openclaw.html">OpenClaw</a> used where the customer communication layer genuinely needs it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one job category where sales-to-operations confusion already creates avoidable drag. Maybe it is replacement work, larger repairs, project-based service, or anything that regularly produces post-sale clarification calls. Define the minimum handoff package for that category, the missing items that should always block scheduling, and the owner for each exception. Then compare the AI review against how your strongest operations coordinator or service manager would screen the same handoff manually.</p>
+<p>That is the standard business owners and operators should use. If the team is catching more weak handoffs before the schedule absorbs them, reducing customer expectation mismatches, and spending less time reconstructing booked work from scattered notes, the workflow is helping. If operations still has to discover basic sale context after the job is already moving, it is not doing enough.</p>
+<div class="inline-cta">
+    If sold work keeps arriving in operations with missing context, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, or use <a href="contact.html">contact</a>.
+ </div>`,
     },
     {
         slug: "ai-parts-readiness-check-service-teams",
