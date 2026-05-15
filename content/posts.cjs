@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-subcontractor-handoff-review-service-teams",
+        title: "AI subcontractor handoff review for service teams",
+        date: "2026-05-15",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-subcontractor-handoff-review-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to catch weak subcontractor handoffs before partner labor turns into rework, blame loops, or delayed customer updates.",
+        homeSummary: "How service teams can use AI to catch weak subcontractor handoffs before partner labor turns into rework, blame loops, or delayed customer updates.",
+        bodyHtml: `
+<h2>AI subcontractor handoff review for service teams</h2>
+<p>Service businesses do not only lose margin when their own team misses something in the field. They also lose it when work gets handed to an outside partner with weak context. A specialized repair needs a subcontractor. A branch is short on coverage and sends overflow work to a partner. A warranty situation depends on a third-party visit. Everyone agrees the outside handoff is necessary, but the scope, site details, customer expectations, and proof requirements are still spread across notes, emails, and memory. By the time the gap shows up, the partner is already onsite or the customer is already asking why the story changed.</p>
+<p>This is a practical AI use case because subcontractor handoff review is repetitive, detail-heavy, and easy to rush when the main goal is simply getting the job covered. The goal is not to let AI select vendors blindly or approve subcontracted work on its own. The goal is to review the work order, estimate, site notes, customer commitments, asset details, and documentation requirements fast enough to show whether the handoff is actually ready before outside labor, follow-up, and billing all inherit preventable confusion.</p>
+<h3>The real problem is incomplete partner context</h3>
+<p>Owners, operators, and support leads usually know the pattern. The partner gets a short scope note but not the real customer history. A specialist is booked for one task while the internal notes imply two. Site access details stay with dispatch instead of following the handoff. The customer thinks the subcontractor is arriving to finish the whole issue, while the partner thinks they are only inspecting or quoting. None of that is unusual. The expensive part is that every missing detail creates another round of calls, blame, rescheduling, or awkward customer explanation.</p>
+<p>That drag spreads quickly. Dispatch assumes the partner has what they need. The partner arrives without the right context, tools, or approval basis. Support has to explain why the outside visit did not match what the customer expected. Billing later struggles to prove what the subcontracted scope actually covered. AI can help because it is good at comparing scattered job records and surfacing the few gaps that materially change whether the partner should proceed, pause, or get a cleaner handoff first.</p>
+<h3>What useful subcontractor handoff review actually does</h3>
+<p>A useful system checks whether the outside handoff and the internal job record agree on the basics. What exact work is being handed off. Whether the asset, location, and site-contact details match. Whether parts, photos, serial references, prior diagnostics, or access conditions that matter to the partner are attached. Whether the customer was told this is an inspection, a repair, a second opinion, or overflow labor. Whether approval, billing, or proof-of-service requirements were captured clearly enough that the business will not have to reconstruct the arrangement later.</p>
+<p>The output should stay operational. Ready for subcontractor handoff. Ready if one missing attachment is added. Needs scope clarification. Needs customer expectation review. Needs billing or approval review before partner dispatch. That is more useful than a polished summary because coordinators, operations leads, support teams, and owners need the next move to be obvious. The value is in catching the weak handoff before outside labor amplifies it.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating the subcontractor like a simple coverage patch. Outside labor is not just a staffing substitute. It changes communication paths, proof requirements, and customer expectations. If the workflow acts like handing the job off is enough by itself, the business will keep discovering context gaps after the partner is already in motion.</p>
+<p>The second mistake is assuming the partner will solve missing scope on arrival. Sometimes they can. Often that just means the business is paying for a more expensive clarification cycle in the field. If the handoff does not make it clear what problem is being solved, what history matters, and what the next deliverable should be, the partner visit can easily create more interpretation work instead of less.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help if customer updates, partner coordination, or document follow-up are moving across chat, text, and web channels and the business wants one controlled front door. But subcontractor handoff review is not mainly an assistant project. It is an operations-control project involving scope clarity, vendor coordination, handoff discipline, and better workflow ownership. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/custom-ai.html">Custom AI Solutions</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one subcontracted workflow that already creates repeat cleanup. Maybe it is overflow field coverage, specialist repair work, warranty partner visits, or any service line where outside labor keeps arriving with partial context. Define the few fields and attachments that should always follow the handoff, the conditions that should force internal review before dispatching the partner, and the proof the business needs back before the job can move cleanly into follow-up or billing. Then compare the AI review against how your strongest coordinator, service manager, or owner checks the same handoff manually.</p>
+<p>That is the standard business owners and operators should use. If the team is sending cleaner partner handoffs, reducing avoidable re-explaining, and spending less office time untangling what the subcontractor was actually supposed to do, the workflow is helping. If outside visits still create the same confusion only with more people involved, it is not doing enough.</p>
+<div class="inline-cta">
+    If subcontracted work keeps creating avoidable follow-up and customer confusion, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/custom-ai.html">Custom AI Solutions</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-asset-record-match-review-service-teams",
         title: "AI asset-record match review for service teams",
         date: "2026-05-14",
