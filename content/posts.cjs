@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-authorized-contact-review-commercial-service-teams",
+        title: "AI authorized-contact review for commercial service teams",
+        date: "2026-05-17",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-authorized-contact-review-for-commercial-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How commercial service teams can use AI to catch contact and approval-path mistakes before updates, quotes, or dispatch move under the wrong person.",
+        homeSummary: "How commercial service teams can use AI to catch contact and approval-path mistakes before updates, quotes, or dispatch move under the wrong person.",
+        bodyHtml: `
+<h2>AI authorized-contact review for commercial service teams</h2>
+<p>Commercial service teams do not only lose time because nobody answered the customer. They also lose time because the team acted on instructions from the wrong person or sent updates to a contact who was never the real decision-maker. A site manager asks for quoted repair, but the account requires regional approval first. A tenant requests service, but the property manager controls authorization. A field contact wants a fast update, but the customer expects status notices to go to a facilities inbox instead. The work itself may be legitimate, yet the communication path is still wrong enough to create avoidable confusion, billing friction, or rework.</p>
+<p>This is a practical AI use case because authorized-contact review is repetitive, detail-heavy, and usually scattered across account notes, prior tickets, estimate threads, service contracts, and memory. The goal is not to let AI decide who the customer is or override account ownership. The goal is to review the request, the people involved, and the expected approval path quickly enough to show whether the business is about to move under the right contact, the wrong contact, or an unclear one before dispatch, quoting, and follow-up all inherit the mistake.</p>
+<h3>The real problem is false clarity around familiar names</h3>
+<p>Owners, operators, and support leads usually recognize the pattern. One branch manager can request service up to a certain amount, but quoted repairs need district approval. One property allows onsite staff to open tickets, but only the management company can approve extra work. A national account may want updates copied to one shared inbox while local contacts handle access and scheduling. None of that is unusual. The expensive part is that those rules often live in habits instead of a reliable workflow, so the office keeps treating whichever contact is easiest to reach as the contact who can decide.</p>
+<p>That creates ordinary but expensive drag. Dispatch moves because someone sounded confident. Support sends updates to the person who replied fastest. Sales or operations treats field enthusiasm as approval to proceed. Billing later learns the customer disputes the work because the approving contact was wrong or the real account owner never saw the estimate. AI can help because it is good at comparing recent communication, account notes, estimate history, and prior approval patterns fast enough to show where the current contact path looks weak before the business commits more labor under that assumption.</p>
+<h3>What useful authorized-contact review actually does</h3>
+<p>A useful system checks whether the people in the workflow match the customer rules attached to the work. Who requested the service. Who has historically approved quoted repairs, NTE increases, return visits, or invoice exceptions for that account. Whether the current requester matches the normal approval role or only the scheduling role. Whether the update path is pointing to the right inbox, manager, property contact, or national-account contact. Whether the estimate, work order, and ticket notes suggest the team should pause before treating a request as authorization.</p>
+<p>The output should stay operational. Contact path looks correct. Scheduling contact only. Approval authority unclear. Update list likely incomplete. Needs account-owner review before quoted work proceeds. That is more useful than a polished summary because service coordinators, dispatchers, account managers, and owners need the next move to be obvious. The value is in preventing the business from acting on a weak contact assumption and only discovering the mismatch after labor, updates, or invoices have already moved.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is assuming the person closest to the job is also the person allowed to approve the next step. In many commercial accounts, the onsite contact, tenant, or local manager is important, but not financially authoritative.</p>
+<p>The second mistake is storing contact rules in memory instead of the workflow. One experienced coordinator may know who really signs off for a difficult account, but that is not the same as having a usable control. If the rule depends on who happens to be in the office that day, the business does not actually have the rule under control.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when requests, follow-up questions, and status updates are arriving across chat, text, and web channels and the business wants one controlled front door. But authorized-contact review is not mainly an assistant project. It is an account-control project involving account notes, approval discipline, communication ownership, and stronger workflow checks. In many cases, the better starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-training.html">AI Training &amp; Enablement</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one customer segment where contact confusion already slows work down. Maybe it is property management, multi-location retail, national accounts, warranty administrators, or any commercial queue where one person requests work and another person controls approval. Define which contact roles can request service, which can approve quoted work, which should receive status updates, and which cases should always force human review before labor expands. Then compare the AI review against how your strongest coordinator, dispatcher, or account manager screens the same records manually.</p>
+<p>That is the standard business owners and operators should use. If the business is routing updates more cleanly, pausing sooner on weak approvals, and creating fewer disputes about who authorized the work, the workflow is helping. If the office still learns too late that it moved under the wrong contact, it is not doing enough.</p>
+<div class="inline-cta">
+    If contact confusion keeps slowing quotes, dispatch, or follow-up, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-permit-closeout-review-commercial-service-teams",
         title: "AI permit-closeout review for commercial service teams",
         date: "2026-05-17",
