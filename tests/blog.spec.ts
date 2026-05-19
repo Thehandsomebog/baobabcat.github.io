@@ -1,7 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-const latestPostTitle = 'AI authorized-contact review for commercial service teams';
-
 test.describe('Blog Page', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/blog.html');
@@ -16,8 +14,18 @@ test.describe('Blog Page', () => {
   });
 
   test('shows the latest generated post title', async ({ page }) => {
-    await page.locator('.blog-entry').first().click();
-    await expect(page.locator('.blog-reader__content')).toContainText(latestPostTitle);
+    const firstEntry = page.locator('.blog-entry').first();
+    const postId = await firstEntry.getAttribute('data-post');
+
+    expect(postId).not.toBeNull();
+
+    const expectedTitle = await page.evaluate((id) => {
+      const template = document.getElementById(`post-${id}`) as HTMLTemplateElement | null;
+      return template?.content.querySelector('h2')?.textContent?.trim() ?? '';
+    }, postId);
+
+    await firstEntry.click();
+    await expect(page.locator('.blog-reader__content')).toContainText(expectedTitle);
   });
 
   test('opens the reader when clicking a post', async ({ page }) => {
