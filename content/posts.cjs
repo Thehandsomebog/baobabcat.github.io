@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-timesheet-exception-review-field-service-teams",
+        title: "AI timesheet-exception review for field service teams",
+        date: "2026-05-19",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-timesheet-exception-review-for-field-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How field service teams can use AI to catch labor-entry problems before payroll cleanup, billing disputes, and job-cost noise pile up.",
+        homeSummary: "How field service teams can use AI to catch labor-entry problems before payroll cleanup, billing disputes, and job-cost noise pile up.",
+        bodyHtml: `
+<h2>AI timesheet-exception review for field service teams</h2>
+<p>Field service businesses do not only lose margin on the jobsite. They also lose it after the work is done, when labor entries reach the office in a shape that nobody fully trusts. A technician logs eight hours to the right customer but the wrong work order. Drive time is mixed into wrench time without a clear rule. One visit spans two scopes, but the labor was dropped into one bucket because the day was rushed. An after-hours repair gets coded like normal time until payroll, billing, and operations all notice the mismatch from different angles. The work may have been real. The record of the work is where the business starts absorbing avoidable drag.</p>
+<p>This is a practical AI use case because timesheet-exception review is repetitive, rules-heavy, and usually spread across job notes, dispatch history, payroll codes, and billing expectations. The goal is not to let AI approve payroll or replace the manager who owns labor policy. The goal is to review labor entries quickly enough to show where the record likely conflicts with the job, the customer agreement, or the company&apos;s own coding rules before those mistakes spread into payroll, invoicing, and job-cost reporting.</p>
+<h3>The real problem is that one bad labor entry creates three different cleanup paths</h3>
+<p>Owners, operators, and support leads usually feel this in fragments. Payroll sees missing meal-break notes, overtime flags, or unclear rate treatment. Billing sees labor totals that do not line up with the approved scope, NTE, or customer expectation. Operations sees job-cost reporting that makes one team or one service line look better or worse than reality. None of that is unusual by itself. The expensive part is that the same weak labor entry keeps getting reinterpreted by different teams after the fact instead of being challenged once while the context is still fresh.</p>
+<p>That creates ordinary but expensive waste. The office has to chase technicians for memory-based corrections. Managers spend time deciding whether the problem is a pay issue, a billing issue, or both. Customers may question hours that were real but poorly documented. Reporting gets noisier, so leadership starts making capacity or pricing decisions on labor data that is not clean enough to trust. AI can help because it is good at comparing the timesheet entry against the surrounding operating record and surfacing the few mismatches that actually matter.</p>
+<h3>What useful timesheet-exception review actually does</h3>
+<p>A useful system checks whether the labor record agrees with the job context. Does the logged time line up with the dispatch window, onsite notes, and closeout timing. Is overtime or premium time present where the schedule and notes suggest it should be, or absent where it likely should not be. Does the work order coding match the scope that was actually performed. Are there labor entries that look duplicated, rounded too aggressively, or attached to the wrong phase of work. If the customer has special billing rules around travel, standby, minimum charges, or after-hours labor, does the entry reflect that well enough to invoice without office-side reconstruction.</p>
+<p>The output should stay operational. Labor entry looks aligned. Needs technician clarification. Needs payroll-code review. Needs billing-rule review. Possible wrong work-order match. Possible duplicate or rounded entry. That is more useful than a polished summary because payroll, service managers, dispatch leads, and owners need the next move to be obvious. The value is in catching labor ambiguity before the business turns it into back-office churn.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating timesheet cleanup like a payroll-only issue. In service work, labor entries affect payroll, billing, job costing, and customer trust at the same time. If the business waits until payroll processing or invoice review to question the entry, it is choosing the slowest and most expensive place to find the problem.</p>
+<p>The second mistake is assuming more technician detail automatically fixes the issue. More notes can help, but only if the business is clear about which fields actually drive pay, billing, and reporting. If every exception depends on a manager remembering unwritten rules, the form is not the real problem. The operating standard is.</p>
+<p>The third mistake is making OpenClaw sound larger than the use case. OpenClaw can help if labor questions, technician follow-up, or customer status updates are arriving across several channels and the business wants one controlled communication layer. But timesheet-exception review is not mainly an assistant project. It is a workflow-control and data-discipline project involving labor policy, field documentation, billing logic, and cleaner job-cost records. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one labor category that already creates office cleanup. Maybe it is after-hours service, quoted repair work, multi-day installs, travel-heavy routes, or any queue where the team keeps correcting time after the job is already closed. Define which labor patterns should always trigger review, which ones are safe to pass through, and who owns the exception when the notes and the hours do not tell the same story. Then compare the AI review against how your strongest payroll lead, service manager, or operations owner checks the same entries manually.</p>
+<p>That is the standard business owners and operators should use. If the team is catching labor mismatches earlier, spending less office time on memory-based corrections, and trusting payroll, billing, and job-cost reporting more, the workflow is helping. If the same arguments about hours still get settled only after the invoice or paycheck is already being prepared, it is not doing enough.</p>
+<div class="inline-cta">
+    If labor entries keep creating payroll and billing cleanup after the work is done, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-authorized-contact-review-commercial-service-teams",
         title: "AI authorized-contact review for commercial service teams",
         date: "2026-05-17",
