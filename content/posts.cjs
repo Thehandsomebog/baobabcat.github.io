@@ -1,5 +1,38 @@
 module.exports = [
     {
+        slug: "what-to-clean-up-before-ai-touches-service-pricebook",
+        title: "What to clean up before AI touches your service pricebook",
+        date: "2026-05-31",
+        readTime: "9m",
+        category: "practical AI tips",
+        filename: "what-to-clean-up-before-ai-touches-your-service-pricebook.md",
+        status: "published",
+        featured: false,
+        summary: "Why service businesses should clean up pricebook sprawl, naming drift, and approval rules before using AI in quoting, dispatch, or support workflows.",
+        homeSummary: "Why service businesses should clean up pricebook sprawl, naming drift, and approval rules before using AI in quoting, dispatch, or support workflows.",
+        bodyHtml: `
+<h2>What to clean up before AI touches your service pricebook</h2>
+<p>A lot of service businesses want AI to help with quoting, support, dispatch, and follow-up before they have cleaned up the pricing layer those workflows depend on. That usually creates a fast demo and a messy rollout. The team asks AI to suggest labor items, explain charges, or prepare estimate drafts, but the underlying pricebook is full of duplicate task names, retired codes that still appear in old habits, vague bundle descriptions, and approval rules that only exist in somebody&apos;s head. The AI is not the original problem. It just makes the existing pricebook disorder easier to notice.</p>
+<p>This matters for owners, operators, and support leads because the pricebook is not just an accounting artifact. It shapes how the office explains charges, how technicians describe work, how estimates get assembled, and how billing disputes start or get avoided. If the naming is loose or the rules are inconsistent, AI will surface those inconsistencies faster. That can still be useful, but only if the business treats it as an operations cleanup project instead of expecting the model to quietly standardize a system that humans never standardized first.</p>
+<h3>The real problem is usually governance, not the AI layer</h3>
+<p>Most pricing trouble in service businesses is ordinary. One branch says diagnostic. Another says service call. A third uses a legacy code that should have been retired last year. Travel may be included in one workflow, separated in another, and waived by habit for a certain account class without anyone writing that rule down clearly. Flat-rate items may describe the same real-world work at different levels of detail, which creates quoting inconsistency even when the field team did the right thing. When businesses say they want AI to help with estimates or support explanations, they are often really saying they want a cleaner operating system underneath those conversations.</p>
+<p>That is why pricebook cleanup should come before broader AI exposure. If your dispatchers, coordinators, support staff, estimators, and technicians are all working from slightly different interpretations of what an item means, AI will not remove the ambiguity. It will scale it. The practical win is using AI to reinforce a controlled structure once the business has decided what should be standard, what should require review, and what should never be suggested automatically.</p>
+<h3>What should be cleaned up first</h3>
+<p>Start with naming clarity. If two items sound nearly the same but lead to different labor assumptions or customer expectations, fix that before asking AI to recommend either one. Then review duplicates and near-duplicates. A pricebook that has grown through acquisitions, branch habits, or years of exception handling usually contains multiple paths to the same outcome. That slows humans down and gives any AI workflow too many weak options to choose from.</p>
+<p>Next, clean up boundary rules. Which items can support staff mention confidently. Which ones should only appear in a draft for estimator or manager review. Which ones require site verification, parts confirmation, or customer approval language before they should ever be presented as likely scope. These rules matter more than the model choice. They define whether AI is helping the team move faster inside a controlled operating lane or helping them make inconsistent promises at higher speed.</p>
+<p>Then review explanation quality. A lot of pricebook items make sense internally but read poorly when they have to be explained to a customer. If the description is too short, too technical, or too branch-specific, support teams will keep rewriting it manually and AI will inherit the same awkward source material. The goal is not marketing copy. The goal is plain-language descriptions that let your team explain what the item is, when it applies, and what it does not include.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating the pricebook like back-office data that only finance or management needs to understand. In reality, it is frontline operating infrastructure. It affects quoting speed, approval quality, dispute handling, and how confidently the team can communicate about work.</p>
+<p>The second mistake is trying to solve messy pricing behavior by giving one assistant access to everything and hoping the patterns sort themselves out. OpenClaw can be useful when customer conversations around estimates, approvals, or service questions need a controlled communication layer. But pricebook cleanup is not mainly an assistant project. It is a workflow, governance, and standards project. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> paired with <a href="services/ai-strategy.html">AI Strategy &amp; Roadmaps</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<p>The third mistake is skipping the human-review map. Businesses often say they want AI to draft quotes or explain charges, but they have not specified which pricing situations should flow straight through, which ones need supervisor review, and which ones should stay fully human. Without that map, the problem is not that AI is unsafe. The problem is that the business has not decided how much discretion it is willing to operationalize.</p>
+<h3>A practical way to start</h3>
+<p>Pick one service line where quoting friction or pricing inconsistency is already visible. Review the top recurring pricebook items, the most common duplicate or confusing entries, the approval-sensitive items, and the descriptions that support teams keep translating manually for customers. Clean those up before you ask AI to recommend, explain, or assemble anything broader. Then test whether the workflow produces clearer drafts, fewer internal corrections, and fewer customer-side pricing questions.</p>
+<p>That is the standard business owners and operators should use. If the business can explain charges more consistently, draft estimates with less cleanup, and reduce how often work gets slowed down by ambiguous item choices, the foundation is improving. If AI is still forcing people to guess which labor item was meant, which fee applies, or who has authority to offer it, the pricebook needs more work first.</p>
+<div class="inline-cta">
+    If pricing inconsistency is undermining quoting and support workflows, start with <a href="services/ai-strategy.html">AI Strategy &amp; Roadmaps</a>, review <a href="services/ai-automation.html">AI Workflow Automation</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-equipment-turnover-review-commercial-service-teams",
         title: "AI equipment-turnover review for commercial service teams",
         date: "2026-05-30",
