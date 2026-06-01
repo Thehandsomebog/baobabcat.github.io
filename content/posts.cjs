@@ -1,5 +1,38 @@
 module.exports = [
     {
+        slug: "what-to-clean-up-before-ai-touches-service-area-rules",
+        title: "What to clean up before AI touches your service-area rules",
+        date: "2026-06-01",
+        readTime: "8m",
+        category: "practical AI tips",
+        filename: "what-to-clean-up-before-ai-touches-your-service-area-rules.md",
+        status: "published",
+        featured: false,
+        summary: "Why service businesses should clean up coverage zones, trip-charge logic, and after-hours boundaries before using AI in intake, quoting, or dispatch workflows.",
+        homeSummary: "Why service businesses should clean up coverage zones, trip-charge logic, and after-hours boundaries before using AI in intake, quoting, or dispatch workflows.",
+        bodyHtml: `
+<h2>What to clean up before AI touches your service-area rules</h2>
+<p>A lot of service businesses want AI to help with intake, scheduling, quoting, and after-hours screening before they have cleaned up the geographic rules those workflows depend on. That creates a familiar problem. The assistant sounds helpful, the intake moves faster, and then the office spends the next day cleaning up jobs that were accepted outside the real coverage area, promised at the wrong response level, or quoted without the right travel assumptions. The AI is not inventing the disorder. It is exposing a set of service-area rules that was already being carried around in branch habits, dispatcher memory, and account exceptions.</p>
+<p>This matters for owners, operators, dispatch leads, and support teams because service-area logic is not just a routing concern. It affects which customers get same-day commitments, which accounts can receive after-hours response, when trip charges apply, how subcontractor coverage gets used, and how confidently the office can say yes to work. If those rules are inconsistent, AI will surface the inconsistency faster. That can still be useful, but only if the business treats it as an operations-governance issue instead of assuming the model will quietly sort out territory decisions that the company never standardized.</p>
+<h3>The real problem is usually hidden exception handling</h3>
+<p>Most service-area confusion is ordinary. One coordinator knows a certain town is covered only on Tuesdays because that is when the right technician is nearby. Another knows a national account can get emergency response outside the normal radius because the contract has different terms. A branch manager may waive the standard trip charge for one property group but not another. Somebody remembers that one zip code is technically in range for planned work but not for after-hours calls. None of this is unusual. The problem starts when these rules are operationally important but documented poorly enough that they only work when the right person happens to be online.</p>
+<p>That is why service-area cleanup should happen before broader AI exposure. If your intake staff, dispatchers, coordinators, estimators, and after-hours coverage team are all using slightly different mental maps, AI will not remove the ambiguity. It will scale it. The practical win is using AI to reinforce a controlled territory model once the business has decided what counts as standard coverage, what requires review, and what should never be promised automatically.</p>
+<h3>What should be cleaned up first</h3>
+<p>Start with zone definitions. If the business uses counties, branches, zip codes, drive times, customer classes, or technician skill availability to decide whether work should be accepted, that logic needs one clear source of truth. A vague statement like we cover most of the metro area is not enough when AI is screening requests or drafting replies at speed. The team needs to know what in area means for routine service, quoted project work, and emergency response.</p>
+<p>Next, clean up response boundaries. Which customers can receive same-day service. Which locations are covered only during normal hours. Which requests can be accepted for next-day scheduling but should not trigger an after-hours dispatch. Which exceptions depend on branch approval, account status, subcontractor availability, or minimum revenue thresholds. These rules matter more than the model choice because they define whether AI is helping the office stay inside a real operating lane or helping it overpromise at higher speed.</p>
+<p>Then review pricing and escalation logic tied to geography. If travel charges, remote-site premiums, minimum-hour rules, or special-account exceptions vary by territory, those need to be explicit before AI starts drafting quotes or service confirmations. The goal is not to make every edge case automatic. The goal is to make the standard cases obvious and the exception cases visible enough that humans can review them before the customer hears the wrong answer.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating coverage rules like tribal knowledge instead of frontline operating infrastructure. If the office cannot explain clearly where it serves, under what response terms, and with which pricing assumptions, the business will keep burning time on preventable cleanup.</p>
+<p>The second mistake is letting intake automation answer territory questions with too much confidence. A polished response that accepts the work is worse than a cautious response that routes the request for review when the territory rules are unclear.</p>
+<p>The third mistake is making OpenClaw sound like the whole fix. OpenClaw can help when service-area questions are arriving across chat, text, and web and the business wants one controlled communication layer. But territory cleanup is not mainly an assistant project. It is a standards, governance, and workflow project. In many cases, the stronger starting point is <a href="services/ai-strategy.html">AI Strategy &amp; Roadmaps</a> paired with <a href="services/ai-automation.html">AI Workflow Automation</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Pick one branch, service line, or account segment where territory confusion already causes friction. Review the accepted jobs that should have been screened harder, the calls that bounced between teams because nobody was sure who owned the area, the quotes that missed travel assumptions, and the after-hours requests that should have followed a different rule. Clean those up before asking AI to approve, route, or draft anything broader. Then test whether the workflow produces fewer promise corrections, cleaner dispatch decisions, and less back-and-forth about whether the work should have been accepted in the first place.</p>
+<p>That is the standard business owners and operators should use. If the business can answer coverage questions more consistently, route borderline requests faster, and reduce how often the office has to unwind a bad territory promise, the foundation is improving. If AI is still forcing people to guess whether a location is in bounds, what response level applies, or whether travel should have been disclosed, the service-area rules need more work first.</p>
+<div class="inline-cta">
+    If unclear coverage rules are creating intake and dispatch cleanup, start with <a href="services/ai-strategy.html">AI Strategy &amp; Roadmaps</a>, review <a href="services/ai-automation.html">AI Workflow Automation</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "what-to-clean-up-before-ai-touches-service-pricebook",
         title: "What to clean up before AI touches your service pricebook",
         date: "2026-05-31",
