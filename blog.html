@@ -48,6 +48,12 @@
                     <div class="blog-list">
                 <div class="blog-list__header">$ ls -la ~/blog/</div>
                 <!-- GENERATED_BLOG_ENTRIES_START -->
+                <div class="blog-entry" data-post="what-to-clean-up-before-ai-touches-your-credit-hold-release-queue">
+                    <span class="blog-entry__perms">-rw-r--r--</span>
+                    <span class="blog-entry__date">Jun 03</span>
+                    <span class="blog-entry__time">8m</span>
+                    <span class="blog-entry__name">what-to-clean-up-before-ai-touches-your-credit-hold-release-queue.md</span>
+                </div>
                 <div class="blog-entry" data-post="what-to-clean-up-before-ai-touches-technician-skill-matrix">
                     <span class="blog-entry__perms">-rw-r--r--</span>
                     <span class="blog-entry__date">Jun 02</span>
@@ -476,6 +482,31 @@
         </section>
 
         <!-- GENERATED_BLOG_TEMPLATES_START -->
+        <template id="post-what-to-clean-up-before-ai-touches-your-credit-hold-release-queue">
+            <h2>What to clean up before AI touches your credit-hold release queue</h2>
+            <p>A lot of service businesses want faster decisions when an account is on credit hold. That instinct makes sense. Support does not want to stall the customer, dispatch does not want to hold open capacity forever, and operations does not want technicians walking into work that accounting may not support. But this is exactly the kind of workflow where AI can create new risk if the business has not cleaned up the decision rules first. A faster recommendation is only useful if the business agrees on what actually makes a job safe to release.</p>
+            <p>This matters for owners, operators, support leads, and service managers because credit-hold friction rarely stays inside accounting. It delays scheduling, creates awkward customer callbacks, pushes coordinators into informal exception handling, and turns ordinary service requests into manager escalations. The expensive part is not only the unpaid invoice in the background. It is the amount of labor the business burns while different teams try to guess whether this job should move, pause, or be escalated.</p>
+            <h3>The first thing to clean up is release authority</h3>
+            <p>Many teams talk about credit holds as if there are only two states: blocked or cleared. In real operations, there are usually more paths than that. Some accounts can proceed for emergency work only. Some can proceed below a defined dollar threshold. Some require a promise-to-pay note from the right contact. Some need a branch manager, owner, or finance lead to make the call. If those boundaries still live in scattered notes and memory, AI will sound decisive while operating on unstable rules.</p>
+            <p>Write down who can release what. Can support move diagnostic work forward but not quoted repair. Can dispatch hold a slot tentatively while waiting on finance. Can a service manager override for revenue-critical equipment, habitability issues, or contract obligations. Can anyone other than accounting clear a recurring offender. Those rules matter more than the interface. Without them, the team is not automating a workflow. It is speeding up ambiguity.</p>
+            <h3>The second thing to clean up is account-status evidence</h3>
+            <p>Credit-hold decisions usually depend on several sources that do not line up cleanly. The ERP says the account is past due. The email thread says payment was sent. The branch says this customer always pays slowly but should not be blocked. The national account portal shows a dispute. The customer-facing rep hears that a check is being overnighted. If the business has not defined what evidence actually changes the decision, the AI layer will end up comparing contradictory signals and sounding more certain than the record deserves.</p>
+            <p>That is why the business needs a practical evidence hierarchy. Which system is authoritative for hold status. What counts as proof of release. Which customer claims should trigger review but not immediate movement. Which promises are not enough on their own. Owners and operators should want those answers explicit before they ask AI to recommend next steps.</p>
+            <h3>The third thing to clean up is exception categories</h3>
+            <p>Not every blocked account creates the same operational question. A no-cooling emergency at a medical site is different from elective follow-up at a slow-paying property. Warranty work may follow a different path than quoted replacement. Preventive maintenance under contract may carry obligations that a discretionary repair does not. Support teams get stuck when every exception arrives in one generic bucket and the business still expects quick judgment.</p>
+            <p>A useful AI workflow needs those categories written plainly enough that a reviewer can tell why the system suggested release, hold, or escalation. Emergency. Contract-required. Small diagnostic allowance. Customer claims payment sent. Active dispute. Needs finance approval. Needs branch-manager exception. Those labels help teams move. A polished paragraph about the account history does not.</p>
+            <h3>Where teams usually get this wrong</h3>
+            <p>The first mistake is treating credit holds like a back-office issue until a customer gets upset. By then, support, dispatch, and service management are already improvising around a rule they do not fully own.</p>
+            <p>The second mistake is assuming a veteran coordinator can keep fixing edge cases informally. If one experienced employee is still translating which holds are real, which ones are negotiable, and which ones need a call to finance, the business has not created a stable workflow yet.</p>
+            <p>The third mistake is making OpenClaw sound like the main answer. OpenClaw can help if customers are asking for status, sending payment updates, or responding to hold-related questions across chat, text, and web channels. But credit-hold release is not mainly a conversational-assistant problem. It is a routing, policy, and exception-control problem. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+            <h3>A practical way to start</h3>
+            <p>Pick one account segment where credit holds already create visible waste. Maybe it is property management, national accounts, recurring commercial service, or any customer group where the same release questions keep coming back. Define the release authority, the evidence hierarchy, the exception categories, and the conditions that should always force human review. Then compare the AI recommendation against how your strongest finance lead, service manager, or support supervisor makes the same call manually.</p>
+            <p>That is the standard to use. If the team is resolving ordinary hold questions faster, escalating gray-area cases earlier, and reducing the amount of work that gets scheduled on shaky authorization, the project is helping. If the business still depends on side messages, hallway exceptions, and last-minute reversals, the workflow needs more cleanup before the AI layer deserves trust.</p>
+            <div class="inline-cta">
+                If credit holds are slowing down scheduling and support, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, or use <a href="contact.html">contact</a>.
+            </div>
+        </template>
+
         <template id="post-what-to-clean-up-before-ai-touches-technician-skill-matrix">
             <h2>What to clean up before AI touches your technician skill matrix</h2>
             <p>A lot of service businesses want AI to help with dispatch, scheduling, quoting, and job routing before they have cleaned up the skill map those workflows depend on. That usually creates a familiar problem. The board looks smarter for a week, jobs move faster on paper, and then the office starts cleaning up assignments that never should have been made. A technician gets sent because the system saw the right trade but missed the wrong equipment family. Another gets booked into a call that requires certification, startup experience, or customer-facing judgment they do not actually have yet. The AI is not inventing the confusion. It is exposing a skill matrix that was already inconsistent.</p>
