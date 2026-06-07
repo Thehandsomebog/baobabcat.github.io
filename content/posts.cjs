@@ -1,5 +1,38 @@
 module.exports = [
     {
+        slug: "what-to-clean-up-before-ai-touches-your-customer-communication-preferences",
+        title: "What to clean up before AI touches your customer communication preferences",
+        date: "2026-06-07",
+        readTime: "8m",
+        category: "practical AI tips",
+        filename: "what-to-clean-up-before-ai-touches-your-customer-communication-preferences.md",
+        status: "published",
+        featured: false,
+        summary: "Why owners, operators, support teams, and service managers should clean up communication-preference rules before AI starts sending updates at scale.",
+        homeSummary: "Why owners, operators, support teams, and service managers should clean up communication-preference rules before AI starts sending updates at scale.",
+        bodyHtml: `
+<h2>What to clean up before AI touches your customer communication preferences</h2>
+<p>A lot of service businesses want AI to help with customer communication because the update work feels repetitive. A job gets scheduled. A technician is delayed. A part is ordered. An estimate is ready. A visit needs to be confirmed. Someone has to send the message, and it is tempting to assume the main challenge is just doing that faster. That instinct is understandable. The problem is that many businesses have not cleaned up the communication-preference rules underneath those messages. AI does not fix that. It makes the inconsistency show up across more customers, more channels, and more moments in the workflow.</p>
+<p>This matters for owners, operators, support leads, and service managers because communication preferences are not just a customer-service courtesy. They affect whether updates get seen, whether the right person gets them, whether the office creates avoidable callbacks, and whether the team accidentally sends the wrong message through the wrong channel. If one customer wants text first, another account requires email to a shared inbox, and a third has a property manager who wants approval calls but tenant-facing ETA texts, the business needs more than good intentions. It needs operating rules.</p>
+<h3>The real problem is usually mixed ownership, not weak messaging</h3>
+<p>Most communication-preference drift is ordinary. A technician promises to text the customer directly even though the account expects all updates to flow through the office. A support rep sends a scheduling email to the person who opened the last ticket even though a different contact now owns approvals. A dispatcher calls the site contact for access details while an automated system texts the occupant something slightly different. None of this sounds dramatic until AI starts sending those updates at scale. Then the business hears its own inconsistency played back faster.</p>
+<p>That is why cleanup should happen before broader AI exposure. If the business has not defined who should receive which kinds of updates, which channel should be used for which event, and when a message must stop and wait for human review, the AI layer will not create trust. It will standardize confusion.</p>
+<h3>What should be cleaned up first</h3>
+<p>Start with communication categories. Appointment reminders are not the same as ETA changes. ETA changes are not the same as quote approvals, billing questions, access coordination, or recommended-work follow-up. Many teams talk about customer preference as if it is one field, but in practice the right channel often depends on the message type. A tenant might be fine with text reminders but not authorized for repair approvals. A facilities manager may want summary emails but expect urgent outage calls. If those categories are not explicit, AI will make decisions from a preference record that is too shallow to trust.</p>
+<p>Next, clean up recipient ownership. Who should receive routine scheduling updates. Who should receive approval requests. Who should receive invoices, scope changes, arrival notices, or post-visit summaries. For multi-location and commercial accounts, those are often different people. If the business still relies on whichever contact was most recently active, the workflow is not ready for automation. AI needs a durable map of recipients and message types, not a moving target created by the latest reply thread.</p>
+<p>Then clean up channel rules and exceptions. Which updates are safe for text. Which ones belong in email because attachments, approvals, or documentation matter. Which ones should never be sent automatically because the situation is sensitive, disputed, after-hours, or likely to create confusion without context. Good communication-preference logic is not only about customer convenience. It is about controlling operational risk.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating communication preference like a single CRM field instead of a workflow rule set. One field labeled preferred contact method usually hides the real business question, which is preferred for what.</p>
+<p>The second mistake is assuming the latest responder is the right long-term recipient. That shortcut creates avoidable rework when billing, approvals, site access, and scheduling ownership belong to different people.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when customer messages and updates are arriving across chat, text, and web channels. But communication-preference cleanup is not mainly an assistant problem. It is a workflow-governance and contact-ownership problem. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-training.html">AI Training &amp; Enablement</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Pick one update path that keeps generating customer friction. Maybe it is appointment reminders, arrival updates, approval requests, or post-visit follow-up on quoted work. Review where the office had to resend messages, correct recipients, switch channels midstream, or explain why the wrong person was contacted. Then tighten the message categories, define the right recipients for each one, and document the few cases where automation should pause for human review. After that, compare the AI-driven communication against how your strongest coordinator, support lead, or service manager would handle the same situations manually.</p>
+<p>That is the standard to use. If the business is reducing avoidable callbacks, cutting down on message rework, and making customer communication more predictable without losing control, the foundation is improving. If the team still has to manually reinterpret who should hear what every time a job changes state, the business needs more cleanup before the AI layer deserves authority.</p>
+<div class="inline-cta">
+    If customer-update rules are still creating message rework, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "what-to-clean-up-before-ai-touches-your-rebill-risk-queue",
         title: "What to clean up before AI touches your rebill-risk queue",
         date: "2026-06-06",
