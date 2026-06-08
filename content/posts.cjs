@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-knowledge-article-freshness-review-support-teams",
+        title: "AI knowledge-article freshness review for support teams",
+        date: "2026-06-08",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-knowledge-article-freshness-review-for-support-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How support and service teams can use AI to spot stale knowledge articles before outdated guidance creates avoidable callbacks, rework, and inconsistent answers.",
+        homeSummary: "How support and service teams can use AI to spot stale knowledge articles before outdated guidance creates avoidable callbacks, rework, and inconsistent answers.",
+        bodyHtml: `
+<h2>AI knowledge-article freshness review for support teams</h2>
+<p>Most teams do not notice knowledge-base drift all at once. It shows up in smaller operational failures first. A support rep follows an article that still references an old billing step. A service coordinator sends a customer the right form but the wrong timing guidance. A technician calls the office because the checklist in the portal does not match the current closeout process. Nobody set out to create bad documentation. The business just changed faster than the articles did.</p>
+<p>This is a practical AI use case for business owners, operators, and support leaders because stale knowledge creates expensive confusion without looking dramatic in a dashboard. The team answers the same question three different ways. New hires learn workarounds instead of standards. Managers get pulled into basic clarifications that should have been settled in the article already. AI can help if it is used to review knowledge freshness and flag where the documented guidance no longer matches the real operating process.</p>
+<h3>The real problem is usually silent documentation drift</h3>
+<p>Most knowledge articles do not fail because they are unreadable. They fail because they become quietly incomplete. A policy changes but the exception section never gets updated. A workflow adds one approval step but the article still tells the team to move directly to scheduling. A customer-facing promise gets tightened, but the internal article keeps the old wording that support used last quarter. These are normal operating changes. The problem is that most businesses do not have a dependable way to notice which articles have become risky.</p>
+<p>That matters because a stale article does more than slow down search. It teaches inconsistency at scale. Once outdated guidance sits in the knowledge base, the business effectively turns yesterday&apos;s process into today&apos;s training material. AI is useful here because it can compare live ticket patterns, recent process updates, and article language faster than a manager reading every page manually.</p>
+<h3>What useful freshness review actually does</h3>
+<p>A useful system does not just score articles on age. It looks for operating signals that suggest the article is no longer trustworthy enough to stand alone. Support tickets that keep asking for clarification after the article was supposedly shared. Repeat escalations around one procedure. Articles that refer to fields, queues, or approvals the team no longer uses. Documentation that conflicts with newer SOPs, service notes, or training material. Pages that still explain the happy path but never mention the exceptions the team now handles every day.</p>
+<p>The output should stay operational. Possible stale process step. Missing exception handling. Link or attachment likely outdated. Article still in use but needs owner review. Low-risk cleanup. High-risk mismatch because the current workflow no longer matches the article. That level of structure helps support leads, QA owners, and operations managers decide where to spend review time first instead of treating the whole knowledge base like one giant writing project.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating knowledge freshness as a content-calendar problem instead of an operations-control problem. The business does not mainly need prettier documents. It needs the right article to stop teaching the wrong move.</p>
+<p>The second mistake is measuring views instead of operational risk. Some low-traffic articles matter a lot because they guide refunds, escalations, access rules, safety steps, or customer commitments. A page can be rarely opened and still create expensive mistakes when it is wrong.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help if the business wants one controlled assistant layer across customer and internal channels. But knowledge-article freshness review is not mainly a chat-assistant project. It is a documentation-governance and workflow-alignment project. In many cases, the stronger starting point is <a href="services/ai-training.html">AI Training &amp; Enablement</a> paired with <a href="services/ai-automation.html">AI Workflow Automation</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one article group that frontline teams use often enough to create real drag when it goes stale. That might be billing exceptions, scheduling rules, warranty intake, field closeout steps, or customer-update procedures. Define what signals should trigger review, decide who owns the article after a process change, and compare the AI review against how your strongest support lead or operator would spot risky drift manually.</p>
+<p>That is the standard to use. If the business is catching stale guidance earlier, reducing repeated clarification work, and making it easier for the team to trust what the knowledge base says, the workflow is helping. If support still has to ask which article is actually current before answering a routine question, the documentation layer needs more discipline.</p>
+<div class="inline-cta">
+    If your team keeps working around stale internal guidance, start with <a href="services/ai-training.html">AI Training &amp; Enablement</a>, review <a href="services/ai-automation.html">AI Workflow Automation</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "what-to-clean-up-before-ai-touches-your-customer-communication-preferences",
         title: "What to clean up before AI touches your customer communication preferences",
         date: "2026-06-07",
