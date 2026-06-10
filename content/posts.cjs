@@ -1,5 +1,36 @@
 module.exports = [
     {
+        slug: "why-supervisor-interrupt-load-is-the-ai-metric-to-watch",
+        title: "Why supervisor interrupt load is the AI metric to watch",
+        date: "2026-06-10",
+        readTime: "8m",
+        category: "strategy / opinion",
+        filename: "why-supervisor-interrupt-load-is-the-ai-metric-to-watch.md",
+        status: "published",
+        featured: false,
+        summary: "Why owners, operators, support teams, and service managers should judge AI by whether it reduces supervisor interrupts and exception cleanup, not by how impressive the assistant sounds.",
+        homeSummary: "Why owners, operators, support teams, and service managers should judge AI by whether it reduces supervisor interrupts and exception cleanup, not by how impressive the assistant sounds.",
+        bodyHtml: `
+<h2>Why supervisor interrupt load is the AI metric to watch</h2>
+<p>A lot of AI reporting sounds polished without saying much about whether the business is actually calmer to run. Leaders hear about response time, resolution rate, deflection, automation coverage, or usage counts. Those numbers can be useful, but they miss a harder operational question. Did the system reduce the number of times your strongest supervisor, service manager, dispatcher, or support lead had to stop what they were doing to clean up confusion, reinterpret a rule, or untangle a weak handoff. If not, the AI layer may be generating activity without creating much relief.</p>
+<p>This matters for business owners, operators, support teams, and service teams because interrupt load is where expensive labor disappears. A service manager gets pulled into a pricing exception that should have been screened earlier. A support lead has to reread a customer thread because the prior handoff was shallow. A dispatcher has to resolve a scheduling conflict that the system should have surfaced as an exception instead of letting it drift. None of these moments look dramatic in a dashboard. Together they decide whether the business feels more stable or more brittle after AI shows up.</p>
+<h3>Why common AI metrics can still hide weak operations</h3>
+<p>An assistant can answer quickly and still leave the hard work for the wrong people. A triage system can classify accurately most of the time while still sending noisy exceptions to managers. A workflow can have strong adoption numbers while the office keeps relying on the same two experienced employees to interpret edge cases the system did not frame clearly. That is why a clean-looking performance report can coexist with daily operator frustration. The dashboard says the tool is active. The team says the interruptions never stopped.</p>
+<p>That gap matters because interrupt load is not just a staffing inconvenience. It is a signal that the business has not made the right work explicit enough for the system to handle. If supervisors are still translating policy, fixing poor intake, correcting weak summaries, or deciding which exceptions are real, the AI layer is not yet carrying enough of the middle of the process. It may still be worth keeping, but it should not be mistaken for operational leverage.</p>
+<h3>What a better metric actually looks like</h3>
+<p>The useful question is simple. After the rollout, are supervisors being interrupted less often for the same recurring categories of work. Not because people gave up asking for help, but because the requests arriving for review are cleaner, narrower, and more justified. Owners and operators should want to know how many manager touches were avoided, how many escalations arrived with enough context to act immediately, and which exception classes still depend on one experienced person to interpret the situation from scratch.</p>
+<p>This does not require a complicated analytics program on day one. Start by reviewing the interrupts that already consume expensive attention. Approval questions. Queue re-sorting. Billing exceptions. Customer-promise cleanup. Reopened tickets. Scheduling conflicts. Weak job closeout. Then ask which ones should have been prevented, which ones should have arrived with better context, and which ones are genuinely management work. That creates a far more honest picture than simply counting how often the assistant replied.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is optimizing for visible front-end speed while ignoring back-end rework. Customers may get a fast answer, but if the office then spends more time correcting the record, the business did not become more efficient. It just moved the work downstream.</p>
+<p>The second mistake is treating every manager interrupt as unavoidable. Some interrupts are necessary because accountability sits with a human. Many others are signs that rules, summaries, routing, or evidence requirements were never made explicit enough for the workflow to stay disciplined.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when a business needs one controlled communication layer across web, text, chat, or other channels. But interrupt reduction is not mainly a chat-assistant story. It is a workflow-design, exception-control, and measurement story. In many cases, the better starting point is <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a> paired with <a href="services/ai-automation.html">AI Workflow Automation</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to use this</h3>
+<p>Pick one team lead or supervisor role that keeps absorbing preventable noise. Review a week of interrupts. What kept pulling them in. What should have been handled without them. What arrived with missing context. What categories repeated. Then compare that baseline against the same role after the AI workflow has been tightened. If the interrupts are becoming rarer, narrower, and easier to resolve, the system is improving the business. If the same experienced people are still functioning as human glue for every messy edge case, the deployment needs more operational work.</p>
+<div class="inline-cta">
+    If AI still feels like extra supervision instead of relief, start with <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, review <a href="services/ai-automation.html">AI Workflow Automation</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-knowledge-article-freshness-review-support-teams",
         title: "AI knowledge-article freshness review for support teams",
         date: "2026-06-08",
