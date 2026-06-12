@@ -1,5 +1,38 @@
 module.exports = [
     {
+        slug: "what-to-clean-up-before-ai-touches-your-technician-debrief-notes",
+        title: "What to clean up before AI touches your technician debrief notes",
+        date: "2026-06-12",
+        readTime: "8m",
+        category: "practical AI tips",
+        filename: "what-to-clean-up-before-ai-touches-your-technician-debrief-notes.md",
+        status: "published",
+        featured: false,
+        summary: "Why service businesses should clean up technician debrief notes before AI starts turning field updates into summaries, follow-up tasks, and customer communication.",
+        homeSummary: "Why service businesses should clean up technician debrief notes before AI starts turning field updates into summaries, follow-up tasks, and customer communication.",
+        bodyHtml: `
+<h2>What to clean up before AI touches your technician debrief notes</h2>
+<p>A lot of service businesses want AI to help with technician debriefs because the notes coming back from the field are messy, late, short, or spread across too many places. That instinct is reasonable. Someone finishes the visit, leaves a few lines in the work order, maybe sends a text to dispatch, maybe adds photos, maybe records a quick summary, and then the office has to turn that into the next move. Invoice release. Quote follow-up. Return-visit planning. Customer update. Warranty review. Recommended work. AI can help with that transformation, but only if the business has cleaned up what those debrief notes are supposed to contain.</p>
+<p>This matters for owners, operators, dispatchers, support teams, and service managers because technician debrief notes are not just historical records. They drive downstream decisions. If the notes are vague, AI will produce cleaner-looking vagueness. If the notes mix diagnosis, customer promises, parts status, and follow-up requests without structure, the office still has to reinterpret the job manually. The goal is not to make every technician write an essay. The goal is to make sure the debrief contains enough consistent signal that AI can turn it into something operational instead of decorative.</p>
+<h3>The real problem is usually mixed note intent</h3>
+<p>Most weak debriefs are not caused by laziness. They are caused by the business never deciding what the note is for. One technician writes for the next technician. Another writes for billing. Another writes as if the customer will read every line. Another drops shorthand that only one dispatcher understands. Some teams treat the debrief like a legal record. Others treat it like a memory aid. Once AI enters that environment, the inconsistency becomes easier to scale and harder to notice.</p>
+<p>That is why cleanup has to come first. If the same note is trying to serve billing proof, technical diagnosis, customer communication, parts planning, and manager review all at once, the AI layer will guess which purpose matters most. That is not control. It is delegation by ambiguity.</p>
+<h3>What should be cleaned up first</h3>
+<p>Start with note categories. What belongs in problem found. What belongs in work performed. What belongs in parts needed or parts used. What belongs in customer-facing explanation. What belongs in recommended next step. What belongs in internal risk or escalation notes. These should not live in one undifferentiated paragraph if the office expects AI to convert the debrief into useful follow-up.</p>
+<p>Next, clean up promise language. Technician debriefs often contain soft commitments like &ldquo;office will call,&rdquo; &ldquo;quote to follow,&rdquo; or &ldquo;part should be here soon.&rdquo; Those lines create real downstream work, but many businesses do not define what should happen after they are entered. If AI starts extracting next steps from those statements, the team needs clear rules for which phrases create a follow-up task, which ones require office review, and which ones should never be treated as confirmed customer commitments.</p>
+<p>Then clean up evidence standards. If the business wants AI to help summarize the visit, flag return-work needs, or prepare customer updates, the system needs to know what evidence counts. Was the issue confirmed or only suspected. Was the repair completed or only tested. Was the part number verified or estimated. Did the customer approve next work onsite or only discuss it. If those distinctions are still implied instead of stated, the office will keep correcting polished summaries after the fact.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is forcing technicians to write for the tool instead of the workflow. If the process only works when field staff type perfect narratives at the end of a long day, adoption will collapse. The structure has to be practical enough for real operating conditions.</p>
+<p>The second mistake is assuming AI summarization will fix missing decisions. A cleaner summary does not solve the underlying problem when the note never made clear whether the job is done, whether a return visit is required, or whether the customer was actually promised a next step.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when customer follow-up and service communication need one controlled layer across channels. But technician debrief cleanup is not mainly a conversational-assistant project. It is a field-to-office handoff discipline project. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> paired with <a href="services/ai-training.html">AI Training &amp; Enablement</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Pick one service line or one closeout path where weak debrief notes already create repeated office cleanup. Define the minimum fields and note categories the business actually needs. Decide which phrases should create tasks, which conditions should stop billing or follow-up, and which statements require manager review before AI turns them into customer-facing communication. Then compare the AI output against how your strongest dispatcher, coordinator, or service manager would interpret the same job manually.</p>
+<p>That is the standard to use. If the business is reducing callback confusion, improving follow-up accuracy, and spending less office time translating field notes into the next action, the cleanup is working. If the team still has to reread every debrief to figure out what really happened, the workflow needs more structure before the AI layer deserves authority.</p>
+<div class="inline-cta">
+    If field notes are still creating office rework after every visit, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-review-response-triage-for-service-and-support-teams",
         title: "AI review-response triage for service and support teams",
         date: "2026-06-11",
