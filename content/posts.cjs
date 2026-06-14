@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-chargeback-evidence-review-service-support-teams",
+        title: "AI chargeback-evidence review for service and support teams",
+        date: "2026-06-14",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-chargeback-evidence-review-service-support-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service and support teams can use AI to catch weak payment evidence before card disputes turn into avoidable write-offs and office cleanup.",
+        homeSummary: "How service and support teams can use AI to catch weak payment evidence before card disputes turn into avoidable write-offs and office cleanup.",
+        bodyHtml: `
+<h2>AI chargeback-evidence review for service and support teams</h2>
+<p>Chargebacks create more damage than the dollar amount on the disputed payment. A business loses time gathering records, support teams get pulled into message cleanup, managers have to reconstruct what was approved, and the office often learns too late that the strongest evidence was never stored in one place. That is why chargeback review is a practical AI use case for owners, operators, support teams, and service teams. The goal is not to let AI argue with the bank or payment processor on its own. The useful job is narrower: review whether the business actually has the evidence it would need before a dispute arrives.</p>
+<p>This matters most for service businesses that take deposits, collect cards after a visit, charge for approved repairs remotely, or process invoices through payment links. In those workflows, the payment itself is only one piece of the operating record. The real strength of the case usually depends on whether the job record, approval trail, customer communication, scope explanation, and closeout evidence all line up. If those records are thin or split across too many systems, the dispute process becomes an expensive scavenger hunt.</p>
+<h3>The real problem is usually evidence fragmentation, not payment processing</h3>
+<p>Most businesses already have some proof. The issue is that it is scattered. The office has the paid invoice. The technician has photos. The dispatcher has the text thread that confirmed arrival. The service manager has the note explaining why the scope changed. The customer approved the repair over email, but the payment link record does not clearly tie back to that approval. None of this is rare. The problem is that a dispute demands one coherent story, and many companies only discover the gaps when they are already on the clock.</p>
+<p>That is where AI can help without overstating its role. It can review whether the payment record is supported by the rest of the operating record. Does the invoice describe the work clearly enough. Is there proof of authorization for the billed scope. If the charge was remote, does the communication history show who approved it and in what context. If the amount changed after diagnosis, does the record explain why. If the work was completed onsite, do the closeout notes, photos, or signed acknowledgement support the charge. Those are the kinds of checks that reduce scramble later.</p>
+<h3>What useful chargeback-evidence review actually does</h3>
+<p>A useful system checks the payment against the service record before the business treats the transaction as fully settled. It looks for missing approval trails, vague invoice descriptions, mismatched billed scope, weak proof of completion, or customer messages that suggest confusion was left unresolved. It can also flag whether a deposit was collected before the work scope was described clearly, whether a final charge exceeded the originally discussed amount without enough documentation, or whether the office is relying too heavily on memory instead of stored evidence.</p>
+<p>The output should stay operational. Approval evidence present. Scope-change support missing. Invoice description too vague for dispute defense. Completion proof needs attachment review. Remote payment tied to the wrong contact. Customer message suggests unresolved concern before charge. Manager review recommended before higher-risk payment is considered closed. That is more useful than a polished narrative because support leads, service managers, and operators need the next action to be obvious.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating chargebacks like a finance-only problem. By the time accounting sees the dispute, the evidence quality was usually decided earlier by dispatch, field closeout, approval handling, and customer communication discipline.</p>
+<p>The second mistake is assuming a payment receipt proves enough on its own. A receipt shows that a card was charged. It does not explain what work was approved, what changed onsite, what the customer was told, or whether the invoice language matches the service history strongly enough to defend the transaction.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when approvals, customer updates, and payment-related questions are arriving across web, text, and chat channels and the business wants one controlled communication layer. But chargeback-evidence review is not mainly a conversational-assistant project. It is a workflow-control and record-quality project. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-analytics.html">AI Data &amp; Analytics</a> or <a href="services/custom-ai.html">Custom AI Solutions</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one payment path that already creates cleanup. Maybe it is field-collected cards, remote approval payments, deposits on quoted work, or after-hours service charges that later generate questions. Define what evidence must exist before that payment is treated as operationally safe: who approved the work, what scope was authorized, what completion proof is required, and which message patterns should force a manual review before the record is considered defensible. Then compare the AI review against how your strongest support lead, service manager, or operator would evaluate the same transaction manually.</p>
+<p>That is the standard to use. If the business is finding weak records earlier, reducing last-minute evidence hunts, and defending disputed payments with less operational drag, the workflow is helping. If the office still has to reconstruct the story from scattered notes after the dispute has already landed, the payment record is still too fragile for the AI layer to carry much authority.</p>
+<div class="inline-cta">
+    If disputed payments keep turning into evidence hunts, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-refrigerant-log-review-commercial-service-teams",
         title: "AI refrigerant-log review for commercial service teams",
         date: "2026-06-13",
