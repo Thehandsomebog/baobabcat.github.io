@@ -1,5 +1,38 @@
 module.exports = [
     {
+        slug: "what-to-clean-up-before-ai-touches-your-field-safety-escalation-notes",
+        title: "What to clean up before AI touches your field safety escalation notes",
+        date: "2026-06-14",
+        readTime: "8m",
+        category: "practical AI tips",
+        filename: "what-to-clean-up-before-ai-touches-your-field-safety-escalation-notes.md",
+        status: "published",
+        featured: false,
+        summary: "Why owners, operators, support teams, and service teams should clean up field safety escalation notes before AI starts routing hazards, stop-work issues, and approval follow-up.",
+        homeSummary: "Why owners, operators, support teams, and service teams should clean up field safety escalation notes before AI starts routing hazards, stop-work issues, and approval follow-up.",
+        bodyHtml: `
+<h2>What to clean up before AI touches your field safety escalation notes</h2>
+<p>A lot of service businesses want AI to help with field escalations because the first reports from technicians are usually short, rushed, and coming in from too many places at once. A tech sends a text about a gas smell. Someone uploads photos from a mechanical room. Dispatch gets a call saying access is unsafe until another trade finishes. A supervisor hears that the equipment can be restarted, but only after the customer approves extra work. That instinct to use AI is reasonable. The problem is that many businesses still have weak safety-escalation notes, inconsistent stop-work language, and unclear review paths. AI does not fix that. It makes the office act on unclear risk faster.</p>
+<p>This matters for owners, operators, support teams, and service teams because safety escalation is not just another status update. It changes what work is allowed to continue, who needs to be notified, and whether the business should pause billing, scheduling, or customer communication until someone with authority reviews the situation. If one technician writes &ldquo;unsafe to proceed,&rdquo; another writes &ldquo;needs attention,&rdquo; and a third just says &ldquo;waiting on customer,&rdquo; the office is not working from a stable signal. Once AI starts summarizing and routing those notes, the same ambiguity gets scaled into the next decision.</p>
+<h3>The real problem is usually mixed escalation intent</h3>
+<p>Most weak safety notes are not caused by bad field judgment. They are caused by the business never deciding what the note is supposed to do. Is it meant to trigger stop-work. Is it meant to request approval for additional work. Is it meant to warn the next technician. Is it meant to create a customer-facing update. Is it meant to document a condition for legal or insurance review. Many companies expect one hurried note to do all of that at once. When AI enters the workflow, it has to guess which purpose matters most.</p>
+<p>That is the wrong starting point. If the team has not separated hazard documentation from workflow routing, the AI layer will produce polished summaries that still leave the office asking the same questions. Can the job continue. Does the customer need immediate notice. Does a manager need to review first. Is this a scheduling hold, a billing hold, a site-access problem, or a true safety stop. Those are operating decisions, not formatting problems.</p>
+<h3>What should be cleaned up first</h3>
+<p>Start with escalation categories. A confirmed hazardous condition is not the same as a suspected hazard. A stop-work issue is not the same as a parts delay. Customer approval required is not the same as unsafe access. Third-party trade dependency is not the same as a code-compliance concern. If the business dumps all of these into one vague field, AI will have no stable basis for routing them differently.</p>
+<p>Next, clean up evidence requirements. What facts have to be captured before the office treats the note as a real stop-work escalation. Photos. Equipment ID. Exact location. Observed condition. Whether the issue was confirmed, suspected, or reported secondhand. Whether the system was shut down, isolated, or left running. If those details are still optional, the office will keep chasing technicians for clarification after AI has already drafted a neat-looking summary.</p>
+<p>Then clean up authority rules. Who can clear a job to continue. Who can approve temporary operation. Who needs to review customer communication before the business sends it. Which conditions should automatically pause dispatch, invoice release, or follow-up promises until a supervisor, service manager, or safety lead signs off. AI can help surface those conditions quickly, but the business has to define the authority map first.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating safety escalation like ordinary note cleanup. It is not. The language in these notes affects whether work continues, what the customer is told, and what responsibility the business may be taking on.</p>
+<p>The second mistake is assuming the most experienced coordinator will interpret the note correctly every time. That works until volume rises, shifts change, or AI starts making the first-pass summary sound more complete than the underlying evidence actually is.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when customer communication around delays, approvals, and next steps needs one controlled layer across channels. But field safety escalation is not mainly a conversational-assistant project. It is a risk-control and authority-design project. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> paired with <a href="services/ai-training.html">AI Training &amp; Enablement</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Pick one escalation pattern that already creates office confusion. Maybe it is suspected electrical hazards, equipment left in temporary operation, unsafe roof access, refrigerant leak concerns, or customer approvals that blur into safety holds. Review the last few cases where the office had to reconstruct what the technician meant before deciding the next move. Then define the escalation categories, the minimum evidence, and the approval chain each category should trigger before AI gets involved.</p>
+<p>That is the standard to use. If the business is reaching the right reviewer faster, reducing avoidable clarification calls, and keeping stop-work decisions more controlled, the cleanup is helping. If the office still has to reinterpret every field note before acting, the workflow needs more structure before the AI layer deserves authority.</p>
+<div class="inline-cta">
+    If field safety escalations are still too dependent on side messages and memory, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "ai-chargeback-evidence-review-service-support-teams",
         title: "AI chargeback-evidence review for service and support teams",
         date: "2026-06-14",
