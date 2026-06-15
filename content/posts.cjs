@@ -1,5 +1,37 @@
 module.exports = [
     {
+        slug: "ai-refund-request-review-support-teams",
+        title: "AI refund-request review for support teams",
+        date: "2026-06-15",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-refund-request-review-for-support-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How support teams can use AI to review refund requests faster without turning policy exceptions and service recovery into another vague manager queue.",
+        homeSummary: "How support teams can use AI to review refund requests faster without turning policy exceptions and service recovery into another vague manager queue.",
+        bodyHtml: `
+<h2>AI refund-request review for support teams</h2>
+<p>Refund requests rarely arrive as clean policy cases. One customer says the technician never fixed the problem. Another says the work was approved under pressure. Someone else wants money back because the part took too long, the invoice was confusing, or the follow-up they expected never happened. Support teams end up reading the request, checking the record, figuring out what policy applies, and deciding whether the situation is a billing correction, a service recovery issue, or a real refund path. That work is repetitive enough for AI to help, but sensitive enough that sloppy automation creates new problems quickly.</p>
+<p>This is a practical AI use case for owners, operators, support teams, and service managers because refund requests sit at the intersection of policy, documentation, and customer trust. If the first pass is weak, the business either refunds too loosely, resists too bluntly, or escalates too many cases to the same manager. None of those outcomes is stable. The goal is not to let AI approve refunds on its own. The useful job is narrower: review the request against the service record, policy rules, and communication history so the next human decision starts with cleaner context.</p>
+<h3>The real problem is usually category confusion, not lack of effort</h3>
+<p>Most refund queues are messy because different situations get treated like the same type of complaint. A customer may really need a corrected invoice, not a refund. Another may need a return visit because the work outcome is still unresolved. Another may be reacting to poor expectation-setting around diagnosis, parts timing, or scope change. If all of those land in one refund bucket, the support team has to reinterpret the case from scratch every time.</p>
+<p>That is where AI can help without overreaching. It can review the original request, invoice, work-order notes, approval trail, technician debrief, and prior messages to identify what kind of case the business is actually looking at. Possible billing-error review. Possible service-recovery case. Possible scope-approval dispute. Possible refund exception request. Missing evidence before decision. Manager review required. That is a much more useful first pass than a sentiment label or a drafted apology.</p>
+<h3>What useful refund-request review actually does</h3>
+<p>A useful system checks whether the request can be classified cleanly before anyone starts promising outcomes. Was the work completed as documented. Was the billed scope the same scope the customer approved. Does the communication history show unresolved confusion before payment or before closeout. Is the customer arguing about outcome quality, timing, authorization, duplicate billing, or a policy exception. Has the same account already received prior credits or service recovery on the same issue. Those checks help the team separate policy work from emotional noise without pretending every complaint is equivalent.</p>
+<p>The output should stay operational. Refund not supported by current record. Billing correction likely. Service follow-up recommended before refund decision. Approval trail weak. Duplicate-charge review required. Customer expectation mismatch. Escalate to manager with evidence summary. Support leads and operators do not need a softer paragraph here. They need the next action to be obvious enough that the case moves without three people rereading the same history.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating every refund request like a finance problem. Many requests start earlier in the workflow. Weak approvals, thin closeout notes, vague invoices, and poor expectation-setting create the argument before accounting ever sees it.</p>
+<p>The second mistake is letting the assistant sound definitive when the policy path is still ambiguous. If the record is incomplete, the system should surface that gap and route the case for review. It should not imply that a refund will happen, that a refund is impossible, or that the customer complaint has already been resolved.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when refund-related conversations are arriving across chat, web, and other channels and the business wants one controlled communication layer. But refund-request review is not mainly a conversational-assistant project. It is a policy-handling, record-quality, and service-recovery workflow. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-training.html">AI Training &amp; Enablement</a> or <a href="services/custom-ai.html">Custom AI Solutions</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one refund category that already creates repeated cleanup. Maybe it is duplicate-charge complaints, dissatisfaction after a return visit, deposit disputes, or requests tied to unclear scope approvals. Define which facts must be present for first-pass review, which cases should never move without a human decision, and which request types should be rerouted immediately into billing correction or service recovery instead of sitting in a generic refund queue. Then compare the AI review against how your strongest support lead, operations manager, or owner would assess the same cases manually.</p>
+<p>That is the standard to use. If the team is classifying refund requests more consistently, escalating fewer cases without context, and correcting the right issues earlier, the workflow is helping. If the office still has to reconstruct every dispute from scratch before it can decide whether a refund is even the right question, the process needs more structure before the AI layer deserves authority.</p>
+<div class="inline-cta">
+    If refund requests are turning into policy guesswork and office cleanup, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "what-to-clean-up-before-ai-touches-your-overtime-approval-rules",
         title: "What to clean up before AI touches your overtime approval rules",
         date: "2026-06-15",
