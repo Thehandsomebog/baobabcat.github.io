@@ -1,5 +1,38 @@
 module.exports = [
     {
+        slug: "what-to-clean-up-before-ai-touches-your-closed-job-reopen-reasons",
+        title: "What to clean up before AI touches your closed-job reopen reasons",
+        date: "2026-06-17",
+        readTime: "8m",
+        category: "practical AI tips",
+        filename: "what-to-clean-up-before-ai-touches-your-closed-job-reopen-reasons.md",
+        status: "published",
+        featured: false,
+        summary: "Why owners, operators, support teams, and service teams should clean up closed-job reopen reasons before AI starts routing comeback work, paperwork follow-up, and unresolved issues.",
+        homeSummary: "Why owners, operators, support teams, and service teams should clean up closed-job reopen reasons before AI starts routing comeback work, paperwork follow-up, and unresolved issues.",
+        bodyHtml: `
+<h2>What to clean up before AI touches your closed-job reopen reasons</h2>
+<p>A lot of service businesses want AI to help with closed jobs because work does not really stop when the invoice goes out or the technician leaves the site. A customer calls back and says the issue is still there. Support realizes the paperwork was incomplete. Billing finds a missing approval. A branch coordinator reopens the work order because a warranty item was missed. Another person reopens the same kind of job because the customer wants an update, not because the repair failed. That instinct to use AI is reasonable. The problem is that many businesses still treat every reopened job like the same operating event. AI does not fix that. It makes a messy comeback queue move faster.</p>
+<p>This matters for owners, operators, support teams, and service teams because reopened work affects labor recovery, technician scheduling, customer confidence, invoice timing, and whether managers can tell the difference between a real quality problem and routine administrative cleanup. If one person reopens a job for missing photos, another for unresolved equipment issues, and a third for customer confusion about the original scope, the business is not working from one definition of what a reopened job means. Once AI starts triaging those cases, that inconsistency turns into polished misrouting.</p>
+<h3>The real problem is usually mixed reopen intent</h3>
+<p>Most teams already know jobs get reopened. The issue is that they have not defined why. A reopened job might mean the original work failed. It might mean the repair held but the customer still needs explanation. It might mean billing or warranty documentation was incomplete. It might mean a part was unavailable and the office reopened the record to finish the closeout path later. Those are not the same problem, and they should not sit under one vague label called reopen.</p>
+<p>That becomes risky when AI starts screening comeback requests or sorting the next action. If the system cannot separate true return-work risk from admin follow-up, it will send some cases back to the field that never needed a truck, leave real quality issues buried in clerical cleanup, or make reporting look worse than reality because the business keeps mixing operating categories.</p>
+<h3>What should be cleaned up first</h3>
+<p>Start with reopen categories. Distinguish unresolved original issue, related but new issue, documentation correction, billing correction, warranty follow-up, parts completion, customer clarification, and manager review. The exact labels can vary, but the business needs categories that reflect what downstream action should happen. If the office still relies on free-text reopen reasons and local habit, AI will classify against noise instead of policy.</p>
+<p>Next, clean up ownership rules. Which reopen reasons belong to dispatch. Which ones stay with support. Which ones should route to billing, warranty, service management, or the original technician&apos;s supervisor. If every reopened job lands in one shared queue, AI may speed up the tagging step without fixing the real coordination problem underneath it.</p>
+<p>Then clean up evidence standards. What facts should exist before a job is reopened as a true comeback. Was the original complaint actually unresolved. Did the customer report a different symptom. Was the paperwork incomplete but the field work finished correctly. Was approval missing, or only missing from the record. These distinctions matter because they change whether the business is dealing with quality control, customer communication, training, or administrative cleanup.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is using reopened-job counts as if they already mean the same thing. A backlog full of documentation corrections does not tell the same story as a backlog full of failed repairs.</p>
+<p>The second mistake is letting AI sound more certain than the record deserves. If the reopen reason is weak, the system should say the next review step is unclear and route it for a human decision. It should not imply that the technician failed, that the job is definitely warranty-related, or that a return visit is automatically required.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when reopened-job questions are coming in through web, chat, or text and the business wants one controlled communication layer. But reopen-reason discipline is not mainly a conversational-assistant project. It is a workflow-design and operating-definition project. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> supported by <a href="services/ai-training.html">AI Training &amp; Enablement</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Pick one branch, service line, or reopen queue where the team is already spending too much time deciding what happened after closeout. Review a small set of recently reopened jobs and ask what each one was really for. Then define the minimum reopen categories, ownership rules, and evidence standards that should have governed those cases before AI gets involved.</p>
+<p>That is the standard to use. If the business is separating real comeback work from administrative cleanup more consistently, routing fewer reopened jobs into the wrong hands, and learning more accurately from the pattern of what comes back after closeout, the cleanup is helping. If reopened jobs still mean five different things depending on who touched the record, the operating model needs more structure before the AI layer deserves authority.</p>
+<div class="inline-cta">
+    If reopened jobs are still mixing quality issues with office cleanup, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "what-to-clean-up-before-ai-touches-your-service-agreement-coverage-rules",
         title: "What to clean up before AI touches your service agreement coverage rules",
         date: "2026-06-16",
