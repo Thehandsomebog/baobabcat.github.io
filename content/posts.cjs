@@ -33,6 +33,38 @@ module.exports = [
 </div>`,
     },
     {
+        slug: "ai-core-return-and-vendor-credit-review-service-teams",
+        title: "AI core-return and vendor-credit review for service teams",
+        date: "2026-06-17",
+        readTime: "8m",
+        category: "implementation guidance",
+        filename: "ai-core-return-and-vendor-credit-review-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to catch weak parts core-return and vendor-credit workflows before margin leaks turn into office cleanup and avoidable disputes.",
+        homeSummary: "How service teams can use AI to catch weak parts core-return and vendor-credit workflows before margin leaks turn into office cleanup and avoidable disputes.",
+        bodyHtml: `
+<h2>AI core-return and vendor-credit review for service teams</h2>
+<p>Parts core returns and vendor credits usually look small until the office tries to close the loop at scale. A technician swaps a compressor, motor, board, or other covered component. The failed part should be tagged, held, returned, and tied back to the right job. Someone in the office expects a vendor credit. Someone else assumes the field already handled it. A branch loses track of the deadline, the paperwork, or the serial detail that made the return valid in the first place. That is a practical AI use case for owners, operators, support teams, and service teams because the work is repetitive, document-heavy, and easy to let drift without noticing.</p>
+<p>The goal is not to let AI argue with the vendor or approve accounting treatment on its own. The useful job is narrower: review whether the service record, parts usage, return status, and expected credit path actually line up before the business treats the job as financially complete. That helps the office catch preventable misses while the job is still fresh instead of discovering them weeks later during margin review.</p>
+<h3>The real problem is usually broken handoff, not missing effort</h3>
+<p>Most businesses do not lose credits because nobody cares. They lose them because the workflow crosses too many hands. The technician removes the part. The warehouse or branch counter receives it. Purchasing may need an RMA or return authorization. Accounting expects a credit memo. Service management wants the work order closed. If those teams are all doing reasonable work but not from one shared status model, the same part can look returned to one person, pending to another, and forgotten to everyone else.</p>
+<p>That is where AI can help without overreaching. It can compare the work order, parts lines, warranty or vendor notes, return tags, branch messages, and credit status to see whether the return path makes operational sense. Was a core-eligible part used. Was the removed part actually logged for return. Is there evidence the branch received it. Is an authorization number missing. Does the expected credit still depend on a technician note, a serial number, or a shipping step that never happened. Those are useful first-pass questions. They are much better than waiting for month-end and calling the loss a paperwork problem.</p>
+<h3>What useful core-return review actually does</h3>
+<p>A useful system checks whether the job should still be considered financially open even if the customer-facing work is done. It can flag cases where the part installed suggests a core or vendor return is likely, but the record does not show a matching removed part, return status, or credit expectation. It can also separate routine returns from cases that need faster review because the value is higher, the vendor rules are stricter, or the deadline is short.</p>
+<p>The output should stay operational. Core return likely pending. Credit path unclear. Removed part not logged. Authorization missing before shipment. Branch received part but no credit follow-up recorded. Accounting should wait for vendor-credit confirmation. Manager review recommended for high-value return. That gives operators and service managers a clear next move without pretending the system already resolved the vendor relationship.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating core returns like a warehouse-only problem. By the time the part reaches the shelf, the outcome may already depend on what the field documented, what the work order said, and whether the office tied the return to the right vendor rule.</p>
+<p>The second mistake is assuming the installed-parts line is enough by itself. A billed or consumed part does not prove the removed part was tagged correctly, stored correctly, shipped correctly, or tied to the correct return authorization. If the business wants the credit to hold up later, the operational trail has to be clearer than the invoice line.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when technicians, coordinators, or customers are sending job updates across web, chat, and other channels and the business wants one controlled communication layer. But core-return review is not mainly a conversational-assistant project. It is a workflow-control and record-discipline project. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> backed by <a href="services/ai-analytics.html">AI Data &amp; Analytics</a> or <a href="services/custom-ai.html">Custom AI Solutions</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Start with one return path that already creates avoidable cleanup. Maybe it is compressor cores, warranty boards, motors with vendor-credit rules, or any parts category where branch handling and office follow-up regularly drift apart. Define what evidence must exist before a job is treated as financially clean: removed-part confirmation, tag or serial detail, branch receipt, return authorization, shipment status, and credit follow-up owner. Then compare the AI review against how your strongest branch operator, service manager, or support lead would review the same jobs manually.</p>
+<p>That is the standard to use. If the business is catching pending returns sooner, losing fewer credits to avoidable handoff gaps, and giving accounting cleaner visibility into what is still open, the workflow is helping. If the office still has to hunt through notes, shelves, and side messages to figure out whether a returned part ever had a valid credit path, the process needs more structure before the AI layer deserves authority.</p>
+<div class="inline-cta">
+    If vendor credits and core returns are still disappearing into office cleanup, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "what-to-clean-up-before-ai-touches-your-service-agreement-coverage-rules",
         title: "What to clean up before AI touches your service agreement coverage rules",
         date: "2026-06-16",
