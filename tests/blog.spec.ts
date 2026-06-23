@@ -28,9 +28,9 @@ test.describe('Blog Page', () => {
     await expect(page.locator('.blog-reader__content')).toContainText(expectedTitle);
   });
 
-  test('shows the new credit-hold release post first after generation', async ({ page }) => {
+  test('shows the new portal-submission-rules post first after generation', async ({ page }) => {
     const firstEntry = page.locator('.blog-entry').first();
-    await expect(firstEntry).toHaveAttribute('data-post', 'what-to-clean-up-before-ai-touches-your-customer-credit-hold-release-rules');
+    await expect(firstEntry).toHaveAttribute('data-post', 'what-to-clean-up-before-ai-touches-your-customer-portal-submission-rules');
   });
 
   test('opens the reader when clicking a post', async ({ page }) => {
