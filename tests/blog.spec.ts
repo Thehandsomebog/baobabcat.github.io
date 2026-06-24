@@ -1,4 +1,7 @@
 import { test, expect } from '@playwright/test';
+// The generated blog list should mirror the first published post in source content.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const posts = require('../content/posts.cjs');
 
 test.describe('Blog Page', () => {
   test.beforeEach(async ({ page }) => {
@@ -28,9 +31,12 @@ test.describe('Blog Page', () => {
     await expect(page.locator('.blog-reader__content')).toContainText(expectedTitle);
   });
 
-  test('shows the new portal-submission-rules post first after generation', async ({ page }) => {
+  test('shows the newest published post first after generation', async ({ page }) => {
     const firstEntry = page.locator('.blog-entry').first();
-    await expect(firstEntry).toHaveAttribute('data-post', 'what-to-clean-up-before-ai-touches-your-customer-portal-submission-rules');
+    const newestPublishedSlug = posts.find((post: { status: string; slug: string }) => post.status === 'published')?.slug;
+
+    expect(newestPublishedSlug).toBeTruthy();
+    await expect(firstEntry).toHaveAttribute('data-post', newestPublishedSlug);
   });
 
   test('opens the reader when clicking a post', async ({ page }) => {
