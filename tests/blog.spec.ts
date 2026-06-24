@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
-// The generated blog list should mirror the first published post in source content.
+
+// Keep the blog ordering test aligned with the generated source of truth.
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const posts = require('../content/posts.cjs');
 
