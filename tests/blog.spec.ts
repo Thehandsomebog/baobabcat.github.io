@@ -3,6 +3,9 @@ import { test, expect } from '@playwright/test';
 // Keep the blog ordering test aligned with the generated source of truth.
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const posts = require('../content/posts.cjs');
+const newestPublishedSlug = [...posts]
+  .filter((post) => (post.status || 'published') === 'published')
+  .sort((left, right) => new Date(right.date).getTime() - new Date(left.date).getTime())[0]?.slug;
 
 test.describe('Blog Page', () => {
   test.beforeEach(async ({ page }) => {
@@ -34,7 +37,6 @@ test.describe('Blog Page', () => {
 
   test('shows the newest published post first after generation', async ({ page }) => {
     const firstEntry = page.locator('.blog-entry').first();
-    const newestPublishedSlug = posts.find((post: { status: string; slug: string }) => post.status === 'published')?.slug;
 
     expect(newestPublishedSlug).toBeTruthy();
     await expect(firstEntry).toHaveAttribute('data-post', newestPublishedSlug);
