@@ -1,5 +1,38 @@
 module.exports = [
     {
+        slug: "what-to-clean-up-before-ai-touches-your-cancellation-fee-waiver-rules",
+        title: "What to clean up before AI touches your cancellation-fee waiver rules",
+        date: "2026-06-27",
+        readTime: "8m",
+        category: "practical AI tips",
+        filename: "what-to-clean-up-before-ai-touches-your-cancellation-fee-waiver-rules.md",
+        status: "published",
+        featured: false,
+        summary: "Why owners, operators, support teams, and service teams should clean up cancellation-fee waiver rules before AI starts deciding which missed appointments deserve an exception.",
+        homeSummary: "Why owners, operators, support teams, and service teams should clean up cancellation-fee waiver rules before AI starts deciding which missed appointments deserve an exception.",
+        bodyHtml: `
+<h2>What to clean up before AI touches your cancellation-fee waiver rules</h2>
+<p>A lot of service businesses want AI to help with schedule recovery, customer follow-up, and billing consistency because same-day cancellations and no-access visits create office drag fast. A customer says they forgot the appointment. A site contact claims the technician arrived outside the agreed window. A coordinator wants to save the relationship and waive the fee immediately. Another rep wants to hold the line because the truck, labor slot, and route time were already committed. That instinct to use AI is reasonable. The problem is that many businesses still treat cancellation-fee waivers like branch habit instead of operating policy. AI does not fix that. It helps the business move faster on top of mixed exception logic, weak evidence standards, and avoidable customer confusion.</p>
+<p>This matters for owners, operators, support teams, and service teams because a waived cancellation fee is not just a small courtesy. It affects route economics, technician utilization, customer precedent, dispute volume, and whether the business trains the office to negotiate policy one phone call at a time. If one coordinator waives every first offense, another waives only for strategic accounts, and a third removes the charge anytime the customer pushes back hard enough, the business is not working from one usable rule. Once AI starts screening complaints, drafting responses, or recommending whether a fee should stand, that inconsistency becomes more polished, not more fair.</p>
+<h3>The real problem is usually mixed waiver logic, not tough customer conversations</h3>
+<p>Most teams already know some missed-appointment fees should be waived. The harder question is why. Was the cancellation late because the customer truly no-showed, because the office confirmed poorly, because the arrival window slipped, because the site was inaccessible for reasons the business should have caught earlier, or because the job itself was never ready to run. If those reasons still live in casual notes, side conversations, or branch memory, the business is not ready for AI to make first-pass judgments around them.</p>
+<p>That becomes risky when AI starts reviewing call notes, appointment history, dispatch timestamps, and customer messages. If the system cannot tell the difference between customer-caused miss, branch-caused miss, weather exception, first-time courtesy exception, contract-account exception, and manager-approved save-the-account decision, it will recommend actions that look efficient but create more cleanup later. The office then spends time reversing invoices, arguing over fairness, or teaching customers that the fee is optional if they escalate loudly enough.</p>
+<h3>What should be cleaned up first</h3>
+<p>Start with waiver types. Full waiver is not the same as partial fee reduction. One-time courtesy is not the same as branch error correction. Strategic-account exception is not the same as policy for every customer. Technician unable to gain access is not the same as the office failing to confirm the right contact or entry instructions. If the business still collapses all of that into vague notes like waived per customer request, AI will not have a stable basis for next-step decisions.</p>
+<p>Next, clean up evidence standards. What has to exist before the business says the fee should stand. Which timestamps, call records, confirmation messages, route notes, or site-access records should support a waiver recommendation. When should the system treat the missed appointment as a customer issue, and when should it route the case for branch review because the business may have contributed to the failure. These controls matter because AI will learn from the records the business keeps, not the intentions it remembers later.</p>
+<p>Then clean up authority. Who can waive a fee automatically. Who can make a one-time exception to protect a relationship. Which cases should route to finance, operations, or a branch manager before the customer gets a final answer. If the office still relies on whoever answers the complaint first, the workflow is not ready for automation.</p>
+<h3>Where teams usually get this wrong</h3>
+<p>The first mistake is treating cancellation-fee disputes like a customer-service script problem. In practice they are a policy and margin-control problem with customer-communication consequences.</p>
+<p>The second mistake is assuming the team can judge fairness ad hoc forever. Experienced people often can, until volume rises, staffing shifts, or AI starts copying undocumented exceptions the business never meant to scale.</p>
+<p>The third mistake is making OpenClaw sound like the whole answer. OpenClaw can help when appointment complaints, waiver requests, and follow-up messages are moving across web, chat, and text channels and the business wants one controlled communication layer. But cancellation-fee discipline is not mainly a conversational-assistant project. It is a policy, evidence, and workflow-governance project. In many cases, the stronger starting point is <a href="services/ai-automation.html">AI Workflow Automation</a> paired with <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, with <a href="services/openclaw.html">OpenClaw</a> used where the communication layer genuinely benefits from it.</p>
+<h3>A practical way to start</h3>
+<p>Pick one appointment segment where waiver inconsistency already creates repeat cleanup. Maybe it is residential service windows, commercial after-hours visits, site-access-sensitive work, or any branch workflow where the office keeps debating whether the missed-appointment fee was really enforceable. Review the last few waived charges, upheld charges, and escalated complaints. Then define the waiver types, evidence standards, and approval authority that should have governed those cases before AI gets involved.</p>
+<p>That is the standard to use. If the business is making fewer mixed promises, defending legitimate fees more consistently, and correcting branch-caused misses faster without guessing, the cleanup is helping. If fee decisions still depend on side messages and whoever sounds most confident on the phone, the rules need more structure before the AI layer deserves authority.</p>
+<div class="inline-cta">
+    If cancellation-fee disputes are still creating avoidable billing and customer cleanup, start with <a href="services/ai-automation.html">AI Workflow Automation</a>, review <a href="services/ai-strategy.html">AI Strategy &amp; Readiness</a>, or use <a href="contact.html">contact</a>.
+</div>`,
+    },
+    {
         slug: "what-to-clean-up-before-ai-touches-your-tax-exempt-billing-rules",
         title: "What to clean up before AI touches your tax-exempt billing rules",
         date: "2026-06-27",
