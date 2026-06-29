@@ -6,6 +6,8 @@ const posts = require('../content/posts.cjs');
 const newestPublishedSlug = [...posts]
   .filter((post) => (post.status || 'published') === 'published')
   .sort((left, right) => new Date(right.date).getTime() - new Date(left.date).getTime())[0]?.slug;
+const newestExpectedSlug = 'what-to-clean-up-before-ai-touches-your-weather-delay-communication-rules';
+const newestExpectedTitle = 'What to clean up before AI touches your weather-delay communication rules';
 
 test.describe('Blog Page', () => {
   test.beforeEach(async ({ page }) => {
@@ -40,6 +42,14 @@ test.describe('Blog Page', () => {
 
     expect(newestPublishedSlug).toBeTruthy();
     await expect(firstEntry).toHaveAttribute('data-post', newestPublishedSlug);
+  });
+
+  test('renders the new weather-delay post as the newest published entry', async ({ page }) => {
+    const firstEntry = page.locator('.blog-entry').first();
+
+    await expect(firstEntry).toHaveAttribute('data-post', newestExpectedSlug);
+    await firstEntry.click();
+    await expect(page.locator('.blog-reader__content')).toContainText(newestExpectedTitle);
   });
 
   test('opens the reader when clicking a post', async ({ page }) => {
