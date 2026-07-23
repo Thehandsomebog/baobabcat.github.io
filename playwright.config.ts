@@ -13,12 +13,46 @@ export default defineConfig({
   use: {
     baseURL: testBaseUrl,
     trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
   },
   projects: [
     {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
+      },
+    },
+    {
+      name: 'firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+      },
+    },
+    {
+      name: 'webkit',
+      use: {
+        ...devices['Desktop Safari'],
+      },
+    },
+    {
+      name: 'mobile-chrome',
+      testMatch: /responsive\.spec\.ts/,
+      use: {
+        ...devices['Pixel 5'],
+      },
+    },
+    {
+      name: 'mobile-safari',
+      testMatch: /responsive\.spec\.ts/,
+      use: {
+        ...devices['iPhone 13'],
+      },
+    },
+    {
+      name: 'tablet-webkit',
+      testMatch: /responsive\.spec\.ts/,
+      use: {
+        ...devices['iPad Pro 11'],
       },
     },
   ],

@@ -21,7 +21,7 @@
             <p>Reach out if you need help with AI strategy, automation, OpenClaw, training, analytics, or a workflow that is slowing the business down.</p>
         </section>
 
-        <div id="form-success" class="success-banner">
+        <div id="form-success" class="success-banner" role="status" aria-live="polite" tabindex="-1">
             <div class="cmd">$ contact submit --status ok</div>
             <p>Your message was sent. BaobabCat has your request and will follow up soon.</p>
         </div>
@@ -37,26 +37,30 @@
             </article>
 
             <div class="contact-form-wrap">
-                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" data-contact-form novalidate>
                     <input type="hidden" name="access_key" value="372f2f8e-3b9a-4338-aaf3-b24cfd63534b">
                     <input type="hidden" name="redirect" value="https://baobabcat.com/contact.html?submitted=true">
                     <input type="hidden" name="subject" value="New Contact from BaobabCat Website">
 
                     <div class="form-field">
                         <label for="name">name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required autocomplete="name" aria-describedby="name-error">
+                        <span id="name-error" class="form-error" aria-live="polite"></span>
                     </div>
                     <div class="form-field">
                         <label for="email">email</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+                        <span id="email-error" class="form-error" aria-live="polite"></span>
                     </div>
                     <div class="form-field">
                         <label for="phone">phone</label>
-                        <input type="tel" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-error">
+                        <span id="phone-error" class="form-error" aria-live="polite"></span>
                     </div>
                     <div class="form-field">
                         <label for="message">what needs to change</label>
-                        <textarea id="message" name="message" required placeholder="Example: our support team is buried in repeat requests and we need triage + escalation to stop living in one inbox."></textarea>
+                        <textarea id="message" name="message" required aria-describedby="message-error" placeholder="Example: our support team is buried in repeat requests and we need triage + escalation to stop living in one inbox."></textarea>
+                        <span id="message-error" class="form-error" aria-live="polite"></span>
                     </div>
 
                     <label class="form-checkbox">
@@ -64,7 +68,8 @@
                         <span>I consent to receive SMS messages from BaobabCat.</span>
                     </label>
 
-                    <button type="submit" class="btn-terminal btn-terminal--primary">[Send message]</button>
+                    <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+                    <button type="submit" class="btn-terminal btn-terminal--primary"><span data-submit-label>[Send message]</span></button>
                 </form>
             </div>
         </section>

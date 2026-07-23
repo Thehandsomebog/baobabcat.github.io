@@ -22,7 +22,7 @@ test.describe('Blog Page', () => {
   test('shows blog entries', async ({ page }) => {
     await expect.poll(async () => page.locator('.blog-entry').count()).toBeGreaterThanOrEqual(6);
     await expect(page.locator('.blog-entry:visible')).toHaveCount(12);
-    await expect(page.locator('.blog-entry').first()).toHaveAttribute('type', 'button');
+    await expect(page.locator('.blog-entry').first()).toHaveAttribute('href', /\/blog\/.+\/$/);
   });
 
   test('shows the latest generated post title', async ({ page }) => {
