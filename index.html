@@ -32,18 +32,34 @@
                 </div>
                 <div class="home-hero__inner">
                     <div class="eyebrow">deploy ai. stay human.</div>
-                    <div class="home-hero__prompt">
-                        <span class="prompt-symbol">$</span>
-                        <span id="typed-output" class="typed-text"></span>
-                        <span class="cursor">█</span>
-                    </div>
-                    <p id="subtitle-text" class="home-hero__subtitle"></p>
+                    <h1 class="home-hero__prompt">
+                        <span class="prompt-symbol" aria-hidden="true">$</span>
+                        <span id="typed-output" class="typed-text">
+                            <span class="typed-text__deploy">Deploy AI.</span>
+                            <span class="typed-text__human">Stay human.</span>
+                        </span>
+                        <span class="cursor" aria-hidden="true">█</span>
+                    </h1>
+                    <p id="subtitle-text" class="home-hero__subtitle">Practical AI systems for companies that want measurable business outcomes, not demos.</p>
                     <div class="home-hero__actions">
-                        <button type="button" class="btn-terminal btn-terminal--primary" data-continue="#home-content">[Continue]</button>
-                        <a href="contact.html" class="btn-terminal">[Talk with BaobabCat]</a>
-                        <a href="manifesto.html" class="btn-terminal">[Read manifesto]</a>
+                        <a href="contact.html" class="btn-terminal btn-terminal--primary">[Start with your workflow]</a>
+                        <a href="services.html" class="btn-terminal">[Explore services]</a>
                     </div>
-                    <p class="home-hero__support">Strategy if needed. Implementation when useful. Training when adoption matters.</p>
+                    <button type="button" class="home-hero__scroll-cue" data-continue="#home-content">See how the work runs <span aria-hidden="true">↓</span></button>
+                    <dl class="home-hero__defaults" aria-label="Engagement defaults">
+                        <div>
+                            <dt>start</dt>
+                            <dd>one workflow</dd>
+                        </div>
+                        <div>
+                            <dt>build</dt>
+                            <dd>smallest useful system</dd>
+                        </div>
+                        <div>
+                            <dt>handoff</dt>
+                            <dd>trained team + clear escalation</dd>
+                        </div>
+                    </dl>
                 </div>
             </div>
             <aside class="home-hero__stats">
@@ -76,6 +92,25 @@
                     </div>
                 </div>
             </aside>
+        </section>
+
+        <section class="outcome-strip" aria-labelledby="outcome-strip-title">
+            <div class="outcome-strip__heading">
+                <div class="eyebrow">operational outcomes</div>
+                <h2 id="outcome-strip-title">Work measured where the workflow changes</h2>
+            </div>
+            <a href="case-studies.html" class="outcome-strip__item">
+                <span>support triage</span>
+                <strong>Faster response, fewer repeat touches</strong>
+            </a>
+            <a href="case-studies.html" class="outcome-strip__item">
+                <span>service operations</span>
+                <strong>Fewer no-shows, more staff time recovered</strong>
+            </a>
+            <a href="case-studies.html" class="outcome-strip__item">
+                <span>analytics</span>
+                <strong>Faster intervention, cleaner reporting</strong>
+            </a>
         </section>
 
         <div id="home-content" class="home-content">

@@ -28,6 +28,13 @@ function formatDate(dateString) {
     }).replace(",", "");
 }
 
+function slugifyCategory(category) {
+    return category
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+}
+
 function indentBlock(block, indent) {
     return block
         .trim()
@@ -73,12 +80,12 @@ function getPublishedPosts() {
 }
 
 function renderBlogEntries(postsToRender) {
-    return postsToRender.map((post) => `                <div class="blog-entry" data-post="${post.slug}">
-                    <span class="blog-entry__perms">-rw-r--r--</span>
+    return postsToRender.map((post) => `                <button type="button" class="blog-entry" data-post="${post.slug}" data-category="${slugifyCategory(post.category)}">
+                    <span class="blog-entry__category">${post.category}</span>
                     <span class="blog-entry__date">${formatDate(post.date)}</span>
                     <span class="blog-entry__time">${post.readTime}</span>
-                    <span class="blog-entry__name">${post.filename}</span>
-                </div>`).join("\n");
+                    <span class="blog-entry__name">${post.title}</span>
+                </button>`).join("\n");
 }
 
 function renderBlogTemplates(postsToRender) {

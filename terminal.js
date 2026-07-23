@@ -1,45 +1,3 @@
-function typeText(element, text, speed = 40) {
-    return new Promise((resolve) => {
-        let i = 0;
-
-        function tick() {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i += 1;
-                window.setTimeout(tick, speed);
-                return;
-            }
-
-            resolve();
-        }
-
-        tick();
-    });
-}
-
-async function animateHero() {
-    const output = document.getElementById("typed-output");
-    const subtitle = document.getElementById("subtitle-text");
-    if (!output || !subtitle) {
-        return;
-    }
-
-    const line1 = document.createElement("span");
-    line1.style.color = "var(--accent-green)";
-    output.appendChild(line1);
-    await typeText(line1, "Deploy AI.", 42);
-
-    output.appendChild(document.createTextNode("\n"));
-
-    const line2 = document.createElement("span");
-    line2.style.color = "var(--accent-yellow)";
-    output.appendChild(line2);
-    await typeText(line2, "Stay human.", 42);
-
-    await new Promise((resolve) => window.setTimeout(resolve, 260));
-    await typeText(subtitle, "Practical AI systems for companies that want measurable business outcomes, not demos.", 16);
-}
-
 function animateStats() {
     const container = document.getElementById("stats-output");
     if (!container) {
@@ -53,6 +11,8 @@ function animateStats() {
         { key: "focus                ", value: ": support, workflows, analytics" },
         { status: "status: available for new client work" }
     ];
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     stats.forEach((stat, index) => {
         const line = document.createElement("div");
@@ -75,7 +35,7 @@ function animateStats() {
         }
 
         container.appendChild(line);
-        window.setTimeout(() => line.classList.add("visible"), 450 + index * 170);
+        window.setTimeout(() => line.classList.add("visible"), reduceMotion ? 0 : 160 + index * 90);
     });
 }
 
@@ -113,15 +73,50 @@ function initBlog() {
     const readerContent = document.querySelector(".blog-reader__content");
     const readerLabel = document.querySelector(".blog-reader__label");
     const closeBtn = document.querySelector(".blog-reader__close");
-    const entries = document.querySelectorAll(".blog-entry");
+    const search = document.getElementById("blog-search");
+    const filters = document.querySelectorAll("[data-blog-filter]");
+    const loadMore = document.querySelector(".blog-load-more");
+    const emptyState = document.querySelector(".blog-empty");
+    const resultCount = document.getElementById("blog-result-count");
+    const entries = [...document.querySelectorAll(".blog-entry")];
+    const pageSize = 12;
+    let activeCategory = "all";
+    let visibleLimit = pageSize;
+    let lastTrigger = null;
 
     if (!list || !reader || !readerContent || entries.length === 0) {
         return;
     }
 
+    function updateArchive() {
+        const query = search ? search.value.trim().toLowerCase() : "";
+        const matches = entries.filter((entry) => {
+            const matchesCategory = activeCategory === "all" || entry.dataset.category === activeCategory;
+            const matchesQuery = !query || entry.textContent.toLowerCase().includes(query);
+            return matchesCategory && matchesQuery;
+        });
+
+        entries.forEach((entry) => {
+            const matchIndex = matches.indexOf(entry);
+            entry.hidden = matchIndex === -1 || matchIndex >= visibleLimit;
+        });
+
+        const shown = Math.min(matches.length, visibleLimit);
+        if (resultCount) {
+            resultCount.textContent = `${shown} of ${matches.length} articles`;
+        }
+        if (emptyState) {
+            emptyState.hidden = matches.length !== 0;
+        }
+        if (loadMore) {
+            loadMore.hidden = matches.length <= visibleLimit;
+        }
+    }
+
     function openPost(entry) {
         entries.forEach((item) => item.classList.remove("active"));
         entry.classList.add("active");
+        lastTrigger = entry;
 
         const postId = entry.dataset.post;
         const template = postId ? document.getElementById(`post-${postId}`) : null;
@@ -136,7 +131,13 @@ function initBlog() {
 
         list.classList.add("split");
         reader.classList.add("open");
+        reader.setAttribute("aria-hidden", "false");
+        reader.removeAttribute("inert");
         window.location.hash = `post-${postId}`;
+
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            reader.focus({ preventScroll: true });
+        }
     }
 
     entries.forEach((entry) => {
@@ -146,11 +147,53 @@ function initBlog() {
     if (closeBtn) {
         closeBtn.addEventListener("click", () => {
             reader.classList.remove("open");
+            reader.setAttribute("aria-hidden", "true");
+            reader.setAttribute("inert", "");
             list.classList.remove("split");
             entries.forEach((item) => item.classList.remove("active"));
             history.replaceState(null, "", window.location.pathname);
+            if (lastTrigger && !lastTrigger.hidden) {
+                lastTrigger.focus();
+            } else if (search) {
+                search.focus();
+            }
         });
     }
+
+    if (search) {
+        search.addEventListener("input", () => {
+            visibleLimit = pageSize;
+            updateArchive();
+        });
+    }
+
+    filters.forEach((filter) => {
+        filter.addEventListener("click", () => {
+            activeCategory = filter.dataset.blogFilter;
+            visibleLimit = pageSize;
+            filters.forEach((item) => {
+                const selected = item === filter;
+                item.classList.toggle("active", selected);
+                item.setAttribute("aria-pressed", String(selected));
+            });
+            updateArchive();
+        });
+    });
+
+    if (loadMore) {
+        loadMore.addEventListener("click", () => {
+            visibleLimit += pageSize;
+            updateArchive();
+        });
+    }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && reader.classList.contains("open") && closeBtn) {
+            closeBtn.click();
+        }
+    });
+
+    updateArchive();
 
     const hash = window.location.hash.replace(/^#/, "");
     if (hash.startsWith("post-")) {
@@ -191,7 +234,8 @@ function initContinue() {
     button.addEventListener("click", () => {
         const target = document.querySelector(button.getAttribute("data-continue"));
         if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
         }
     });
 }
@@ -215,7 +259,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initSuccessState();
 
     if (document.body.classList.contains("page-home")) {
-        animateHero();
         animateStats();
     }
 

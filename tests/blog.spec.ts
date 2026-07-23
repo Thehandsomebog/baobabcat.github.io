@@ -21,6 +21,8 @@ test.describe('Blog Page', () => {
 
   test('shows blog entries', async ({ page }) => {
     await expect.poll(async () => page.locator('.blog-entry').count()).toBeGreaterThanOrEqual(6);
+    await expect(page.locator('.blog-entry:visible')).toHaveCount(12);
+    await expect(page.locator('.blog-entry').first()).toHaveAttribute('type', 'button');
   });
 
   test('shows the latest generated post title', async ({ page }) => {
@@ -62,5 +64,20 @@ test.describe('Blog Page', () => {
     await page.locator('.blog-entry').first().click();
     await expect(reader).toHaveClass(/open/);
     await expect(page.locator('.blog-reader__content')).not.toBeEmpty();
+  });
+
+  test('filters the archive by topic and search text', async ({ page }) => {
+    await page.getByRole('button', { name: 'Strategy', exact: true }).click();
+    await expect(page.locator('.blog-entry:visible')).not.toHaveCount(0);
+    await expect(page.locator('.blog-entry:visible').first()).toHaveAttribute('data-category', 'strategy-opinion');
+
+    await page.locator('#blog-search').fill('supervisor interrupt');
+    await expect(page.locator('.blog-entry:visible')).toHaveCount(1);
+    await expect(page.locator('.blog-entry:visible').first()).toContainText('supervisor interrupt');
+  });
+
+  test('loads more articles without hiding the initial archive', async ({ page }) => {
+    await page.getByRole('button', { name: '[Show more articles]' }).click();
+    await expect(page.locator('.blog-entry:visible')).toHaveCount(24);
   });
 });
