@@ -16,7 +16,7 @@ test.describe('Consent-aware analytics contract', () => {
       body: '',
     }));
     await page.goto('/');
-    await page.getByRole('button', { name: '[Allow]' }).click();
+    await page.getByRole('button', { name: 'Allow analytics' }).click();
     await expect(page.locator('#baobabcat-ga4')).toHaveCount(1);
     await page.evaluate(() => {
       window.BaobabAnalytics.track('contact_form_error', {
@@ -32,9 +32,15 @@ test.describe('Consent-aware analytics contract', () => {
 
   test('persists decline and provides a preferences launcher', async ({ page }) => {
     await page.goto('/');
-    await page.getByRole('button', { name: '[Decline]' }).click();
+    await page.getByRole('button', { name: 'Not now' }).click();
     await expect(page.getByRole('button', { name: 'Change analytics privacy choice' })).toBeVisible();
     await page.reload();
-    await expect(page.getByRole('dialog', { name: 'Analytics preference' })).not.toBeVisible();
+    await expect(page.getByRole('region', { name: 'Analytics preference' })).not.toBeVisible();
+  });
+
+  test('keeps optional analytics non-modal and does not steal initial focus', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.getByRole('region', { name: 'Analytics preference' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Allow analytics' })).not.toBeFocused();
   });
 });

@@ -34,4 +34,21 @@ test.describe('Responsive touch and layout behavior', () => {
     await page.locator('#message').scrollIntoViewIfNeeded();
     await expect(page.locator('#message')).toBeInViewport();
   });
+
+  test('mobile blog prioritizes discovery controls over topic exposition', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'This hierarchy is specific to touch-sized projects.');
+    await page.goto('/blog.html');
+    await expect(page.locator('.blog-top .pane').nth(1)).toBeHidden();
+    await expect(page.locator('#blog-search')).toBeInViewport();
+    await expect(page.locator('.blog-entry').first()).toBeInViewport();
+  });
+
+  test('mobile contact prioritizes the form before alternate contact details', async ({ page, isMobile }) => {
+    test.skip(!isMobile, 'This hierarchy is specific to touch-sized projects.');
+    await page.goto('/contact.html');
+    const formTop = await page.locator('.contact-form-wrap').evaluate((element) => element.getBoundingClientRect().top);
+    const detailsTop = await page.locator('.contact-info').evaluate((element) => element.getBoundingClientRect().top);
+    expect(formTop).toBeLessThan(detailsTop);
+    await expect(page.locator('#name')).toBeInViewport();
+  });
 });

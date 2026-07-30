@@ -2,6 +2,8 @@ module.exports = [
     {
         slug: "what-to-clean-up-before-ai-touches-your-customer-data-retention-rules",
         title: "What to clean up before AI touches your customer data retention rules",
+        displayTitle: "Customer data retention rules",
+        series: "Before AI touches…",
         date: "2026-07-27",
         readTime: "7m",
         category: "practical AI tips",
@@ -38,6 +40,8 @@ module.exports = [
     {
         slug: "what-to-clean-up-before-ai-touches-your-partial-completion-billing-rules",
         title: "What to clean up before AI touches your partial-completion billing rules",
+        displayTitle: "Partial-completion billing rules",
+        series: "Before AI touches…",
         date: "2026-07-20",
         readTime: "8m",
         category: "practical AI tips",
