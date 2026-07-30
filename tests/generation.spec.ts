@@ -46,6 +46,16 @@ test.describe('Generated publishing contracts', () => {
     }
   });
 
+  test('archive presentation shortens repeated series titles without changing canonical titles', () => {
+    const post = published.find((entry) => entry.slug === 'what-to-clean-up-before-ai-touches-your-customer-data-retention-rules');
+    const presentation = generator.getArchivePresentation(post);
+    expect(presentation).toEqual({
+      displayTitle: 'Customer data retention rules',
+      series: 'Before AI touches…',
+    });
+    expect(post.title).toBe('What to clean up before AI touches your customer data retention rules');
+  });
+
   test('social cards have the required dimensions and budget', async () => {
     for (const slug of [published[0].slug, 'why-ai-pilots-stall']) {
       const imagePath = path.join(root, 'assets', 'social', `${slug}.jpg`);

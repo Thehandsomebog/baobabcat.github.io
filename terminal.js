@@ -126,12 +126,19 @@ function setActiveTab() {
     const page = path || "index.html";
     const currentRoute = page.replace(/(?:index)?\.html$/, "").replace(/\/$/, "") || "index";
 
+    document.querySelectorAll(".status-bar").forEach((navigation) => {
+        if (!navigation.hasAttribute("aria-label")) {
+            navigation.setAttribute("aria-label", "Primary");
+        }
+    });
+
     document.querySelectorAll(".status-bar__tab").forEach((tab) => {
         tab.classList.remove("active");
         const link = tab.querySelector("a");
         if (!link) {
             return;
         }
+        link.removeAttribute("aria-current");
 
         const href = link.getAttribute("href");
         if (!href) {
@@ -142,12 +149,12 @@ function setActiveTab() {
         const normalizedRoute = normalizedHref.replace(/(?:index)?\.html$/, "").replace(/\/$/, "") || "index";
         const serviceDetail = page.startsWith("services/");
         const articleDetail = page.startsWith("blog/");
-        if (normalizedRoute === currentRoute) {
+        const active = normalizedRoute === currentRoute
+            || (serviceDetail && normalizedHref === "services.html")
+            || (articleDetail && normalizedHref === "blog.html");
+        if (active) {
             tab.classList.add("active");
-        } else if (serviceDetail && normalizedHref === "services.html") {
-            tab.classList.add("active");
-        } else if (articleDetail && normalizedHref === "blog.html") {
-            tab.classList.add("active");
+            link.setAttribute("aria-current", "page");
         }
     });
 }
@@ -177,7 +184,8 @@ function initBlog() {
         const query = search ? search.value.trim().toLowerCase() : "";
         const matches = entries.filter((entry) => {
             const matchesCategory = activeCategory === "all" || entry.dataset.category === activeCategory;
-            const matchesQuery = !query || entry.textContent.toLowerCase().includes(query);
+            const searchableText = entry.dataset.search || entry.textContent;
+            const matchesQuery = !query || searchableText.toLowerCase().includes(query);
             return matchesCategory && matchesQuery;
         });
 
@@ -205,7 +213,10 @@ function initBlog() {
         reader.setAttribute("aria-hidden", "true");
         reader.setAttribute("inert", "");
         list.classList.remove("split");
-        entries.forEach((item) => item.classList.remove("active"));
+        entries.forEach((item) => {
+            item.classList.remove("active");
+            item.setAttribute("aria-expanded", "false");
+        });
         if (restoreHistory && readerHistoryActive) {
             history.back();
         } else if (!restoreHistory) {
@@ -219,8 +230,12 @@ function initBlog() {
     }
 
     function openPost(entry, { updateHistory = true } = {}) {
-        entries.forEach((item) => item.classList.remove("active"));
+        entries.forEach((item) => {
+            item.classList.remove("active");
+            item.setAttribute("aria-expanded", "false");
+        });
         entry.classList.add("active");
+        entry.setAttribute("aria-expanded", "true");
         lastTrigger = entry;
 
         const postId = entry.dataset.post;
@@ -245,7 +260,11 @@ function initBlog() {
         }
         window.BaobabAnalytics?.track("blog_article_open", { article_slug: postId, source: "archive_reader" });
 
-        if (window.matchMedia("(max-width: 767px)").matches) {
+        const heading = readerContent.querySelector("h2");
+        if (heading) {
+            heading.setAttribute("tabindex", "-1");
+            requestAnimationFrame(() => heading.focus({ preventScroll: true }));
+        } else {
             reader.focus({ preventScroll: true });
         }
     }
@@ -340,20 +359,7 @@ function initClock() {
     if (!el) {
         return;
     }
-
-    function update() {
-        const now = new Date();
-        const h = String(now.getHours()).padStart(2, "0");
-        const m = String(now.getMinutes()).padStart(2, "0");
-        const day = String(now.getDate()).padStart(2, "0");
-        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        const mon = months[now.getMonth()];
-        const yr = String(now.getFullYear()).slice(-2);
-        el.textContent = `"* BaobabCat" ${h}:${m} ${day}-${mon}-${yr}`;
-    }
-
-    update();
-    window.setInterval(update, 10000);
+    el.textContent = "available for new work";
 }
 
 function initContinue() {
@@ -390,24 +396,30 @@ function initConsentUi() {
     if (!analytics) return;
     const banner = document.createElement("section");
     banner.className = "consent-banner";
-    banner.setAttribute("role", "dialog");
+    banner.setAttribute("role", "region");
     banner.setAttribute("aria-label", "Analytics preference");
-    banner.innerHTML = `<p><strong>Optional analytics</strong><br>Allow privacy-conscious interaction measurement to help improve this site.</p>
-        <div><button type="button" class="btn-terminal btn-terminal--primary" data-consent="granted">[Allow]</button>
-        <button type="button" class="btn-terminal" data-consent="denied">[Decline]</button>
-        <a href="/privacy.html">Privacy details</a></div>`;
-    const launcher = document.createElement("button");
-    launcher.type = "button";
-    launcher.className = "consent-launcher";
-    launcher.textContent = "Privacy choices";
-    launcher.setAttribute("aria-label", "Change analytics privacy choice");
-    document.body.append(banner, launcher);
+    banner.setAttribute("aria-live", "polite");
+    banner.innerHTML = `<p><strong>Help improve BaobabCat?</strong> Optional analytics measure page interactions without collecting form contents.</p>
+        <div class="consent-banner__actions"><button type="button" class="btn-terminal btn-terminal--primary" data-consent="granted">Allow analytics</button>
+        <button type="button" class="btn-terminal" data-consent="denied">Not now</button>
+        <a href="/privacy.html">Details</a></div>`;
+
+    const settings = document.createElement("footer");
+    settings.className = "privacy-settings";
+    settings.innerHTML = `<a href="/privacy.html">Privacy</a><span aria-hidden="true">·</span><button type="button" data-analytics-settings aria-label="Change analytics privacy choice">Privacy settings</button>`;
+
+    const main = document.querySelector("main");
+    if (main) {
+        main.appendChild(settings);
+    }
+    document.body.appendChild(banner);
+
+    let returnFocus = null;
 
     function sync() {
         const undecided = !analytics.getConsent();
         banner.classList.toggle("is-visible", undecided);
-        launcher.hidden = undecided;
-        if (undecided) banner.querySelector("button")?.focus({ preventScroll: true });
+        banner.setAttribute("aria-hidden", String(!undecided));
     }
 
     banner.addEventListener("click", (event) => {
@@ -415,16 +427,25 @@ function initConsentUi() {
         if (!button) return;
         analytics.setConsent(button.dataset.consent);
         sync();
-        launcher.focus({ preventScroll: true });
+        if (returnFocus?.isConnected) {
+            returnFocus.focus({ preventScroll: true });
+        } else {
+            document.querySelector("main a, main button, main input, main textarea")?.focus({ preventScroll: true });
+        }
+        returnFocus = null;
     });
-    launcher.addEventListener("click", () => {
+
+    function showPreferences(trigger) {
+        returnFocus = trigger || null;
         banner.classList.add("is-visible");
+        banner.setAttribute("aria-hidden", "false");
         banner.querySelector("button")?.focus({ preventScroll: true });
-    });
+    }
+
     document.querySelectorAll("[data-analytics-settings]").forEach((button) => {
-        button.addEventListener("click", () => launcher.click());
+        button.addEventListener("click", () => showPreferences(button));
     });
-    document.addEventListener("baobabcat:show-consent", () => launcher.click());
+    document.addEventListener("baobabcat:show-consent", () => showPreferences(document.activeElement));
     sync();
 }
 

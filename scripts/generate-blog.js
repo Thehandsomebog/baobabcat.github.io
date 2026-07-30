@@ -49,6 +49,32 @@ function slugifyCategory(category) {
     return category.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
+function capitalize(value) {
+    return value ? `${value[0].toUpperCase()}${value.slice(1)}` : value;
+}
+
+function getArchivePresentation(post) {
+    if (post.displayTitle) {
+        return {
+            displayTitle: post.displayTitle,
+            series: post.series || "",
+        };
+    }
+
+    const cleanupMatch = post.title.match(/^What to clean up before AI touches (?:your )?(.+)$/i);
+    if (cleanupMatch) {
+        return {
+            displayTitle: capitalize(cleanupMatch[1]),
+            series: "Before AI touches…",
+        };
+    }
+
+    return {
+        displayTitle: post.title,
+        series: post.series || "",
+    };
+}
+
 function indentBlock(block, indent) {
     return block.trim().split("\n").map((line) => `${indent}${line}`).join("\n");
 }
@@ -112,12 +138,17 @@ function getApprovedProof() {
 }
 
 function renderBlogEntries(postsToRender) {
-    return postsToRender.map((post) => `                <a class="blog-entry" href="${post.canonicalPath}" data-post="${post.slug}" data-category="${slugifyCategory(post.category)}">
+    return postsToRender.map((post) => {
+        const { displayTitle, series } = getArchivePresentation(post);
+        const searchText = `${post.title} ${displayTitle} ${post.category}`;
+        const seriesMarkup = series ? `<span class="blog-entry__series">${escapeHtml(series)}</span>` : "";
+        return `                <a class="blog-entry" href="${post.canonicalPath}" data-post="${post.slug}" data-category="${slugifyCategory(post.category)}" data-search="${escapeHtml(searchText)}" aria-label="${escapeHtml(`${post.title}, ${post.category}, ${formatDate(post.date)}, ${post.readTime} read`)}" aria-expanded="false" aria-controls="blog-reader">
                     <span class="blog-entry__category">${escapeHtml(post.category)}</span>
                     <span class="blog-entry__date">${formatDate(post.date)}</span>
                     <span class="blog-entry__time">${escapeHtml(post.readTime)}</span>
-                    <span class="blog-entry__name">${escapeHtml(post.title)}</span>
-                </a>`).join("\n");
+                    <span class="blog-entry__title-group">${seriesMarkup}<span class="blog-entry__name">${escapeHtml(displayTitle)}</span></span>
+                </a>`;
+    }).join("\n");
 }
 
 function renderBlogTemplates(postsToRender) {
@@ -346,7 +377,7 @@ async function main() {
     console.log(`Generated ${publishedPosts.length} articles, social cards, proof, and sitemap output.`);
 }
 
-module.exports = { getPublishedPosts, getApprovedProof, renderSitemap, articlePage };
+module.exports = { getPublishedPosts, getApprovedProof, getArchivePresentation, renderSitemap, articlePage };
 
 if (require.main === module) {
     main().catch((error) => {

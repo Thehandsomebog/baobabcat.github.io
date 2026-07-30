@@ -60,10 +60,21 @@ test.describe('Blog Page', () => {
 
   test('opens the reader when clicking a post', async ({ page }) => {
     const reader = page.locator('.blog-reader');
+    const firstEntry = page.locator('.blog-entry').first();
     await expect(reader).not.toHaveClass(/open/);
-    await page.locator('.blog-entry').first().click();
+    await firstEntry.click();
     await expect(reader).toHaveClass(/open/);
     await expect(page.locator('.blog-reader__content')).not.toBeEmpty();
+    await expect(firstEntry).toHaveAttribute('aria-expanded', 'true');
+    await expect(page.locator('.blog-reader__content h2')).toBeFocused();
+  });
+
+  test('uses concise archive titles while preserving the full article title', async ({ page }) => {
+    const firstEntry = page.locator('.blog-entry').first();
+    await expect(firstEntry.locator('.blog-entry__series')).toContainText('Before AI touches');
+    await expect(firstEntry.locator('.blog-entry__name')).toHaveText('Customer data retention rules');
+    await firstEntry.click();
+    await expect(page.locator('.blog-reader__content h2')).toContainText('What to clean up before AI touches');
   });
 
   test('filters the archive by topic and search text', async ({ page }) => {
