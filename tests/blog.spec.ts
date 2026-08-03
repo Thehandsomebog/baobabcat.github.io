@@ -70,10 +70,12 @@ test.describe('Blog Page', () => {
   });
 
   test('uses concise archive titles while preserving the full article title', async ({ page }) => {
-    const firstEntry = page.locator('.blog-entry').first();
-    await expect(firstEntry.locator('.blog-entry__series')).toContainText('Before AI touches');
-    await expect(firstEntry.locator('.blog-entry__name')).toHaveText('Customer data retention rules');
-    await firstEntry.click();
+    const seriesEntry = page.locator(
+      '.blog-entry[data-post="what-to-clean-up-before-ai-touches-your-customer-data-retention-rules"]',
+    );
+    await expect(seriesEntry.locator('.blog-entry__series')).toContainText('Before AI touches');
+    await expect(seriesEntry.locator('.blog-entry__name')).toHaveText('Customer data retention rules');
+    await seriesEntry.click();
     await expect(page.locator('.blog-reader__content h2')).toContainText('What to clean up before AI touches');
   });
 
