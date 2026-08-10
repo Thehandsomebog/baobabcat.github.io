@@ -63,6 +63,12 @@
                     </div>
                 </div>
                 <!-- GENERATED_BLOG_ENTRIES_START -->
+                <a class="blog-entry" href="/blog/ai-voice-note-transcription-review-for-field-service-teams/" data-post="ai-voice-note-transcription-review-for-field-service-teams" data-category="implementation-guidance" data-search="AI voice-note transcription review for field service teams AI voice-note transcription review for field service teams implementation guidance" aria-label="AI voice-note transcription review for field service teams, implementation guidance, Aug 10, 7m read" aria-expanded="false" aria-controls="blog-reader">
+                    <span class="blog-entry__category">implementation guidance</span>
+                    <span class="blog-entry__date">Aug 10</span>
+                    <span class="blog-entry__time">7m</span>
+                    <span class="blog-entry__title-group"><span class="blog-entry__name">AI voice-note transcription review for field service teams</span></span>
+                </a>
                 <a class="blog-entry" href="/blog/ai-translation-review-for-service-and-support-teams/" data-post="ai-translation-review-for-service-and-support-teams" data-category="implementation-guidance" data-search="AI translation review for service and support teams AI translation review for service and support teams implementation guidance" aria-label="AI translation review for service and support teams, implementation guidance, Aug 03, 7m read" aria-expanded="false" aria-controls="blog-reader">
                     <span class="blog-entry__category">implementation guidance</span>
                     <span class="blog-entry__date">Aug 03</span>
@@ -793,6 +799,34 @@
         </section>
 
         <!-- GENERATED_BLOG_TEMPLATES_START -->
+        <template id="post-ai-voice-note-transcription-review-for-field-service-teams">
+            <a class="blog-reader__full-link" href="/blog/ai-voice-note-transcription-review-for-field-service-teams/">Open full article</a>
+            <h2>AI voice-note transcription review for field service teams</h2>
+            <p>Voice notes are a practical way for technicians to capture what happened while the details are still fresh. They are faster than typing in a truck, easier to use with gloves off between calls, and often contain useful context that never makes it into a short completion code. AI transcription can turn those recordings into searchable work-order notes, draft service summaries, and follow-up tasks. The risk is that a readable transcript can look more certain than the recording actually was.</p>
+            <p>For owners, operators, dispatchers, and service teams, the useful question is not whether speech-to-text is accurate in general. It is whether the workflow catches the mistakes that could change the next decision. Equipment model numbers, measurements, part numbers, negations, customer names, and statements about what was or was not approved all deserve more care than filler words or punctuation.</p>
+            <h3>Separate the recording, transcript, and final record</h3>
+            <p>A raw recording is source material. An AI transcript is a draft interpretation of that source. The final work-order note is the business record employees and customers may rely on later. Treating those three things as interchangeable is the first failure to avoid.</p>
+            <p>Keep the original recording available for an appropriate review period, label the transcript as machine generated, and require a clear action that promotes reviewed information into the official note. The system should record who reviewed it and when. That makes corrections visible instead of quietly overwriting the path from what the technician said to what the company stored.</p>
+            <h3>Review the details that change work</h3>
+            <p>Not every word needs equal scrutiny. Build the review around operational consequence. A wrong serial number can attach history to the wrong asset. “No leak found” becoming “leak found” can trigger unnecessary work. A decimal error in a reading can change a diagnosis. A missed “not” in an approval statement can create a billing dispute. A similar-sounding part number can send purchasing in the wrong direction.</p>
+            <p>Ask the system to highlight those fields and compare them with known records where possible. Asset identifiers can be checked against the customer location. Part numbers can be checked against the catalog. Names can be checked against the work order. Measurements can be shown beside the expected unit. A mismatch should create a question for the technician or office reviewer, not an automatic correction that hides uncertainty.</p>
+            <h3>Give technicians a recording pattern</h3>
+            <p>Better input reduces review work. A short structure helps: identify the work order and asset, state the reported issue, describe what was observed, list tests or readings with units, explain the action taken, and name the next step. Technicians should say identifiers slowly, spell unusual names when necessary, and state approval separately from technical findings.</p>
+            <p>This is not about making field staff perform a script for the software. It is about giving them a repeatable way to separate facts that often blur together in an informal recap. The pattern should be tested in the actual environments where people record notes, including vehicle noise, mechanical rooms, outdoor wind, masks, and trade-specific vocabulary.</p>
+            <h3>Keep sensitive details out of the wrong systems</h3>
+            <p>Voice notes can capture more than the technician intends: customer conversations in the background, access codes, personal phone numbers, payment details, health information, or comments that do not belong in a customer-facing record. Decide what employees should never record, when recording requires notice or consent, where audio is processed, who can access it, and how long it is retained. Applicable privacy, employment, and recording laws should be reviewed with qualified advisors.</p>
+            <p>The workflow also needs a path for removing irrelevant sensitive content without rewriting the service history. Redaction should be logged, permissions should follow job roles, and customer-facing summaries should be generated only from reviewed material. A polished summary is not a safe shortcut around source control.</p>
+            <h3>Use AI for the draft, not the judgment</h3>
+            <p>AI can transcribe, organize a note into sections, identify possible follow-up tasks, and flag uncertain terms. It should not decide that the customer approved additional work, that an equipment condition is safe, that a diagnosis is final, or that a technician completed a required procedure. Those decisions need the people and controls already responsible for them.</p>
+            <p><a href="services/openclaw.html">OpenClaw</a> may be useful when a reviewed field update needs to continue into a controlled customer conversation. It is one service in the wider workflow, not the transcription policy, technical reviewer, or system of record. The stronger starting point is often <a href="services/ai-automation.html">AI Workflow Automation</a> combined with <a href="services/ai-training.html">AI Training &amp; Enablement</a> so the capture, review, and escalation rules work together.</p>
+            <h3>A practical first implementation</h3>
+            <p>Start with one team and one note type, such as end-of-visit internal summaries. Gather the terms that transcription commonly gets wrong, define the high-consequence fields, and create a short recording pattern. Run the draft transcript beside the current documentation process until supervisors can see where errors occur and how much review is actually required.</p>
+            <p>Then measure operating signals rather than chasing a generic accuracy percentage. Look for corrections to identifiers and measurements, transcripts returned for clarification, follow-up tasks missed or invented, and time from recording to reviewed note. If the team cannot reconstruct why the final record says what it says, the workflow is not ready to expand. A useful system makes field documentation easier while keeping uncertainty visible.</p>
+            <div class="inline-cta">
+                If technician voice notes contain useful detail but create inconsistent records, review <a href="services/ai-automation.html">AI Workflow Automation</a>, explore <a href="services/ai-training.html">AI Training &amp; Enablement</a>, or <a href="contact.html">contact BaobabCat</a>.
+            </div>
+        </template>
+
         <template id="post-ai-translation-review-for-service-and-support-teams">
             <a class="blog-reader__full-link" href="/blog/ai-translation-review-for-service-and-support-teams/">Open full article</a>
             <h2>AI translation review for service and support teams</h2>
