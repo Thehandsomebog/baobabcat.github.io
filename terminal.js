@@ -26,14 +26,29 @@
         window.dataLayer.push(arguments);
     }
 
+    function consentState(analyticsStorage) {
+        return {
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied",
+            analytics_storage: analyticsStorage,
+        };
+    }
+
     function load() {
-        if (loaded || consent !== "granted") return;
+        if (loaded) return;
         loaded = true;
         window.dataLayer = window.dataLayer || [];
-        gtag("consent", "default", { analytics_storage: "denied" });
-        gtag("consent", "update", { analytics_storage: "granted" });
+        gtag("consent", "default", consentState("denied"));
+        if (consent === "granted") {
+            gtag("consent", "update", consentState("granted"));
+        }
         gtag("js", new Date());
-        gtag("config", measurementId, { anonymize_ip: true });
+        gtag("config", measurementId, {
+            anonymize_ip: true,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false,
+        });
         const script = document.createElement("script");
         script.id = "baobabcat-ga4";
         script.async = true;
@@ -60,9 +75,9 @@
             // The choice still applies for this page when browser storage is unavailable.
         }
         if (nextConsent === "granted") {
-            load();
-        } else if (loaded) {
-            gtag("consent", "update", { analytics_storage: "denied" });
+            gtag("consent", "update", consentState("granted"));
+        } else {
+            gtag("consent", "update", consentState("denied"));
         }
         document.dispatchEvent(new CustomEvent("baobabcat:consent-change", { detail: nextConsent }));
     }
@@ -74,7 +89,7 @@
         showPreferences: () => document.dispatchEvent(new CustomEvent("baobabcat:show-consent")),
     };
 
-    if (consent === "granted") load();
+    load();
 })();
 
 function animateStats() {

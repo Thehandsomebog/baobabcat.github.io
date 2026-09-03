@@ -16,6 +16,7 @@ test.describe('Core page existence', () => {
   test('contact page contains the contact form', async ({ page }) => {
     await page.goto('/contact.html');
     await expect(page.locator('form.contact-form')).toBeVisible();
+    await expect(page.getByRole('link', { name: /hello@baobabcat\.com/i })).toHaveAttribute('href', 'mailto:hello@baobabcat.com');
     await expect(page.locator('input[name="name"]')).toBeVisible();
     await expect(page.locator('input[name="email"]')).toBeVisible();
     await expect(page.locator('textarea[name="message"]')).toBeVisible();
@@ -24,6 +25,7 @@ test.describe('Core page existence', () => {
   test('privacy page exists', async ({ page }) => {
     await page.goto('/privacy.html');
     await expect(page.locator('h1')).toContainText('Privacy');
+    await expect(page.getByRole('link', { name: 'hello@baobabcat.com' })).toHaveAttribute('href', 'mailto:hello@baobabcat.com');
   });
 
   test('404 page exists', async ({ page }) => {
