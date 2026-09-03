@@ -53,6 +53,34 @@ function capitalize(value) {
     return value ? `${value[0].toUpperCase()}${value.slice(1)}` : value;
 }
 
+function trimAtWord(value, maxLength, punctuation = "") {
+    const normalized = value.trim();
+    if (normalized.length <= maxLength) return normalized;
+    const available = maxLength - punctuation.length;
+    const slice = normalized.slice(0, available + 1);
+    const lastSpace = slice.lastIndexOf(" ");
+    const end = lastSpace >= Math.floor(available * 0.65) ? lastSpace : available;
+    return `${normalized.slice(0, end).replace(/[,:;\-\u2013\u2014]+$/u, "")}${punctuation}`;
+}
+
+function getSeoTitle(post) {
+    if (post.seoTitle) return trimAtWord(post.seoTitle, 60);
+    if (post.title.length <= 60) return post.title;
+
+    const cleanupMatch = post.title.match(/^What to clean up before AI touches (?:your )?(.+)$/i);
+    if (cleanupMatch) return trimAtWord(`AI prep: ${capitalize(cleanupMatch[1])}`, 60);
+
+    const withoutAudience = post.title
+        .replace(/\s+for\s+.*?\s+teams$/i, "")
+        .replace(/\s+(?:(?:commercial|field|multi-location|national account|recurring)\s+)?(?:service|support|ops)(?:\s+(?:and\s+)?(?:service|support|ops))?\s+teams$/i, "");
+    return trimAtWord(withoutAudience, 60);
+}
+
+function getSeoDescription(post) {
+    if (post.seoDescription) return trimAtWord(post.seoDescription, 160, ".");
+    return trimAtWord(post.summary, 160, ".");
+}
+
 function getArchivePresentation(post) {
     if (post.displayTitle) {
         return {
@@ -96,6 +124,7 @@ function writeIfChanged(filePath, content) {
 
 function getPublishedPosts() {
     const slugs = new Set();
+    const seoTitles = new Set();
     const published = posts
         .filter((post) => (post.status || "published") === "published")
         .map((post) => ({ ...post, canonicalPath: `/blog/${post.slug}/` }))
@@ -108,6 +137,12 @@ function getPublishedPosts() {
         });
         assert(!slugs.has(post.slug), `Duplicate slug: ${post.slug}`);
         slugs.add(post.slug);
+        const seoTitle = getSeoTitle(post);
+        const seoDescription = getSeoDescription(post);
+        assert(seoTitle.length >= 10 && seoTitle.length <= 60, `SEO title length is invalid for ${post.slug}`);
+        assert(!seoTitles.has(seoTitle), `Duplicate SEO title: ${seoTitle}`);
+        seoTitles.add(seoTitle);
+        assert(seoDescription.length >= 70 && seoDescription.length <= 160, `SEO description length is invalid for ${post.slug}`);
     });
     return published;
 }
@@ -177,7 +212,7 @@ function renderProofCard(entry, representative = false) {
                     <blockquote><p>“${escapeHtml(entry.testimonial.quote)}”</p><cite>${escapeHtml(entry.testimonial.attribution)}, ${escapeHtml(entry.testimonial.role)}</cite></blockquote>` : "";
     return `            <article class="proof-card">
                 <div class="kicker">${escapeHtml(entry.category)}</div>
-                <h3>${escapeHtml(heading)}</h3>
+                <h2>${escapeHtml(heading)}</h2>
                 <div class="proof-card__story">
                     <div><span>operating problem</span><p>${escapeHtml(entry.problem)}</p></div>
                     <div><span>intervention</span><p>${escapeHtml(entry.intervention)}</p></div>
@@ -213,7 +248,9 @@ function absolutizeArticleHtml(html) {
 
 function articlePage(post) {
     const title = escapeHtml(post.title);
-    const description = escapeHtml(post.summary);
+    const seoTitle = escapeHtml(getSeoTitle(post));
+    const seoDescription = escapeHtml(getSeoDescription(post));
+    const summary = escapeHtml(post.summary);
     const canonical = `${siteUrl}${post.canonicalPath}`;
     const social = `${siteUrl}/assets/social/${post.slug}.jpg`;
     const articleBody = absolutizeArticleHtml(post.bodyHtml)
@@ -225,14 +262,14 @@ function articlePage(post) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title} | BaobabCat</title>
-    <meta name="description" content="${description}">
+    <title>${seoTitle}</title>
+    <meta name="description" content="${seoDescription}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="${canonical}">
     <meta property="og:type" content="article">
     <meta property="og:url" content="${canonical}">
     <meta property="og:title" content="${title}">
-    <meta property="og:description" content="${description}">
+    <meta property="og:description" content="${summary}">
     <meta property="og:image" content="${social}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -240,7 +277,7 @@ function articlePage(post) {
     <meta property="article:published_time" content="${post.date}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${title}">
-    <meta name="twitter:description" content="${description}">
+    <meta name="twitter:description" content="${summary}">
     <meta name="twitter:image" content="${social}">
     <meta name="twitter:image:alt" content="BaobabCat article card: ${title}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -254,7 +291,7 @@ function articlePage(post) {
                 <div class="eyebrow">${escapeHtml(post.category)}</div>
                 <h1>${title}</h1>
                 <p class="article-meta"><time datetime="${post.date}">${formatDate(post.date, true)}</time><span>${escapeHtml(post.readTime)} read</span></p>
-                <p class="article-summary">${description}</p>
+                <p class="article-summary">${summary}</p>
             </header>
             <div class="blog-reader__content article-content">
 ${indentBlock(articleBody, "                ")}
@@ -377,7 +414,7 @@ async function main() {
     console.log(`Generated ${publishedPosts.length} articles, social cards, proof, and sitemap output.`);
 }
 
-module.exports = { getPublishedPosts, getApprovedProof, getArchivePresentation, renderSitemap, articlePage };
+module.exports = { getPublishedPosts, getApprovedProof, getArchivePresentation, getSeoTitle, getSeoDescription, renderSitemap, articlePage };
 
 if (require.main === module) {
     main().catch((error) => {

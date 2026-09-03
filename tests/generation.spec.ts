@@ -65,6 +65,24 @@ test.describe('Generated publishing contracts', () => {
     expect(post.title).toBe('What to clean up before AI touches your customer data retention rules');
   });
 
+  test('generated article metadata stays inside OpenSEO length limits', () => {
+    const seoTitles = new Set<string>();
+    for (const post of published) {
+      const title = generator.getSeoTitle(post);
+      const description = generator.getSeoDescription(post);
+      expect(title.length, post.slug).toBeGreaterThanOrEqual(10);
+      expect(title.length, post.slug).toBeLessThanOrEqual(60);
+      expect(description.length, post.slug).toBeGreaterThanOrEqual(70);
+      expect(description.length, post.slug).toBeLessThanOrEqual(160);
+      expect(seoTitles.has(title), `duplicate SEO title: ${title}`).toBe(false);
+      seoTitles.add(title);
+    }
+  });
+
+  test('all indexable pages pass OpenSEO-compatible on-page checks', () => {
+    expect(() => execFileSync(process.execPath, ['scripts/check-seo.js'], { cwd: root })).not.toThrow();
+  });
+
   test('social cards have the required dimensions and budget', async () => {
     for (const slug of [published[0].slug, 'why-ai-pilots-stall']) {
       const imagePath = path.join(root, 'assets', 'social', `${slug}.jpg`);

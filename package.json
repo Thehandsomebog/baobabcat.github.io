@@ -6,6 +6,7 @@
     "generate": "node scripts/generate-blog.js",
     "generate:blog": "node scripts/generate-blog.js",
     "check:generated": "npm run generate && git diff --exit-code -- '*.html' sitemap.xml",
+    "check:seo": "node scripts/check-seo.js",
     "prepare:deploy": "node scripts/prepare-deploy.js",
     "lighthouse": "node scripts/run-lighthouse.js",
     "test": "playwright test",
