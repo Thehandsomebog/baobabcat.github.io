@@ -46,6 +46,15 @@ test.describe('Generated publishing contracts', () => {
     }
   });
 
+  test('deployment includes the Search Console verification file unchanged', () => {
+    const verificationFile = 'googlefcc2469c106d4caa.html';
+    const expected = `google-site-verification: ${verificationFile}`;
+    const source = fs.readFileSync(path.join(root, verificationFile), 'utf8');
+    expect(source.trim()).toBe(expected);
+    execFileSync(process.execPath, ['scripts/prepare-deploy.js'], { cwd: root });
+    expect(fs.readFileSync(path.join(root, '_site', verificationFile), 'utf8')).toBe(source);
+  });
+
   test('archive presentation shortens repeated series titles without changing canonical titles', () => {
     const post = published.find((entry) => entry.slug === 'what-to-clean-up-before-ai-touches-your-customer-data-retention-rules');
     const presentation = generator.getArchivePresentation(post);
