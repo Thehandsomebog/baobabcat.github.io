@@ -846,7 +846,7 @@ main {
 .case-preview-card h3,
 .post-preview h3,
 .step-card h3,
-.proof-card h3 {
+.proof-card h2 {
     margin-bottom: 10px;
     color: var(--text-primary);
 }
@@ -1051,7 +1051,7 @@ main {
     padding: 14px;
 }
 
-.service-sidebar__block h3 {
+.service-sidebar__block h2 {
     color: var(--accent-green);
     font-size: 14px;
     margin-bottom: 8px;
