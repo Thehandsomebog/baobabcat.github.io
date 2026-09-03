@@ -14,6 +14,7 @@ const rootFiles = [
     "favicon-16x16.png",
     "favicon-32x32.png",
     "favicon.svg",
+    "googlefcc2469c106d4caa.html",
     "index.html",
     "manifesto.html",
     "og-image.jpg",
