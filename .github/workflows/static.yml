@@ -42,12 +42,12 @@ jobs:
         run: npm run check:generated
       - name: Install test browsers
         run: npx playwright install --with-deps chromium firefox webkit
+      - name: Prepare and validate deployment artifact
+        run: npm run prepare:deploy && node scripts/check-seo.js --artifact
       - name: Run browser and accessibility tests
         run: npm test
       - name: Run Lighthouse budgets
         run: npm run lighthouse
-      - name: Prepare deploy artifact
-        run: npm run prepare:deploy
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

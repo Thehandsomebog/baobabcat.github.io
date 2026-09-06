@@ -3885,26 +3885,29 @@ module.exports = [
     },
     {
         slug: "response-time",
-        title: "How we cut support response time by 80%",
+        title: "A practical design for faster support response",
         date: "2026-04-08",
         readTime: "8m",
         category: "implementation guidance",
-        filename: "how-we-cut-response-time-80-percent.md",
+        filename: "representative-support-response-design.md",
+        representative: true,
+        updatedAt: "2026-09-06",
         status: "published",
         featured: true,
-        summary: "A breakdown of queue design, triage logic, and escalation rules that made the number believable.",
-        homeSummary: "A breakdown of queue design, triage logic, and escalation rules that made the number believable.",
+        summary: "A representative support workflow showing how queue design, triage logic, and escalation rules can reduce repeated work.",
+        homeSummary: "A representative workflow for queue design, triage, and human escalation—not a verified client result.",
         bodyHtml: `
-<h2>How we cut support response time by 80%</h2>
+<h2>A practical design for faster support response</h2>
+<p><strong>Representative example:</strong> This workflow illustrates an approach to support design. It is not a verified client case study or a measured performance result.</p>
 <p>Support response time is one of those metrics that leadership loves because it is easy to understand and easy to misuse. Many teams try to improve it by adding people, asking agents to move faster, or introducing an assistant that answers whatever it can. Those changes sometimes improve the number for a week or two, but they usually fail because they do not alter the structure of the queue. If the queue logic is wrong, speed at the edge does not fix the system.</p>
-<p>The support environment behind this result had three classic problems. First, a large percentage of requests were repetitive and did not require human judgment. Second, everything entered the same queue, so the simple work crowded out the important work. Third, by the time a complex request reached a person, the person often had to re-read the entire context from scratch. That meant even escalated tickets started slowly.</p>
-<h3>What changed</h3>
-<p>The first intervention was not the assistant itself. It was queue architecture. We separated common requests, ambiguous requests, and clearly human-required requests into different operating paths. OpenClaw handled the front-line conversation for the repetitive issues, but just as importantly it collected the right information for the complex ones. That reduced both first response time and the cost of escalation.</p>
-<p>The second intervention was classification discipline. Instead of asking the system to be &ldquo;smart&rdquo; in the abstract, we forced a smaller set of decisions: what type of request is this, what confidence threshold exists, what context needs to be gathered before handoff, and when should a human step in immediately. That simplicity matters. Support systems become noisy when they try to reason about everything at once. They improve when they do a few steps reliably.</p>
-<p>The third intervention was handoff quality. A handoff is not useful just because a human is now in the loop. A useful handoff arrives with a summary, the relevant context, what the assistant already tried, and why the escalation happened. That is where much of the time savings came from. We did not just move tickets faster. We removed the repeated context reconstruction that human agents were doing all day.</p>
-<h3>Why the result held</h3>
-<p>The queue improved because the humans were no longer doing low-value sorting work. They spent more time on the cases that actually needed expertise, and those cases arrived with enough context to act. That combination creates a compounding effect: the assistant does not need to solve every ticket, it just needs to keep humans from spending their best energy on the wrong tickets.</p>
-<p>This is why support transformations should be evaluated as operating redesign, not just as AI deployment. A business that measures only bot resolution rate can miss the more important effect: whether the queue is healthier, whether specialists are seeing the right issues, and whether customers are getting to the right path faster. Response time improved because the whole system got simpler.</p>
+<p>Consider a support team with three common problems: repetitive requests share a queue with urgent issues, simple work obscures cases needing judgment, and specialists must reconstruct context after every escalation. These are the constraints this representative design addresses.</p>
+<h3>Design the routing before choosing the assistant</h3>
+<p>Separate common requests, ambiguous requests, and human-required requests into distinct operating paths. An assistant such as OpenClaw is one possible tool for collecting information and handling approved repetitive questions. The routing rules, source quality, and escalation ownership matter more than the product choice.</p>
+<p>Keep classification narrow: request type, confidence threshold, information needed before handoff, and conditions requiring an immediate human response. Test these decisions against a reviewed sample of tickets before exposing the workflow to customers. Low confidence should lead to review, not a guessed answer.</p>
+<p>A useful handoff includes a summary, relevant source context, actions already attempted, and the reason for escalation. The intended benefit is less repeated context reconstruction. Specialists should be able to correct the summary and see the original request.</p>
+<h3>Measure before calling it a result</h3>
+<p>Record a baseline and comparison period with similar request volume and complexity. Define whether response time means any acknowledgment or a useful human response. Compare median and slow-tail response times, repeat contacts, escalations, and supervisor review effort. A faster acknowledgment is not success if resolution quality deteriorates.</p>
+<p>Evaluate this design as an operating change, not just an AI deployment. Bot resolution rate alone cannot show whether the queue is healthier, specialists see the right issues, and customers reach a useful answer. Treat improvement as a hypothesis until the comparison data supports it.</p>
 <p>That is also why this kind of work is repeatable. The exact tooling may change, but the principles do not. Good routing, good escalation, and good handoff design are durable. AI simply makes it more feasible to execute those principles at scale.</p>
 <div class="inline-cta">
     Read the related <a href="case-studies.html">case studies</a> or review <a href="services/openclaw.html">OpenClaw Deployment</a>.

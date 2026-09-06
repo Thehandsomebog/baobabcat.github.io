@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
+const { getPublishedPosts } = require("./generate-blog");
 
 const root = path.resolve(__dirname, "..");
-const destination = path.join(root, "_site");
 const rootFiles = [
     "404.html",
     "CNAME",
@@ -26,20 +26,33 @@ const rootFiles = [
     "terminal.js",
 ];
 
-fs.rmSync(destination, { recursive: true, force: true });
-fs.mkdirSync(destination, { recursive: true });
+function prepareDeploy(destination = path.join(root, "_site"), publishedPosts = getPublishedPosts()) {
+    if (path.resolve(destination) === root || path.resolve(destination) === path.parse(root).root) throw new Error("Unsafe artifact destination");
+    fs.rmSync(destination, { recursive: true, force: true });
+    fs.mkdirSync(destination, { recursive: true });
 
-for (const file of rootFiles) {
-    const source = path.join(root, file);
-    if (fs.existsSync(source)) fs.copyFileSync(source, path.join(destination, file));
+    for (const file of rootFiles) {
+        const source = path.join(root, file);
+        if (fs.existsSync(source)) fs.copyFileSync(source, path.join(destination, file));
+    }
+
+    fs.cpSync(path.join(root, "services"), path.join(destination, "services"), { recursive: true });
+    fs.mkdirSync(path.join(destination, "assets", "social"), { recursive: true });
+    for (const post of publishedPosts) {
+        const articleDirectory = path.join(destination, "blog", post.slug);
+        fs.mkdirSync(articleDirectory, { recursive: true });
+        fs.copyFileSync(path.join(root, "blog", post.slug, "index.html"), path.join(articleDirectory, "index.html"));
+        fs.copyFileSync(path.join(root, "assets", "social", `${post.slug}.jpg`), path.join(destination, "assets", "social", `${post.slug}.jpg`));
+    }
+    for (const file of fs.readdirSync(path.join(root, "services")).filter((file) => file.endsWith(".html"))) {
+        const socialFile = `service-${file.replace(/\.html$/, "")}.jpg`;
+        fs.copyFileSync(path.join(root, "assets", "social", socialFile), path.join(destination, "assets", "social", socialFile));
+    }
+    fs.writeFileSync(path.join(destination, ".nojekyll"), "");
+
+    console.log(`Prepared deploy artifact at ${destination}`);
+    return destination;
 }
 
-for (const directory of ["blog", "services"]) {
-    fs.cpSync(path.join(root, directory), path.join(destination, directory), { recursive: true });
-}
-
-fs.mkdirSync(path.join(destination, "assets"), { recursive: true });
-fs.cpSync(path.join(root, "assets", "social"), path.join(destination, "assets", "social"), { recursive: true });
-fs.writeFileSync(path.join(destination, ".nojekyll"), "");
-
-console.log(`Prepared deploy artifact at ${destination}`);
+module.exports = { prepareDeploy };
+if (require.main === module) prepareDeploy();

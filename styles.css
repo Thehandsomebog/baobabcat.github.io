@@ -36,10 +36,12 @@
 
 html {
     scroll-behavior: smooth;
+    background: var(--bg-primary);
 }
 
 body {
-    min-height: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
     background:
         radial-gradient(circle at top right, rgba(111, 213, 111, 0.08), transparent 28%),
         radial-gradient(circle at top left, rgba(119, 184, 216, 0.06), transparent 24%),
@@ -461,6 +463,8 @@ main {
 
 .hero-ascii-wrap {
     display: grid;
+    container-type: inline-size;
+    width: 100%;
     gap: 14px;
     align-self: flex-start;
 }
@@ -475,7 +479,7 @@ main {
 .hero-ascii-logo {
     margin: 0;
     color: var(--accent-green);
-    font-size: clamp(12px, 1.25vw, 18px);
+    font-size: clamp(8px, 2.4cqi, 18px);
     line-height: 1.1;
     letter-spacing: 0.02em;
     text-shadow: 0 0 18px rgba(111, 213, 111, 0.08);
@@ -1252,6 +1256,23 @@ main {
     min-width: 0;
 }
 
+.blog-list.split .blog-entry {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 6px 10px;
+}
+
+.blog-list.split .blog-entry__name,
+.blog-list.split .blog-entry__title-group {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.blog-list.split .blog-entry__category,
+.blog-list.split .blog-entry__date,
+.blog-list.split .blog-entry__time {
+    font-size: 11px;
+}
+
 .blog-entry__series {
     color: var(--text-muted);
     font-family: var(--font-mono);
@@ -1419,8 +1440,7 @@ main {
     transition:
         opacity var(--motion-fade) var(--ease-out),
         transform var(--motion-fade) var(--ease-out),
-        max-height var(--motion-fade) var(--ease-out),
-        padding var(--motion-fade) var(--ease-out);
+        border-color var(--motion-fade) var(--ease-out);
 }
 
 .success-banner.is-visible {
@@ -1634,6 +1654,31 @@ main {
 }
 
 /* Standalone article */
+.blog-reader.no-motion,
+.blog-list:has(+ .blog-reader.no-motion) {
+    transition: none;
+}
+
+.blog-reader .article-document {
+    border: 0;
+    background: none;
+}
+
+.blog-reader .article-header,
+.blog-reader .article-content {
+    padding: 0;
+}
+
+.blog-reader .article-header { margin-bottom: 24px; }
+.article-byline { color: var(--text-muted); font-size: 14px; }
+.related-reading { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+.learning-paths { padding: 32px clamp(16px, 4vw, 48px); }
+.learning-paths > p { margin: 12px 0 24px; color: var(--text-muted); }
+.learning-paths__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 24px; }
+.learning-paths ol { padding-left: 24px; margin-top: 12px; }
+.learning-paths a { display: inline-flex; align-items: center; min-height: 44px; }
+.related-reading a { display: inline-flex; align-items: center; min-height: 44px; }
+
 .article-layout {
     max-width: 920px;
 }
@@ -2108,12 +2153,19 @@ main {
 
     .consent-banner__actions {
         display: grid;
-        grid-template-columns: 1fr 1fr auto;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     }
 
     .consent-banner__actions .btn-terminal {
         min-height: 44px;
         padding: 8px 10px;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .consent-banner__actions a {
+        grid-column: 1 / -1;
+        justify-content: center;
     }
 
     .article-header,

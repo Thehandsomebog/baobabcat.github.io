@@ -3,6 +3,7 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import sharp from 'sharp';
 
 const root = path.resolve(__dirname, '..');
@@ -51,8 +52,11 @@ test.describe('Generated publishing contracts', () => {
     const expected = `google-site-verification: ${verificationFile}`;
     const source = fs.readFileSync(path.join(root, verificationFile), 'utf8');
     expect(source.trim()).toBe(expected);
-    execFileSync(process.execPath, ['scripts/prepare-deploy.js'], { cwd: root });
-    expect(fs.readFileSync(path.join(root, '_site', verificationFile), 'utf8')).toBe(source);
+    const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'baobabcat-deploy-test-'));
+    try {
+      const artifact = require('../scripts/prepare-deploy').prepareDeploy(path.join(temporary, 'site'));
+      expect(fs.readFileSync(path.join(artifact, verificationFile), 'utf8')).toBe(source);
+    } finally { fs.rmSync(temporary, { recursive: true, force: true }); }
   });
 
   test('archive presentation shortens repeated series titles without changing canonical titles', () => {

@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 const testPort = 4173;
-const testBaseUrl = `http://localhost:${testPort}`;
+const testBaseUrl = `http://127.0.0.1:${testPort}`;
 
 export default defineConfig({
   testDir: './tests',
@@ -57,8 +57,8 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: `npx serve -l ${testPort}`,
+    command: `npm run prepare:deploy && node scripts/serve-site.js ${testPort}`,
     url: testBaseUrl,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
   },
 });

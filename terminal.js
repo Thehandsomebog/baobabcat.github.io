@@ -106,9 +106,7 @@ function animateStats() {
         { status: "status: available for new client work" }
     ];
 
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    stats.forEach((stat, index) => {
+    stats.forEach((stat) => {
         const line = document.createElement("div");
         line.className = "stat-line";
 
@@ -160,7 +158,7 @@ function setActiveTab() {
             return;
         }
 
-        const normalizedHref = href.replace(/^(\.\/|\.\.\/)+/, "");
+        const normalizedHref = new URL(href, window.location.href).pathname.replace(/^\//, "");
         const normalizedRoute = normalizedHref.replace(/(?:index)?\.html$/, "").replace(/\/$/, "") || "index";
         const serviceDetail = page.startsWith("services/");
         const articleDetail = page.startsWith("blog/");
@@ -190,6 +188,10 @@ function initBlog() {
     let activeCategory = "all";
     let visibleLimit = pageSize;
     let lastTrigger = null;
+    let matchCount = entries.length;
+    let requestVersion = 0;
+    const articleCache = new Map();
+    const desktop = window.matchMedia("(min-width: 1024px)");
 
     if (!list || !reader || !readerContent || entries.length === 0) {
         return;
@@ -204,10 +206,9 @@ function initBlog() {
             return matchesCategory && matchesQuery;
         });
 
-        entries.forEach((entry) => {
-            const matchIndex = matches.indexOf(entry);
-            entry.hidden = matchIndex === -1 || matchIndex >= visibleLimit;
-        });
+        matchCount = matches.length;
+        const visible = new Set(matches.slice(0, visibleLimit));
+        entries.forEach((entry) => { entry.hidden = !visible.has(entry); });
 
         const shown = Math.min(matches.length, visibleLimit);
         if (resultCount) {
@@ -224,6 +225,8 @@ function initBlog() {
     let readerHistoryActive = false;
 
     function closePost({ restoreHistory = false } = {}) {
+        requestVersion += 1;
+        reader.removeAttribute("aria-busy");
         reader.classList.remove("open");
         reader.setAttribute("aria-hidden", "true");
         reader.setAttribute("inert", "");
@@ -244,7 +247,9 @@ function initBlog() {
         }
     }
 
-    function openPost(entry, { updateHistory = true } = {}) {
+    async function openPost(entry, { updateHistory = true, keyboard = false } = {}) {
+        const version = ++requestVersion;
+        reader.classList.toggle("no-motion", keyboard);
         entries.forEach((item) => {
             item.classList.remove("active");
             item.setAttribute("aria-expanded", "false");
@@ -254,12 +259,16 @@ function initBlog() {
         lastTrigger = entry;
 
         const postId = entry.dataset.post;
-        const template = postId ? document.getElementById(`post-${postId}`) : null;
-        if (!template) {
-            return;
-        }
-
-        readerContent.replaceChildren(template.content.cloneNode(true));
+        const fullLink = document.createElement("a");
+        fullLink.className = "blog-reader__full-link";
+        fullLink.href = entry.href;
+        fullLink.textContent = "Open full article";
+        const loading = document.createElement("p");
+        loading.setAttribute("role", "status");
+        loading.textContent = "Loading article…";
+        readerContent.replaceChildren(fullLink, loading);
+        readerContent.scrollTop = 0;
+        reader.setAttribute("aria-busy", "true");
         if (readerLabel) {
             readerLabel.textContent = `~/blog/${postId}.md`;
         }
@@ -273,12 +282,49 @@ function initBlog() {
             history[historyMethod]({ blogReader: true, postId }, "", entry.href);
             readerHistoryActive = true;
         }
-        window.BaobabAnalytics?.track("blog_article_open", { article_slug: postId, source: "archive_reader" });
+        setActiveTab();
+
+        try {
+            if (!articleCache.has(postId)) {
+                const response = await fetch(entry.href, { signal: AbortSignal.timeout(12000) });
+                if (!response.ok) throw new Error("Article unavailable");
+                const doc = new DOMParser().parseFromString(await response.text(), "text/html");
+                const article = doc.querySelector(".article-document");
+                if (!article) throw new Error("Article unavailable");
+                const title = article.querySelector("h1");
+                if (title) {
+                    const heading = doc.createElement("h2");
+                    heading.textContent = title.textContent;
+                    title.replaceWith(heading);
+                }
+                // Content headings sit below the preview title, never beside it.
+                article.querySelectorAll(".article-content h2").forEach((heading) => {
+                    const childHeading = doc.createElement("h3");
+                    childHeading.textContent = heading.textContent;
+                    heading.replaceWith(childHeading);
+                });
+                article.querySelector(".article-content")?.classList.remove("blog-reader__content");
+                articleCache.set(postId, article);
+            }
+            if (version !== requestVersion) return;
+            readerContent.replaceChildren(fullLink, articleCache.get(postId).cloneNode(true));
+            readerContent.scrollTop = 0;
+            reader.removeAttribute("aria-busy");
+            window.BaobabAnalytics?.track("blog_article_open", { article_slug: postId, source: "archive_reader" });
+        } catch {
+            if (version !== requestVersion) return;
+            loading.textContent = "The preview could not load. Open the full article or try again.";
+            reader.removeAttribute("aria-busy");
+            fullLink.focus({ preventScroll: true });
+            return;
+        }
 
         const heading = readerContent.querySelector("h2");
         if (heading) {
             heading.setAttribute("tabindex", "-1");
-            requestAnimationFrame(() => heading.focus({ preventScroll: true }));
+            requestAnimationFrame(() => {
+                if (version === requestVersion) heading.focus({ preventScroll: true });
+            });
         } else {
             reader.focus({ preventScroll: true });
         }
@@ -286,11 +332,11 @@ function initBlog() {
 
     entries.forEach((entry) => {
         entry.addEventListener("click", (event) => {
-            const desktopReader = window.matchMedia("(min-width: 1024px)").matches;
+            const desktopReader = desktop.matches;
             const primaryUnmodified = event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
             if (!desktopReader || !primaryUnmodified) return;
             event.preventDefault();
-            openPost(entry);
+            openPost(entry, { keyboard: event.detail === 0 });
         });
     });
 
@@ -304,10 +350,6 @@ function initBlog() {
         search.addEventListener("input", () => {
             visibleLimit = pageSize;
             updateArchive();
-            window.BaobabAnalytics?.track("blog_filter", {
-                filter: activeCategory,
-                result_count: entries.filter((entry) => !entry.hidden).length,
-            });
         });
     }
 
@@ -321,6 +363,7 @@ function initBlog() {
                 item.setAttribute("aria-pressed", String(selected));
             });
             updateArchive();
+            window.BaobabAnalytics?.track("blog_filter", { filter: activeCategory, result_count: matchCount });
         });
     });
 
@@ -336,6 +379,7 @@ function initBlog() {
 
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && reader.classList.contains("open") && closeBtn) {
+            reader.classList.add("no-motion");
             closeBtn.click();
         }
     });
@@ -345,7 +389,7 @@ function initBlog() {
     const hash = window.location.hash.replace(/^#/, "");
     if (hash.startsWith("post-")) {
         const slug = hash.replace(/^post-/, "");
-        const entry = document.querySelector(`.blog-entry[data-post="${slug}"]`);
+        const entry = entries.find((item) => item.dataset.post === slug);
         if (entry) {
             window.location.replace(entry.href);
         }
@@ -359,13 +403,24 @@ function initBlog() {
             const bucket = length === 0 ? "0" : length <= 3 ? "1-3" : length <= 8 ? "4-8" : "9+";
             window.BaobabAnalytics?.track("blog_search", {
                 query_length_bucket: bucket,
-                result_count: entries.filter((entry) => !entry.hidden).length,
+                result_count: matchCount,
             });
         }, 500);
     });
 
-    window.addEventListener("popstate", () => {
-        if (reader.classList.contains("open")) closePost();
+    window.addEventListener("popstate", (event) => {
+        const entry = event.state?.blogReader && entries.find((item) => item.dataset.post === event.state.postId);
+        if (entry) {
+            if (!desktop.matches) return window.location.reload();
+            readerHistoryActive = true;
+            openPost(entry, { updateHistory: false, keyboard: true });
+        } else {
+            closePost();
+        }
+        setActiveTab();
+    });
+    desktop.addEventListener("change", () => {
+        if (!desktop.matches && readerHistoryActive) window.location.reload();
     });
 }
 

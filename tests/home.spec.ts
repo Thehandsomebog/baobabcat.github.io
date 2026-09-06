@@ -32,10 +32,10 @@ test.describe('Home Page', () => {
   test('top-level nav points to active terminal pages only', async ({ page }) => {
     const links = page.locator('.status-bar__tab a');
     await expect(links).toHaveCount(5);
-    await expect(links.nth(0)).toHaveAttribute('href', 'index.html');
-    await expect(links.nth(1)).toHaveAttribute('href', 'services.html');
-    await expect(links.nth(2)).toHaveAttribute('href', 'blog.html');
-    await expect(links.nth(3)).toHaveAttribute('href', 'case-studies.html');
-    await expect(links.nth(4)).toHaveAttribute('href', 'contact.html');
+    await expect(links.nth(0)).toHaveAttribute('href', '/index.html');
+    await expect(links.nth(1)).toHaveAttribute('href', '/services.html');
+    await expect(links.nth(2)).toHaveAttribute('href', '/blog.html');
+    await expect(links.nth(3)).toHaveAttribute('href', '/case-studies.html');
+    await expect(links.nth(4)).toHaveAttribute('href', '/contact.html');
   });
 });

@@ -31,10 +31,7 @@ test.describe('Blog Page', () => {
 
     expect(postId).not.toBeNull();
 
-    const expectedTitle = await page.evaluate((id) => {
-      const template = document.getElementById(`post-${id}`) as HTMLTemplateElement | null;
-      return template?.content.querySelector('h2')?.textContent?.trim() ?? '';
-    }, postId);
+    const expectedTitle = posts.find((post) => post.slug === postId)?.title;
 
     await firstEntry.click();
     await expect(page.locator('.blog-reader__content')).toContainText(expectedTitle);
@@ -66,7 +63,7 @@ test.describe('Blog Page', () => {
     await expect(reader).toHaveClass(/open/);
     await expect(page.locator('.blog-reader__content')).not.toBeEmpty();
     await expect(firstEntry).toHaveAttribute('aria-expanded', 'true');
-    await expect(page.locator('.blog-reader__content h2')).toBeFocused();
+    await expect(page.locator('.blog-reader__content h2').first()).toBeFocused();
   });
 
   test('uses concise archive titles while preserving the full article title', async ({ page }) => {

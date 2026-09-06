@@ -47,7 +47,7 @@ test.describe('Service hub and detail pages', () => {
   test('services hub links to every detail page', async ({ page }) => {
     await page.goto('/services.html');
     for (const path of detailPages) {
-      await expect(page.locator(`a[href="${path.replace(/^\//, '')}"]`).first()).toBeVisible();
+      await expect(page.locator(`a[href="${path}"]`).first()).toBeVisible();
     }
   });
 

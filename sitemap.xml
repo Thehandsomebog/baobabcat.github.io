@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://baobabcat.com/</loc><lastmod>2026-08-31</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://baobabcat.com/services.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://baobabcat.com/blog.html</loc><lastmod>2026-08-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://baobabcat.com/case-studies.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://baobabcat.com/contact.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://baobabcat.com/privacy.html</loc><lastmod>2026-08-31</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://baobabcat.com/manifesto.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://baobabcat.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://baobabcat.com/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://baobabcat.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://baobabcat.com/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://baobabcat.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://baobabcat.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://baobabcat.com/manifesto.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://baobabcat.com/services/ai-analytics.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://baobabcat.com/services/ai-automation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://baobabcat.com/services/ai-strategy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://baobabcat.com/services/ai-training.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://baobabcat.com/services/custom-ai.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://baobabcat.com/services/openclaw.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://baobabcat.com/blog/ai-training-evidence-review-for-service-and-support-teams/</loc><lastmod>2026-08-31</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://baobabcat.com/blog/ai-warranty-claim-intake-for-service-teams/</loc><lastmod>2026-08-24</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://baobabcat.com/blog/ai-accessibility-review-for-customer-service-communications/</loc><lastmod>2026-08-17</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
@@ -126,7 +132,7 @@
   <url><loc>https://baobabcat.com/blog/after-hours-ai-intake/</loc><lastmod>2026-04-14</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://baobabcat.com/blog/why-ai-pilots-stall/</loc><lastmod>2026-04-13</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://baobabcat.com/blog/age-of-ai-agents/</loc><lastmod>2026-04-11</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://baobabcat.com/blog/response-time/</loc><lastmod>2026-04-08</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://baobabcat.com/blog/response-time/</loc><lastmod>2026-09-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://baobabcat.com/blog/automation-small-business/</loc><lastmod>2026-04-05</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://baobabcat.com/blog/openclaw-fit/</loc><lastmod>2026-04-01</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://baobabcat.com/blog/stay-human/</loc><lastmod>2026-03-28</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>

@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const os = require("node:os");
 const { spawn } = require("child_process");
 const { chromium } = require("playwright");
 
@@ -29,6 +30,8 @@ async function waitForServer() {
 }
 
 async function main() {
+    const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "baobabcat-lighthouse-"));
+    const artifact = require("./prepare-deploy").prepareDeploy(path.join(temporary, "site"));
     const [{ default: lighthouse }, chromeLauncher] = await Promise.all([
         import("lighthouse"),
         import("chrome-launcher"),
@@ -37,7 +40,7 @@ async function main() {
 
     const server = spawn(
         process.execPath,
-        [path.join(root, "node_modules", "serve", "build", "main.js"), "-l", String(port)],
+        [path.join(root, "scripts", "serve-site.js"), String(port), artifact],
         { cwd: root, stdio: "ignore" }
     );
 
@@ -89,6 +92,7 @@ async function main() {
     } finally {
         if (chrome) await chrome.kill();
         server.kill("SIGTERM");
+        fs.rmSync(temporary, { recursive: true, force: true });
     }
 }
 

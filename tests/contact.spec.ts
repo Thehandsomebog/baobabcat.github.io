@@ -54,4 +54,17 @@ test.describe('Contact form states', () => {
     await expect(page.locator('#form-status')).toContainText('offline');
     await expect(page.locator('#message')).toHaveValue('Offline message');
   });
+
+  test('timeout restores the form without losing entries', async ({ page }) => {
+    await page.clock.install();
+    await page.route('https://api.web3forms.com/submit', () => {});
+    await page.locator('#name').fill('Test User');
+    await page.locator('#email').fill('test@example.com');
+    await page.locator('#message').fill('Keep after timeout');
+    await page.getByRole('button', { name: '[Send message]' }).click();
+    await page.clock.fastForward(12500);
+    await expect(page.locator('#form-status')).toContainText('timed out');
+    await expect(page.locator('#message')).toHaveValue('Keep after timeout');
+    await expect(page.getByRole('button', { name: '[Send message]' })).toBeEnabled();
+  });
 });

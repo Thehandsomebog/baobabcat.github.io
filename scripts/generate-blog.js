@@ -3,6 +3,7 @@ const path = require("path");
 const sharp = require("sharp");
 const posts = require("../content/posts.cjs");
 const { proofEntries, representativePatterns } = require("../content/proof.cjs");
+const { descriptions, learningPaths } = require("../content/editorial.cjs");
 
 const repoRoot = path.resolve(__dirname, "..");
 const blogPath = path.join(repoRoot, "blog.html");
@@ -53,32 +54,21 @@ function capitalize(value) {
     return value ? `${value[0].toUpperCase()}${value.slice(1)}` : value;
 }
 
-function trimAtWord(value, maxLength, punctuation = "") {
-    const normalized = value.trim();
-    if (normalized.length <= maxLength) return normalized;
-    const available = maxLength - punctuation.length;
-    const slice = normalized.slice(0, available + 1);
-    const lastSpace = slice.lastIndexOf(" ");
-    const end = lastSpace >= Math.floor(available * 0.65) ? lastSpace : available;
-    return `${normalized.slice(0, end).replace(/[,:;\-\u2013\u2014]+$/u, "")}${punctuation}`;
-}
-
 function getSeoTitle(post) {
-    if (post.seoTitle) return trimAtWord(post.seoTitle, 60);
+    if (post.seoTitle) return post.seoTitle.trim();
     if (post.title.length <= 60) return post.title;
 
     const cleanupMatch = post.title.match(/^What to clean up before AI touches (?:your )?(.+)$/i);
-    if (cleanupMatch) return trimAtWord(`AI prep: ${capitalize(cleanupMatch[1])}`, 60);
+    if (cleanupMatch) return `AI prep: ${capitalize(cleanupMatch[1])}`;
 
     const withoutAudience = post.title
         .replace(/\s+for\s+.*?\s+teams$/i, "")
         .replace(/\s+(?:(?:commercial|field|multi-location|national account|recurring)\s+)?(?:service|support|ops)(?:\s+(?:and\s+)?(?:service|support|ops))?\s+teams$/i, "");
-    return trimAtWord(withoutAudience, 60);
+    return withoutAudience;
 }
 
 function getSeoDescription(post) {
-    if (post.seoDescription) return trimAtWord(post.seoDescription, 160, ".");
-    return trimAtWord(post.summary, 160, ".");
+    return post.seoDescription || descriptions[post.slug] || post.summary;
 }
 
 function getArchivePresentation(post) {
@@ -122,10 +112,11 @@ function writeIfChanged(filePath, content) {
     }
 }
 
-function getPublishedPosts() {
+function getPublishedPosts(sourcePosts = posts) {
     const slugs = new Set();
     const seoTitles = new Set();
-    const published = posts
+    const approved = getApprovedProof();
+    const published = sourcePosts
         .filter((post) => (post.status || "published") === "published")
         .map((post) => ({ ...post, canonicalPath: `/blog/${post.slug}/` }))
         .sort((left, right) => new Date(right.date) - new Date(left.date));
@@ -136,6 +127,13 @@ function getPublishedPosts() {
             assert(post[field], `Missing ${field} for ${post.slug || "post"}`);
         });
         assert(!slugs.has(post.slug), `Duplicate slug: ${post.slug}`);
+        assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(post.slug), `Invalid slug: ${post.slug}`);
+        assert(/^\d{4}-\d{2}-\d{2}$/.test(post.date) && Number.isFinite(Date.parse(post.date)), `Invalid date: ${post.slug}`);
+        const claimText = [post.title, post.summary, post.homeSummary, post.bodyHtml].join(" ");
+        const hasResult = /\b(?:we|our client|client result|measured result)\b[^.!?<>]{0,100}\d+(?:\.\d+)?\s*%/i.test(claimText);
+        if (post.proofSlug || post.claimsResults || hasResult) {
+            assert(approved.some((entry) => entry.slug === post.proofSlug), `Result-bearing article ${post.slug} requires approved proofSlug`);
+        }
         slugs.add(post.slug);
         const seoTitle = getSeoTitle(post);
         const seoDescription = getSeoDescription(post);
@@ -187,10 +185,15 @@ function renderBlogEntries(postsToRender) {
 }
 
 function renderBlogTemplates(postsToRender) {
-    return postsToRender.map((post) => `        <template id="post-${post.slug}">
-            <a class="blog-reader__full-link" href="${post.canonicalPath}">Open full article</a>
-${indentBlock(post.bodyHtml, "            ")}
-        </template>`).join("\n\n");
+    return `<section class="learning-paths" aria-labelledby="learning-paths-title">
+            <h2 id="learning-paths-title">Start with a workflow</h2>
+            <p>Follow a short reading path, then explore the archive for your specific operating constraint.</p>
+            <div class="learning-paths__grid">${learningPaths.map((group) => `<section><h3>${escapeHtml(group.title)}</h3><ol>${group.posts.map((slug) => {
+                const post = postsToRender.find((item) => item.slug === slug);
+                assert(post, `Missing learning-path post: ${slug}`);
+                return `<li><a href="${post.canonicalPath}">${escapeHtml(post.title)}</a></li>`;
+            }).join("")}</ol></section>`).join("")}</div>
+        </section>`;
 }
 
 function renderHomePosts(postsToRender) {
@@ -239,11 +242,14 @@ function renderHomeProof(approvedProof) {
 }
 
 function absolutizeArticleHtml(html) {
-    return html
-        .replaceAll('href="services/', 'href="/services/')
-        .replaceAll('href="contact.html"', 'href="/contact.html"')
-        .replaceAll('href="blog.html"', 'href="/blog.html"')
-        .replaceAll('href="case-studies.html"', 'href="/case-studies.html"');
+    return normalizeDocumentUrls(html, `${siteUrl}/`);
+}
+
+function relatedPosts(post) {
+    const published = getPublishedPosts();
+    const path = learningPaths.find((group) => group.posts.includes(post.slug))
+        || learningPaths.find((group) => group.slug === (/support|triage|knowledge/i.test(post.title) ? "support" : /service|dispatch|billing|technician/i.test(post.title) ? "service" : "deployment"));
+    return path.posts.filter((slug) => slug !== post.slug).slice(0, 3).map((slug) => published.find((entry) => entry.slug === slug)).filter(Boolean);
 }
 
 function articlePage(post) {
@@ -257,6 +263,14 @@ function articlePage(post) {
         .replace(/<h2>.*?<\/h2>/, "")
         .replaceAll("<h3>", "<h2>")
         .replaceAll("</h3>", "</h2>");
+    const schema = JSON.stringify({
+        "@context": "https://schema.org", "@type": "BlogPosting", headline: post.title,
+        description: getSeoDescription(post), image: social, datePublished: post.date,
+        ...(post.updatedAt ? { dateModified: post.updatedAt } : {}),
+        author: { "@type": "Organization", name: "BaobabCat", url: siteUrl },
+        publisher: { "@type": "Organization", name: "BaobabCat", url: siteUrl },
+        mainEntityOfPage: canonical,
+    }).replaceAll("<", "\\u003c");
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -280,6 +294,7 @@ function articlePage(post) {
     <meta name="twitter:description" content="${summary}">
     <meta name="twitter:image" content="${social}">
     <meta name="twitter:image:alt" content="BaobabCat article card: ${title}">
+    <script type="application/ld+json">${schema}</script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/styles.css">
 </head>
@@ -291,10 +306,15 @@ function articlePage(post) {
                 <div class="eyebrow">${escapeHtml(post.category)}</div>
                 <h1>${title}</h1>
                 <p class="article-meta"><time datetime="${post.date}">${formatDate(post.date, true)}</time><span>${escapeHtml(post.readTime)} read</span></p>
+                <p class="article-byline">By <a href="/manifesto.html">BaobabCat</a>${post.updatedAt ? ` · Updated <time datetime="${post.updatedAt}">${formatDate(post.updatedAt, true)}</time>` : ""}</p>
                 <p class="article-summary">${summary}</p>
             </header>
             <div class="blog-reader__content article-content">
 ${indentBlock(articleBody, "                ")}
+                <nav class="related-reading" aria-label="Related reading">
+                    <h2>Continue learning</h2>
+                    <ul>${relatedPosts(post).map((related) => `<li><a href="${related.canonicalPath}">${escapeHtml(related.title)}</a></li>`).join("")}</ul>
+                </nav>
             </div>
         </article>
         <aside class="pane article-cta">
@@ -376,10 +396,11 @@ function renderSitemap(publishedPosts) {
         ["/privacy.html", "yearly", "0.3"],
         ["/manifesto.html", "monthly", "0.4"],
     ];
-    const latest = publishedPosts[0].date;
-    const urls = staticUrls.map(([url, frequency, priority]) => `  <url><loc>${siteUrl}${url}</loc><lastmod>${latest}</lastmod><changefreq>${frequency}</changefreq><priority>${priority}</priority></url>`);
+    fs.readdirSync(path.join(repoRoot, "services")).filter((file) => file.endsWith(".html")).sort()
+        .forEach((file) => staticUrls.push([`/services/${file}`, "monthly", "0.8"]));
+    const urls = staticUrls.map(([url, frequency, priority]) => `  <url><loc>${siteUrl}${url}</loc><changefreq>${frequency}</changefreq><priority>${priority}</priority></url>`);
     publishedPosts.forEach((post) => {
-        urls.push(`  <url><loc>${siteUrl}${post.canonicalPath}</loc><lastmod>${post.date}</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>`);
+        urls.push(`  <url><loc>${siteUrl}${post.canonicalPath}</loc><lastmod>${post.updatedAt || post.date}</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>`);
     });
     return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join("\n")}\n</urlset>\n`;
 }
@@ -410,11 +431,56 @@ async function main() {
         await generateSocialImage(path.join(socialDir, `${post.slug}.jpg`), post.title, post.category);
     }
     await generateSocialImage(path.join(repoRoot, "og-image.jpg"), "AI systems for real business workflows", "BaobabCat");
+    const serviceFiles = fs.readdirSync(path.join(repoRoot, "services")).filter((file) => file.endsWith(".html")).sort();
+    for (const file of serviceFiles) {
+        const filePath = path.join(repoRoot, "services", file);
+        let html = fs.readFileSync(filePath, "utf8");
+        const title = html.match(/<title>(.*?)<\/title>/)[1];
+        const description = html.match(/<meta name="description" content="([^"]*)"/)[1];
+        const slug = file.replace(/\.html$/, "");
+        const canonical = `${siteUrl}/services/${file}`;
+        const social = `${siteUrl}/assets/social/service-${slug}.jpg`;
+        const metadata = `<!-- GENERATED_SERVICE_META_START -->
+    <link rel="canonical" href="${canonical}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="${canonical}">
+    <meta property="og:title" content="${title}">
+    <meta property="og:description" content="${description}">
+    <meta property="og:image" content="${social}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="BaobabCat service: ${title}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${title}">
+    <meta name="twitter:description" content="${description}">
+    <meta name="twitter:image" content="${social}">
+    <meta name="twitter:image:alt" content="BaobabCat service: ${title}">
+    <!-- GENERATED_SERVICE_META_END -->`;
+        html = html.includes("<!-- GENERATED_SERVICE_META_START -->")
+            ? html.replace(/<!-- GENERATED_SERVICE_META_START -->[\s\S]*?<!-- GENERATED_SERVICE_META_END -->/, metadata)
+            : html.replace("</head>", `    ${metadata}\n</head>`);
+        // Existing service-relative links resolve against their actual document path.
+        html = normalizeDocumentUrls(html, canonical);
+        writeIfChanged(filePath, html);
+        await generateSocialImage(path.join(socialDir, `service-${slug}.jpg`), title.replace(/ &amp; /g, " & ").replace(/ \| BaobabCat$/, ""), "Services");
+    }
+    for (const file of ["index.html", "blog.html", "case-studies.html", "contact.html", "services.html", "privacy.html", "manifesto.html", "404.html"]) {
+        const filePath = path.join(repoRoot, file);
+        writeIfChanged(filePath, normalizeDocumentUrls(fs.readFileSync(filePath, "utf8"), `${siteUrl}/${file}`));
+    }
     writeIfChanged(sitemapPath, renderSitemap(publishedPosts));
     console.log(`Generated ${publishedPosts.length} articles, social cards, proof, and sitemap output.`);
 }
 
-module.exports = { getPublishedPosts, getApprovedProof, getArchivePresentation, getSeoTitle, getSeoDescription, renderSitemap, articlePage };
+function normalizeDocumentUrls(html, baseUrl) {
+    return html.replace(/\b(href|src)=(['"])([^'"]+)\2/g, (match, attribute, quote, value) => {
+        if (/^(?:#|[a-z][a-z\d+.-]*:|\/\/)/i.test(value)) return match;
+        const url = new URL(value, baseUrl);
+        return `${attribute}=${quote}${url.pathname}${url.search}${url.hash}${quote}`;
+    });
+}
+
+module.exports = { getPublishedPosts, getApprovedProof, getArchivePresentation, getSeoTitle, getSeoDescription, renderSitemap, articlePage, normalizeDocumentUrls };
 
 if (require.main === module) {
     main().catch((error) => {
