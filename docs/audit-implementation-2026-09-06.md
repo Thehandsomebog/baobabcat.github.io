@@ -14,6 +14,7 @@ Implements the live-site and code audit associated with Beads issue `baobabcat.g
 - Add curated support, service-intake and safe-deployment reading paths, related articles, truthful organizational attribution and BlogPosting structured data. Preserve existing article URLs.
 - Refine consent choices, desktop ASCII-mark sizing, narrow reader-list title layout, human-centered service copy and engagement scope guidance. Keep motion restrained and functional, following the Emil design skill.
 - Build deployment output from the published manifest, excluding stale unpublished article files and cards. Validate the actual artifact with real 404 behavior before deployment; isolate Lighthouse staging from browser-test staging.
+- Preserve reviewed social-card bytes across operating systems using a committed rendering-input/output fingerprint manifest. The first Linux release check exposed differing font rasterization; changed inputs or corrupted output still trigger regeneration and the generated-diff gate.
 - Expand axe, contact-timeout, navigation/history, metadata and publishing regression coverage. Fix the short-page background that caused a WebKit 404 contrast failure.
 
 ## Verification

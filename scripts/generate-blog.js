@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
+const { createHash } = require("node:crypto");
 const posts = require("../content/posts.cjs");
 const { proofEntries, representativePatterns } = require("../content/proof.cjs");
 const { descriptions, learningPaths } = require("../content/editorial.cjs");
@@ -11,6 +12,10 @@ const homePath = path.join(repoRoot, "index.html");
 const casesPath = path.join(repoRoot, "case-studies.html");
 const sitemapPath = path.join(repoRoot, "sitemap.xml");
 const socialDir = path.join(repoRoot, "assets", "social");
+const socialManifestPath = path.join(socialDir, "manifest.json");
+const previousSocialManifest = fs.existsSync(socialManifestPath) ? JSON.parse(fs.readFileSync(socialManifestPath, "utf8")) : {};
+const nextSocialManifest = {};
+const jpegOptions = { quality: 82, progressive: true };
 const siteUrl = "https://baobabcat.com";
 
 const BLOG_ENTRIES_START = "<!-- GENERATED_BLOG_ENTRIES_START -->";
@@ -377,13 +382,31 @@ function socialSvg(title, category = "AI operations") {
     </svg>`);
 }
 
+function sha256(value) {
+    return createHash("sha256").update(value).digest("hex");
+}
+
+function socialInputHash(title, category) {
+    return sha256(Buffer.concat([socialSvg(title, category), Buffer.from(JSON.stringify({ jpegOptions, sharp: sharp.versions.sharp }))]));
+}
+
 async function generateSocialImage(filePath, title, category) {
-    const next = await sharp(socialSvg(title, category)).jpeg({ quality: 82, progressive: true }).toBuffer();
+    const key = path.relative(repoRoot, filePath).split(path.sep).join("/");
+    const inputHash = socialInputHash(title, category);
+    const previous = previousSocialManifest[key];
+    // Font rasterization varies by OS. Reuse reviewed bytes only when both the
+    // complete rendering input and the actual output match the committed manifest.
+    if (previous?.inputHash === inputHash && fs.existsSync(filePath) && sha256(fs.readFileSync(filePath)) === previous.outputHash) {
+        nextSocialManifest[key] = previous;
+        return;
+    }
+    const next = await sharp(socialSvg(title, category)).jpeg(jpegOptions).toBuffer();
     assert(next.length <= 200 * 1024, `${path.basename(filePath)} exceeds 200 KB`);
     if (!fs.existsSync(filePath) || !fs.readFileSync(filePath).equals(next)) {
         fs.mkdirSync(path.dirname(filePath), { recursive: true });
         fs.writeFileSync(filePath, next);
     }
+    nextSocialManifest[key] = { inputHash, outputHash: sha256(next) };
 }
 
 function renderSitemap(publishedPosts) {
@@ -469,6 +492,8 @@ async function main() {
         writeIfChanged(filePath, normalizeDocumentUrls(fs.readFileSync(filePath, "utf8"), `${siteUrl}/${file}`));
     }
     writeIfChanged(sitemapPath, renderSitemap(publishedPosts));
+    const orderedManifest = Object.fromEntries(Object.entries(nextSocialManifest).sort(([left], [right]) => left.localeCompare(right, "en")));
+    writeIfChanged(socialManifestPath, `${JSON.stringify(orderedManifest, null, 2)}\n`);
     console.log(`Generated ${publishedPosts.length} articles, social cards, proof, and sitemap output.`);
 }
 
@@ -480,7 +505,7 @@ function normalizeDocumentUrls(html, baseUrl) {
     });
 }
 
-module.exports = { getPublishedPosts, getApprovedProof, getArchivePresentation, getSeoTitle, getSeoDescription, renderSitemap, articlePage, normalizeDocumentUrls };
+module.exports = { getPublishedPosts, getApprovedProof, getArchivePresentation, getSeoTitle, getSeoDescription, renderSitemap, articlePage, normalizeDocumentUrls, socialInputHash };
 
 if (require.main === module) {
     main().catch((error) => {

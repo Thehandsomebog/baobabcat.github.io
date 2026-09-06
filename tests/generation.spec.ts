@@ -18,6 +18,9 @@ function digestGenerated() {
     'blog.html',
     'case-studies.html',
     'sitemap.xml',
+    'assets/social/manifest.json',
+    'og-image.jpg',
+    ...fs.readdirSync(path.join(root, 'services')).filter((file) => file.endsWith('.html')).flatMap((file) => [`services/${file}`, `assets/social/service-${file.replace(/\.html$/, '')}.jpg`]),
     ...published.map((post) => `blog/${post.slug}/index.html`),
     ...published.map((post) => `assets/social/${post.slug}.jpg`),
   ];
@@ -44,6 +47,18 @@ test.describe('Generated publishing contracts', () => {
     const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
     for (const post of published) {
       expect(sitemap).toContain(`https://baobabcat.com/blog/${post.slug}/`);
+    }
+  });
+
+  test('social fingerprints validate rendering inputs and reviewed output bytes', () => {
+    const manifest = JSON.parse(fs.readFileSync(path.join(root, 'assets/social/manifest.json'), 'utf8'));
+    for (const [file, entry] of Object.entries(manifest) as [string, { inputHash: string; outputHash: string }][]) {
+      expect(createHash('sha256').update(fs.readFileSync(path.join(root, file))).digest('hex'), file).toBe(entry.outputHash);
+    }
+    for (const post of published) {
+      const entry = manifest[`assets/social/${post.slug}.jpg`];
+      expect(entry.inputHash).toBe(generator.socialInputHash(post.title, post.category));
+      expect(entry.inputHash).not.toBe(generator.socialInputHash(`${post.title} changed`, post.category));
     }
   });
 

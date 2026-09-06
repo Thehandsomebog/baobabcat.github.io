@@ -1,0 +1,522 @@
+{
+  "assets/social/after-hours-ai-intake.jpg": {
+    "inputHash": "9dc5cf74ad6018a785a46fdddb7a31168eafa2af18519919e01280e8d12e5c63",
+    "outputHash": "891a907a10f6eeadcd03c26c40accb2cbac880e4f83950e4c16fd563a90c922c"
+  },
+  "assets/social/age-of-ai-agents.jpg": {
+    "inputHash": "1c1072171316cf1f049a40d6f9f811631870fcc7a94d70fc526414d968344c5c",
+    "outputHash": "06d904ca58c9deaaff777482729b784f0e2d73f8c4e1d0e0b545e4a12ec916d2"
+  },
+  "assets/social/ai-accessibility-review-for-customer-service-communications.jpg": {
+    "inputHash": "bef73014d2cb5fd63bd64fe1f364d6e6a4bc37e151f6a59d25cf4b158df9242d",
+    "outputHash": "4e026c1350468e960b69dca441a9bd419df1da09f14a616ebe710d4a0779b1df"
+  },
+  "assets/social/ai-account-mapping-review-multi-location-service-teams.jpg": {
+    "inputHash": "db4367905135b8b3e588d91feca72237078f180492ba84a1a7f571ca5cf86e06",
+    "outputHash": "81421550d84de1e06d0f84d0ab73de93da2fb47a2fcc0610dfe036ca24679144"
+  },
+  "assets/social/ai-appointment-confirmation-service-teams.jpg": {
+    "inputHash": "60b8e114448266d9a7855905543900d31fd6304c36366f53f33ca6852b1ae51d",
+    "outputHash": "e5db977643892b7f2f4d613fc376eed22c3718a73a7202e0c2e1d39e5592c0fa"
+  },
+  "assets/social/ai-asset-record-match-review-service-teams.jpg": {
+    "inputHash": "a49b4ac96941e6e27fbba0af22c1fd8ef1d20284e4f64831e100252fe574b588",
+    "outputHash": "d6f66f6ed29610a6e41f34851a09da6e53a90be6b0ba69c2714fa137edcb569a"
+  },
+  "assets/social/ai-authorized-contact-review-commercial-service-teams.jpg": {
+    "inputHash": "9419df7d469c01faf03313f0c2574833e50be93830874ccb001757387c26e227",
+    "outputHash": "f04365e055312d8580e33f2c4c84060f55e0b3e21260a48591002c873e208c9c"
+  },
+  "assets/social/ai-backlog-aging-review-support-teams.jpg": {
+    "inputHash": "977f10a8b2070677a9063b4eb86168db6162408d2453bc9a6412b9eaabae111e",
+    "outputHash": "c0129fa5dbe5142dac1a5108c6172e990fcb32a1b99ab6e200ff0925ade24fff"
+  },
+  "assets/social/ai-branch-to-branch-parts-transfer-review-service-teams.jpg": {
+    "inputHash": "c839e2df647b8d9d916db96378fa376b43d7365acfbf30a1b0a1b59a8b9ccdcb",
+    "outputHash": "b89575997d23b90843fd9a6d54e4d34c506160104c3cb949259162a93da11658"
+  },
+  "assets/social/ai-callback-pattern-review-service-teams.jpg": {
+    "inputHash": "190b1478629751b29181ef38d3f4497c5a419d6939eed94b499c261f1bc1a3f7",
+    "outputHash": "a367693b86ef93a66557bd935c31e6fbf65f22085bfe4ca3cba9159366245209"
+  },
+  "assets/social/ai-certificate-of-insurance-review-commercial-service-teams.jpg": {
+    "inputHash": "aab8917216a78c44d9c68012887bf82eff9b1b0c1f80b37158f4ffed30054ef2",
+    "outputHash": "a85fa1c45e3868581edeab75727a16321e356ce86fdb11b33f9b8121749a16c1"
+  },
+  "assets/social/ai-chargeback-evidence-review-service-support-teams.jpg": {
+    "inputHash": "ba2d36673745ba5c75d17036292eeea7d6b142bfd7393e5b7fdb546beecda353",
+    "outputHash": "cfb2adebf17300a36052d44df87cf49a879d4d93a334aa8c36d56c09b742d0e7"
+  },
+  "assets/social/ai-core-return-and-vendor-credit-review-service-teams.jpg": {
+    "inputHash": "0917524d32f30a9d51827994233b043b3cf9e209365a5c22c3e84325450d499e",
+    "outputHash": "7a500b7103d5ac7fe13419cb11bda601ddd43986a159f849301441e4826152af"
+  },
+  "assets/social/ai-credit-hold-review-commercial-service-teams.jpg": {
+    "inputHash": "07a8feaaa3fb9a6ca59d3347ec307117933c3173630eba2e90f3285992b447e2",
+    "outputHash": "c7cf56b411ae947cd6034f255bb7fa5acce37443802d98e4da7208a57ce53e97"
+  },
+  "assets/social/ai-customer-billing-instruction-review-service-support-teams.jpg": {
+    "inputHash": "c4c873e3903b8535616a59f95c2e948324cf223d5be8a255d7d7b138c076dcd5",
+    "outputHash": "f877568446583ce793839da6d79ea446a163252c10adb77660ee519c7acda445"
+  },
+  "assets/social/ai-customer-portal-update-review-national-account-service-teams.jpg": {
+    "inputHash": "4b84ce0bfe1902fae6b3b627f432d960685f69f0ea18836a9277707045c92fb0",
+    "outputHash": "9e987ddaa82da56bbb91088b28e263dafc97790b54106c8152ea4f3073bf7211"
+  },
+  "assets/social/ai-customer-promise-tracking-support-service-teams.jpg": {
+    "inputHash": "662129e777497a772d79c9ae612a9f92cbe75a643fd1bd2d56716500c5445efd",
+    "outputHash": "6a1b5541f68d24b29ceddc8a0e80dd191f09a74324c484a43239169741575a6d"
+  },
+  "assets/social/ai-customer-supplied-parts-review-for-service-teams.jpg": {
+    "inputHash": "e794b0ceeb3a37d28eed89ee6d3d6da754e25eb401055be90481f4201097096a",
+    "outputHash": "60a21907bcf414243e4c44e3b94cac66d54860234eafde2129320576eb537874"
+  },
+  "assets/social/ai-dispatch-prioritization-service-teams.jpg": {
+    "inputHash": "9b4f5cf131b446c86172fcc20f15cbbc898d5618db4a2fd0989072a1a11bcf1c",
+    "outputHash": "ed0c5bced7e1849938438a8df9e293fa4c5e7f1c7f41a1df0033e18b245e027d"
+  },
+  "assets/social/ai-duplicate-work-order-detection-service-teams.jpg": {
+    "inputHash": "1333f9c6f29f07f3e95277fe443a3a13191b14d8b01d86806062233a7530e859",
+    "outputHash": "157ed8f20b1540701e15e4f5fdcb403127c0854f77cb4f71c73226e3bae0baf5"
+  },
+  "assets/social/ai-emergency-rate-eligibility-review-commercial-service-teams.jpg": {
+    "inputHash": "46dcd32adffee9e285bcf20628734ac7ca485cacebad82c2a94f9ea231c52f03",
+    "outputHash": "12ba15c9a8aba69e79599b0c5a19231f25a220fcc0183e997c1891a1f9578192"
+  },
+  "assets/social/ai-equipment-ownership-review-commercial-service-teams.jpg": {
+    "inputHash": "5effda87d27c6647c959aff5ac4b72b8f575f0d2c2b9a644651cccbc248344f9",
+    "outputHash": "ecf0feaab00001d597ff48722970e74c276d16df575b48874c37fa411ee1563a"
+  },
+  "assets/social/ai-equipment-turnover-review-commercial-service-teams.jpg": {
+    "inputHash": "f4afe4424e37f13520e0ecef6757750cb9a633fdc6408283030b8f23854e1a23",
+    "outputHash": "b6fca7990d45c6f620b7fa63d744dc7b59869e43df3de1de50d586439f392957"
+  },
+  "assets/social/ai-escalation-screening-support-teams.jpg": {
+    "inputHash": "6a0e99fc911183c994e8a4666b0eb25d7f7892691ffa032961621fdd21276b29",
+    "outputHash": "d7bb91719f0755fb337b1303d5506b0dbd7f95ba6b72bf6ae77c53ea9925db6d"
+  },
+  "assets/social/ai-estimate-aging-review-service-teams.jpg": {
+    "inputHash": "ab037c2220284577cfbcfda74dc6fc999448fd0ace1f75316918a4d3741a018b",
+    "outputHash": "d56e79396a8011ddc99dd2da4590483cfdc4018b7d86716d0533997e64c231d6"
+  },
+  "assets/social/ai-field-purchase-receipt-review-service-ops-teams.jpg": {
+    "inputHash": "58efa787ab7b1c22e8158d55576a35803d3b60a1c10ebe42a9f2f292d34152b8",
+    "outputHash": "87005b4d4de6773b8965f5666c9ea1f7b1f4094e7e82d0d0f5921785ade220a8"
+  },
+  "assets/social/ai-first-trip-completion-risk-review-commercial-service-teams.jpg": {
+    "inputHash": "d987ad7440bd08111886ec79a3ea70d837fada12d7911dcc2056113dfe21b211",
+    "outputHash": "a15e088469a94b8f4b40b5bf8482311440d421b88e1d4baa2ed18a7b595c53c2"
+  },
+  "assets/social/ai-hot-work-permit-readiness-review-commercial-service-teams.jpg": {
+    "inputHash": "f25b7540f42c0e92363465dc1cde0ed0599fb01c41086ffef9bc7b46964dde31",
+    "outputHash": "61d3a606c93cfa39077444f26201040313cf3bee11b6a6b6576617fee08c2593"
+  },
+  "assets/social/ai-install-readiness-review-service-teams.jpg": {
+    "inputHash": "67a5dbd6c80c61dc7537f6ca7a48835d74dd1373503606c671f1f6404a919d0b",
+    "outputHash": "e15321293a3ec4bb09acee5a0f01b143a079a2d45437075903dffadf576ddeb2"
+  },
+  "assets/social/ai-invoice-dispute-triage-support-ops.jpg": {
+    "inputHash": "fedd970677ef50231c3d58f7dcbefebe0eba086af143e67df4de58b5a843d443",
+    "outputHash": "498bc14b7b9b11e217cd62d3e06ecbebafc974887ea1e3ae494dd09bb54404de"
+  },
+  "assets/social/ai-invoice-package-readiness-commercial-service-teams.jpg": {
+    "inputHash": "42121980336456fc8fa00d0bf4236dc381ee62310b7cd9e5a97b01060a3f7e0b",
+    "outputHash": "801a529f498b11b625597f35b83929cb2e5fcb9e8f2da8ed871c3ec2cd0a791e"
+  },
+  "assets/social/ai-knowledge-article-freshness-review-support-teams.jpg": {
+    "inputHash": "b9f5a81cc95db3b3bc967e351ba182672f8b5cc2f612ff89f2975bd761494467",
+    "outputHash": "9404dd89a2bf95398a7026444c6bca446da17293c23dcd33d949e8b8a7ee57bd"
+  },
+  "assets/social/ai-loaner-equipment-return-review-service-teams.jpg": {
+    "inputHash": "47b90a0618639f62a4f634e13d8ee59ab11bc071d5ed19b9b8ea1d538d83e405",
+    "outputHash": "8a117db71631f4870065f4858d0ec91ebeb1abe435870e44b68542aba6052e4b"
+  },
+  "assets/social/ai-maintenance-deferral-review-recurring-service-teams.jpg": {
+    "inputHash": "cc38f62ddc61f76fb5ab9a0bd6d3a1cdf82f35501cb0d1d56912920740de7602",
+    "outputHash": "5a6a18e9fbfe4a51e0e7e6e139bd80fd0dccd1450dae4a9c1e9035ea2c1b4ec6"
+  },
+  "assets/social/ai-maintenance-deficiency-bundling-review-commercial-service-teams.jpg": {
+    "inputHash": "11025d63f7abbccbb2d7737b3da5c698686c79c2ddba3a0ec55c96d799b8cc3c",
+    "outputHash": "054af84e6b88e30ef52c61cba176cfb0c5fd96fba36c0f507aed6b87a30cade0"
+  },
+  "assets/social/ai-material-staging-review-commercial-service-teams.jpg": {
+    "inputHash": "d3e06646388a878dc85f0355021ec4925b74134802accb0e61d70c21bb00fbcb",
+    "outputHash": "20f94a67c23549af4fac71d97a097e25a6f850e06ffd2b91eadc4b13b4e26140"
+  },
+  "assets/social/ai-missed-call-recovery-service-support-teams.jpg": {
+    "inputHash": "7d6a21a85fe294cc0cae6d020799219a9718f17f46bc8bf0797ad98e777ae04d",
+    "outputHash": "fcd7df693099ec20411511513afada43550e0511d7bcda00638265792f76e1db"
+  },
+  "assets/social/ai-no-fault-found-review-service-teams.jpg": {
+    "inputHash": "e4c885b3ddb44bb41415bb4bf4c8f521af564cd7a8c0d9f428e41a8bba75cb39",
+    "outputHash": "9ac9e815a56b014c04d226dec7a69ec26aebe7468b66c1abb4ab79e5d51fa717"
+  },
+  "assets/social/ai-nte-approval-review-commercial-service-teams.jpg": {
+    "inputHash": "c65d84fe4b4379994be9fcee055ed074b16af51edfac50994fd5de2312910b65",
+    "outputHash": "3fb7d97dcbe6b8572b0c2b22569ca6665519c4569cf92ff5bb89da497199d954"
+  },
+  "assets/social/ai-parts-order-exception-handling-service-teams.jpg": {
+    "inputHash": "b2652c261e115a43c7223cabd58e7ba6ee272c2d2a75668c7a526945460804df",
+    "outputHash": "c6fc424c6b8f85388cb501576feb46a0feaeabc9eba8a29f0e2dbf156bce65a7"
+  },
+  "assets/social/ai-parts-readiness-check-service-teams.jpg": {
+    "inputHash": "60c9d7f5ebdbe4c43920258e70fd402163c65a4392ecb4600438d06d744f9cd3",
+    "outputHash": "7ef27222efbd454261a791277de5afe204c91223534ca5b32aa91c32b6826ee3"
+  },
+  "assets/social/ai-payment-promise-review-support-ops-teams.jpg": {
+    "inputHash": "1ae997795692b6b33215b3848e33b359e7ed7ce59a9c8b60c0b463494a1c96ba",
+    "outputHash": "868f60a33828ab05fe46874bc3bb878b0a185afac4cad82df4da16077f9f64ef"
+  },
+  "assets/social/ai-permit-closeout-review-commercial-service-teams.jpg": {
+    "inputHash": "66087a369064bcefd060debe5156d51012d756345fed5db7c6787c08031ab85d",
+    "outputHash": "986384d5a321cc1cf3fb6e09052ede1a75fc148831ffaf7d0dc148efa4d3d248"
+  },
+  "assets/social/ai-photo-intake-review-support-service-teams.jpg": {
+    "inputHash": "d86e5506072e3ad8cd6f80dba945df37a2f02ea7e062d9d0663d6bc9f0358b11",
+    "outputHash": "d825dec007b107a242f52564529e17d0a6516147c92aab2835dd75f778b4ff9d"
+  },
+  "assets/social/ai-planned-outage-review-commercial-service-teams.jpg": {
+    "inputHash": "78f601a09842dc56540311abae76dc8a0a80bf5565968ef89d3924b6a95d24d0",
+    "outputHash": "a3e9c317135d908d28a2ddd7efdde97ae6449bc35f0d6dc8a490d96e1836dd1a"
+  },
+  "assets/social/ai-pre-visit-brief-service-teams.jpg": {
+    "inputHash": "a54f4154917243cd3aa34ec2cb28ecbd940a83fe3e3bf7214470a220c70bf06e",
+    "outputHash": "9c4f0dbdf5c5b13fb82ed90b769c60abcd6a73cd7f21748825e6c44fb7fcd6e3"
+  },
+  "assets/social/ai-purchase-order-requirement-review-commercial-service-teams.jpg": {
+    "inputHash": "ba7ecf31071da2d6788c14f86deb79647799cc5210f24e64d036f547867c5678",
+    "outputHash": "69c4eaebf6bf1e2e33c93504969b33a705bcfd6d5a68e3b69bc88aa7c040e8db"
+  },
+  "assets/social/ai-quality-review-support-teams.jpg": {
+    "inputHash": "1d4128f62bdc043f94b52e80fd1bda155b95455931e0e430609e7710c61c855f",
+    "outputHash": "1edb07730056c66a71188cc5f65c5f4e43e593a05df21f0f81059d625d420cf6"
+  },
+  "assets/social/ai-quote-qualification-service-teams.jpg": {
+    "inputHash": "9ff9aaebd7bbe18c9077b10dc30d5af3f3ecd346ccb9e956d94b757a94542e5b",
+    "outputHash": "28fcba11d67fb1f2532157164c4f1196563e34080eb008aa01c6f6eec948c5d1"
+  },
+  "assets/social/ai-recall-and-advisory-intake-triage-service-support-teams.jpg": {
+    "inputHash": "6dcba43c0d19da133fe9452b310a921e98e3b351b2ff5d17fc67a1c9aaa3a4ba",
+    "outputHash": "cab1b8e912de57bac7da51a3e01af66233b43e2ec737cabee90e2a981acc78e0"
+  },
+  "assets/social/ai-recommended-work-follow-up-review-service-teams.jpg": {
+    "inputHash": "d26cde3fff1e4fdb97eb018c2841145a036c8f34e91497bb9e477ba9a4945143",
+    "outputHash": "92c42d1778f61b481745e0e376918071adeedc8941a38dfbe0d6efa6daff7c61"
+  },
+  "assets/social/ai-recurring-service-scope-creep-review-commercial-service-teams.jpg": {
+    "inputHash": "e2bf1216ee988688483f45198b5991d17a7adcef4f7fcc7f9ba258dd6c86e1a8",
+    "outputHash": "76043934a2d2af17c8429da953e20dd63f62896b762f920573bdf574ce92f0b8"
+  },
+  "assets/social/ai-refrigerant-log-review-commercial-service-teams.jpg": {
+    "inputHash": "3c7c8d343c9f16a418e7753fc0330bc49df6d90f65c24e877870d58100cca276",
+    "outputHash": "11a4e2025ed1f734c186e57f3b9668aeb82431fa329ec91ccc23066479d1ba9b"
+  },
+  "assets/social/ai-refund-request-review-support-teams.jpg": {
+    "inputHash": "cbb1e9c21905d5e00f533037c955e9fc29bd7dbeea2d5585877973965fe52049",
+    "outputHash": "6e9d28c411db9142e1dbc6bd486492695ab0aa4d707a03646bfbcc47009f26ba"
+  },
+  "assets/social/ai-renewal-risk-review-recurring-service-teams.jpg": {
+    "inputHash": "96c137fb62cde1f0067d6540828f076eb54ab0c7ebbbbb82f3fa3261f41c3d88",
+    "outputHash": "93ad2f8e299106aa29cfe5a3a7e5202f72c699dea93581c9f67974b29b7c19b1"
+  },
+  "assets/social/ai-review-response-triage-for-service-and-support-teams.jpg": {
+    "inputHash": "7c51d17660d87e40dc952e25e4814e0bff21f9e870e68dfd5e20e75e694e87ec",
+    "outputHash": "7375d406910e61a66159dcb926b8e569b4f2574b93bbad1492be789ccd65aa0f"
+  },
+  "assets/social/ai-route-delay-update-review-service-teams.jpg": {
+    "inputHash": "9c86eba41866cbdcada0cd4600e021b9a78d49d36182887c4e00cc482e322fcd",
+    "outputHash": "692b4b4df53f4c132b23ebd82bd52b968c6350a0aa9bcf6c91c68d633c073941"
+  },
+  "assets/social/ai-schedule-gap-recovery-service-teams.jpg": {
+    "inputHash": "ba803e3b56dcaf4a8d94ef06880df932b4449d044d11f38f113f95dc45a24cec",
+    "outputHash": "fe6672b4ca617c88fdfdaee4311e89c4df1e187e9695fd0701edaf2396e9f68e"
+  },
+  "assets/social/ai-scope-change-review-service-teams.jpg": {
+    "inputHash": "da7ed5586e642bcc1aa12b32e2ed523a58c1627e757c063347988f8db815d58f",
+    "outputHash": "efd56eab452b1a8f62012d417e981dbd33980fd927fd23bef70e328c50f93693"
+  },
+  "assets/social/ai-service-contract-entitlement-review-commercial-service-teams.jpg": {
+    "inputHash": "3d27218c201cf8d58fa4029dbdf5ce6b368f5ed17f606ebaa1dc855382215a63",
+    "outputHash": "fca4a88f1511d041c148297282fe85f77a67a9f8ecc5afdc24128c0fada85612"
+  },
+  "assets/social/ai-service-level-agreement-clock-review-commercial-service-teams.jpg": {
+    "inputHash": "39b8f57d7f963a8075dcdebe82a8adb8927c489e684762604bde9b8685216cc6",
+    "outputHash": "174a01a3e541a1250c644144aaadf6d09060831d04e8a99c9b74cd3bd8f90646"
+  },
+  "assets/social/ai-shift-handoffs-service-teams.jpg": {
+    "inputHash": "a0c4e36d72064b5a549ac0f1de20f7800bfddb9993a30cfe6626129e0fb19e67",
+    "outputHash": "fda0ec5dd3d10d1037feb1e509063310e47ad985e970917a33eb4fb9ff6beb08"
+  },
+  "assets/social/ai-site-access-readiness-review-commercial-service-teams.jpg": {
+    "inputHash": "6f3adb0b0550c4ab289c06169fa1ad85533204bbf50ce9fbd0c57c62cb8dff4d",
+    "outputHash": "073117d8effb0393f2719bb7ba8f94d6f03aabad9462e6c6121ac1d290ddeb13"
+  },
+  "assets/social/ai-site-sign-in-and-sign-out-review-commercial-service-teams.jpg": {
+    "inputHash": "2e9e8a920ca79418c43afeb92562a4bcbceced363064592b8af41e28e7e427b1",
+    "outputHash": "61eb7c1a2ef02387fff5f593fb00e0f2f43ef687cd0180ea708342ef4a66ed42"
+  },
+  "assets/social/ai-sold-job-handoff-review-service-teams.jpg": {
+    "inputHash": "046f5c0c717fd5e5a809a5fd84a668515591a5b39c5d2ca2623fa4cb8d126f24",
+    "outputHash": "a345a5341484e443a3b8037347fa8caede3b6baf7579079da4874d5898406936"
+  },
+  "assets/social/ai-sop-retrieval-frontline-teams.jpg": {
+    "inputHash": "8a4ec5442c03f2de0b458280a1e83431cd090ca35b18448af1b67a307e0cfbf0",
+    "outputHash": "32872be7fa5d430e06473783a3a329f5693bc890e03a55a9fbb6329cd6db11e7"
+  },
+  "assets/social/ai-staffing-signal-review-service-teams.jpg": {
+    "inputHash": "2374b5edae7bd3e9845dde27c424e6051d837e81703dc5cf6f8f53294910a6f9",
+    "outputHash": "7b09ed016acdf7a6abb3c1e0d12924290cccc3288c5a1aada079db975f23adeb"
+  },
+  "assets/social/ai-subcontractor-handoff-review-service-teams.jpg": {
+    "inputHash": "217e75e3b8633a96dffeaf4ea5cb2813715293fcaf8ad91f65ca451e4ce08a2e",
+    "outputHash": "958fc28d6fccad90d6b8c47bc376842851066b86a57a4578e8fcc54b4d6d5bec"
+  },
+  "assets/social/ai-technician-credential-review-commercial-service-teams.jpg": {
+    "inputHash": "5e7c9a428388452384d4c97fb385e69fef60c987dcd163e07e8fe97d6b11fd0d",
+    "outputHash": "7459a8ac12ce425228232db5dd14a41e1c53be0e7f641e25a6f1824e9fda739f"
+  },
+  "assets/social/ai-temporary-equipment-decision-review-commercial-service-teams.jpg": {
+    "inputHash": "522718aee885d55e90d46786d7dc221cb4d28f48e97ebe79fda93e0b609c3ace",
+    "outputHash": "56d3367ce932a1e6d94ba2a5e7fa5e2be7b6cc4f70bfa47d34104d811f8da59c"
+  },
+  "assets/social/ai-timesheet-exception-review-field-service-teams.jpg": {
+    "inputHash": "54fd4083d1ff471e7431c136a35711493709fd29bf7f1a52970d2699d4c775a7",
+    "outputHash": "8cb1c4f4fcfbb8934286686a0c24638027b11b515cdddf2a1fc2d793d1bbf5c8"
+  },
+  "assets/social/ai-training-evidence-review-for-service-and-support-teams.jpg": {
+    "inputHash": "df44eb592b01a71de0bbf4684c13f7100466b44048dfe7fab9c7222b5a1b29a1",
+    "outputHash": "d275de22ce05de861bd4a386c3a947d410e1cdc8e8ec4969e1a991a25aefe1a1"
+  },
+  "assets/social/ai-translation-review-for-service-and-support-teams.jpg": {
+    "inputHash": "f6ea202c41aa6e22aa234130fee880aa29051f273f5ca92fc0b22581e0da178c",
+    "outputHash": "3e85fa5bfd231d9d9b8bccbdd04e54aadd3f38b9ddc1e0fd21f544e8c9dce501"
+  },
+  "assets/social/ai-truck-stock-exception-review-service-teams.jpg": {
+    "inputHash": "d7f0e36bcefb4180613bebbce6ed2597567fa2f7324330071ac9f563fe2ff74d",
+    "outputHash": "5f3b2bb1211e18753bb67e8737bd690c5624eddc71f60ed1b140e65779415c94"
+  },
+  "assets/social/ai-vendor-eta-promise-review-service-support-teams.jpg": {
+    "inputHash": "d377ea95bc545a237a4c09d9f282be72e16a70822abd74f341ae1d46e03e0102",
+    "outputHash": "1fa02b7788b3f02230a2307dd79cd7336fa7834a3903617b73809422a737741f"
+  },
+  "assets/social/ai-vendor-onboarding-packet-review-service-support-teams.jpg": {
+    "inputHash": "7c01a8b61db60a3e6e467e905e5dafe4dc0035656114db4ef9317dd4313d3882",
+    "outputHash": "c64852b66f040b92515bc8215ba91c33f0cd6a193cc8eade7454776fb29a748e"
+  },
+  "assets/social/ai-voice-note-transcription-review-for-field-service-teams.jpg": {
+    "inputHash": "37f41934722c8b98caa84e471f73cf1de0f94858a79d73488b421b3f2a67ce44",
+    "outputHash": "d48786cff985f2e7fc0d6892610c5366dc308a18538d20ec3232bd725626699f"
+  },
+  "assets/social/ai-warranty-claim-documentation-review-commercial-service-teams.jpg": {
+    "inputHash": "e1c7bf3d79acbec34fa6bf2e293a8dfe221168d368f7528e83d22db371050ebb",
+    "outputHash": "69a6aed55bfc26da65ae272244cf933e327f84a8300bebb05e524c889e6250bf"
+  },
+  "assets/social/ai-warranty-claim-intake-for-service-teams.jpg": {
+    "inputHash": "b66f278072b6be367bb9281ff793117b1832a109f2ef7e25f617f89f6237ce51",
+    "outputHash": "3034d8b2cdd3a68143c20f27bc80762477c57ec84533417101d14f5ed8eea346"
+  },
+  "assets/social/ai-warranty-triage-support-teams.jpg": {
+    "inputHash": "e27fe8a055ec15b34de822bb70e39fca58d774f6fccf2e0672d0bc67de4057f6",
+    "outputHash": "40d83ea6b20f8050f51c0b70d37b4951a203e0a2d689a401a9a56bbb9d029bf4"
+  },
+  "assets/social/ai-work-order-closure-review-service-teams.jpg": {
+    "inputHash": "999808b6a5738144340b6e655b6fd3665783df9ea7b1187af6351d66ea999125",
+    "outputHash": "05caa2628e8514b29d3c15cf2187ed42270a02be26372442558d441f3ad502f2"
+  },
+  "assets/social/automation-small-business.jpg": {
+    "inputHash": "e6ae67ccdd3598e4b1de3d909f18f0ed98f1c3d4c791beb8accc5011ccbd3001",
+    "outputHash": "bbe45bd09d0473cfaca38da3c6fd8ea08ccd82b407ff9dfa02ba68e08fae1cf7"
+  },
+  "assets/social/openclaw-fit.jpg": {
+    "inputHash": "9cac8db55118a5cb0036723fb2c92eca5dd39e5ae15d1bd08e496b137a5a5d28",
+    "outputHash": "80ae06d0b76b0f180738a1444c9778fdbaa316c4403ba6aca541eb5e7695222c"
+  },
+  "assets/social/response-time.jpg": {
+    "inputHash": "46f5ded6b828b40e988b2fd0bf61874b7d325784375b989ca299ebd918af354a",
+    "outputHash": "9b90c7ac0224b22a8ef59633c6e8540177faa368b50c341de7fc8b8da1e22efa"
+  },
+  "assets/social/service-ai-analytics.jpg": {
+    "inputHash": "28d37e59c2d8052bcd1b91f1ec85054456447deb1e07973b79d60a6d3b0dacce",
+    "outputHash": "b0a60e6c928cef41966f89a6b2a46c1a3b5356bbff9d23462eb65458ed1b6c68"
+  },
+  "assets/social/service-ai-automation.jpg": {
+    "inputHash": "ff686226be16d7b4bfadcf2d1a5eb53031009d142239f0f8d2d8f70f64c05a7b",
+    "outputHash": "895eb5986925aab0243f5d857681cf8983072fdb53b5ea085958032f738d193f"
+  },
+  "assets/social/service-ai-strategy.jpg": {
+    "inputHash": "d6b20ba0d5a16d5c9434ce94937d33c2c7ae3dc7b3c02fe220fe9b67934956e8",
+    "outputHash": "fe6b402a248ff0a7610ad627cbf5f2e96af6d20aa0714c1e01f73b2dc8022032"
+  },
+  "assets/social/service-ai-training.jpg": {
+    "inputHash": "b20fe40a7503d9a53ed181acea3133aecd1ff0d3acdd82e88543294de8ee9127",
+    "outputHash": "c53f6e97c0c1bdb9ee7e2d596d681a8dd7e7aab8e306d550ce8b93a3aadb1f6b"
+  },
+  "assets/social/service-custom-ai.jpg": {
+    "inputHash": "e33a09cbb19e799e5c65436dd49d705bcc8c2c2ccb677cd936d2c66cfbc36950",
+    "outputHash": "ac0701a1d7e8ce0b4fb733a9686869ea735ca2960cc37c133658b63a53af6ae6"
+  },
+  "assets/social/service-openclaw.jpg": {
+    "inputHash": "708848714abe5967ecf82da3e1ca86e3ad4585b56704d5f2051af902ea50ddae",
+    "outputHash": "301d193226b66749e6ea3ef1e99220d30d440fc79ab32d0b7ecf1c15f6623945"
+  },
+  "assets/social/stay-human.jpg": {
+    "inputHash": "00c8074448e6865e03c13de7216120cebd0159f2a51c489409015b2b40a7ee17",
+    "outputHash": "c7a96ba9e299062562e2dd26d1c86824f9a99a997b694183d8df2e4eceaaabe9"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-service-area-rules.jpg": {
+    "inputHash": "fa83474985d01b6de12cdb4e48fa8cc599dea047c676228214e6a7b87e1c5456",
+    "outputHash": "929e377d993d5e83ba1f5ffdf4305b3618f730417da3f519d3fbad113c5f55da"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-service-pricebook.jpg": {
+    "inputHash": "25e7072f75fb082a3244113a9536d929be9f11f556fca01558dd8f929251134f",
+    "outputHash": "21e2cf26260b1e6b794afa596c3802f55adc37185e50aa45ef617beb69476641"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-technician-skill-matrix.jpg": {
+    "inputHash": "0892285439f8895b44025e7153bce79c4c6b054eab8c454d86be4cbf35f4b149",
+    "outputHash": "1080da52d0f9983eea1e76336fb032e6a9eaf22ef25e9801ec2beeba090c18ce"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-after-hours-escalation-roster.jpg": {
+    "inputHash": "c209757c3e99d89e80a5b926d1cfb9852c9dbf1359c457bc70c4b99a7e9db392",
+    "outputHash": "a64616afcca8d8837fb8cbf9e049587f0bf35f0c289862adebb274a810198812"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-cancellation-fee-waiver-rules.jpg": {
+    "inputHash": "774fee4459cdad1b26bee0aa4794d7387339e0d354f277d81b7c35a9fff8c011",
+    "outputHash": "be7db8f733f129ac69fae8ae267d9935362766a798d53845e1961277fd76edb2"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-closed-job-reopen-reasons.jpg": {
+    "inputHash": "9f711ca1f4610f9f7588b63882994d4c24baef414c90ac7532c2a32c2439d958",
+    "outputHash": "be37fca6371d48d6f0b822e77974513081b091a5462a5b2c2520c4411bfd153d"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-credit-hold-release-queue.jpg": {
+    "inputHash": "62f27c6291352780d26986d1f1b99e16569124470423aed7e37c00f47acda592",
+    "outputHash": "6b7dc185bb13cede5e0e52a69fdf477c63289c69b257cacc9ec27c340ad09afa"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-callback-windows.jpg": {
+    "inputHash": "6ee55487ace4467fc7b2ae7c3dfd60371553e2703584db1962e0e97f099e7ac5",
+    "outputHash": "703a1573a8bbbe1ddc05385e398c3fbf80e3d367ad707ebf3dbebac9d210920e"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-communication-preferences.jpg": {
+    "inputHash": "b44c389d2c10d0a6706e4774fe89ae147861f153b3f10c09a4f2d24f73039b73",
+    "outputHash": "fb657aca9665c39bf4803c121f83f382b3daaa70f07ab8840935be6b9206adf2"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-credit-hold-release-rules.jpg": {
+    "inputHash": "9bc6cf92bfddb797f49e9421c766473254a18b766defd443fe13f21caf350b08",
+    "outputHash": "55b9b865356e15a0d9e1ce184ec9b51a389f45b04ceb6622835990d43a664244"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-data-retention-rules.jpg": {
+    "inputHash": "f794bc3bc260c90d16772419070e741cc301f96d797984c44656528e73e40d56",
+    "outputHash": "8927f8e0bcdf43919cd17be6632af751f7f714bc7d02a08eb6f533f473d9e176"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-key-control-rules.jpg": {
+    "inputHash": "02b801a1407eace11909b1b71df52807cbac2a5ed2bff943dca3c7b37e61c787",
+    "outputHash": "5bf54835a8c86430ef85f3b141e3c292c8073ecedc6298f4b3ee4380bab9cd18"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-po-rules.jpg": {
+    "inputHash": "f156d2e550b207b7def86ef7b3c8e4b810101db464ca4188744c448bb240a238",
+    "outputHash": "047ecb3ea2c3adcb72d725b6a42b71e77dd3b41bb16a5d4ccf6fb78f4715de1d"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-portal-submission-rules.jpg": {
+    "inputHash": "1d7859a274a183f4ace6bd5fb4409e0129a70325e195765b433f089760fdd038",
+    "outputHash": "9de0358bd329ba091a929f0250045ca64df6e0af1073b229baadeb04c5d38284"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-record-merge-rules.jpg": {
+    "inputHash": "4b295d1af44abeaba82c6a96c265755e3d8e5590b9767392acd280e5d87e29e5",
+    "outputHash": "e919ecadda86812bd2bbef4c78887a0f7562f76b5957212ca7e1909fddb64c57"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-requested-technician-rules.jpg": {
+    "inputHash": "d867f8a33d7eabdefd7e9420da0fc02ab9631f79cdbdfc55016c741aa0956795",
+    "outputHash": "a1a1a3774db07a6e5be6f8134cf00611a63adda249b001d524c86fda23bf0c9c"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-shutdown-windows.jpg": {
+    "inputHash": "763b1517154a598ba99b44209560c375d8a5e4eca09e336baa54861c7da253bc",
+    "outputHash": "42cd51e904c4f4abfe6da2c48e583ba450ea40644d83d42a3aae79d68d33d66b"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-customer-supplied-parts-rules.jpg": {
+    "inputHash": "0b33e66308d5d910eb5f3f45a28c3cc41926649b72609b9fd4d58d247a5fb66d",
+    "outputHash": "30471108036019995d281c47cc68a2c848c9c05b51ad65d6c67c7feac8a24970"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-do-not-dispatch-rules.jpg": {
+    "inputHash": "ccee3a5b90c4635e2761a395dfff5c6471e257359a0b95e82198c81ebfaeb589",
+    "outputHash": "98cf65ab6a4f9cc0c760338c9a5ba508f7b6c3d327fa963b773685880bca730c"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-field-safety-escalation-notes.jpg": {
+    "inputHash": "c5e2b71ecdee4b17c01a69292cdf0070ca5104ff382f563026be462dd64073cd",
+    "outputHash": "db57d5809652b4797ac614875223c1c05a037532305ed751cef65aaf2b299294"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-landlord-vs-tenant-approval-rules.jpg": {
+    "inputHash": "9592e25e0feb51691b173fc1c724fdfa1abaf3b8d5bd22e30544b4fa0ffba27d",
+    "outputHash": "6352b74853ebdecc0110a03362f7850e40960e82b7aeeccdf5f9de937c6fe126"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-overtime-approval-rules.jpg": {
+    "inputHash": "b9c76578fbf2013c0e485f1bff3c296d45bf389874d893750d4080b8f61c8551",
+    "outputHash": "bc666c6a66eb240d2af56dede9b32c77ebf692dbf892619488dfd101ee35a6bb"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-partial-completion-billing-rules.jpg": {
+    "inputHash": "85045a7f671c64094469ce65b264381ed88142b561ad0eb2c55b606e5ffe093b",
+    "outputHash": "cbe7b14628cc3a4b9a2eef2e7e790c9e89d58047b300c0ebff10a126e2ef6e86"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-permit-required-scheduling-rules.jpg": {
+    "inputHash": "bb935459c7fbbbca24d00cb5ef4bfaccc39368c1827de6e98f37d5c1ada46758",
+    "outputHash": "dd0f1e0ae3bcd18129b27950395767fed894fc0e52611813f1c79924bd38d907"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-rebill-risk-queue.jpg": {
+    "inputHash": "7ebe9295eb34a1a1abb4457da87d2988dec6ae97c7dfa07f85cd6f6190d62431",
+    "outputHash": "24cd7df04ea752d2fd63b40b6018abdc40f31d88ae266fe699708fe543b93684"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-reschedule-reason-codes.jpg": {
+    "inputHash": "990979cf4acae904fe8747cae76143d22861c5659c954398d6d8561684c260df",
+    "outputHash": "f27a0aa297a5e8f420d666873a3969507764e6114655268b3e4c770491ea0948"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-self-scheduling-rules.jpg": {
+    "inputHash": "63fcb84a57b8c50fa17aaa071781dafa21b02462882dd848a7e6e5a5912f6517",
+    "outputHash": "43df165f9c94a4dd2e7ad744c4f42c3d0e6bb090d59a9f1b929cfdf13094e6b8"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-service-agreement-coverage-rules.jpg": {
+    "inputHash": "5b3161e63cf6d0ed19f16a1bccb454354163aa0dfb44b64db9b58a9d2e2755bd",
+    "outputHash": "b3bc7f7094d0a8e7d51f6f3846c51b62dd5bf56450798415588e54fdfb0a5247"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-service-report-recipient-rules.jpg": {
+    "inputHash": "d94c588e17264e0036d209ffc33e76d9e3356ca9d0395b208821a729eaff999a",
+    "outputHash": "8305012c829a45d9994d3d3c4e0de931847c5aa74f22598a46bb14d2384ed5a1"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-service-request-problem-labels.jpg": {
+    "inputHash": "b2b12ab6b2da1f1c1e62c9870f665a98c776f520148ddb5c148eea288cc54088",
+    "outputHash": "5cd66479dc10907e21b962d51d40542a53657f5cb32967d99206de075d41eeae"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-special-order-deposit-rules.jpg": {
+    "inputHash": "f7b14f06f39d6d8400c36305c4584cc4ff166db321f61d3aec4e4474135e1d81",
+    "outputHash": "5562b66ad349e2405c2dac9e76e0e1afd1380541a002369345744bfa805322c1"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-tax-exempt-billing-rules.jpg": {
+    "inputHash": "c752e5dd0590fe2142977a69275d81da4bdd0c1980085d442fe749a90f57c561",
+    "outputHash": "20398057f56b57c24db689b9d63bb187fe451fce57304ba2d5ad1e6a2f9d9a51"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-technician-debrief-notes.jpg": {
+    "inputHash": "7be8097b5d42f3dcd3e0549841d9f9e5778a3780b02836dc435f885324f92ec4",
+    "outputHash": "f365eb3a514e0fe86d1223e38df0cda18d4067879818a5a66adf39b0d589d1f0"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-weather-delay-communication-rules.jpg": {
+    "inputHash": "702feb711c5f329b55aec39f711936d4165fda66dec3ef51f9e97bae09dfe895",
+    "outputHash": "be680d5e1a1e0139e21469727040d44c2bb05653c8bca6956b66c78b38fe05ec"
+  },
+  "assets/social/what-to-clean-up-before-ai-touches-your-work-order-completion-codes.jpg": {
+    "inputHash": "1e942eb4f12ce78a0e7d7c136e322185ba77f6e1b85ed68686d98c721ec6c68a",
+    "outputHash": "183a19912960f17fa10754983b1e73b92fb9185160c1b0a34d183ac874790057"
+  },
+  "assets/social/what-to-document-before-ai-touches-support-inbox.jpg": {
+    "inputHash": "a4d2fee7b25ee229ce4e40037d5fdb7d4f256b251720ad405fdf88aadd684896",
+    "outputHash": "60dce359aaa5048f3de9bfc7a313be0dc7b207b63885e672ab1453505b87b2f4"
+  },
+  "assets/social/why-ai-pilots-stall.jpg": {
+    "inputHash": "d43113f474966ccb50bab57ede0e0bb135b0d08bf2e4d4d353d9315e1cf36e2d",
+    "outputHash": "ec7e8b2c22f328693512ac4d18d2a1681f2c4950f90c367b84a19ad2485c1f96"
+  },
+  "assets/social/why-supervisor-interrupt-load-is-the-ai-metric-to-watch.jpg": {
+    "inputHash": "cdd2610f15ed1a3fe122604ac8a51eedda95ef972ed089cb99b46244334811d9",
+    "outputHash": "36cc0c416365ba98b685df2ff8ce9e9e897b5809991c247ece417b60ceab6b6b"
+  },
+  "og-image.jpg": {
+    "inputHash": "8c28ba191dab97ff5fb3ff7f2a0ee466c8a056ea9412943b379ec9a927e7962b",
+    "outputHash": "424b68f93c29df5b03db72c567fd71df3c315e406169c71c06b243ed7a1d7198"
+  }
+}
