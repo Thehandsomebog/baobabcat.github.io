@@ -1,5 +1,42 @@
 module.exports = [
     {
+        slug: "ai-parts-supersession-review-for-service-teams",
+        title: "AI parts-supersession review for service teams",
+        date: "2026-09-07",
+        readTime: "7m",
+        category: "implementation guidance",
+        filename: "ai-parts-supersession-review-for-service-teams.md",
+        status: "published",
+        featured: false,
+        summary: "How service teams can use AI to organize replacement-part research without treating a possible supersession as proof of fit, availability, or approval.",
+        homeSummary: "How service teams can use AI to organize replacement-part research without treating a possible supersession as proof of fit, availability, or approval.",
+        bodyHtml: `
+<h2>AI parts-supersession review for service teams</h2>
+<p>A discontinued part can turn a routine service job into hours of fragmented research. A technician may have an old number from the equipment label, the office may find a different number in prior invoices, and a distributor may show one or more replacements. The apparent substitute might require a kit, an updated control, a different connector, or a serial-number break that is easy to miss. Meanwhile, the customer is waiting for a price and a return date.</p>
+<p>AI can help organize the evidence behind that research. It can collect part numbers from notes and documents, trace stated replacement chains, compare applicability details, and prepare questions for a supplier or qualified technical reviewer. It should not declare that a part will fit, place an order, or promise availability based on a search result. The practical objective is a review packet that makes uncertainty visible before the wrong material reaches the job.</p>
+<h3>Start with the equipment identity, not the replacement number</h3>
+<p>A reliable review begins with the actual asset. Record the manufacturer, model, serial number, revision or configuration where relevant, installed options, and the source of each value. A model copied from an old work order may describe the same site but a different unit. A photo may contain a readable part label without showing the equipment serial number that determines applicability.</p>
+<p>Have the workflow distinguish confirmed identifiers from plausible ones. If two records disagree, surface the conflict for a person to resolve. Do not let AI silently choose the most common model, normalize a character that may be a letter or number, or assume that every unit under one customer account has the same configuration. A clean replacement chain built on the wrong asset is still wrong.</p>
+<h3>Treat supersession as a chain of claims</h3>
+<p>A replacement is rarely just “old number equals new number.” The source may say that one number replaces another only after a manufacturing date, only with an adapter, or only when several components are changed together. There may also be a difference between a manufacturer-authorized replacement, a distributor cross-reference, and an aftermarket equivalent.</p>
+<p>Store each step separately with its source, publication or retrieval date, stated conditions, and reviewer. The AI can summarize the chain, but the output should link every material claim back to the document, catalog entry, supplier response, or approved internal record that made it. If the chain skips a number or contains conflicting conditions, label it unresolved instead of smoothing it into a confident answer.</p>
+<h3>Keep fit, approval, availability, and price separate</h3>
+<p>A part can be technically compatible but not approved under a customer agreement, warranty process, code requirement, or company policy. It can be approved but unavailable. It can be available at a price that exceeds the estimate or the customer&apos;s authorization. It can also be one component of a required kit rather than a complete solution.</p>
+<p>Use separate review fields for technical applicability, required companion materials, approval status, supplier availability, quoted price, quote expiration, lead time, return restrictions, and customer authorization. This gives purchasing, dispatch, and support teams a shared view without implying that one green check settles every decision. It also makes the next action clear: obtain technical confirmation, request a complete kit quote, seek approval, or update the schedule.</p>
+<h3>Control what reaches the customer and the field</h3>
+<p>AI can draft an internal summary or a supplier question, but customer language needs to match the current evidence. “We found a replacement” is different from “we are confirming the manufacturer&apos;s current replacement and availability.” A preliminary cross-reference should not become a promised repair date. When a supplier response is conditional, that condition belongs in the work record and in any decision based on it.</p>
+<p>The field handoff should identify what was confirmed, by whom, and what still needs verification onsite. Include companion parts, configuration steps, return restrictions, and source documents the technician may need. If final fit depends on inspecting the installed equipment, say so explicitly. The workflow should help the technician prepare, not transfer an office assumption into a field instruction.</p>
+<h3>Protect the ordering boundary</h3>
+<p>Ordering has financial and operational consequences. A plausible match can create restocking fees, emergency freight, schedule loss, and a second customer delay. Keep purchase authority with the designated employee and require that person to see unresolved conflicts before submitting an order. The system should also respect account-specific vendor rules, approval limits, and purchasing records rather than bypassing them through a conversational interface.</p>
+<p><a href="services/ai-automation.html">AI Workflow Automation</a> can connect equipment records, research evidence, supplier questions, and approval routing. <a href="services/ai-analytics.html">AI Data &amp; Analytics</a> can help teams find recurring causes of parts-research delays once the underlying records are dependable. <a href="services/openclaw.html">OpenClaw</a> may provide a controlled conversational entry point for status or research questions, but it is one service in the process, not a parts authority or purchasing system.</p>
+<h3>A practical first implementation</h3>
+<p>Pilot the workflow on one equipment family that produces repeat supersession questions. Gather manufacturer documentation, approved distributor sources, internal equipment records, and several completed examples that a qualified employee has already reviewed. Define which sources can support technical applicability and which are useful only as leads. Then have AI produce a draft table showing the original identifier, every replacement step, applicable conditions, companion materials, and unresolved questions.</p>
+<p>Require a knowledgeable employee to review every pilot result before it affects a quote, order, schedule, or customer message. Track wrong or incomplete identifier extraction, missing conditions, supplier questions avoided or clarified, orders stopped for unresolved fit, and corrections made by reviewers. The goal is not to automate a judgment that depends on technical authority. It is to give the team a traceable path from the installed asset to the purchasing decision and make weak evidence harder to overlook.</p>
+<div class="inline-cta">
+    If discontinued and replacement parts are creating research delays or preventable ordering risk, review <a href="services/ai-automation.html">AI Workflow Automation</a>, explore <a href="services/ai-analytics.html">AI Data &amp; Analytics</a>, or <a href="contact.html">contact BaobabCat</a>.
+</div>`,
+    },
+    {
         slug: "ai-training-evidence-review-for-service-and-support-teams",
         title: "AI training-evidence review for service and support teams",
         date: "2026-08-31",
